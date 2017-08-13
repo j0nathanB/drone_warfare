@@ -1,33 +1,58 @@
 import React from 'react';
 
-const EIFFEL_TOWER_POSITION = {
-  lat: 48.858608,
-  lng: 2.294471
-};
-
-class Map extends React.Component {
-  constructor() {
-    super();
+class GoogleMap extends React.Component {
+  constructor(props) {
+    super(props);
+    //this.getCircle = this.getCircle.bind(this);
+    //this.eqfeed_callback = this.eqfeed_callback.bind(this);
   }
 
   componentDidMount() {
-    this.map = new google.maps.Map(this.refs.map, {
-      center: EIFFEL_TOWER_POSITION,
-      zoom: 16
+    let gMap  = new google.maps.Map(this.refs.map, {
+      zoom: 5,
+      center: {lat: 27, lng: 63},
+      mapTypeId: 'terrain'
     });
+
+    gMap.data.setStyle( feature => {
+      var magnitude = feature.f.deaths;
+      return {
+        icon: getCircle(magnitude)
+      };
+    });  
+  
+    let getCircle = (magnitude) => {
+      return {
+        path: google.maps.SymbolPath.CIRCLE,
+        fillColor: 'red',
+        fillOpacity: .2,
+        scale: magnitude * 2,
+        strokeColor: 'white',
+        strokeWeight: .5
+      };
+    }
+
+    let eqfeed_callback = (results) => {
+      gMap.data.addGeoJson(results);
+    }
+
+    let obj = {"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[45.322755,15.47467]},"properties":{"deaths":6}},{"type":"Feature","geometry":{"type":"Point","coordinates":[69.57624435,32.30512565]},"properties":{"deaths":8}},{"type":"Feature","geometry":{"type":"Point","coordinates":[70.26082993,32.98677989]},"properties":{"deaths":2}},{"type":"Feature","geometry":{"type":"Point","coordinates":[70.34082413,32.99988191]},"properties":{"deaths":8}},{"type":"Feature","geometry":{"type":"Point","coordinates":[70.04196167,33.00866349]},"properties":{"deaths":5}}]}
+
+    eqfeed_callback(obj);
+
   }
 
   render() {
     const mapStyle = {
-      width: 500,
-      height: 300,
-      border: '1px solid black'
+      width: '100vw',
+      height: '100vh'
     };
 
     return ( 
-      <div ref="map" style={mapStyle}>I am a map</div>
+      <div ref="map" style={mapStyle}>Loading map...
+      </div>
     )
   }
 }
 
-export default Map;
+export default GoogleMap;

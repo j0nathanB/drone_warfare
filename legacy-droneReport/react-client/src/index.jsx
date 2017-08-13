@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Map from './components/map.jsx'
+import GoogleMap from './components/map.jsx';
+//import Marker from './components/marker.jsx'
 
 class App extends React.Component {
   constructor(props) {
@@ -11,10 +12,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        Map should be below:
-        <Map />
-      </div>
+        <GoogleMap />
     )
   }
 }

@@ -131,3 +131,35 @@ const dummyData =
       ]
     }
   ]
+
+  /*
+  var convertGeoJson = array => {
+    let featureCollection = { 
+      "type": "FeatureCollection",
+      "features": []
+    }
+    
+    let results = array.map(
+      strike => {
+        featureCollection.features.push(
+          { "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [Number(strike.lon), Number(strike.lat)]
+            },
+            "properties": {
+              "deaths": Number(strike.deaths_max)
+            }
+          }
+        )
+      }
+    )
+
+    return featureCollection;
+  }
+
+  console.log(JSON.stringify(convertGeoJson(dummyData)))
+  
+   let obj = {"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[45.322755,15.47467]},"properties":{"deaths":6}},{"type":"Feature","geometry":{"type":"Point","coordinates":[69.57624435,32.30512565]},"properties":{"deaths":8}},{"type":"Feature","geometry":{"type":"Point","coordinates":[70.26082993,32.98677989]},"properties":{"deaths":2}},{"type":"Feature","geometry":{"type":"Point","coordinates":[70.34082413,32.99988191]},"properties":{"deaths":8}},{"type":"Feature","geometry":{"type":"Point","coordinates":[70.04196167,33.00866349]},"properties":{"deaths":5}}]}
+  
+  */
