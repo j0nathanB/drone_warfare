@@ -1,10 +1,11 @@
 import React from 'react';
+import Card from './card.jsx';
+
+let apiData = require ('../../../dataInit.js');
 
 class GoogleMap extends React.Component {
   constructor(props) {
     super(props);
-    //this.getCircle = this.getCircle.bind(this);
-    //this.eqfeed_callback = this.eqfeed_callback.bind(this);
   }
 
   componentDidMount() {
@@ -14,33 +15,49 @@ class GoogleMap extends React.Component {
       mapTypeId: 'terrain'
     });
 
-    gMap.data.setStyle( feature => {
-      var magnitude = feature.f.deaths;
-      return {
-        icon: getCircle(magnitude)
-      };
-    });  
+    for (let i = 0; i < apiData.features.length; i++) {
+      let marker = new google.maps.Marker({
+        position: {lat: apiData.features[i].geometry.coordinates[1], lng:apiData.features[i].geometry.coordinates[0]},
+        map: gMap,
+        title: 'location'
+      });
+      
+      let infoWindow = new google.maps.InfoWindow({
+        content: 
+          `<h1> ${apiData.features[i].properties.town} </h1><p />` +         
+          `<h3> Deaths: ${apiData.features[i].properties.deaths} </h3><br />` +
+          `<h3> Injuries: ${apiData.features[i].properties.injuries} </h3><br />` +
+          `<h3> Civilians: ${apiData.features[i].properties.civilians} </h3><br />` +
+          `<h3> Children: ${apiData.features[i].properties.children} </h3><br />`
+      });
+
+      marker.addListener('click', function() {
+        infoWindow.open(gMap, marker);
+      });
+    }
+        // gMap.data.setStyle( feature => {
+    //   var magnitude = feature.f.deaths;
+    //   return {
+    //     icon: getCircle(magnitude)
+    //   };
+    // });  
   
-    let getCircle = (magnitude) => {
-      return {
-        path: google.maps.SymbolPath.CIRCLE,
-        fillColor: 'red',
-        fillOpacity: .2,
-        scale: magnitude * 2,
-        strokeColor: 'white',
-        strokeWeight: .5
-      };
-    }
-
-    let eqfeed_callback = (results) => {
-      gMap.data.addGeoJson(results);
-    }
-
-    let obj = {"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[45.322755,15.47467]},"properties":{"deaths":6}},{"type":"Feature","geometry":{"type":"Point","coordinates":[69.57624435,32.30512565]},"properties":{"deaths":8}},{"type":"Feature","geometry":{"type":"Point","coordinates":[70.26082993,32.98677989]},"properties":{"deaths":2}},{"type":"Feature","geometry":{"type":"Point","coordinates":[70.34082413,32.99988191]},"properties":{"deaths":8}},{"type":"Feature","geometry":{"type":"Point","coordinates":[70.04196167,33.00866349]},"properties":{"deaths":5}}]}
-
-    eqfeed_callback(obj);
-
+  //   let getCircle = (magnitude) => {
+  //     return {
+  //       path: google.maps.SymbolPath.CIRCLE,
+  //       fillColor: 'red',
+  //       fillOpacity: .2,
+  //       scale: magnitude,
+  //       strokeColor: 'white',
+  //       strokeWeight: .5
+  //     };
+  //   }
+  //   console.log(JSON.stringify(apiData))
+  //   gMap.data.addGeoJson(apiData);
   }
+
+
+
 
   render() {
     const mapStyle = {
