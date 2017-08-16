@@ -16826,3 +16826,19 @@ module.exports =
     }
   ]
 };
+/*
+      Sayun, Hadhramaut Province, 15.9495° N, 48.8096° E
+      (Marquesha),Abyan Province, 13.6343° N, 46.0563° E
+      Rawda City,Shabwah Province, 14.4670° N, 47.2753° E
+      Huta,Lahj Province, 14.4277° N, 46.1515° E
+      Shahidano Dhand,Lower Kurram, 33.43, 70.403889
+      * (Radhum),Shabwah Province, 14.4670° N, 47.2753° E
+      * Al Hudhn and Naqeel al Hayala villages, Abyan Province, 13.6343° N, 46.0563° E
+      * Amoudiya,Abyan Province, 13.6343° N, 46.0563° E
+      * Gardan,Shabwah Province, 14.4670° N, 47.2753° E
+      * Musaina,Shabwah Province, 14.4670° N, 47.2753° E
+      Jabul,Marib Province, 15.5159° N, 45.4498° E
+      * Al Uqlah,Shabwah Province, 14.4670° N, 47.2753° E
+      * Sawmaa,Al Bayda Province, 14.3589° N, 45.4498° E
+      * Sra Ghundai,Kurram Agency, 33.6960° N, 70.3361° E
+  */
