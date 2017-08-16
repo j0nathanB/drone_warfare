@@ -8,9 +8,8 @@ let makeTownData = () => {
     let apiTown = apiData.strike[i].town;
 
     // handle condition if town name isn't given
-    if (apiTown === "") {
-      apiTown = apiData.strike[i].location
-    }
+    apiTown === "" &&  apiData.strike[i].location !== "" ? 
+      apiTown = apiData.strike[i].location : apiTown = apiData.strike[i].country
 
     // if town name is new, initialize town with data, otherwise update data
     if (!townData.hasOwnProperty(apiTown)){
@@ -23,7 +22,7 @@ let makeTownData = () => {
       
 
       if (townData[apiTown].coords[0] === 0) {
-        array.push([apiTown, apiData.strike[i].location]);
+        console.log(apiTown);
       }
         
       let normalizeHumData = (apiProperty) => {

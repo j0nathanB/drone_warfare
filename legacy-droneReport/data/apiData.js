@@ -15907,8 +15907,8 @@ module.exports =
       "bij_summary_short": "",
       "bij_link": "https://www.thebureauinvestigates.com/2016/01/18/yemen-reported-us-covert-actions-2016/#YEM212",
       "target": "",
-      "lat": "",
-      "lon": "",
+      "lat": "15.9495",
+      "lon": "48.8096",
       "articles": [],
       "names": [
         ""
@@ -15933,8 +15933,8 @@ module.exports =
       "bij_summary_short": "",
       "bij_link": "https://www.thebureauinvestigates.com/2016/01/18/yemen-reported-us-covert-actions-2016/#YEM214",
       "target": "",
-      "lat": "",
-      "lon": "",
+      "lat": "13.560833",
+      "lon": "46.156389",
       "articles": [],
       "names": [
         ""
@@ -15959,8 +15959,8 @@ module.exports =
       "bij_summary_short": "",
       "bij_link": "https://www.thebureauinvestigates.com/2016/01/18/yemen-reported-us-covert-actions-2016/#YEM213",
       "target": "",
-      "lat": "",
-      "lon": "",
+      "lat": "14.4670",
+      "lon": "47.2753",
       "articles": [],
       "names": [
         ""
@@ -15985,8 +15985,8 @@ module.exports =
       "bij_summary_short": "",
       "bij_link": "https://www.thebureauinvestigates.com/2016/01/18/yemen-reported-us-covert-actions-2016/#YEM215",
       "target": "",
-      "lat": "",
-      "lon": "",
+      "lat": "13.0578",
+      "lon": "44.8833",
       "articles": [],
       "names": [
         ""
@@ -16011,8 +16011,8 @@ module.exports =
       "bij_summary_short": "",
       "bij_link": "https://www.thebureauinvestigates.com/2016/01/11/obama-2016-pakistan-drone-strikes/#Ob372",
       "target": "",
-      "lat": "",
-      "lon": "",
+      "lat": "35.158889",
+      "lon": "71.752778",
       "articles": [],
       "names": [
         ""
@@ -16037,8 +16037,8 @@ module.exports =
       "bij_summary_short": "",
       "bij_link": "https://www.thebureauinvestigates.com/2016/01/18/yemen-reported-us-covert-actions-2016/#YEM216",
       "target": "",
-      "lat": "",
-      "lon": "",
+      "lat": "14.083333",
+      "lon": "47.733333",
       "articles": [],
       "names": [
         ""
@@ -16089,8 +16089,8 @@ module.exports =
       "bij_summary_short": "",
       "bij_link": "https://www.thebureauinvestigates.com/2016/01/18/yemen-reported-us-covert-actions-2016/#YEM218",
       "target": "",
-      "lat": "",
-      "lon": "",
+      "lat": "13.291111",
+      "lon": "45.295833",
       "articles": [],
       "names": [
         ""
@@ -16167,8 +16167,8 @@ module.exports =
       "bij_summary_short": "",
       "bij_link": "https://www.thebureauinvestigates.com/2016/01/18/yemen-reported-us-covert-actions-2016/#YEM227",
       "target": "",
-      "lat": "",
-      "lon": "",
+      "lat": "13.1333328",
+      "lon": "45.3666652",
       "articles": [],
       "names": [
         ""
@@ -16245,8 +16245,8 @@ module.exports =
       "bij_summary_short": "",
       "bij_link": "https://www.thebureauinvestigates.com/2016/01/18/yemen-reported-us-covert-actions-2016/#YEM230",
       "target": "",
-      "lat": "",
-      "lon": "",
+      "lat": "15.5527",
+      "lon": "48.5164",
       "articles": [],
       "names": [
         ""
@@ -16297,8 +16297,8 @@ module.exports =
       "bij_summary_short": "",
       "bij_link": "https://www.thebureauinvestigates.com/2012/02/22/get-the-data-somalias-hidden-war/#SOM039",
       "target": "",
-      "lat": "",
-      "lon": "",
+      "lat": "-.236449190219209",
+      "lon": "42.6501221419181",
       "articles": [],
       "names": [
         ""
@@ -16310,7 +16310,7 @@ module.exports =
       "country": "Yemen",
       "date": "2016-06-12T00:00:00.000Z",
       "narrative": "Three U.S. drone strikes killed six people across Bayda, Marib, and Shabwah.",
-      "town": "",
+      "town": "Multiple cities",
       "location": "Al Bayda, Marib, and Shabwah Province",
       "deaths": "6",
       "deaths_min": "6",
@@ -16323,8 +16323,8 @@ module.exports =
       "bij_summary_short": "",
       "bij_link": "https://www.thebureauinvestigates.com/2016/01/18/yemen-reported-us-covert-actions-2016/#YEM233",
       "target": "",
-      "lat": "",
-      "lon": "",
+      "lat": "14.877012",
+      "lon": "45.805508",
       "articles": [],
       "names": [
         ""
@@ -16375,8 +16375,8 @@ module.exports =
       "bij_summary_short": "",
       "bij_link": "https://www.thebureauinvestigates.com/2016/01/18/yemen-reported-us-covert-actions-2016/#YEM235",
       "target": "",
-      "lat": "",
-      "lon": "",
+      "lat": "14.9543",
+      "lon": "47.0583",
       "articles": [],
       "names": [
         ""
@@ -16401,8 +16401,8 @@ module.exports =
       "bij_summary_short": "",
       "bij_link": "https://www.thebureauinvestigates.com/2016/01/18/yemen-reported-us-covert-actions-2016/#YEM235",
       "target": "",
-      "lat": "",
-      "lon": "",
+      "lat": "14.85",
+      "lon": "49.966667",
       "articles": [],
       "names": [
         ""
@@ -16427,8 +16427,8 @@ module.exports =
       "bij_summary_short": "",
       "bij_link": "https://www.thebureauinvestigates.com/2016/01/18/yemen-reported-us-covert-actions-2016/#YEM237",
       "target": "",
-      "lat": "",
-      "lon": "",
+      "lat": "15.0474",
+      "lon": "45.1887",
       "articles": [],
       "names": [
         ""
@@ -16453,8 +16453,8 @@ module.exports =
       "bij_summary_short": "",
       "bij_link": "https://www.thebureauinvestigates.com/2016/01/18/yemen-reported-us-covert-actions-2016/#YEM238",
       "target": "",
-      "lat": "",
-      "lon": "",
+      "lat": "15.324934",
+      "lon": "46.816585",
       "articles": [],
       "names": [
         ""
@@ -16505,8 +16505,8 @@ module.exports =
       "bij_summary_short": "",
       "bij_link": "https://www.thebureauinvestigates.com/2016/01/18/yemen-reported-us-covert-actions-2016/#YEM240",
       "target": "",
-      "lat": "",
-      "lon": "",
+      "lat": "14.7546",
+      "lon": "46.5163",
       "articles": [],
       "names": [
         ""
@@ -16609,8 +16609,8 @@ module.exports =
       "bij_summary_short": "",
       "bij_link": "https://www.thebureauinvestigates.com/2016/01/18/yemen-reported-us-covert-actions-2016/#YEM254",
       "target": "",
-      "lat": "",
-      "lon": "",
+      "lat": "14.877012",
+      "lon": "45.805508",
       "articles": [],
       "names": [
         ""
@@ -16635,8 +16635,8 @@ module.exports =
       "bij_summary_short": "",
       "bij_link": "https://www.thebureauinvestigates.com/2016/01/18/yemen-reported-us-covert-actions-2016/#YEM255",
       "target": "",
-      "lat": "",
-      "lon": "",
+      "lat": "13.883333",
+      "lon": "44.833333",
       "articles": [],
       "names": [
         ""
@@ -16739,8 +16739,8 @@ module.exports =
       "bij_summary_short": "",
       "bij_link": "https://www.thebureauinvestigates.com/drone-war/data/pakistan-covert-us-reported-actions-2017",
       "target": "",
-      "lat": "",
-      "lon": "",
+      "lat": "32.333333",
+      "lon": "67.883333",
       "articles": [],
       "names": [
         ""
@@ -16827,18 +16827,7 @@ module.exports =
   ]
 };
 /*
-      Sayun, Hadhramaut Province, 15.9495° N, 48.8096° E
-      (Marquesha),Abyan Province, 13.6343° N, 46.0563° E
-      Rawda City,Shabwah Province, 14.4670° N, 47.2753° E
-      Huta,Lahj Province, 14.4277° N, 46.1515° E
-      Shahidano Dhand,Lower Kurram, 33.43, 70.403889
-      * (Radhum),Shabwah Province, 14.4670° N, 47.2753° E
+           
       * Al Hudhn and Naqeel al Hayala villages, Abyan Province, 13.6343° N, 46.0563° E
-      * Amoudiya,Abyan Province, 13.6343° N, 46.0563° E
-      * Gardan,Shabwah Province, 14.4670° N, 47.2753° E
-      * Musaina,Shabwah Province, 14.4670° N, 47.2753° E
-      Jabul,Marib Province, 15.5159° N, 45.4498° E
-      * Al Uqlah,Shabwah Province, 14.4670° N, 47.2753° E
-      * Sawmaa,Al Bayda Province, 14.3589° N, 45.4498° E
-      * Sra Ghundai,Kurram Agency, 33.6960° N, 70.3361° E
-  */
+       */
+  
