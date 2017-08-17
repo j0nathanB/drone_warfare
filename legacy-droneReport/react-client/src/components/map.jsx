@@ -1,5 +1,4 @@
 import React from 'react';
-import Card from './card.jsx';
 import mapStyle from '../../dist/mapStyle.js'
 
 let apiData = require ('../../../dataInit.js');
@@ -8,10 +7,10 @@ class GoogleMap extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      infWindow: {}
+      infWindow: {},
+      center: {lat: 23.4241, lng: 53.8478}
     }
     this.handleClick = this.handleClick.bind(this);
-    //add infoWindow state to close window when other marker clicked
   }
 
   handleClick(infWin, map, marker) {
@@ -27,9 +26,11 @@ class GoogleMap extends React.Component {
   }
 
   componentDidMount() {
+    let propsCenter = this.props.center;
+    
     let gMap  = new google.maps.Map(this.refs.map, {
       zoom: 4,
-      center: {lat: 23.4241, lng: 53.8478},
+      center: this.state.center,
       mapTypeId: 'terrain',
       styles: mapStyle
     });
@@ -53,9 +54,8 @@ class GoogleMap extends React.Component {
       });
 
       let clickHandler = this.handleClick;
-      // 
+
       marker.addListener('click', function() {
-        // marker doesn't have access to global state
         clickHandler(infoWindow, gMap, marker);
       });
       

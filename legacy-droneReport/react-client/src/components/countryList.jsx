@@ -1,17 +1,18 @@
 //AIzaSyAWh923QwLcLQGjH1w4OYOG0_CX8jGHbmE
 import React from 'react';
+import Country from './country.jsx';
+
 
 class CountryList extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
-    }
   }
 
   render() {
     return (
       <div>
-        <pre>Country</pre>
+        {this.props.countries.map( 
+          (location, i) => <Country onClick={this.props.clickHandler} name={location} key={i}/> )}
       </div>
     )
   }
