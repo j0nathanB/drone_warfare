@@ -8,8 +8,13 @@ let makeTownData = () => {
     let apiTown = apiData.strike[i].town;
 
     // handle condition if town name isn't given
-    apiTown === "" &&  apiData.strike[i].location !== "" ? 
-      apiTown = apiData.strike[i].location : apiTown = apiData.strike[i].country
+    if (apiTown === "") {
+      if (apiData.strike[i].location !== ""){
+        apiTown = apiData.strike[i].location
+      } else {
+        apiTown = apiData.strike[i].country
+      }
+    }
 
     // if town name is new, initialize town with data, otherwise update data
     if (!townData.hasOwnProperty(apiTown)){
@@ -65,9 +70,22 @@ let makeTownData = () => {
 //convert to GeoJSON
 let convertToGeoJSON = (data) => {
   let geoJSON = {"type":"FeatureCollection","features":[]};
-
   for (let town in data) {
-    geoJSON.features.push({"type":"Feature","geometry":{"type":"Point","coordinates":data[town].coords},"properties":{"town": town, "strikes":data[town].count, "deaths":data[town].deathsMin, "injuries":data[town].injuries, "civilians": data[town].civilians, "children": data[town].children}});
+    geoJSON.features.push(
+      {"type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":data[town].coords},
+        "properties":{
+          "town": town, 
+          "strikes":data[town].count, 
+          "deaths":data[town].deathsMin, 
+          "injuries":data[town].injuries, 
+          "civilians": data[town].civilians, 
+          "children": data[town].children
+        }
+      }
+    );
   }
 
   return geoJSON;

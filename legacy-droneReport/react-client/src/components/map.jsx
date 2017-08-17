@@ -1,12 +1,29 @@
 import React from 'react';
 import Card from './card.jsx';
+import mapStyle from '../../dist/mapStyle.js'
 
 let apiData = require ('../../../dataInit.js');
 
 class GoogleMap extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      infWindow: {}
+    }
+    this.handleClick = this.handleClick.bind(this);
     //add infoWindow state to close window when other marker clicked
+  }
+
+  handleClick(infWin, map, marker) {
+    if (this.state.infWindow.hasOwnProperty("content")) {
+      this.state.infWindow.close();
+    }
+    
+    infWin.open(map, marker);
+    
+    this.setState({
+      infWindow: infWin
+    });
   }
 
   componentDidMount() {
@@ -14,93 +31,14 @@ class GoogleMap extends React.Component {
       zoom: 4,
       center: {lat: 23.4241, lng: 53.8478},
       mapTypeId: 'terrain',
-      styles: [
-            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
-            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
-            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
-            {
-              featureType: 'administrative.locality',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#d59563'}]
-            },
-            {
-              featureType: 'poi',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#d59563'}]
-            },
-            {
-              featureType: 'poi.park',
-              elementType: 'geometry',
-              stylers: [{color: '#263c3f'}]
-            },
-            {
-              featureType: 'poi.park',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#6b9a76'}]
-            },
-            {
-              featureType: 'road',
-              elementType: 'geometry',
-              stylers: [{color: '#38414e'}]
-            },
-            {
-              featureType: 'road',
-              elementType: 'geometry.stroke',
-              stylers: [{color: '#212a37'}]
-            },
-            {
-              featureType: 'road',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#9ca5b3'}]
-            },
-            {
-              featureType: 'road.highway',
-              elementType: 'geometry',
-              stylers: [{color: '#746855'}]
-            },
-            {
-              featureType: 'road.highway',
-              elementType: 'geometry.stroke',
-              stylers: [{color: '#1f2835'}]
-            },
-            {
-              featureType: 'road.highway',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#f3d19c'}]
-            },
-            {
-              featureType: 'transit',
-              elementType: 'geometry',
-              stylers: [{color: '#2f3948'}]
-            },
-            {
-              featureType: 'transit.station',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#d59563'}]
-            },
-            {
-              featureType: 'water',
-              elementType: 'geometry',
-              stylers: [{color: '#17263c'}]
-            },
-            {
-              featureType: 'water',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#515c6d'}]
-            },
-            {
-              featureType: 'water',
-              elementType: 'labels.text.stroke',
-              stylers: [{color: '#17263c'}]
-            }
-          ]
+      styles: mapStyle
     });
 
     for (let i = 0; i < apiData.features.length; i++) {
       let marker = new google.maps.Marker({
         position: {lat: apiData.features[i].geometry.coordinates[1], lng:apiData.features[i].geometry.coordinates[0]},
         map: gMap,
-        title: 'location'
+        title: apiData.features[i].properties.town
       });
       
       let infoWindow = new google.maps.InfoWindow({
@@ -114,8 +52,11 @@ class GoogleMap extends React.Component {
           `<h3> Children: ${apiData.features[i].properties.children} </h3>`
       });
 
+      let clickHandler = this.handleClick;
+      // 
       marker.addListener('click', function() {
-        infoWindow.open(gMap, marker);
+        // marker doesn't have access to global state
+        clickHandler(infoWindow, gMap, marker);
       });
       
       gMap.addListener('click', function() {

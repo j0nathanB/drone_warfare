@@ -16826,8 +16826,3 @@ module.exports =
     }
   ]
 };
-/*
-           
-      * Al Hudhn and Naqeel al Hayala villages, Abyan Province, 13.6343° N, 46.0563° E
-       */
-  
