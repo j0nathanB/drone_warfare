@@ -1,5 +1,7 @@
 import React from 'react';
-import mapStyle from '../../dist/mapStyle.js'
+import mapStyle from '../../dist/mapStyle.js';
+import CountryList from './countryList.jsx'
+ 
 
 let apiData = require ('../../../dataInit.js');
 
@@ -8,10 +10,18 @@ class GoogleMap extends React.Component {
     super(props);
     this.state = {
       infWindow: {},
-      center: {lat: 23.4241, lng: 53.8478}
+      center: {lat: 23.4241, lng: 53.8478},
+      countries: [
+        {name: "Pakistan", coords: {lat: 33.3338, lng: 69.9372} }, 
+        {name: "Somalia", coords: {lat: 2.107681, lng: 43.694073} }, 
+        {name: "Yemen", coords: {lat: 14.7546, lng: 46.5163} }
+      ],
+      activeCountry: {}
     }
     this.handleClick = this.handleClick.bind(this);
+    this.optionClick = this.optionClick.bind(this)
   }
+
 
   handleClick(infWin, map, marker) {
     if (this.state.infWindow.hasOwnProperty("content")) {
@@ -25,10 +35,24 @@ class GoogleMap extends React.Component {
     });
   }
 
+  optionClick(selection) {
+    this.setState({
+      activeCountry: this.state.countries.filter( country => country.name === selection)[0]
+    }, () => { 
+      this.map.panTo(this.state.activeCountry.coords); 
+      if (this.state.activeCountry.name === "Somalia") {
+        this.map.setZoom(8);
+      } else if (this.state.activeCountry.name === "Yemen") {
+        this.map.setZoom(8)
+      }
+      else {
+        this.map.setZoom(9);
+      }
+    });
+  }
+
   componentDidMount() {
-    let propsCenter = this.props.center;
-    
-    let gMap  = new google.maps.Map(this.refs.map, {
+    this.map  = new google.maps.Map(this.refs.map, {
       zoom: 4,
       center: this.state.center,
       mapTypeId: 'terrain',
@@ -38,7 +62,7 @@ class GoogleMap extends React.Component {
     for (let i = 0; i < apiData.features.length; i++) {
       let marker = new google.maps.Marker({
         position: {lat: apiData.features[i].geometry.coordinates[1], lng:apiData.features[i].geometry.coordinates[0]},
-        map: gMap,
+        map: this.map,
         title: apiData.features[i].properties.town
       });
       
@@ -56,35 +80,14 @@ class GoogleMap extends React.Component {
       let clickHandler = this.handleClick;
 
       marker.addListener('click', function() {
-        clickHandler(infoWindow, gMap, marker);
+        clickHandler(infoWindow, this.map, marker);
       });
       
-      gMap.addListener('click', function() {
+      this.map.addListener('click', function() {
         infoWindow.close();
       });
     }
-        // gMap.data.setStyle( feature => {
-    //   var magnitude = feature.f.deaths;
-    //   return {
-    //     icon: getCircle(magnitude)
-    //   };
-    // });  
-  
-  //   let getCircle = (magnitude) => {
-  //     return {
-  //       path: google.maps.SymbolPath.CIRCLE,
-  //       fillColor: 'red',
-  //       fillOpacity: .2,
-  //       scale: magnitude,
-  //       strokeColor: 'white',
-  //       strokeWeight: .5
-  //     };
-  //   }
-  //   console.log(JSON.stringify(apiData))
-  //   gMap.data.addGeoJson(apiData);
   }
-
-
 
 
   render() {
@@ -92,9 +95,11 @@ class GoogleMap extends React.Component {
       width: '100vw',
       height: '100vh'
     };
-
-    return ( 
-      <div ref="map" style={mapStyle}>Loading map...
+    
+    return (
+      <div>
+        <CountryList clickHandler={this.optionClick} countries={this.state.countries}/>
+        <div ref="map" style={mapStyle}>Loading map...</div>
       </div>
     )
   }

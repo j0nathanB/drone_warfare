@@ -12,7 +12,7 @@ class CountryList extends React.Component {
     return (
       <div>
         {this.props.countries.map( 
-          (location, i) => <Country onClick={this.props.clickHandler} name={location} key={i}/> )}
+          (location, i) => <Country onClick={this.props.clickHandler} name={location.name} key={i}/> )}
       </div>
     )
   }
