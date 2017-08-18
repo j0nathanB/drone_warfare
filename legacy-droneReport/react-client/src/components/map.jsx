@@ -1,7 +1,6 @@
 import React from 'react';
 import mapStyle from '../../dist/mapStyle.js';
-import CountryList from './countryList.jsx'
- 
+import NavBar from './navbar.jsx' 
 
 let apiData = require ('../../../dataInit.js');
 
@@ -98,7 +97,7 @@ class GoogleMap extends React.Component {
     
     return (
       <div>
-        <CountryList clickHandler={this.optionClick} countries={this.state.countries}/>
+        <NavBar clickHandler={this.optionClick} countries={this.state.countries}/>
         <div ref="map" style={mapStyle}>Loading map...</div>
       </div>
     )

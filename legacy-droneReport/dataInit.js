@@ -1,6 +1,5 @@
 let apiData = require ('./data/apiData.js');
 let townData = {};
-let array = [];
 
 // get unique towns plus coordinates and extras
 let makeTownData = () => {
