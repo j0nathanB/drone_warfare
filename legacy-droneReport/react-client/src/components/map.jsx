@@ -2,7 +2,7 @@ import React from 'react';
 import mapStyle from '../../dist/mapStyle.js';
 import NavBar from './navbar.jsx' 
 
-let apiData = require ('../../../dataInit.js');
+let apiData = require ('../../../data/normalized.js');
 
 class GoogleMap extends React.Component {
   constructor(props) {
@@ -67,13 +67,11 @@ class GoogleMap extends React.Component {
       
       let infoWindow = new google.maps.InfoWindow({
         content: 
-          `<h1> ${apiData.features[i].properties.town} </h1>` +
-          `<h2> ${marker.position} </h2>` +
-          `<h3> Times targeted: ${apiData.features[i].properties.strikes} </h3>` +  
-          `<h3> Deaths: ${apiData.features[i].properties.deaths} </h3>` +
-          `<h3> Injuries: ${apiData.features[i].properties.injuries} </h3>` +
-          `<h3> Civilians: ${apiData.features[i].properties.civilians} </h3>` +
-          `<h3> Children: ${apiData.features[i].properties.children} </h3>`
+          `<pre><h2>${apiData.features[i].properties.town}</h2></pre>` +
+          `<pre> Coordinates: ${apiData.features[i].geometry.coordinates[1].toFixed(4)}, ${apiData.features[i].geometry.coordinates[0].toFixed(4)}</pre>` + `<hr>` + 
+          `<pre> ${apiData.features[i].properties.strikes} drone strike(s) to date</pre>` +  
+          `<pre> Deaths: ${apiData.features[i].properties.deaths}, Injuries: ${apiData.features[i].properties.injuries}</pre>` +
+          `<pre> Civilians: ${apiData.features[i].properties.civilians}, Children: ${apiData.features[i].properties.children} </pre>`
       });
 
       let clickHandler = this.handleClick;
@@ -92,7 +90,7 @@ class GoogleMap extends React.Component {
   render() {
     const mapStyle = {
       width: '100vw',
-      height: '100vh'
+      height: '94vh'
     };
     
     return (

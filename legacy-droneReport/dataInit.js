@@ -1,5 +1,24 @@
 let apiData = require ('./data/apiData.js');
+const fs = require ('fs');
 let townData = {};
+
+
+let normalize = (data) => {
+  let normalized = Number(data);
+  let dataString = "" + data;
+
+  if (!isNaN(normalized)) {
+    return normalized;
+  } else if (isNaN(normalized) && dataString.includes("-")) {
+    return  Number(data.split("-", 1));
+  } else {
+    return "Unknown";
+  }
+}
+
+let normalizeUpdate = (data) => {
+  return data === "Unknown" ? 0 : data;
+}
 
 // get unique towns plus coordinates and extras
 let makeTownData = () => {
@@ -11,7 +30,7 @@ let makeTownData = () => {
       if (apiData.strike[i].location !== ""){
         apiTown = apiData.strike[i].location
       } else {
-        apiTown = apiData.strike[i].country
+        apiTown = "Undisclosed"
       }
     }
 
@@ -20,48 +39,21 @@ let makeTownData = () => {
       townData[apiTown] = { count: 1 };
       townData[apiTown].coords = [Number(apiData.strike[i].lon), Number(apiData.strike[i].lat)];
       townData[apiTown].deathsMin = Number(apiData.strike[i].deaths_min);
-      townData[apiTown].injuries = Number(apiData.strike[i].injuries)
-      townData[apiTown].civilians = Number(apiData.strike[i].civilians)
-      townData[apiTown].children = Number(apiData.strike[i].children)
-      
-
-      if (townData[apiTown].coords[0] === 0) {
-        console.log(apiTown);
-      }
-        
-      let normalizeHumData = (apiProperty) => {
-        if (isNaN(townData[apiTown][apiProperty])) {
-          if (townData[apiTown][apiProperty] === "Possible" || townData[apiTown][apiProperty] === "Possibly") {
-          townData[apiTown][apiProperty] = "Unknown";
-          } else if (!isNaN(Number(apiData.strike[i][apiProperty][0]))) {
-            let min = apiData.strike[i][apiProperty].split("-", 1);
-            townData[apiTown][apiProperty] = min;
-          } else {
-            townData[apiTown][apiProperty] = apiData.strike[i][apiProperty]
-          }
-        }
-      }
-
-      normalizeHumData("civilians");
-      normalizeHumData("children");
-      normalizeHumData("injuries");    
-      
+      townData[apiTown].injuries = normalize(apiData.strike[i].injuries);
+      townData[apiTown].civilians = normalize(apiData.strike[i].civilians);
+      townData[apiTown].children = normalize(apiData.strike[i].children);
     } else {
       townData[apiTown].count++;
+      townData[apiTown].deathsMin += Number(apiData.strike[i].deaths_min);
 
-      if(townData[apiTown].deathsMin < Number(apiData.strike[i].deaths_min)) {
-        townData[apiTown].deathsMin = Number(apiData.strike[i].deaths_min);
-      }
-      if(townData[apiTown].injuries < Number(apiData.strike[i].injuries)) {
-        townData[apiTown].injuries = Number(apiData.strike[i].injuries);
-      }
-      if(townData[apiTown].civilians < Number(apiData.strike[i].civilians)) {
-        townData[apiTown].civilians = Number(apiData.strike[i].civilians);
-      }
-      if(townData[apiTown].children < Number(apiData.strike[i].children)) {
-        townData[apiTown].children = Number(apiData.strike[i].children);
-      }
-
+      //normalize data for aggregation
+      townData[apiTown].injuries = normalizeUpdate(townData[apiTown].injuries);
+      townData[apiTown].civilians = normalizeUpdate(townData[apiTown].civilians);
+      townData[apiTown].children = normalizeUpdate(townData[apiTown].children);
+      
+      townData[apiTown].injuries += normalizeUpdate(normalize(apiData.strike[i].injuries));
+      townData[apiTown].civilians += normalizeUpdate(normalize(apiData.strike[i].civilians));
+      townData[apiTown].children += normalizeUpdate(normalize(apiData.strike[i].children));
     }
   }
 }
@@ -74,15 +66,19 @@ let convertToGeoJSON = (data) => {
       {"type":"Feature",
       "geometry":{
         "type":"Point",
-        "coordinates":data[town].coords},
-        "properties":{
-          "town": town, 
-          "strikes":data[town].count, 
-          "deaths":data[town].deathsMin, 
-          "injuries":data[town].injuries, 
-          "civilians": data[town].civilians, 
-          "children": data[town].children
-        }
+        "coordinates":data[town].coords
+      },
+      "properties":{
+        "town": town, 
+        "strikes":data[town].count, 
+        "deaths":data[town].deathsMin, 
+        "injuries":data[town].injuries, 
+        "injuriesMin":data[town].injuriesMin, 
+        "civilians": data[town].civilians, 
+        "civiliansMin": data[town].civiliansMin, 
+        "childrenMin": data[town].childrenMin,
+        "children": data[town].children
+      }
       }
     );
   }
@@ -92,7 +88,13 @@ let convertToGeoJSON = (data) => {
 
 let formattedData = () => {
   makeTownData();
-  return convertToGeoJSON(townData);
+  return JSON.stringify(convertToGeoJSON(townData));
 }
+
+fs.writeFile('test.js', formattedData(), (err) => {
+  if(err) { throw err; }
+  console.log('saved!');
+}
+)
 
 module.exports = formattedData();
