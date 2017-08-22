@@ -1,15 +1,16 @@
 import React from 'react';
 import mapStyle from '../../dist/mapStyle.js';
 import NavBar from './navbar.jsx' 
-
+const API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
 let apiData = require ('../../../data/normalized.js');
+
 
 class GoogleMap extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       infWindow: {},
-      center: {lat: 23.4241, lng: 53.8478},
+      center: {lat: 20.4735, lng: 60.9754},
       countries: [
         {name: "Pakistan", coords: {lat: 33.3338, lng: 69.9372} }, 
         {name: "Somalia", coords: {lat: 2.107681, lng: 43.694073} }, 
@@ -18,7 +19,9 @@ class GoogleMap extends React.Component {
       activeCountry: {}
     }
     this.handleClick = this.handleClick.bind(this);
-    this.optionClick = this.optionClick.bind(this)
+    this.optionClick = this.optionClick.bind(this);
+    this.loadMap = this.loadMap.bind(this);
+    this.loadScript = this.loadScript.bind(this);
   }
 
 
@@ -50,7 +53,7 @@ class GoogleMap extends React.Component {
     });
   }
 
-  componentDidMount() {
+  loadMap() {
     this.map  = new google.maps.Map(this.refs.map, {
       zoom: 4,
       center: this.state.center,
@@ -64,8 +67,6 @@ class GoogleMap extends React.Component {
         map: this.map,
         title: apiData.features[i].properties.town
       });
-      
-      //condRender
 
       let content = `<pre><h2>${apiData.features[i].properties.town}</h2></pre>
             <pre> Coordinates: ${apiData.features[i].geometry.coordinates[1].toFixed(4)}, ${apiData.features[i].geometry.coordinates[0].toFixed(4)}</pre> 
@@ -78,7 +79,7 @@ class GoogleMap extends React.Component {
         if (apiData.features[i].properties.photos.length > 0){
           return (
           `<div style='float:left'>
-            <img border="0" align="left" width=200 height=200 src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=300&photoreference=${apiData.features[i].properties.photos[0].photo_reference}&key=YOUR_API_KEY"></div>
+            <img border="0" align="left" width=200 height=200 src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=300&photoreference=${apiData.features[i].properties.photos[0].photo_reference}&key=${API_KEY}"></div>
           <div style="float:right">
             ${cont}
           </div>` )
@@ -86,7 +87,6 @@ class GoogleMap extends React.Component {
           return cont;
         }
       }
-      
 
       let infoWindow = new google.maps.InfoWindow({
         content: 
@@ -98,13 +98,30 @@ class GoogleMap extends React.Component {
       marker.addListener('click', function() {
         clickHandler(infoWindow, this.map, marker);
       });
-      
+
       this.map.addListener('click', function() {
         infoWindow.close();
       });
     }
   }
 
+  loadScript(url, callback) {
+    let head = document.getElementsByTagName('head')[0];
+    let script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = url;
+    script.async = true;
+    script.defer = true;
+
+    script.onreadystatechange = callback;
+    script.onload = callback;
+
+    head.appendChild(script);
+  }
+
+  componentDidMount() {
+    this.loadScript(`https://maps.googleapis.com/maps/api/js?key=${API_KEY}`, this.loadMap)
+  }
 
   render() {
     const mapStyle = {

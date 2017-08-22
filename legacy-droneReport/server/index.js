@@ -1,7 +1,8 @@
 var express = require('express')
 var app = express();
 var bodyParser = require('body-parser');
-var axios = require('axios')
+var axios = require('axios');
+const PORT = process.env.PORT || 3000;
 
 app.use(express.static(__dirname + '/../react-client/dist'));
 
@@ -19,8 +20,9 @@ app.get('/', function (req, res) {
   res.send('Hello World!')
 });
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
+app.listen(PORT, function () {
+  console.log(`Example app listening on port ${PORT}!`)
+  console.log(process.env.GOOGLE_MAPS_API_KEY)
 });
 
 //scrape the DroneStream API
@@ -33,7 +35,6 @@ app.get('/scrape', (req, res) => {
       let entry = Object.keys(strike)
 
       entry.forEach( key => apiEntryKeys[key] = key );
-    //apiEntryKeys.forEach(  )
     })
     for (let key in apiEntryKeys) {
       console.log(key)

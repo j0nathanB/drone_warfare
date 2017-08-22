@@ -1,6 +1,5 @@
 import React from 'react';
 import Country from './country.jsx';
-import Modal from './modal.jsx';
 
 class NavBar extends React.Component {
   constructor(props) {
