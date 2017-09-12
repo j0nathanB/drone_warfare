@@ -154,7 +154,7 @@ class GoogleMap extends React.Component {
   }
 
   componentDidMount() {
-    this.loadScript(`https://maps.googleapis.com/maps/api/js?v=3.30&sensor=false?key=${API_KEY}`, this.loadMap)
+    this.loadScript(`https://maps.googleapis.com/maps/api/js?key=${API_KEY}`, this.loadMap)
   }
 
   render() {
