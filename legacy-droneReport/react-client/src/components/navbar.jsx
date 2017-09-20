@@ -12,14 +12,13 @@ class NavBar extends React.Component {
     return (
       <div>
         <nav className="navbar navbar-expand-lg navbar-light bg-dark">
-          <a className="navbar-brand text-white" href="#">Drone Report &nbsp;&nbsp;&nbsp;&nbsp; |</a>
-          <ul className="navbar-nav mr-auto">
-            {this.props.countries.map( 
-                (location, i) => <Country onClick={this.props.clickHandler} name={location.name} key={i}/> )
-              }
-              <li className="nav-item text-white" ><a className="navbar-brand text-white">&nbsp; |</a></li>
-              <li className="nav-item"><a className="nav-link text-white" href="http://github.com/j0nathanB/droneReport">About</a></li>
-          </ul>
+          <a className="navbar-brand text-white" href=".">Drone Report</a>
+          <a className="navbar-brand text-white">&nbsp; |</a>
+          {this.props.countries.map( 
+              (location, i) => <Country onClick={this.props.clickHandler} name={location.name} key={i}/> )
+            }
+          <a className="navbar-brand text-white">&nbsp; |</a>
+          <a className="nav-link text-white" href="https://github.com/j0nathanB/droneReport/blob/master/README.md">About</a>
         </nav>
       </div>
     )
