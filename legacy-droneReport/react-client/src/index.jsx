@@ -52,6 +52,7 @@ class GoogleMap extends React.Component {
     });
   }
 
+  // Load Google Maps component
   loadMap() {
     this.map  = new google.maps.Map(this.refs.map, {
       zoom: 5,
@@ -59,7 +60,8 @@ class GoogleMap extends React.Component {
       mapTypeId: 'terrain',
       styles: mapStyle
     });
-
+    
+    // Load map markers from Fusion Tables data
     var layer = new google.maps.FusionTablesLayer({
       query: {
         select: '\'town\'',
@@ -71,6 +73,7 @@ class GoogleMap extends React.Component {
       }
     });
     
+    // Load area rectangles
     let generateRectangle = (n,s,e,w) => {
       return new google.maps.Polyline({
         path: [
@@ -95,7 +98,7 @@ class GoogleMap extends React.Component {
     yemBound.setMap(this.map)
     layer.setMap(this.map);
     
-    // USE THE INFOWINDOW COMPONENT HERE IF FUSION TABLES BREAKS
+    // PUT THE INFOWINDOW COMPONENT HERE IF FUSION TABLES BREAKS
   }
 
   loadScript(url, callback) {
