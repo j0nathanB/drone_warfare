@@ -1,12 +1,14 @@
 import React from 'react';
-import mapStyle from '../../dist/mapStyle.js';
-import NavBar from './navbar.jsx';
+import ReactDOM from 'react-dom'
+import NavBar from './components/navbar.jsx';
+
+import mapStyle from '../dist/mapStyle.js';
 
 const API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
-let apiData = require ('../../../data/normalized.js');
+let apiData = require ('../../data/normalized.js');
 
 
-class GoogleMap extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -60,9 +62,8 @@ class GoogleMap extends React.Component {
       mapTypeId: 'terrain',
       styles: mapStyle
     });
-    
-    // Load map markers from Fusion Tables data
-    var layer = new google.maps.FusionTablesLayer({
+
+    let layer = new google.maps.FusionTablesLayer({
       query: {
         select: '\'town\'',
         from: '1UHO3u9llRy0dkWjRwSwW94wb7RBNllVnJ0nzpjkx'
@@ -71,6 +72,12 @@ class GoogleMap extends React.Component {
         styleId: 2,
         templateId: 2
       }
+    });
+
+    let heatMapData = [];
+
+    let heatMap = new google.maps.visualization.HeatmapLayer({
+      data: heatMapData 
     });
     
     // Load area rectangles
@@ -93,12 +100,12 @@ class GoogleMap extends React.Component {
     let somBound = generateRectangle(3.8, -0.7, 45.5, 42);
     let yemBound = generateRectangle(17.4, 12.9, 50.5, 43);
 
-    pakBound.setMap(this.map)
-    somBound.setMap(this.map)
-    yemBound.setMap(this.map)
+    pakBound.setMap(this.map);
+    somBound.setMap(this.map);
+    yemBound.setMap(this.map);
     layer.setMap(this.map);
-    
-    // PUT THE INFOWINDOW COMPONENT HERE IF FUSION TABLES BREAKS
+    heatMap.setMap(this.map);
+    // USE INFOWINDOW COMPONENT HERE IF FUSION TABLES API v2 CHANGES 
   }
 
   loadScript(url, callback) {
@@ -116,7 +123,8 @@ class GoogleMap extends React.Component {
   }
 
   componentDidMount() {
-    this.loadScript(`https://maps.googleapis.com/maps/api/js?key=${API_KEY}`, this.loadMap)
+    //this.loadScript(`https://maps.googleapis.com/maps/api/js?key=${API_KEY}`, this.loadMap);
+    this.loadScript(`https://maps.googleapis.com/maps/api/js?key=${API_KEY}&libraries=visualization`, this.loadMap);
   }
 
   render() {
@@ -134,4 +142,6 @@ class GoogleMap extends React.Component {
   }
 }
 
-export default GoogleMap;
+
+ReactDOM.render(<App />, document.getElementById('app'));
+//export default App;

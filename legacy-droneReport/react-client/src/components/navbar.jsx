@@ -18,6 +18,8 @@ class NavBar extends React.Component {
               (location, i) => <Country onClick={this.props.clickHandler} name={location.name} key={i}/> )
             }
           <a className="navbar-brand text-white">&nbsp; |</a>
+          <a className="nav-link text-white">Heat Map &nbsp; </a>
+          <a className="navbar-brand text-white">&nbsp; |</a>
           <a className="nav-link text-white" href="https://github.com/j0nathanB/droneReport/blob/master/README.md">About</a>
         </nav>
       </div>
