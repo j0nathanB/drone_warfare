@@ -1,7 +1,7 @@
 //let locationData = require('./data/normalized.js').features;
 //let locationData = require('./data/dummy.js')
 let googleMapsClient = require('@google/maps').createClient({
-  key: 'AIzaSyBUDEPn6eu89DZFecIrTksJsNgsgQwrSxo'
+  key: 'YOUR_API_KEY'
 }); 
 
 let downloadPhotos = (locationData) => {
