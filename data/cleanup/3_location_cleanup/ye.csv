@@ -1,0 +1,327 @@
+strike_id,date,adm_1,adm_2,adm_3,min_total_ppl,max_total_ppl,min_civilians,max_civilians,min_children,max_children,min_injured,max_injured,adm_1_code,adm_1_sort_name,adm_1_full_name,adm_1_lat_dd,adm_1_long_dd,adm_2_sort_name,adm_2_full_name,adm_2_lat_dd,adm_2_long_dd
+YEM001,03/11/2002,Ma'rib,unclear,Unknown,6,6,0,0,0,0,0,0,YE-MA,MARIB,Ma'rib,15.416667,45.35,,,,
+YEM002,17/12/2009,Abyan,unclear,Unknown,55,58,44,44,21,22,9,9,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM003,17/12/2009,San`a',Arhab,Unknown,0,0,0,0,0,0,0,0,YE-SN,SANA,San`a',15.260691,44.424895,ARHAB,Arhab,15.790939,44.246602
+YEM004,24/12/2009,Shabwah,unclear,Unknown,30,34,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM005,12/01/2010,Shabwah,unclear,Unknown,1,2,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM006,15/01/2010,unclear,unclear,Unknown,0,6,0,0,0,0,0,0,,,,,,,,,
+YEM007,20/01/2010,Ma'rib,Al Jubah,Unknown,2,2,0,0,0,0,0,0,YE-MA,MARIB,Ma'rib,15.416667,45.35,ALJUBAH,Al Jubah,15.129253,45.286811
+YEM008,31/01/2010,multiple,unclear,Unknown,0,0,0,0,0,0,0,0,,,,,,,,,
+YEM009,14/03/2010,Abyan,Al Mahfid,Unknown,2,3,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,ALMAHFID,Al Mahfid,14.01847,46.755958
+YEM010,15/03/2010,Abyan,Mudiyah,Unknown,7,20,0,20,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,MUDIYAH,Mudiyah,13.885422,46.219647
+YEM011,24/05/2010,Ma'rib,unclear,Unknown,3,4,3,4,0,0,2,3,YE-MA,MARIB,Ma'rib,15.416667,45.35,,,,
+YEM012,05/05/2011,Shabwah,unclear,Unknown,2,2,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM013,03/06/2011,Abyan,Zinjibar,Unknown,7,7,4,4,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,ZINJIBAR,Zinjibar,13.140857,45.430399
+YEM014,10/06/2011,Abyan,Zinjibar,Unknown,1,1,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,ZINJIBAR,Zinjibar,13.140857,45.430399
+YEM015,10/06/2011,Abyan,unclear,Unknown,2,3,2,3,1,1,0,1,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM016,18/06/2011,Abyan,unclear,Unknown,0,0,0,0,0,0,6,6,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM017,14/07/2011,Abyan,Mudiyah,Unknown,6,50,30,30,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,MUDIYAH,Mudiyah,13.885422,46.219647
+YEM018,14/07/2011,Abyan,unclear,Unknown,0,0,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM019,27/07/2011,Abyan,Zinjibar,Unknown,5,5,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,ZINJIBAR,Zinjibar,13.140857,45.430399
+YEM020,01/08/2011,Abyan,unclear,Unknown,13,16,0,0,0,0,12,17,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM021,24/08/2011,Abyan,Zinjibar,Unknown,30,30,0,0,0,0,40,40,YE-AB,ABYAN,Abyan,13.786202,46.141766,ZINJIBAR,Zinjibar,13.140857,45.430399
+YEM022,24/08/2011,Abyan,unclear,Unknown,6,6,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM023,25/08/2011,Abyan,Al Wadi`,Unknown,8,8,0,0,0,0,3,3,YE-AB,ABYAN,Abyan,13.786202,46.141766,ALWADI,Al Wadi`,13.719918,46.012205
+YEM024,31/08/2011,Abyan,unclear,Unknown,30,30,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM025,05/09/2011,Abyan,unclear,Unknown,3,7,3,7,0,0,4,4,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM026,05/09/2011,Abyan,unclear,Unknown,9,11,1,1,1,1,2,2,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM027,07/09/2011,Abyan,Al Mahfid,Unknown,3,10,0,0,0,0,2,24,YE-AB,ABYAN,Abyan,13.786202,46.141766,ALMAHFID,Al Mahfid,14.01847,46.755958
+YEM028,21/09/2011,Abyan,Al Mahfid,Unknown,4,4,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,ALMAHFID,Al Mahfid,14.01847,46.755958
+YEM029,21/09/2011,Abyan,unclear,Unknown,6,7,0,0,0,0,3,3,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM030,30/09/2011,Al Jawf,unclear,Unknown,4,4,0,0,0,0,0,0,YE-JA,ALJAWF,Al Jawf,16.689733,45.611556,,,,
+YEM031,05/10/2011,Abyan,unclear,Unknown,5,5,0,0,0,0,7,7,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM032,14/10/2011,Shabwah,unclear,Unknown,0,0,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM033,14/10/2011,Shabwah,unclear,Unknown,7,9,2,2,2,2,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM034,14/10/2011,unclear,unclear,Unknown,15,17,0,0,0,0,0,0,,,,,,,,,
+YEM035,14/10/2011,Shabwah,unclear,Unknown,2,2,1,2,1,1,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM036,22/12/2011,Abyan,Zinjibar,Unknown,1,1,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,ZINJIBAR,Zinjibar,13.140857,45.430399
+YEM037,31/01/2012,Abyan,Lawdar,Unknown,10,14,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,LAWDAR,Lawdar,13.709611,45.800769
+YEM038,31/01/2012,Abyan,unclear,Unknown,0,0,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM039,09/03/2012,Al Bayda',unclear,Unknown,23,34,2,2,0,0,0,55,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM040,10/03/2012,Abyan,multiple,Unknown,24,24,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM041,11/03/2012,Abyan,Khanfir,Unknown,3,6,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,KHANFIR,Khanfir,13.447814,45.733642
+YEM042,13/03/2012,Al Bayda',unclear,Unknown,4,5,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM043,18/03/2012,Abyan,Zinjibar,Unknown,14,18,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,ZINJIBAR,Zinjibar,13.140857,45.430399
+YEM044,18/03/2012,Abyan,unclear,Unknown,8,8,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM045,22/03/2012,Abyan,Zinjibar,Unknown,29,30,0,0,0,0,24,24,YE-AB,ABYAN,Abyan,13.786202,46.141766,ZINJIBAR,Zinjibar,13.140857,45.430399
+YEM046,30/03/2012,Shabwah,unclear,Unknown,5,5,1,1,0,0,6,9,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM047,07/04/2012,Shabwah,unclear,Unknown,0,8,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM048,08/04/2012,Abyan,unclear,Unknown,16,16,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM049,11/04/2012,Abyan,Lawdar,Unknown,10,14,0,0,0,0,10,10,YE-AB,ABYAN,Abyan,13.786202,46.141766,LAWDAR,Lawdar,13.709611,45.800769
+YEM050,14/04/2012,Al Bayda',Az Zahir,Unknown,3,7,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,AZZAHIR,Az Zahir,13.962396,45.421823
+YEM051,16/04/2012,Shabwah,unclear,Unknown,5,7,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM052,18/04/2012,Abyan,multiple,Unknown,6,10,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM053,21/04/2012,Abyan,Lawdar,Unknown,12,17,0,0,0,0,0,5,YE-AB,ABYAN,Abyan,13.786202,46.141766,LAWDAR,Lawdar,13.709611,45.800769
+YEM054,22/04/2012,Ma'rib,unclear,Unknown,4,4,0,0,0,0,0,0,YE-MA,MARIB,Ma'rib,15.416667,45.35,,,,
+YEM055,23/04/2012,Shabwah,Nisab,Unknown,3,3,0,0,0,0,2,2,YE-SH,SHABWAH,Shabwah,15.0,47.0,NISAB,Nisab,14.478977,46.44767
+YEM056,23/04/2012,Abyan,Lawdar,Unknown,0,4,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,LAWDAR,Lawdar,13.709611,45.800769
+YEM057,26/04/2012,Abyan,Mudiyah,Unknown,3,3,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,MUDIYAH,Mudiyah,13.885422,46.219647
+YEM058,29/04/2012,Al Jawf,unclear,Unknown,3,3,0,0,0,0,0,0,YE-JA,ALJAWF,Al Jawf,16.689733,45.611556,,,,
+YEM059,30/04/2012,Abyan,Lawdar,Unknown,4,4,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,LAWDAR,Lawdar,13.709611,45.800769
+YEM060,30/04/2012,Abyan,unclear,Unknown,3,3,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM061,02/05/2012,Abyan,Zinjibar,Unknown,10,15,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,ZINJIBAR,Zinjibar,13.140857,45.430399
+YEM062,06/05/2012,Shabwah,unclear,Unknown,2,4,1,1,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM063,10/05/2012,Abyan,unclear,Unknown,5,12,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM064,10/05/2012,Abyan,unclear,Unknown,2,4,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM065,12/05/2012,Ma'rib,Harib al Qaramish,Unknown,6,7,0,0,0,0,0,0,YE-MA,MARIB,Ma'rib,15.416667,45.35,HARIBALQARAMISH,Harib al Qaramish,15.450786,44.615349
+YEM066,12/05/2012,multiple,unclear,Unknown,10,10,0,0,0,0,0,0,,,,,,,,,
+YEM067,12/05/2012,multiple,unclear,Unknown,6,10,0,0,0,0,0,0,,,,,,,,,
+YEM068,14/05/2012,Abyan,unclear,Unknown,10,10,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM069,14/05/2012,Abyan,Lawdar,Unknown,6,6,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,LAWDAR,Lawdar,13.709611,45.800769
+YEM070,14/05/2012,Abyan,unclear,Unknown,0,0,0,0,0,0,2,2,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM071,15/05/2012,Abyan,unclear,Unknown,14,42,14,26,0,0,20,21,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM072,16/05/2012,Abyan,Mudiyah,Unknown,16,16,0,0,0,0,5,14,YE-AB,ABYAN,Abyan,13.786202,46.141766,MUDIYAH,Mudiyah,13.885422,46.219647
+YEM073,17/05/2012,unclear,unclear,Unknown,2,3,0,0,0,0,0,2,,,,,,,,,
+YEM074,17/05/2012,Abyan,unclear,Unknown,5,6,0,2,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM075,19/05/2012,Abyan,unclear,Unknown,3,5,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM076,19/05/2012,Al Bayda',unclear,Unknown,2,2,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM077,20/05/2012,Abyan,unclear,Unknown,0,9,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM078,28/05/2012,Al Bayda',unclear,Unknown,3,5,0,2,0,0,4,4,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM079,28/05/2012,Abyan,unclear,Unknown,5,5,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM080,01/06/2012,Abyan,Al Mahfid,Unknown,11,12,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,ALMAHFID,Al Mahfid,14.01847,46.755958
+YEM081,07/06/2012,Abyan,Mudiyah,Unknown,2,2,0,0,0,0,7,7,YE-AB,ABYAN,Abyan,13.786202,46.141766,MUDIYAH,Mudiyah,13.885422,46.219647
+YEM082,07/06/2012,Abyan,unclear,Unknown,3,3,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM083,07/06/2012,Abyan,unclear,Unknown,5,5,0,0,0,0,3,3,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM084,11/06/2012,Shabwah,unclear,Unknown,16,16,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM085,13/06/2012,Abyan,unclear,Unknown,10,18,0,0,0,0,1,1,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM086,13/06/2012,Shabwah,unclear,Unknown,9,9,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM087,15/06/2012,Shabwah,unclear,Unknown,5,5,0,0,0,0,2,2,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM088,15/06/2012,Abyan,unclear,Unknown,5,7,5,7,4,6,4,5,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM089,19/06/2012,Shabwah,unclear,Unknown,3,3,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM090,20/06/2012,Abyan,Al Mahfid,Unknown,1,1,1,1,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,ALMAHFID,Al Mahfid,14.01847,46.755958
+YEM091,20/06/2012,Al Bayda',Al Qurayshiyah,Unknown,5,30,0,0,0,0,6,6,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,ALQURAYSHIYAH,Al Qurayshiyah,14.485872,44.889627
+YEM092,25/06/2012,Abyan,Al Mahfid,Unknown,3,3,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,ALMAHFID,Al Mahfid,14.01847,46.755958
+YEM093,03/07/2012,Shabwah,Bayhan,Unknown,2,5,0,0,0,0,2,2,YE-SH,SHABWAH,Shabwah,15.0,47.0,BAYHAN,Bayhan,14.752961,45.748229
+YEM094,04/07/2012,Abyan,Al Mahfid,Unknown,3,13,0,0,0,0,7,7,YE-AB,ABYAN,Abyan,13.786202,46.141766,ALMAHFID,Al Mahfid,14.01847,46.755958
+YEM095,23/07/2012,Abyan,Al Mahfid,Unknown,5,5,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,ALMAHFID,Al Mahfid,14.01847,46.755958
+YEM096,04/08/2012,unclear,unclear,Unknown,3,5,0,0,0,0,2,2,,,,,,,,,
+YEM097,06/08/2012,Al Bayda',Rada`,Unknown,7,7,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,RADA,Rada`,14.339995,44.908741
+YEM098,07/08/2012,unclear,unclear,Unknown,2,3,0,0,0,0,2,2,,,,,,,,,
+YEM099,28/08/2012,unclear,unclear,Unknown,2,3,0,0,0,0,0,0,,,,,,,,,
+YEM100,29/08/2012,unclear,unclear,Unknown,5,5,2,2,0,0,0,0,,,,,,,,,
+YEM101,31/08/2012,unclear,unclear,Unknown,8,8,0,0,0,0,0,0,,,,,,,,,
+YEM102,02/09/2012,Al Bayda',Rada`,Unknown,12,12,12,12,3,3,4,11,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,RADA,Rada`,14.339995,44.908741
+YEM103,05/09/2012,multiple,unclear,Unknown,4,6,1,4,0,0,3,3,,,,,,,,,
+YEM104,10/09/2012,multiple,unclear,Unknown,6,15,0,0,0,0,3,3,,,,,,,,,
+YEM105,20/09/2012,Abyan,Al Mahfid,Unknown,2,4,0,0,0,0,3,3,YE-AB,ABYAN,Abyan,13.786202,46.141766,ALMAHFID,Al Mahfid,14.01847,46.755958
+YEM106,04/10/2012,Shabwah,Markhah al `Ulya,Unknown,3,6,0,0,0,0,2,4,YE-SH,SHABWAH,Shabwah,15.0,47.0,MARKHAHALULYA,Markhah al `Ulya,14.489759,45.929899
+YEM107,18/10/2012,Abyan,unclear,Unknown,7,9,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM108,21/10/2012,Ma'rib,Ma'rib,Unknown,4,4,0,0,0,0,0,0,YE-MA,MARIB,Ma'rib,15.416667,45.35,MARIB,Ma'rib,15.723778,46.011143
+YEM109,28/10/2012,unclear,unclear,Unknown,4,4,0,0,0,0,1,1,,,,,,,,,
+YEM110,07/11/2012,San`a',Al Haymah ad Dakhliyah,Unknown,2,2,0,0,0,0,2,3,YE-SN,SANA,San`a',15.260691,44.424895,ALHAYMAHADDAKHLIYAH,Al Haymah ad Dakhliyah,15.287397,43.863731
+YEM111,24/12/2012,Al Bayda',unclear,Unknown,2,3,0,0,0,0,3,3,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM112,24/12/2012,unclear,unclear,Unknown,3,7,0,0,0,0,1,1,,,,,,,,,
+YEM113,28/12/2012,unclear,unclear,Unknown,2,3,0,0,0,0,0,1,,,,,,,,,
+YEM114,29/12/2012,Al Bayda',unclear,Unknown,3,4,0,0,0,0,0,2,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM115,01/01/2013,Shabwah,unclear,Unknown,1,1,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM116,04/01/2013,Al Bayda',Rada`,Unknown,3,3,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,RADA,Rada`,14.339995,44.908741
+YEM117,19/01/2013,Ma'rib,unclear,Unknown,0,0,0,0,0,0,0,0,YE-MA,MARIB,Ma'rib,15.416667,45.35,,,,
+YEM118,19/01/2013,Ma'rib,unclear,Unknown,2,4,0,3,0,0,0,0,YE-MA,MARIB,Ma'rib,15.416667,45.35,,,,
+YEM119,19/01/2013,Ma'rib,unclear,Unknown,4,6,0,4,0,0,0,0,YE-MA,MARIB,Ma'rib,15.416667,45.35,,,,
+YEM120,20/01/2013,Ma'rib,Harib al Qaramish,Unknown,3,3,0,0,0,0,0,0,YE-MA,MARIB,Ma'rib,15.416667,45.35,HARIBALQARAMISH,Harib al Qaramish,15.450786,44.615349
+YEM121,21/01/2013,Ma'rib,unclear,Unknown,2,4,0,0,0,0,2,2,YE-MA,MARIB,Ma'rib,15.416667,45.35,,,,
+YEM122,22/01/2013,Al Jawf,Bart al `Anan,Unknown,3,5,0,0,0,0,0,0,YE-JA,ALJAWF,Al Jawf,16.689733,45.611556,BARTALANAN,Bart al `Anan,16.91972,44.518823
+YEM123,23/01/2013,San`a',Khawlan,Unknown,4,4,2,2,0,0,0,0,YE-SN,SANA,San`a',15.260691,44.424895,KHAWLAN,Khawlan,15.270134,44.702496
+YEM124,23/01/2013,Al Bayda',unclear,Unknown,3,5,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM125,17/04/2013,Dhamar,Al Hada',Unknown,4,4,0,4,0,0,0,0,YE-DH,DHAMAR,Dhamar,14.682965,44.272937,ALHADA,Al Hada',14.809326,44.567918
+YEM126,21/04/2013,Ma'rib,unclear,Unknown,2,2,0,0,0,0,2,3,YE-MA,MARIB,Ma'rib,15.416667,45.35,,,,
+YEM127,18/05/2013,Abyan,Al Mahfid,Unknown,4,9,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,ALMAHFID,Al Mahfid,14.01847,46.755958
+YEM128,20/05/2013,Al Bayda',Rada`,Unknown,2,2,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,RADA,Rada`,14.339995,44.908741
+YEM129,01/06/2013,Abyan,Al Mahfid,Unknown,7,8,0,0,0,0,2,3,YE-AB,ABYAN,Abyan,13.786202,46.141766,ALMAHFID,Al Mahfid,14.01847,46.755958
+YEM130,09/06/2013,Al Jawf,multiple,Unknown,2,7,1,1,1,1,0,0,YE-JA,ALJAWF,Al Jawf,16.689733,45.611556,,,,
+YEM131,27/07/2013,Abyan,Al Mahfid,Unknown,4,9,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,ALMAHFID,Al Mahfid,14.01847,46.755958
+YEM132,30/07/2013,Shabwah,Markhah al `Ulya,Unknown,3,4,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,MARKHAHALULYA,Markhah al `Ulya,14.489759,45.929899
+YEM133,01/08/2013,unclear,unclear,Unknown,3,5,4,5,1,1,3,3,,,,,,,,,
+YEM134,06/08/2013,Ma'rib,unclear,Unknown,4,4,0,0,0,0,0,0,YE-MA,MARIB,Ma'rib,15.416667,45.35,,,,
+YEM135,07/08/2013,Shabwah,Markhah al `Ulya,Unknown,6,8,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,MARKHAHALULYA,Markhah al `Ulya,14.489759,45.929899
+YEM136,08/08/2013,Ma'rib,unclear,Unknown,3,8,2,2,2,2,0,0,YE-MA,MARIB,Ma'rib,15.416667,45.35,,,,
+YEM137,08/08/2013,unclear,unclear,Unknown,2,7,0,0,0,0,0,0,,,,,,,,,
+YEM138,08/08/2013,unclear,unclear,Unknown,3,5,0,0,0,0,0,0,,,,,,,,,
+YEM139,10/08/2013,Lahij,Al Madaribah wa Al `Arah,Unknown,2,5,0,0,0,0,2,5,YE-LA,LAHIJ,Lahij,13.166667,44.583333,ALMADARIBAHWAALARAH,Al Madaribah wa Al `Arah,12.840633,43.990569
+YEM140,30/08/2013,Al Bayda',unclear,Unknown,4,6,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM141,19/11/2013,unclear,unclear,Unknown,5,5,0,0,0,0,0,0,,,,,,,,,
+YEM142,26/11/2013,Abyan,Al Mahfid,Unknown,12,12,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,ALMAHFID,Al Mahfid,14.01847,46.755958
+YEM143,09/12/2013,unclear,unclear,Unknown,3,3,0,0,0,0,0,0,,,,,,,,,
+YEM144,12/12/2013,Al Bayda',Rada`,Unknown,12,17,8,16,0,0,5,30,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,RADA,Rada`,14.339995,44.908741
+YEM145,27/12/2013,unclear,unclear,Unknown,1,6,0,0,0,0,0,0,,,,,,,,,
+YEM146,31/12/2013,Abyan,Al Mahfid,Unknown,2,6,0,0,0,0,0,3,YE-AB,ABYAN,Abyan,13.786202,46.141766,ALMAHFID,Al Mahfid,14.01847,46.755958
+YEM147,06/01/2014,Al Bayda',Rada`,Unknown,0,0,0,0,0,0,0,2,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,RADA,Rada`,14.339995,44.908741
+YEM148,08/01/2014,unclear,unclear,Unknown,2,2,0,0,0,0,0,2,,,,,,,,,
+YEM149,15/01/2014,unclear,unclear,Unknown,1,1,1,1,0,0,0,0,,,,,,,,,
+YEM150,24/01/2014,Ma'rib,unclear,Unknown,3,4,0,0,0,0,0,0,YE-MA,MARIB,Ma'rib,15.416667,45.35,,,,
+YEM151,03/02/2014,Abyan,Al Mahfid,Unknown,0,4,0,0,0,0,0,2,YE-AB,ABYAN,Abyan,13.786202,46.141766,ALMAHFID,Al Mahfid,14.01847,46.755958
+YEM152,02/03/2014,Ma'rib,unclear,Unknown,2,3,0,0,0,0,2,2,YE-MA,MARIB,Ma'rib,15.416667,45.35,,,,
+YEM153,03/03/2014,Abyan,Al Mahfid,Unknown,1,1,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,ALMAHFID,Al Mahfid,14.01847,46.755958
+YEM154,03/03/2014,Shabwah,unclear,Unknown,2,4,0,0,0,0,2,2,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM155,05/03/2014,Al Jawf,unclear,Unknown,2,4,0,0,0,0,0,0,YE-JA,ALJAWF,Al Jawf,16.689733,45.611556,,,,
+YEM156,10/03/2014,Ma'rib,unclear,Unknown,1,4,0,1,0,1,0,0,YE-MA,MARIB,Ma'rib,15.416667,45.35,,,,
+YEM157,12/03/2014,Al Jawf,unclear,Unknown,2,3,0,0,0,0,0,0,YE-JA,ALJAWF,Al Jawf,16.689733,45.611556,,,,
+YEM158,01/04/2014,Abyan,Al Mahfid,Unknown,3,3,0,0,0,0,4,4,YE-AB,ABYAN,Abyan,13.786202,46.141766,ALMAHFID,Al Mahfid,14.01847,46.755958
+YEM159,19/04/2014,Al Bayda',As Sawm`ah,Unknown,13,21,3,8,0,0,1,6,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,ASSAWMAH,As Sawm`ah,14.227711,45.831125
+YEM160,20/04/2014,Abyan,Al Mahfid,Unknown,24,31,1,1,1,1,1,3,YE-AB,ABYAN,Abyan,13.786202,46.141766,ALMAHFID,Al Mahfid,14.01847,46.755958
+YEM161,21/04/2014,Shabwah,`Usaylan,Unknown,3,4,1,1,1,1,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,USAYLAN,`Usaylan,15.171595,46.027444
+YEM162,12/05/2014,Ma'rib,unclear,Unknown,4,6,0,0,0,0,0,0,YE-MA,MARIB,Ma'rib,15.416667,45.35,,,,
+YEM163,04/06/2014,Ma'rib,unclear,Unknown,3,4,0,0,0,0,0,0,YE-MA,MARIB,Ma'rib,15.416667,45.35,,,,
+YEM164,13/06/2014,Ma'rib,Al Jubah,Unknown,5,6,0,0,0,0,0,0,YE-MA,MARIB,Ma'rib,15.416667,45.35,ALJUBAH,Al Jubah,15.129253,45.286811
+YEM165,21/06/2014,Al Bayda',unclear,Unknown,0,0,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM166,09/08/2014,Ma'rib,unclear,Unknown,3,3,0,0,0,0,2,2,YE-MA,MARIB,Ma'rib,15.416667,45.35,,,,
+YEM167,16/08/2014,unclear,unclear,Unknown,3,3,0,0,0,0,0,0,,,,,,,,,
+YEM168,11/09/2014,Shabwah,unclear,Unknown,4,5,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM169,25/09/2014,Shabwah,`Ataq,Unknown,4,5,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,ATAQ,`Ataq,14.572856,46.831872
+YEM170,26/09/2014,Al Jawf,unclear,Unknown,2,3,0,0,0,0,3,3,YE-JA,ALJAWF,Al Jawf,16.689733,45.611556,,,,
+YEM171,15/10/2014,Shabwah,Mayfa`ah,Unknown,4,4,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,MAYFAAH,Mayfa`ah,14.370924,47.740448
+YEM172,24/10/2014,Al Bayda',Rada`,Unknown,3,10,0,10,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,RADA,Rada`,14.339995,44.908741
+YEM173,26/10/2014,Al Bayda',Rada`,Unknown,12,20,2,10,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,RADA,Rada`,14.339995,44.908741
+YEM174,04/11/2014,Al Bayda',Rada`,Unknown,9,20,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,RADA,Rada`,14.339995,44.908741
+YEM175,12/11/2014,Shabwah,unclear,Unknown,6,8,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM176,26/11/2014,unclear,unclear,Unknown,7,7,0,0,0,0,0,0,,,,,,,,,
+YEM177,06/12/2014,Shabwah,Nisab,Unknown,9,10,0,0,0,0,3,3,YE-SH,SHABWAH,Shabwah,15.0,47.0,NISAB,Nisab,14.478977,46.44767
+YEM178,06/12/2014,Shabwah,unclear,Unknown,11,11,8,8,1,1,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM179,26/01/2015,multiple,unclear,Unknown,3,3,1,2,1,1,0,0,,,,,,,,,
+YEM180,31/01/2015,Shabwah,Markhah al `Ulya,Unknown,4,4,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,MARKHAHALULYA,Markhah al `Ulya,14.489759,45.929899
+YEM181,02/02/2015,Al Bayda',unclear,Unknown,3,6,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM182,20/02/2015,Shabwah,Markhah al `Ulya,Unknown,2,3,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,MARKHAHALULYA,Markhah al `Ulya,14.489759,45.929899
+YEM183,28/02/2015,Shabwah,unclear,Unknown,3,4,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM184,01/03/2015,Shabwah,unclear,Unknown,2,3,0,0,0,0,3,3,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM185,12/04/2015,unclear,unclear,Unknown,3,7,0,0,0,0,0,0,,,,,,,,,
+YEM186,17/04/2015,Shabwah,Habban,Unknown,2,2,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,HABBAN,Habban,14.290268,47.136125
+YEM187,19/04/2015,Shabwah,unclear,Unknown,2,6,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM188,21/04/2015,Hadramawt,Al Mukalla,Unknown,5,7,0,1,0,1,0,0,YE-HD,HADRAMAWT,Hadramawt,16.0,49.0,ALMUKALLA,Al Mukalla,14.671118,48.91989
+YEM189,08/05/2015,Shabwah,unclear,Unknown,3,3,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM190,10/05/2015,Shabwah,`Ataq,Unknown,1,4,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,ATAQ,`Ataq,14.572856,46.831872
+YEM191,11/05/2015,Hadramawt,Al Mukalla,Unknown,4,4,0,0,0,0,2,2,YE-HD,HADRAMAWT,Hadramawt,16.0,49.0,ALMUKALLA,Al Mukalla,14.671118,48.91989
+YEM192,16/05/2015,Shabwah,unclear,Unknown,3,3,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM193,22/05/2015,Shabwah,unclear,Unknown,3,5,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM194,02/06/2015,Al Jawf,unclear,Unknown,5,20,0,0,0,0,0,0,YE-JA,ALJAWF,Al Jawf,16.689733,45.611556,,,,
+YEM195,09/06/2015,Hadramawt,Al Mukalla,Unknown,3,3,0,0,0,0,2,2,YE-HD,HADRAMAWT,Hadramawt,16.0,49.0,ALMUKALLA,Al Mukalla,14.671118,48.91989
+YEM196,25/06/2015,Hadramawt,Al Mukalla,Unknown,4,5,0,0,0,0,2,2,YE-HD,HADRAMAWT,Hadramawt,16.0,49.0,ALMUKALLA,Al Mukalla,14.671118,48.91989
+YEM197,26/06/2015,Shabwah,unclear,Unknown,4,4,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM198,26/06/2015,Hadramawt,Al Mukalla,Unknown,4,4,0,0,0,0,0,0,YE-HD,HADRAMAWT,Hadramawt,16.0,49.0,ALMUKALLA,Al Mukalla,14.671118,48.91989
+YEM199,03/07/2015,Hadramawt,Al Mukalla,Unknown,4,4,0,0,0,0,0,0,YE-HD,HADRAMAWT,Hadramawt,16.0,49.0,ALMUKALLA,Al Mukalla,14.671118,48.91989
+YEM200,11/07/2015,Hadramawt,Al Mukalla,Unknown,3,10,0,0,0,0,0,0,YE-HD,HADRAMAWT,Hadramawt,16.0,49.0,ALMUKALLA,Al Mukalla,14.671118,48.91989
+YEM201,29/07/2015,Abyan,unclear,Unknown,4,5,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM202,12/08/2015,Hadramawt,Al Mukalla,Unknown,5,5,0,0,0,0,0,0,YE-HD,HADRAMAWT,Hadramawt,16.0,49.0,ALMUKALLA,Al Mukalla,14.671118,48.91989
+YEM203,21/08/2015,Ma'rib,Harib,Unknown,3,3,0,0,0,0,0,0,YE-MA,MARIB,Ma'rib,15.416667,45.35,HARIB,Harib,14.930446,45.368197
+YEM204,23/08/2015,unclear,unclear,Unknown,4,4,0,0,0,0,0,0,,,,,,,,,
+YEM205,26/08/2015,Hadramawt,Al Mukalla,Unknown,5,5,0,0,0,0,0,0,YE-HD,HADRAMAWT,Hadramawt,16.0,49.0,ALMUKALLA,Al Mukalla,14.671118,48.91989
+YEM206,09/09/2015,Hadramawt,Al Mukalla,Unknown,3,6,0,4,0,0,2,2,YE-HD,HADRAMAWT,Hadramawt,16.0,49.0,ALMUKALLA,Al Mukalla,14.671118,48.91989
+YEM207,11/09/2015,multiple,unclear,Unknown,4,4,0,0,0,0,0,0,,,,,,,,,
+YEM208,12/09/2015,Hadramawt,Al Mukalla,Unknown,4,5,0,0,0,0,0,0,YE-HD,HADRAMAWT,Hadramawt,16.0,49.0,ALMUKALLA,Al Mukalla,14.671118,48.91989
+YEM209,21/09/2015,Ma'rib,Ma'rib,Unknown,2,2,0,0,0,0,0,0,YE-MA,MARIB,Ma'rib,15.416667,45.35,MARIB,Ma'rib,15.723778,46.011143
+YEM210,22/12/2015,multiple,unclear,Unknown,4,4,0,0,0,0,0,0,,,,,,,,,
+YEM211,15/01/2016,Shabwah,unclear,Unknown,3,3,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM212,19/01/2016,Hadramawt,Say'un,Unknown,2,2,0,0,0,0,0,0,YE-HD,HADRAMAWT,Hadramawt,16.0,49.0,SAYUN,Say'un,15.947115,48.831486
+YEM213,03/02/2016,Shabwah,unclear,Unknown,6,6,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM214,03/02/2016,Abyan,unclear,Unknown,3,3,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM215,15/02/2016,Lahij,unclear,Unknown,3,3,0,0,0,0,0,0,YE-LA,LAHIJ,Lahij,13.166667,44.583333,,,,
+YEM216,29/02/2016,Hadramawt,unclear,Unknown,3,3,0,0,0,0,0,0,YE-HD,HADRAMAWT,Hadramawt,16.0,49.0,,,,
+YEM217,04/03/2016,Shabwah,unclear,Unknown,4,4,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM218,22/03/2016,Hadramawt,Al Mukalla,Unknown,50,71,0,0,0,0,28,30,YE-HD,HADRAMAWT,Hadramawt,16.0,49.0,ALMUKALLA,Al Mukalla,14.671118,48.91989
+YEM219,26/03/2016,Abyan,multiple,Unknown,8,8,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM220,26/03/2016,Abyan,Zinjibar,Unknown,6,6,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,ZINJIBAR,Zinjibar,13.140857,45.430399
+YEM221,28/03/2016,Hadramawt,Al Mukalla,Unknown,5,5,3,3,0,0,0,0,YE-HD,HADRAMAWT,Hadramawt,16.0,49.0,ALMUKALLA,Al Mukalla,14.671118,48.91989
+YEM222,30/03/2016,Shabwah,unclear,Unknown,2,5,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM223,30/03/2016,Hadramawt,Al Mukalla,Unknown,0,0,0,0,0,0,0,0,YE-HD,HADRAMAWT,Hadramawt,16.0,49.0,ALMUKALLA,Al Mukalla,14.671118,48.91989
+YEM224,03/04/2016,Hadramawt,Al Mukalla,Unknown,0,0,0,0,0,0,0,0,YE-HD,HADRAMAWT,Hadramawt,16.0,49.0,ALMUKALLA,Al Mukalla,14.671118,48.91989
+YEM225,05/04/2016,Abyan,Zinjibar,Unknown,0,0,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,ZINJIBAR,Zinjibar,13.140857,45.430399
+YEM226,23/04/2016,unclear,unclear,Unknown,2,2,0,0,0,0,0,0,,,,,,,,,
+YEM227,25/04/2016,Abyan,Zinjibar,Unknown,3,6,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,ZINJIBAR,Zinjibar,13.140857,45.430399
+YEM228,25/04/2016,Shabwah,unclear,Unknown,2,10,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM229,28/04/2016,Shabwah,unclear,Unknown,4,4,0,0,0,0,1,1,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM230,19/05/2016,Shabwah,unclear,Unknown,4,4,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM231,09/06/2016,Al Bayda',unclear,Unknown,2,2,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM232,10/06/2016,unclear,unclear,Unknown,2,2,0,0,0,0,0,0,,,,,,,,,
+YEM233,12/06/2016,Shabwah,Habban,Unknown,2,3,0,0,0,0,1,1,YE-SH,SHABWAH,Shabwah,15.0,47.0,HABBAN,Habban,14.290268,47.136125
+YEM234,01/07/2016,Shabwah,unclear,Unknown,3,6,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM235,04/07/2016,Shabwah,unclear,Unknown,2,3,0,0,0,0,0,1,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM236,08/07/2016,unclear,unclear,Unknown,1,1,0,0,0,0,0,0,,,,,,,,,
+YEM237,10/07/2016,unclear,unclear,Unknown,0,0,0,0,0,0,4,4,,,,,,,,,
+YEM238,16/07/2016,Shabwah,Markhah al `Ulya,Unknown,2,4,0,0,0,0,0,2,YE-SH,SHABWAH,Shabwah,15.0,47.0,MARKHAHALULYA,Markhah al `Ulya,14.489759,45.929899
+YEM239,04/08/2016,Shabwah,unclear,Unknown,2,4,0,0,0,0,2,4,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM240,24/08/2016,Shabwah,unclear,Unknown,4,5,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM241,30/08/2016,Shabwah,unclear,Unknown,3,3,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM242,04/09/2016,Shabwah,unclear,Unknown,6,9,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM243,13/09/2016,Al Bayda',Rada`,Unknown,5,5,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,RADA,Rada`,14.339995,44.908741
+YEM244,20/09/2016,Ma'rib,unclear,Unknown,2,2,0,0,0,0,0,0,YE-MA,MARIB,Ma'rib,15.416667,45.35,,,,
+YEM245,22/09/2016,Al Bayda',unclear,Unknown,2,3,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM246,23/09/2016,unclear,unclear,Unknown,3,5,0,0,0,0,0,0,,,,,,,,,
+YEM247,29/09/2016,Al Bayda',unclear,Unknown,2,2,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM248,06/10/2016,Shabwah,unclear,Unknown,2,2,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM249,12/10/2016,unclear,unclear,Unknown,0,0,0,0,0,0,0,0,,,,,,,,,
+YEM250,18/10/2016,Shabwah,unclear,Unknown,3,8,0,0,0,0,2,2,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM251,21/10/2016,Ma'rib,unclear,Unknown,5,5,0,0,0,0,0,0,YE-MA,MARIB,Ma'rib,15.416667,45.35,,,,
+YEM252,21/11/2016,Al Bayda',unclear,Unknown,1,1,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM253,24/11/2016,Al Bayda',unclear,Unknown,2,2,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM254,30/11/2016,Hadramawt,unclear,Unknown,3,3,0,0,0,0,0,0,YE-HD,HADRAMAWT,Hadramawt,16.0,49.0,,,,
+YEM255,13/12/2016,multiple,unclear,Unknown,4,4,0,0,0,0,0,0,,,,,,,,,
+YEM256,29/12/2016,Al Bayda',unclear,Unknown,2,2,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM257,08/01/2017,Al Bayda',unclear,Unknown,1,1,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM258,20/01/2017,Al Bayda',unclear,Unknown,1,1,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM259,21/01/2017,Al Bayda',unclear,Unknown,3,6,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM260,22/01/2017,Al Bayda',unclear,Unknown,1,3,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM261,28/01/2017,Al Bayda',unclear,Unknown,39,39,25,25,10,10,7,7,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM262,30/01/2017,Shabwah,Bayhan,Unknown,2,2,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,BAYHAN,Bayhan,14.752961,45.748229
+YEM263,02/03/2017,multiple,unclear,Unknown,2,12,0,0,0,0,0,0,,,,,,,,,
+YEM264,03/03/2017,unclear,unclear,Unknown,1,8,0,0,0,0,0,0,,,,,,,,,
+YEM265,04/03/2017,Abyan,Ahwar,Unknown,2,2,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,AHWAR,Ahwar,13.64209,46.755614
+YEM266,06/03/2017,multiple,unclear,Unknown,7,11,0,2,0,2,0,0,,,,,,,,,
+YEM267,31/03/2017,unclear,unclear,Unknown,0,0,0,0,0,0,0,0,,,,,,,,,
+YEM268,02/04/2017,Shabwah,unclear,Unknown,0,0,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM269,18/04/2017,Ma'rib,unclear,Unknown,3,4,0,0,0,0,0,0,YE-MA,MARIB,Ma'rib,15.416667,45.35,,,,
+YEM270,23/04/2017,Shabwah,Markhah al `Ulya,Unknown,3,8,3,8,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,MARKHAHALULYA,Markhah al `Ulya,14.489759,45.929899
+YEM271,24/04/2017,unclear,unclear,Unknown,0,0,0,0,0,0,0,0,,,,,,,,,
+YEM272,29/04/2017,Ma'rib,unclear,Unknown,4,5,0,0,0,0,0,0,YE-MA,MARIB,Ma'rib,15.416667,45.35,,,,
+YEM273,29/04/2017,Shabwah,unclear,Unknown,3,3,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM274,23/05/2017,Ma'rib,Al Jubah,Unknown,7,12,5,5,0,1,5,6,YE-MA,MARIB,Ma'rib,15.416667,45.35,ALJUBAH,Al Jubah,15.129253,45.286811
+YEM275,16/06/2017,Shabwah,Markhah al `Ulya,Unknown,2,3,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,MARKHAHALULYA,Markhah al `Ulya,14.489759,45.929899
+YEM276,01/07/2017,Abyan,Al Wadi`,Unknown,2,2,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,ALWADI,Al Wadi`,13.719918,46.012205
+YEM277,13/08/2017,Abyan,unclear,Unknown,0,3,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,,,,
+YEM278,09/09/2017,Al Bayda',unclear,Unknown,2,7,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM279,16/09/2017,unclear,unclear,Unknown,0,0,0,0,0,0,0,0,,,,,,,,,
+YEM280,04/10/2017,Al Bayda',unclear,Unknown,1,2,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM281,08/10/2017,Ma'rib,Raghwan,Unknown,5,5,0,0,0,0,0,0,YE-MA,MARIB,Ma'rib,15.416667,45.35,RAGHWAN,Raghwan,15.788076,45.069418
+YEM282,16/10/2017,Al Bayda',unclear,Unknown,50,50,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM283,19/10/2017,Al Bayda',unclear,Unknown,5,5,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM284,19/10/2017,unclear,unclear,Unknown,0,0,0,0,0,0,0,0,,,,,,,,,
+YEM285,25/10/2017,Al Bayda',unclear,Unknown,9,13,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM286,02/11/2017,Ma'rib,Al `Abdiyah,Unknown,2,2,0,0,0,0,0,0,YE-MA,MARIB,Ma'rib,15.416667,45.35,ALABDIYAH,Al `Abdiyah,14.733152,45.393384
+YEM287,10/11/2017,Al Bayda',unclear,Unknown,2,2,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM288,11/11/2017,Al Bayda',unclear,Unknown,1,1,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM289,12/11/2017,Al Bayda',unclear,Unknown,2,2,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM290,19/11/2017,Al Bayda',unclear,Unknown,2,2,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM291,20/11/2017,Al Bayda',unclear,Unknown,5,5,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM292,23/11/2017,Al Bayda',unclear,Unknown,2,2,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM293,25/11/2017,Shabwah,unclear,Unknown,5,7,0,0,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM294,26/11/2017,Al Bayda',unclear,Unknown,3,3,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM295,15/12/2017,Al Bayda',unclear,Unknown,1,1,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM296,19/12/2017,Ma'rib,unclear,Unknown,1,1,0,0,0,0,0,0,YE-MA,MARIB,Ma'rib,15.416667,45.35,,,,
+YEM297,01/01/2018,Al Bayda',unclear,Unknown,0,2,0,2,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM298,26/01/2018,Shabwah,unclear,Unknown,7,7,7,7,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM299,29/01/2018,unclear,unclear,Unknown,0,0,0,0,0,0,0,0,,,,,,,,,
+YEM300,11/02/2018,Al Bayda',unclear,Unknown,6,6,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM301,16/02/2018,Al Bayda',unclear,Unknown,2,3,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM302,28/02/2018,unclear,unclear,Unknown,0,0,0,0,0,0,0,0,,,,,,,,,
+YEM303,05/03/2018,Hadramawt,unclear,Unknown,1,4,0,1,0,1,0,1,YE-HD,HADRAMAWT,Hadramawt,16.0,49.0,,,,
+YEM304,07/03/2018,Hadramawt,Madinat al Mukalla,Unknown,1,1,1,1,0,0,0,0,YE-HD,HADRAMAWT,Hadramawt,16.0,49.0,MADINATALMUKALLA,Madinat al Mukalla,14.57884,49.192913
+YEM305,08/03/2018,Hadramawt,unclear,Unknown,0,0,0,0,0,0,0,0,YE-HD,HADRAMAWT,Hadramawt,16.0,49.0,,,,
+YEM306,09/03/2018,Hadramawt,Al `Abr,Unknown,6,6,0,6,0,1,0,0,YE-HD,HADRAMAWT,Hadramawt,16.0,49.0,ALABR,Al `Abr,15.938422,47.228796
+YEM307,22/03/2018,Ma'rib,unclear,Unknown,5,7,0,0,0,0,0,0,YE-MA,MARIB,Ma'rib,15.416667,45.35,,,,
+YEM308,26/03/2018,Hadramawt,unclear,Unknown,0,0,0,0,0,0,0,0,YE-HD,HADRAMAWT,Hadramawt,16.0,49.0,,,,
+YEM309,29/03/2018,Al Bayda',unclear,Unknown,3,4,0,3,0,0,0,2,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM310,11/04/2018,Hadramawt,unclear,Unknown,0,0,0,0,0,0,0,0,YE-HD,HADRAMAWT,Hadramawt,16.0,49.0,,,,
+YEM311,23/04/2018,Al Bayda',unclear,Unknown,0,0,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM312,30/04/2018,unclear,unclear,Unknown,0,0,0,0,0,0,0,0,,,,,,,,,
+YEM313,14/05/2018,Shabwah,unclear,Unknown,2,3,0,1,0,0,0,0,YE-SH,SHABWAH,Shabwah,15.0,47.0,,,,
+YEM314,23/06/2018,unclear,unclear,Unknown,0,0,0,0,0,0,0,0,,,,,,,,,
+YEM315,30/06/2018,unclear,unclear,Unknown,0,0,0,0,0,0,0,0,,,,,,,,,
+YEM316,22/07/2018,Hadramawt,unclear,Unknown,0,0,0,0,0,0,0,0,YE-HD,HADRAMAWT,Hadramawt,16.0,49.0,,,,
+YEM317,24/07/2018,Hadramawt,unclear,Unknown,0,0,0,0,0,0,0,0,YE-HD,HADRAMAWT,Hadramawt,16.0,49.0,,,,
+YEM318,14/08/2018,unclear,unclear,Unknown,0,0,0,0,0,0,0,0,,,,,,,,,
+YEM319,09/09/2018,Abyan,Ahwar,Unknown,4,4,0,0,0,0,0,0,YE-AB,ABYAN,Abyan,13.786202,46.141766,AHWAR,Ahwar,13.64209,46.755614
+YEM320,18/09/2018,Al Bayda',unclear,Unknown,0,0,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM321,25/11/2018,Al Bayda',Madinat al Bayda',Unknown,5,8,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,MADINATALBAYDA,Madinat al Bayda',13.984923,45.556551
+YEM322,01/01/2019,Ma'rib,unclear,Unknown,1,1,0,0,0,0,0,0,YE-MA,MARIB,Ma'rib,15.416667,45.35,,,,
+YEM323,31/03/2019,Al Bayda',unclear,Unknown,0,0,0,0,0,0,0,0,YE-BA,ALBAYDA,Al Bayda',14.34166,45.394422,,,,
+YEM324,24/06/2019,unclear,unclear,Unknown,0,5,0,0,0,0,0,0,,,,,,,,,
+YEM325,02/01/2020,unclear,unclear,Unknown,0,0,0,0,0,0,0,0,,,,,,,,,
+YEM326,02/01/2020,Ma'rib,unclear,Unknown,0,2,0,0,0,0,0,0,YE-MA,MARIB,Ma'rib,15.416667,45.35,,,,
