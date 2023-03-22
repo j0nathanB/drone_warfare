@@ -1,0 +1,191 @@
+Strike ID,Date,Adm_1,Adm_2,Loc,Minimum total people killed,Maximum total people killed,Minimum civilians reported killed,Maximum civilians reported killed,Minimum children reported killed,Maximum children reported killed,Minimum reported injured,Maximum reported injured,matched_sort_Adm_1,matched_sort_Adm_1_ufi,matched_sort_Adm_1_adm1,matched_sort_Adm_1_matched_sort_Adm_1,matched_sort_Adm_1_full_name,matched_sort_Adm_1_full_nm_nd,matched_sort_Adm_1_desig_cd,matched_sort_Adm_1_lat_dd,matched_sort_Adm_1_long_dd,matched_sort_Adm_2,matched_sort_Adm_2_ufi,matched_sort_Adm_2_adm1,matched_sort_Adm_2_matched_sort_Adm_2,matched_sort_Adm_2_full_name,matched_sort_Adm_2_full_nm_nd,matched_sort_Adm_2_desig_cd,matched_sort_Adm_2_lat_dd,matched_sort_Adm_2_long_dd,matched_sort_Loc,matched_sort_Loc_ufi,matched_sort_Loc_adm1,matched_sort_Loc_matched_sort_Loc,matched_sort_Loc_full_name,matched_sort_Loc_full_nm_nd,matched_sort_Loc_desig_cd,matched_sort_Loc_lat_dd,matched_sort_Loc_long_dd
+SOM001,07/01/2007,Jubbada Hoose,Badhaadhe,Ras Kamboni,8,10,2,2,0,1,1,3,JUBBADAHOOSE,-3224957.0,SO-JH,JUBBADAHOOSE,Jubbada Hoose,Jubbada Hoose,ADM1,0.0,42.0,BADHAADHE,-3215831.0,SO-JH,BADHAADHE,Badhaadhe,Badhaadhe,ADM2,-1.002072,41.661436,RASKAMBONI,-3218560.0,SO-JH,RASKAMBONI,Ras Kamboni,Ras Kamboni,PT,-1.641395,41.592921
+SOM002,09/01/2007,unclear,unclear,Unknown,5,10,0,0,0,0,4,5,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM003,09/01/2007,unclear,unclear,Unknown,4,31,4,31,0,1,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM004,23/01/2007,unclear,unclear,Unknown,8,8,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM005,01/06/2007,Bari,Bargal,Unknown,8,12,0,0,0,0,0,0,BARI,-3216231.0,SO-BR,BARI,Bari,Bari,ADM1,10.0,50.0,unclear,,,,,,,,,,,,,,,,,
+SOM006,03/03/2008,unclear,unclear,Unknown,0,6,0,4,0,0,3,8,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM007,01/05/2008,Galguduud,Dusa Marreb,Unknown,8,15,5,10,0,0,0,0,GALGUDUUD,-3221647.0,SO-GA,GALGUDUUD,Galguduud,Galguduud,ADM1,5.0,47.0,unclear,,,,,,,,,,,,,,,,,
+SOM008,14/09/2009,Shabeellaha Hoose,Barawe,Unknown,2,6,0,0,0,0,2,2,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,,,,,,,,,
+SOM009,03/04/2011,unclear,unclear,Unknown,1,36,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM010,23/06/2011,Jubbada Hoose,Kismayo,Unknown,2,2,0,0,0,0,2,3,JUBBADAHOOSE,-3224957.0,SO-JH,JUBBADAHOOSE,Jubbada Hoose,Jubbada Hoose,ADM1,0.0,42.0,unclear,,,,,,,,,,,,,,,,,
+SOM011,06/07/2011,unclear,unclear,Unknown,0,0,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM012,25/09/2011,Jubbada Hoose,Kismayo,Unknown,0,0,0,0,0,0,0,0,JUBBADAHOOSE,-3224957.0,SO-JH,JUBBADAHOOSE,Jubbada Hoose,Jubbada Hoose,ADM1,0.0,42.0,unclear,,,,,,,,,,,,,,,,,
+SOM013,14/11/2011,unclear,unclear,Unknown,0,2,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM014,21/01/2012,unclear,unclear,Unknown,1,1,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM015,24/02/2012,Shabeellaha Hoose,unclear,unclear,3,7,0,1,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,,,,,,,,,,,,,,,,,,
+SOM016,17/04/2012,Puntland,unclear,Unknown,0,0,0,0,0,0,2,2,unclear,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM017,05/10/2013,Shabeellaha Hoose,Barawe,Unknown,1,7,0,0,0,0,1,1,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,,,,,,,,,
+SOM018,28/10/2013,Jubbada Dhexe,Jillib,Unknown,2,3,0,0,0,0,0,0,JUBBADADHEXE,-3224955.0,SO-JD,JUBBADADHEXE,Jubbada Dhexe,Jubbada Dhexe,ADM1,1.33333,42.66667,unclear,,,,,,,,,,,,,,,,,
+SOM019,26/01/2014,Shabeellaha Hoose,unclear,unclear,2,9,0,2,0,2,0,1,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,,,,,,,,,,,,,,,,,,
+SOM020,01/08/2014,Shabeellaha Hoose,Barawe,Unknown,6,6,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,,,,,,,,,
+SOM021,29/12/2014,Jubbada Dhexe,Saakow,Unknown,2,3,0,0,0,0,0,0,JUBBADADHEXE,-3224955.0,SO-JD,JUBBADADHEXE,Jubbada Dhexe,Jubbada Dhexe,ADM1,1.33333,42.66667,unclear,,,,,,,,,,,,,,,,,
+SOM022,31/01/2015,Shabeellaha Hoose,unclear,Dugule,40,60,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,,,,,,,,,,DUGULE,-3220515.0,SO-SH,DUGULE,Dugule,Dugule,LCTY,1.283709,43.731428
+SOM023,31/01/2015,Bay,Dinsoor,unclear,2,9,0,4,0,0,0,4,BAY,-3216354.0,SO-BY,BAY,Bay,Bay,ADM1,3.0,43.5,unclear,,,,,,,,,,,,,,,,,
+SOM024,12/03/2015,Gedo,Baardheere,Unknown,3,3,0,0,0,0,0,0,GEDO,-3222209.0,SO-GE,GEDO,Gedo,Gedo,ADM1,3.0,42.0,unclear,,,,,,,,,,,,,,,,,
+SOM025,15/07/2015,Gedo,Baardheere,Unknown,2,3,0,0,0,0,0,0,GEDO,-3222209.0,SO-GE,GEDO,Gedo,Gedo,ADM1,3.0,42.0,unclear,,,,,,,,,,,,,,,,,
+SOM026,15/07/2015,Gedo,Baardheere,Unknown,0,0,0,0,0,0,0,0,GEDO,-3222209.0,SO-GE,GEDO,Gedo,Gedo,ADM1,3.0,42.0,unclear,,,,,,,,,,,,,,,,,
+SOM027,21/11/2015,Shabeellaha Hoose,Wanlaweyn,Balcad,5,10,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,BALCAD,-3215956.0,SO-SH,BALCAD,Balcad,Balcad,PPL,2.649822,45.049614
+SOM028,29/11/2015,Hiiraan,multiple,Unknown,0,0,0,0,0,0,0,0,HIIRAAN,-3223979.0,SO-HI,HIIRAAN,Hiiraan,Hiiraan,ADM1,4.0,45.5,,,,,,,,,,,,,,,,,,
+SOM029,02/12/2015,Jubbada Dhexe,Jilib,Qunyo Barrow,3,3,0,0,0,0,0,0,JUBBADADHEXE,-3224955.0,SO-JD,JUBBADADHEXE,Jubbada Dhexe,Jubbada Dhexe,ADM1,1.33333,42.66667,unclear,,,,,,,,,QUNYOBARROW,-3228309.0,SO-JD,QUNYOBARROW,Qunyo Barrow,Qunyo Barrow,PPL,0.800088,43.385188
+SOM030,21/12/2015,Shabeellaha Hoose,Kurtunwaarey,Unknown,5,5,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,,,,,,,,,
+SOM031,05/03/2016,Hiiraan,unclear,Raso,150,200,0,0,0,0,0,0,HIIRAAN,-3223979.0,SO-HI,HIIRAAN,Hiiraan,Hiiraan,ADM1,4.0,45.5,,,,,,,,,,RASO,-3228523.0,SO-HI,RASO,Raso,Raso,SPNG,3.5597,45.0543
+SOM032,08/03/2016,Shabeellaha Hoose,Afgooye,Awdheegle,19,19,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,AWDHEEGLE,-3215580.0,SO-SH,AWDHEEGLE,Aw Dheegle,Aw Dheegle,PPL,1.977532,44.832486
+SOM033,31/03/2016,Jubbada Dhexe,Jillib,Unknown,3,3,0,0,0,0,0,0,JUBBADADHEXE,-3224955.0,SO-JD,JUBBADADHEXE,Jubbada Dhexe,Jubbada Dhexe,ADM1,1.33333,42.66667,unclear,,,,,,,,,,,,,,,,,
+SOM034,01/04/2016,unclear,unclear,Unknown,0,22,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM035,02/04/2016,unclear,unclear,Unknown,6,6,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM036,06/04/2016,Jubbada Dhexe,Jillib,Unknown,8,8,0,0,0,0,0,0,JUBBADADHEXE,-3224955.0,SO-JD,JUBBADADHEXE,Jubbada Dhexe,Jubbada Dhexe,ADM1,1.33333,42.66667,unclear,,,,,,,,,,,,,,,,,
+SOM037,11/04/2016,Jubbada Hoose,unclear,unclear,8,12,3,3,0,0,0,0,JUBBADAHOOSE,-3224957.0,SO-JH,JUBBADAHOOSE,Jubbada Hoose,Jubbada Hoose,ADM1,0.0,42.0,,,,,,,,,,,,,,,,,,
+SOM038,12/05/2016,Shabeellaha Hoose,Afgooye,Unknown,5,5,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,,,,,,,,,
+SOM039,27/05/2016,unclear,unclear,Unknown,1,1,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM040,21/06/2016,unclear,unclear,Unknown,3,3,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM041,30/08/2016,Shabeellaha Hoose,Gobanle,Unknown,2,2,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,,,,,,,,,
+SOM042,05/09/2016,Shabeellaha Hoose,Wanlaweyn,Tortoroow,4,4,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,TORTOROOW,-3229928.0,SO-SH,TORTOROOW,Tortoroow,Tortoroow,PPL,2.252412,44.690529
+SOM043,26/09/2016,Jubbada Hoose,unclear,Unknown,4,4,0,0,0,0,0,0,JUBBADAHOOSE,-3224957.0,SO-JH,JUBBADAHOOSE,Jubbada Hoose,Jubbada Hoose,ADM1,0.0,42.0,,,,,,,,,,,,,,,,,,
+SOM044,28/09/2016,Mudug,Galcaio,Unknown,10,22,0,2,0,0,3,16,MUDUG,-3227383.0,SO-MU,MUDUG,Mudug,Mudug,ADM1,7.0,48.0,unclear,,,,,,,,,,,,,,,,,
+SOM045,07/01/2017,unclear,unclear,Unknown,0,0,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM046,04/05/2017,Shabeellaha Hoose,unclear,Dar es Salaam,4,9,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,,,,,,,,,,DAARASALAAM,-3218577.0,SO-SH,DAARASALAAM,Daarasalaam,Daarasalaam,PPL,1.922139,44.787128
+SOM047,11/06/2017,Jubbada Dhexe,Saakow,Unknown,8,8,0,0,0,0,0,0,JUBBADADHEXE,-3224955.0,SO-JD,JUBBADADHEXE,Jubbada Dhexe,Jubbada Dhexe,ADM1,1.33333,42.66667,unclear,,,,,,,,,,,,,,,,,
+SOM048,02/07/2017,Jubbada Dhexe,Jilib,Qunyo Barrow,1,1,0,0,0,0,0,0,JUBBADADHEXE,-3224955.0,SO-JD,JUBBADADHEXE,Jubbada Dhexe,Jubbada Dhexe,ADM1,1.33333,42.66667,unclear,,,,,,,,,QUNYOBARROW,-3228309.0,SO-JD,QUNYOBARROW,Qunyo Barrow,Qunyo Barrow,PPL,0.800088,43.385188
+SOM049,04/07/2017,Jubbada Hoose,Kismayo,Luglaaw,10,13,0,0,0,0,10,10,JUBBADAHOOSE,-3224957.0,SO-JH,JUBBADAHOOSE,Jubbada Hoose,Jubbada Hoose,ADM1,0.0,42.0,unclear,,,,,,,,,LUGLAAW,-3226339.0,SO-JH,LUGLAAW,Luglaaw,Luglaaw,PPL,-0.203664,42.604395
+SOM050,13/07/2017,Jubbada Dhexe,Jilib,Qunyo Barrow,0,0,0,0,0,0,0,0,JUBBADADHEXE,-3224955.0,SO-JD,JUBBADADHEXE,Jubbada Dhexe,Jubbada Dhexe,ADM1,1.33333,42.66667,unclear,,,,,,,,,QUNYOBARROW,-3228309.0,SO-JD,QUNYOBARROW,Qunyo Barrow,Qunyo Barrow,PPL,0.800088,43.385188
+SOM051,15/07/2017,unclear,unclear,Unknown,0,0,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM052,20/07/2017,unclear,unclear,Unknown,0,0,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM053,21/07/2017,unclear,unclear,Unknown,0,0,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM054,28/07/2017,unclear,unclear,Unknown,0,0,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM055,29/07/2017,unclear,unclear,Unknown,0,0,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM056,29/07/2017,Shabeellaha Hoose,Wanlaweyn,Tortoroow,1,1,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,TORTOROOW,-3229928.0,SO-SH,TORTOROOW,Tortoroow,Tortoroow,PPL,2.252412,44.690529
+SOM057,10/08/2017,Banadiir,unclear,Unknown,0,1,0,0,0,0,0,0,BANAADIR,-3216059.0,SO-BN,BANAADIR,Banaadir,Banaadir,ADM1,2.116667,45.4,,,,,,,,,,,,,,,,,,
+SOM058,16/08/2017,Jubbada Dhexe,Jillib,Unknown,7,7,0,7,0,0,0,0,JUBBADADHEXE,-3224955.0,SO-JD,JUBBADADHEXE,Jubbada Dhexe,Jubbada Dhexe,ADM1,1.33333,42.66667,unclear,,,,,,,,,,,,,,,,,
+SOM059,25/08/2017,Shabeellaha Hoose,Afgooye,Bariire,0,10,0,10,0,3,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,BARIIRRE,-3216239.0,SO-SH,BARIIRRE,Bariirre,Bariirre,PPL,2.047573,44.897461
+SOM060,31/08/2017,Shabeellaha Hoose,Barawe,Unknown,1,1,0,0,0,0,1,1,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,,,,,,,,,
+SOM061,05/09/2017,Bay,unclear,unclear,3,3,0,0,0,0,0,0,BAY,-3216354.0,SO-BY,BAY,Bay,Bay,ADM1,3.0,43.5,,,,,,,,,,,,,,,,,,
+SOM062,07/09/2017,Shabeellaha Hoose,Barawe,Unknown,1,1,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,,,,,,,,,
+SOM063,13/09/2017,unclear,unclear,Unknown,6,6,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM064,30/09/2017,unclear,unclear,Unknown,0,0,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM065,02/10/2017,unclear,unclear,Unknown,0,0,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM066,16/10/2017,Shabeellaha Hoose,Afgooye,Bariire,0,5,0,2,0,0,0,8,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,BARIIRRE,-3216239.0,SO-SH,BARIIRRE,Bariirre,Bariirre,PPL,2.047573,44.897461
+SOM067,03/11/2017,Puntland,unclear,Unknown,3,20,0,0,0,0,0,0,unclear,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM068,09/11/2017,Bay,unclear,unclear,3,3,0,0,0,0,0,0,BAY,-3216354.0,SO-BY,BAY,Bay,Bay,ADM1,3.0,43.5,,,,,,,,,,,,,,,,,,
+SOM069,10/11/2017,Shabeellaha Hoose,Afgooye,Basra,13,13,0,3,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,BASRA,-3216331.0,SO-SH,BASRA,Basra,Basra,PPL,2.2991,45.2636
+SOM070,11/11/2017,unclear,unclear,Unknown,1,1,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM071,12/11/2017,Shabeellaha Hoose,unclear,unclear,3,3,0,3,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,,,,,,,,,,,,,,,,,,
+SOM072,12/11/2017,Puntland,unclear,Unknown,23,23,0,0,0,0,0,0,unclear,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM073,13/11/2017,unclear,unclear,Unknown,0,0,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM074,14/11/2017,Shabeellaha Hoose,unclear,unclear,6,6,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,,,,,,,,,,,,,,,,,,
+SOM075,21/11/2017,Bay,unclear,unclear,100,100,0,0,0,0,0,0,BAY,-3216354.0,SO-BY,BAY,Bay,Bay,ADM1,3.0,43.5,,,,,,,,,,,,,,,,,,
+SOM076,27/11/2017,unclear,unclear,Unknown,1,1,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM077,12/12/2017,Shabeellaha Hoose,Qoryooley,Mubaarak,0,0,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,MUBAARAK,-3227370.0,SO-SH,MUBAARAK,Mubaarak,Mubaarak,PPL,1.916744,44.773275
+SOM078,15/12/2017,Jubbada Hoose,unclear,unclear,8,8,0,0,0,0,0,0,JUBBADAHOOSE,-3224957.0,SO-JH,JUBBADAHOOSE,Jubbada Hoose,Jubbada Hoose,ADM1,0.0,42.0,,,,,,,,,,,,,,,,,,
+SOM079,24/12/2017,unclear,unclear,Unknown,13,13,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM080,27/12/2017,Shabeellaha Hoose,unclear,unclear,4,4,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,,,,,,,,,,,,,,,,,,
+SOM081,02/01/2018,Shabeellaha Hoose,unclear,unclear,2,2,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,,,,,,,,,,,,,,,,,,
+SOM082,18/01/2018,Jubbada Hoose,unclear,unclear,4,4,0,0,0,0,0,0,JUBBADAHOOSE,-3224957.0,SO-JH,JUBBADAHOOSE,Jubbada Hoose,Jubbada Hoose,ADM1,0.0,42.0,,,,,,,,,,,,,,,,,,
+SOM083,18/01/2018,Shabeellaha Dhexe,unclear,Unknown,0,5,0,0,0,5,0,6,SHABEELLAHADHEXE,-3229128.0,SO-SD,SHABEELLAHADHEXE,Shabeellaha Dhexe,Shabeellaha Dhexe,ADM1,3.0,46.0,,,,,,,,,,,,,,,,,,
+SOM084,06/02/2018,Jubbada Dhexe,Jilib,Qunyo Barrow,0,0,0,0,0,0,0,0,JUBBADADHEXE,-3224955.0,SO-JD,JUBBADADHEXE,Jubbada Dhexe,Jubbada Dhexe,ADM1,1.33333,42.66667,unclear,,,,,,,,,QUNYOBARROW,-3228309.0,SO-JD,QUNYOBARROW,Qunyo Barrow,Qunyo Barrow,PPL,0.800088,43.385188
+SOM085,19/02/2018,Jubbada Dhexe,Jilib,Unknown,3,3,0,0,0,0,0,0,JUBBADADHEXE,-3224955.0,SO-JD,JUBBADADHEXE,Jubbada Dhexe,Jubbada Dhexe,ADM1,1.33333,42.66667,unclear,,,,,,,,,,,,,,,,,
+SOM086,21/02/2018,Jubbada Hoose,Jamaame,unclear,4,5,0,2,0,0,0,0,JUBBADAHOOSE,-3224957.0,SO-JH,JUBBADAHOOSE,Jubbada Hoose,Jubbada Hoose,ADM1,0.0,42.0,unclear,,,,,,,,,,,,,,,,,
+SOM087,26/02/2018,Jubbada Dhexe,Jilib,Unknown,2,2,0,0,0,0,1,1,JUBBADADHEXE,-3224955.0,SO-JD,JUBBADADHEXE,Jubbada Dhexe,Jubbada Dhexe,ADM1,1.33333,42.66667,unclear,,,,,,,,,,,,,,,,,
+SOM088,12/03/2018,Jubbada Hoose,Jamaame,Kamsuuma,0,0,0,0,0,0,0,0,JUBBADAHOOSE,-3224957.0,SO-JH,JUBBADAHOOSE,Jubbada Hoose,Jubbada Hoose,ADM1,0.0,42.0,unclear,,,,,,,,,KAMSUUMA,-3225192.0,SO-JH,KAMSUUMA,Kamsuuma,Kamsuuma,PPL,0.24932,42.779147
+SOM089,13/03/2018,Shabeellaha Dhexe,Jawhar,Jamecco,12,12,0,0,0,0,15,15,SHABEELLAHADHEXE,-3229128.0,SO-SD,SHABEELLAHADHEXE,Shabeellaha Dhexe,Shabeellaha Dhexe,ADM1,3.0,46.0,unclear,,,,,,,,,JAMEECO,-3224658.0,SO-SD,JAMEECO,Jameeco,Jameeco,PPL,2.7058,45.6239
+SOM090,19/03/2018,Shabeellaha Hoose,Qoryooley,Mubaarak,2,2,0,0,0,0,3,3,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,MUBAARAK,-3227370.0,SO-SH,MUBAARAK,Mubaarak,Mubaarak,PPL,1.916744,44.773275
+SOM091,01/04/2018,Galguduud,El Bur,Unknown,6,6,2,2,1,1,0,0,GALGUDUUD,-3221647.0,SO-GA,GALGUDUUD,Galguduud,Galguduud,ADM1,5.0,47.0,unclear,,,,,,,,,,,,,,,,,
+SOM092,05/04/2018,Jubbada Dhexe,Jilib,Unknown,3,3,0,0,0,0,0,0,JUBBADADHEXE,-3224955.0,SO-JD,JUBBADADHEXE,Jubbada Dhexe,Jubbada Dhexe,ADM1,1.33333,42.66667,unclear,,,,,,,,,,,,,,,,,
+SOM093,11/04/2018,Jubbada Hoose,Afmadoow,Jana Cabdalle,0,0,0,0,0,0,0,0,JUBBADAHOOSE,-3224957.0,SO-JH,JUBBADAHOOSE,Jubbada Hoose,Jubbada Hoose,ADM1,0.0,42.0,unclear,,,,,,,,,JANACABDALLE,-3224672.0,SO-JH,JANACABDALLE,Jana Cabdalle,Jana Cabdalle,LCTY,0.021084,42.312647
+SOM094,16/04/2018,Shabeellaha Hoose,unclear,unclear,0,0,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,,,,,,,,,,,,,,,,,,
+SOM095,09/05/2018,Shabeellaha Hoose,unclear,unclear,0,5,0,5,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,,,,,,,,,,,,,,,,,,
+SOM096,23/05/2018,Shabeellaha Hoose,unclear,unclear,10,10,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,,,,,,,,,,,,,,,,,,
+SOM097,31/05/2018,Shabeellaha Hoose,unclear,unclear,12,12,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,,,,,,,,,,,,,,,,,,
+SOM098,02/06/2018,unclear,unclear,Unknown,27,27,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM099,03/06/2018,unclear,unclear,Unknown,0,0,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM100,08/06/2018,unclear,unclear,Unknown,1,1,0,0,0,0,5,5,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM101,23/07/2018,Jubbada Hoose,unclear,unclear,0,0,0,0,0,0,0,0,JUBBADAHOOSE,-3224957.0,SO-JH,JUBBADAHOOSE,Jubbada Hoose,Jubbada Hoose,ADM1,0.0,42.0,,,,,,,,,,,,,,,,,,
+SOM102,02/08/2018,unclear,unclear,Unknown,4,4,0,3,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM103,21/08/2018,Jubbada Hoose,unclear,unclear,2,2,0,0,0,0,0,0,JUBBADAHOOSE,-3224957.0,SO-JH,JUBBADAHOOSE,Jubbada Hoose,Jubbada Hoose,ADM1,0.0,42.0,,,,,,,,,,,,,,,,,,
+SOM104,27/08/2018,Shabeellaha Hoose,unclear,unclear,3,3,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,,,,,,,,,,,,,,,,,,
+SOM105,11/09/2018,Shabeellaha Hoose,Qoryooley,Mubaarak,2,2,0,0,0,0,1,1,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,MUBAARAK,-3227370.0,SO-SH,MUBAARAK,Mubaarak,Mubaarak,PPL,1.916744,44.773275
+SOM106,21/09/2018,Jubbada Hoose,unclear,unclear,18,18,0,0,0,0,0,0,JUBBADAHOOSE,-3224957.0,SO-JH,JUBBADAHOOSE,Jubbada Hoose,Jubbada Hoose,ADM1,0.0,42.0,,,,,,,,,,,,,,,,,,
+SOM107,01/10/2018,Jubbada Hoose,unclear,unclear,9,9,0,0,0,0,1,1,JUBBADAHOOSE,-3224957.0,SO-JH,JUBBADAHOOSE,Jubbada Hoose,Jubbada Hoose,ADM1,0.0,42.0,,,,,,,,,,,,,,,,,,
+SOM108,06/10/2018,Jubbada Dhexe,Jilib,Qunyo Barrow,1,1,0,0,0,0,0,0,JUBBADADHEXE,-3224955.0,SO-JD,JUBBADADHEXE,Jubbada Dhexe,Jubbada Dhexe,ADM1,1.33333,42.66667,unclear,,,,,,,,,QUNYOBARROW,-3228309.0,SO-JD,QUNYOBARROW,Qunyo Barrow,Qunyo Barrow,PPL,0.800088,43.385188
+SOM109,12/10/2018,Mudug,Harardere,Unknown,60,60,0,0,0,0,0,0,MUDUG,-3227383.0,SO-MU,MUDUG,Mudug,Mudug,ADM1,7.0,48.0,unclear,,,,,,,,,,,,,,,,,
+SOM110,14/10/2018,Jubbada Hoose,Jamaame,Araara,4,4,0,0,0,0,0,0,JUBBADAHOOSE,-3224957.0,SO-JH,JUBBADAHOOSE,Jubbada Hoose,Jubbada Hoose,ADM1,0.0,42.0,unclear,,,,,,,,,ARAARA,-3215376.0,SO-JH,ARAARA,Araara,Araara,PPL,0.026309,42.682939
+SOM111,25/10/2018,Jubbada Dhexe,Jilib,Qunyo Barrow,2,2,0,0,0,0,0,0,JUBBADADHEXE,-3224955.0,SO-JD,JUBBADADHEXE,Jubbada Dhexe,Jubbada Dhexe,ADM1,1.33333,42.66667,unclear,,,,,,,,,QUNYOBARROW,-3228309.0,SO-JD,QUNYOBARROW,Qunyo Barrow,Qunyo Barrow,PPL,0.800088,43.385188
+SOM112,19/11/2018,Mudug,Debatscile,Unknown,27,27,0,0,0,0,0,0,MUDUG,-3227383.0,SO-MU,MUDUG,Mudug,Mudug,ADM1,7.0,48.0,unclear,,,,,,,,,,,,,,,,,
+SOM113,19/11/2018,Mudug,Debatscile,Unknown,10,10,0,0,0,0,0,0,MUDUG,-3227383.0,SO-MU,MUDUG,Mudug,Mudug,ADM1,7.0,48.0,unclear,,,,,,,,,,,,,,,,,
+SOM114,20/11/2018,Mudug,Harardere,Qeycad,7,7,0,0,0,0,0,0,MUDUG,-3227383.0,SO-MU,MUDUG,Mudug,Mudug,ADM1,7.0,48.0,unclear,,,,,,,,,QEYCAD,-3228058.0,SO-MU,QEYCAD,Qeycad,Qeycad,PPL,5.012228,47.991664
+SOM115,21/11/2018,Mudug,Harardere,Unknown,6,6,0,0,0,0,0,0,MUDUG,-3227383.0,SO-MU,MUDUG,Mudug,Mudug,ADM1,7.0,48.0,unclear,,,,,,,,,,,,,,,,,
+SOM116,21/11/2018,Mudug,Harardere,Unknown,0,0,0,0,0,0,0,0,MUDUG,-3227383.0,SO-MU,MUDUG,Mudug,Mudug,ADM1,7.0,48.0,unclear,,,,,,,,,,,,,,,,,
+SOM117,27/11/2018,Mudug,Harardere,Qeycad,3,3,0,0,0,0,0,0,MUDUG,-3227383.0,SO-MU,MUDUG,Mudug,Mudug,ADM1,7.0,48.0,unclear,,,,,,,,,QEYCAD,-3228058.0,SO-MU,QEYCAD,Qeycad,Qeycad,PPL,5.012228,47.991664
+SOM118,30/11/2018,Bay,unclear,Lebede,9,9,0,0,0,0,0,0,BAY,-3216354.0,SO-BY,BAY,Bay,Bay,ADM1,3.0,43.5,,,,,,,,,,LEBEDE,-3226094.0,SO-BY,LEBEDE,Lebede,Lebede,RK,2.412061,43.446084
+SOM119,04/12/2018,Shabeellaha Hoose,Afgooye,Awdheegle,4,4,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,AWDHEEGLE,-3215580.0,SO-SH,AWDHEEGLE,Aw Dheegle,Aw Dheegle,PPL,1.977532,44.832486
+SOM120,08/12/2018,unclear,unclear,Unknown,4,4,0,1,0,0,0,1,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM121,15/12/2018,Shabeellaha Hoose,Marka,Gandarshe,34,34,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,GANDARSHE,-3221816.0,SO-SH,GANDARSHE,Gandarshe,Gandarshe,PPL,1.834581,44.966584
+SOM122,16/12/2018,Shabeellaha Hoose,Marka,Gandarshe,28,28,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,GANDARSHE,-3221816.0,SO-SH,GANDARSHE,Gandarshe,Gandarshe,PPL,1.834581,44.966584
+SOM123,19/12/2018,unclear,unclear,Unknown,11,11,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM124,02/01/2019,Shabeellaha Hoose,unclear,unclear,10,10,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,,,,,,,,,,,,,,,,,,
+SOM125,06/01/2019,Shabeellaha Hoose,unclear,unclear,6,6,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,,,,,,,,,,,,,,,,,,
+SOM126,07/01/2019,Jubbada Hoose,Jamaame,Baqdaad,4,4,0,0,0,0,0,0,JUBBADAHOOSE,-3224957.0,SO-JH,JUBBADAHOOSE,Jubbada Hoose,Jubbada Hoose,ADM1,0.0,42.0,unclear,,,,,,,,,BAQDAAD,-3216156.0,SO-JH,BAQDAAD,Baqdaad,Baqdaad,PPL,-0.04144,42.653653
+SOM127,08/01/2019,Bay,Dinsoor,Yaaq Braawe,6,6,0,0,0,0,0,0,BAY,-3216354.0,SO-BY,BAY,Bay,Bay,ADM1,3.0,43.5,unclear,,,,,,,,,YAAQBRAAWE,-3231499.0,SO-BY,YAAQBRAAWE,Yaaq Braawe,Yaaq Braawe,PPL,1.959699,43.189248
+SOM128,19/01/2019,Jubbada Dhexe,Jilib,Unknown,52,52,0,0,0,0,0,0,JUBBADADHEXE,-3224955.0,SO-JD,JUBBADADHEXE,Jubbada Dhexe,Jubbada Dhexe,ADM1,1.33333,42.66667,unclear,,,,,,,,,,,,,,,,,
+SOM129,23/01/2019,Jubbada Dhexe,Jilib,Unknown,0,0,0,0,0,0,0,0,JUBBADADHEXE,-3224955.0,SO-JD,JUBBADADHEXE,Jubbada Dhexe,Jubbada Dhexe,ADM1,1.33333,42.66667,unclear,,,,,,,,,,,,,,,,,
+SOM130,30/01/2019,Hiiraan,Beledweyne,Shebeeley,24,24,0,0,0,0,0,0,HIIRAAN,-3223979.0,SO-HI,HIIRAAN,Hiiraan,Hiiraan,ADM1,4.0,45.5,unclear,,,,,,,,,SHABEELLEY,-3229154.0,SO-HI,SHABEELLEY,Shabeelley,Shabeelley,PPL,4.714722,45.215
+SOM131,01/02/2019,Shabeellaha Hoose,Marka,Gandarshe,13,13,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,GANDARSHE,-3221816.0,SO-SH,GANDARSHE,Gandarshe,Gandarshe,PPL,1.834581,44.966584
+SOM132,03/02/2019,Shabeellaha Hoose,Marka,Gandarshe,0,0,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,GANDARSHE,-3221816.0,SO-SH,GANDARSHE,Gandarshe,Gandarshe,PPL,1.834581,44.966584
+SOM133,05/02/2019,Bay,BURHACABA,Leego,0,0,0,0,0,0,0,0,BAY,-3216354.0,SO-BY,BAY,Bay,Bay,ADM1,3.0,43.5,unclear,,,,,,,,,LEEGO,-3226156.0,SO-BY,LEEGO,Leego,Leego,PPL,2.716321,44.511484
+SOM134,06/02/2019,Shabeellaha Hoose,Marka,Gandarshe,11,11,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,GANDARSHE,-3221816.0,SO-SH,GANDARSHE,Gandarshe,Gandarshe,PPL,1.834581,44.966584
+SOM135,07/02/2019,Shabeellaha Hoose,Afgooye,Bariire,4,4,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,BARIIRRE,-3216239.0,SO-SH,BARIIRRE,Bariirre,Bariirre,PPL,2.047573,44.897461
+SOM136,08/02/2019,Jubbada Hoose,Jamaame,Kobon,8,8,0,0,0,0,0,0,JUBBADAHOOSE,-3224957.0,SO-JH,JUBBADAHOOSE,Jubbada Hoose,Jubbada Hoose,ADM1,0.0,42.0,unclear,,,,,,,,,KOBON,-3225397.0,SO-JH,KOBON,Kobon,Kobon,PPL,0.035633,42.70911
+SOM137,11/02/2019,Shabeellaha Hoose,unclear,unclear,12,13,0,13,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,,,,,,,,,,,,,,,,,,
+SOM138,23/02/2019,Jubbada Dhexe,Jilib,Qunyo Barrow,2,4,0,3,0,1,0,0,JUBBADADHEXE,-3224955.0,SO-JD,JUBBADADHEXE,Jubbada Dhexe,Jubbada Dhexe,ADM1,1.33333,42.66667,unclear,,,,,,,,,QUNYOBARROW,-3228309.0,SO-JD,QUNYOBARROW,Qunyo Barrow,Qunyo Barrow,PPL,0.800088,43.385188
+SOM139,23/02/2019,Shabeellaha Hoose,Afgooye,Awdheegle,0,3,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,AWDHEEGLE,-3215580.0,SO-SH,AWDHEEGLE,Aw Dheegle,Aw Dheegle,PPL,1.977532,44.832486
+SOM140,23/02/2019,Shabeellaha Hoose,unclear,unclear,0,2,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,,,,,,,,,,,,,,,,,,
+SOM141,24/02/2019,Hiiraan,Beledweyne,Unknown,35,35,0,0,0,0,0,0,HIIRAAN,-3223979.0,SO-HI,HIIRAAN,Hiiraan,Hiiraan,ADM1,4.0,45.5,unclear,,,,,,,,,,,,,,,,,
+SOM142,25/02/2019,Hiiraan,Beledweyne,Shebeeley,20,20,0,0,0,0,0,0,HIIRAAN,-3223979.0,SO-HI,HIIRAAN,Hiiraan,Hiiraan,ADM1,4.0,45.5,unclear,,,,,,,,,SHABEELLEY,-3229154.0,SO-HI,SHABEELLEY,Shabeelley,Shabeelley,PPL,4.714722,45.215
+SOM143,28/02/2019,Hiiraan,unclear,Unknown,26,26,0,0,0,0,0,0,HIIRAAN,-3223979.0,SO-HI,HIIRAAN,Hiiraan,Hiiraan,ADM1,4.0,45.5,,,,,,,,,,,,,,,,,,
+SOM144,11/03/2019,Shabeellaha Hoose,unclear,Dar es Salaam,8,8,0,7,0,0,0,1,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,,,,,,,,,,DAARASALAAM,-3218577.0,SO-SH,DAARASALAAM,Daarasalaam,Daarasalaam,PPL,1.922139,44.787128
+SOM145,12/03/2019,Shabeellaha Hoose,unclear,Huley,2,2,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,,,,,,,,,,unclear,,,,,,,,
+SOM146,13/03/2019,Jubbada Hoose,Jamaame,Malayle,3,3,0,0,0,0,0,0,JUBBADAHOOSE,-3224957.0,SO-JH,JUBBADAHOOSE,Jubbada Hoose,Jubbada Hoose,ADM1,0.0,42.0,unclear,,,,,,,,,MALAYLE,-3226682.0,SO-JH,MALAYLE,Malayle,Malayle,PPL,-0.001618,42.660897
+SOM147,18/03/2019,Shabeellaha Hoose,Afgooye,Awdheegle,3,7,0,4,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,AWDHEEGLE,-3215580.0,SO-SH,AWDHEEGLE,Aw Dheegle,Aw Dheegle,PPL,1.977532,44.832486
+SOM148,09/04/2019,Jubbada Dhexe,Jilib,Unknown,1,1,0,0,0,0,0,0,JUBBADADHEXE,-3224955.0,SO-JD,JUBBADADHEXE,Jubbada Dhexe,Jubbada Dhexe,ADM1,1.33333,42.66667,unclear,,,,,,,,,,,,,,,,,
+SOM149,11/04/2019,Shabeellaha Hoose,Kurtunwaarey,Garowle,2,2,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,GAROWLE,-3222082.0,SO-SH,GAROWLE,Garowle,Garowle,PPLL,1.6547,44.2857
+SOM150,14/04/2019,Bari,ISKUSHUBAN,Xiriiro,1,1,0,0,0,0,0,0,BARI,-3216231.0,SO-BR,BARI,Bari,Bari,ADM1,10.0,50.0,unclear,,,,,,,,,XIRIIRO,-3231357.0,SO-BR,XIRIIRO,Xiriiro,Xiriiro,PPL,9.977982,50.250657
+SOM151,19/04/2019,Jubbada Hoose,Jamaame,unclear,2,2,0,0,0,0,0,0,JUBBADAHOOSE,-3224957.0,SO-JH,JUBBADAHOOSE,Jubbada Hoose,Jubbada Hoose,ADM1,0.0,42.0,unclear,,,,,,,,,,,,,,,,,
+SOM152,26/04/2019,Togdheer,unclear,Unknown,3,3,0,0,0,0,0,0,TOGDHEER,-3229890.0,SO-TO,TOGDHEER,Togdheer,Togdheer,ADM1,9.333333,45.416667,,,,,,,,,,,,,,,,,,
+SOM153,05/05/2019,Shabeellaha Hoose,Wanlaweyn,Tortoroow,3,3,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,TORTOROOW,-3229928.0,SO-SH,TORTOROOW,Tortoroow,Tortoroow,PPL,2.252412,44.690529
+SOM154,08/05/2019,Togdheer,unclear,Unknown,13,13,0,0,0,0,0,0,TOGDHEER,-3229890.0,SO-TO,TOGDHEER,Togdheer,Togdheer,ADM1,9.333333,45.416667,,,,,,,,,,,,,,,,,,
+SOM155,09/05/2019,Togdheer,unclear,Unknown,4,4,0,0,0,0,0,0,TOGDHEER,-3229890.0,SO-TO,TOGDHEER,Togdheer,Togdheer,ADM1,9.333333,45.416667,,,,,,,,,,,,,,,,,,
+SOM156,22/05/2019,Togdheer,unclear,Unknown,2,2,0,0,0,0,0,0,TOGDHEER,-3229890.0,SO-TO,TOGDHEER,Togdheer,Togdheer,ADM1,9.333333,45.416667,,,,,,,,,,,,,,,,,,
+SOM157,22/05/2019,Shabeellaha Hoose,Wanlaweyn,Balcad,2,2,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,BALCAD,-3215956.0,SO-SH,BALCAD,Balcad,Balcad,PPL,2.649822,45.049614
+SOM158,24/05/2019,Togdheer,unclear,Unknown,3,3,0,0,0,0,0,0,TOGDHEER,-3229890.0,SO-TO,TOGDHEER,Togdheer,Togdheer,ADM1,9.333333,45.416667,,,,,,,,,,,,,,,,,,
+SOM159,26/05/2019,Togdheer,unclear,Unknown,3,3,0,0,0,0,0,0,TOGDHEER,-3229890.0,SO-TO,TOGDHEER,Togdheer,Togdheer,ADM1,9.333333,45.416667,,,,,,,,,,,,,,,,,,
+SOM160,04/06/2019,Togdheer,unclear,Unknown,6,6,0,0,0,0,0,0,TOGDHEER,-3229890.0,SO-TO,TOGDHEER,Togdheer,Togdheer,ADM1,9.333333,45.416667,,,,,,,,,,,,,,,,,,
+SOM161,05/06/2019,Shabeellaha Hoose,Wanlaweyn,Tortoroow,1,1,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,TORTOROOW,-3229928.0,SO-SH,TORTOROOW,Tortoroow,Tortoroow,PPL,2.252412,44.690529
+SOM162,16/06/2019,unclear,unclear,Unknown,2,2,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM163,24/06/2019,unclear,unclear,Unknown,1,1,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM164,25/06/2019,Jubbada Dhexe,Jilib,Qunyo Barrow,1,1,0,0,0,0,0,0,JUBBADADHEXE,-3224955.0,SO-JD,JUBBADADHEXE,Jubbada Dhexe,Jubbada Dhexe,ADM1,1.33333,42.66667,unclear,,,,,,,,,QUNYOBARROW,-3228309.0,SO-JD,QUNYOBARROW,Qunyo Barrow,Qunyo Barrow,PPL,0.800088,43.385188
+SOM165,27/07/2019,Togdheer,unclear,Unknown,1,1,0,0,0,0,0,0,TOGDHEER,-3229890.0,SO-TO,TOGDHEER,Togdheer,Togdheer,ADM1,9.333333,45.416667,,,,,,,,,,,,,,,,,,
+SOM166,20/08/2019,Jubbada Dhexe,Jilib,Qunyo Barrow,1,1,0,0,0,0,0,0,JUBBADADHEXE,-3224955.0,SO-JD,JUBBADADHEXE,Jubbada Dhexe,Jubbada Dhexe,ADM1,1.33333,42.66667,unclear,,,,,,,,,QUNYOBARROW,-3228309.0,SO-JD,QUNYOBARROW,Qunyo Barrow,Qunyo Barrow,PPL,0.800088,43.385188
+SOM167,03/09/2019,unclear,unclear,Unknown,1,1,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM168,17/09/2019,Jubbada Hoose,unclear,unclear,2,2,0,0,0,0,0,0,JUBBADAHOOSE,-3224957.0,SO-JH,JUBBADAHOOSE,Jubbada Hoose,Jubbada Hoose,ADM1,0.0,42.0,,,,,,,,,,,,,,,,,,
+SOM168a,24/09/2019,Shabeellaha Hoose,Qoryooley,Ugunji,0,0,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,UGUNJI,-3230148.0,SO-SH,UGUNJI,Ugunji,Ugunji,PPL,1.8734,44.7208
+SOM169,30/09/2019,Shabeellaha Hoose,Wanlaweyn,Bahle Dogli,10,10,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,BAHLEDOGLI,-3230450.0,SO-SH,BAHLEDOGLI,Bahle Dogli,Bahle Dogli,PPL,2.6185,44.8938
+SOM170,30/09/2019,Jubbada Dhexe,Jilib,Qunyo Barrow,1,1,0,0,0,0,0,0,JUBBADADHEXE,-3224955.0,SO-JD,JUBBADADHEXE,Jubbada Dhexe,Jubbada Dhexe,ADM1,1.33333,42.66667,unclear,,,,,,,,,QUNYOBARROW,-3228309.0,SO-JD,QUNYOBARROW,Qunyo Barrow,Qunyo Barrow,PPL,0.800088,43.385188
+SOM171,25/10/2019,unclear,unclear,Unknown,3,3,0,2,0,0,0,1,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM172,12/11/2019,unclear,unclear,Unknown,1,1,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM173,19/11/2019,Jubbada Dhexe,Jilib,Qunyo Barrow,1,1,0,0,0,0,0,0,JUBBADADHEXE,-3224955.0,SO-JD,JUBBADADHEXE,Jubbada Dhexe,Jubbada Dhexe,ADM1,1.33333,42.66667,unclear,,,,,,,,,QUNYOBARROW,-3228309.0,SO-JD,QUNYOBARROW,Qunyo Barrow,Qunyo Barrow,PPL,0.800088,43.385188
+SOM174,30/11/2019,unclear,unclear,Unknown,0,0,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM175,09/12/2019,Jubbada Dhexe,Saakow,Unknown,1,1,0,0,0,0,0,0,JUBBADADHEXE,-3224955.0,SO-JD,JUBBADADHEXE,Jubbada Dhexe,Jubbada Dhexe,ADM1,1.33333,42.66667,unclear,,,,,,,,,,,,,,,,,
+SOM176,16/12/2019,Jubbada Dhexe,Buaale,Dujuuma,1,1,0,0,0,0,0,0,JUBBADADHEXE,-3224955.0,SO-JD,JUBBADADHEXE,Jubbada Dhexe,Jubbada Dhexe,ADM1,1.33333,42.66667,unclear,,,,,,,,,DUJUUMA,-3220525.0,SO-JD,DUJUUMA,Dujuuma,Dujuuma,PPL,1.253114,42.573772
+SOM177,29/12/2019,Jubbada Dhexe,Jilib,Qunyo Barrow,2,2,0,0,0,0,0,0,JUBBADADHEXE,-3224955.0,SO-JD,JUBBADADHEXE,Jubbada Dhexe,Jubbada Dhexe,ADM1,1.33333,42.66667,unclear,,,,,,,,,QUNYOBARROW,-3228309.0,SO-JD,QUNYOBARROW,Qunyo Barrow,Qunyo Barrow,PPL,0.800088,43.385188
+SOM178,29/12/2019,unclear,unclear,Unknown,2,2,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM179,03/01/2020,Shabeellaha Hoose,Afgooye,Bacaw,3,3,0,0,0,0,0,0,SHABEELLAHAHOOSE,-3229137.0,SO-SH,SHABEELLAHAHOOSE,Shabeellaha Hoose,Shabeellaha Hoose,ADM1,1.83333,44.41667,unclear,,,,,,,,,BACAW,-3215801.0,SO-SH,BACAW,Bacaw,Bacaw,PPL,2.068232,44.913313
+SOM180,16/01/2020,Jubbada Dhexe,Jilib,Qunyo Barrow,2,2,0,0,0,0,0,0,JUBBADADHEXE,-3224955.0,SO-JD,JUBBADADHEXE,Jubbada Dhexe,Jubbada Dhexe,ADM1,1.33333,42.66667,unclear,,,,,,,,,QUNYOBARROW,-3228309.0,SO-JD,QUNYOBARROW,Qunyo Barrow,Qunyo Barrow,PPL,0.800088,43.385188
+SOM181,19/01/2020,Jubbada Hoose,Jamaame,Bangeeni,3,3,0,0,0,0,0,0,JUBBADAHOOSE,-3224957.0,SO-JH,JUBBADAHOOSE,Jubbada Hoose,Jubbada Hoose,ADM1,0.0,42.0,unclear,,,,,,,,,BANGEENI,-3216103.0,SO-JH,BANGEENI,Bangeeni,Bangeeni,LCTY,0.05,42.716667
+SOM182,26/01/2020,Jubbada Hoose,Jamaame,Unknown,0,0,0,0,0,0,0,0,JUBBADAHOOSE,-3224957.0,SO-JH,JUBBADAHOOSE,Jubbada Hoose,Jubbada Hoose,ADM1,0.0,42.0,unclear,,,,,,,,,,,,,,,,,
+SOM183,27/01/2020,unclear,unclear,Unknown,1,1,0,1,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM184,29/01/2020,unclear,unclear,Unknown,0,0,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM185,02/02/2020,unclear,unclear,Unknown,1,2,0,1,0,0,0,2,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM186,04/02/2020,Jubbada Hoose,unclear,Unknown,1,1,0,0,0,0,0,0,JUBBADAHOOSE,-3224957.0,SO-JH,JUBBADAHOOSE,Jubbada Hoose,Jubbada Hoose,ADM1,0.0,42.0,,,,,,,,,,,,,,,,,,
+SOM187,06/02/2020,unclear,unclear,Unknown,0,0,0,0,0,0,2,2,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM188,17/02/2020,unclear,unclear,Unknown,0,0,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SOM189,19/02/2020,unclear,unclear,Unknown,3,3,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
