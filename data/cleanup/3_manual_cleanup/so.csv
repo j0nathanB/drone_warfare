@@ -3,7 +3,7 @@ SOM001,07/01/2007,Jubbada Hoose,Badhaadhe,Ras Kamboni,8,10,2,2,0,1,1,3
 SOM002,09/01/2007,unclear,unclear,Unknown,5,10,0,0,0,0,4,5
 SOM003,09/01/2007,unclear,unclear,Unknown,4,31,4,31,0,1,0,0
 SOM004,23/01/2007,unclear,unclear,Unknown,8,8,0,0,0,0,0,0
-SOM005,01/06/2007,Bari,Bargal,Unknown,8,12,0,0,0,0,0,0
+SOM005,01/06/2007,Bari,ISKUSHUBAN,Bargal,8,12,0,0,0,0,0,0
 SOM006,03/03/2008,unclear,unclear,Unknown,0,6,0,4,0,0,3,8
 SOM007,01/05/2008,Galguduud,Dusa Marreb,Unknown,8,15,5,10,0,0,0,0
 SOM008,14/09/2009,Shabeellaha Hoose,Barawe,Unknown,2,6,0,0,0,0,2,2
@@ -39,7 +39,7 @@ SOM037,11/04/2016,Jubbada Hoose,unclear,unclear,8,12,3,3,0,0,0,0
 SOM038,12/05/2016,Shabeellaha Hoose,Afgooye,Unknown,5,5,0,0,0,0,0,0
 SOM039,27/05/2016,unclear,unclear,Unknown,1,1,0,0,0,0,0,0
 SOM040,21/06/2016,unclear,unclear,Unknown,3,3,0,0,0,0,0,0
-SOM041,30/08/2016,Shabeellaha Hoose,Gobanle,Unknown,2,2,0,0,0,0,0,0
+SOM041,30/08/2016,Shabeellaha Hoose,Wanlaweyn,Gobanle,2,2,0,0,0,0,0,0
 SOM042,05/09/2016,Shabeellaha Hoose,Wanlaweyn,Tortoroow,4,4,0,0,0,0,0,0
 SOM043,26/09/2016,Jubbada Hoose,unclear,Unknown,4,4,0,0,0,0,0,0
 SOM044,28/09/2016,Mudug,Galcaio,Unknown,10,22,0,2,0,0,3,16
@@ -110,8 +110,8 @@ SOM108,06/10/2018,Jubbada Dhexe,Jilib,Qunyo Barrow,1,1,0,0,0,0,0,0
 SOM109,12/10/2018,Mudug,Harardere,Unknown,60,60,0,0,0,0,0,0
 SOM110,14/10/2018,Jubbada Hoose,Jamaame,Araara,4,4,0,0,0,0,0,0
 SOM111,25/10/2018,Jubbada Dhexe,Jilib,Qunyo Barrow,2,2,0,0,0,0,0,0
-SOM112,19/11/2018,Mudug,Debatscile,Unknown,27,27,0,0,0,0,0,0
-SOM113,19/11/2018,Mudug,Debatscile,Unknown,10,10,0,0,0,0,0,0
+SOM112,19/11/2018,Mudug,Hobyo,Debatscile,27,27,0,0,0,0,0,0
+SOM113,19/11/2018,Mudug,Hobyo,Debatscile,10,10,0,0,0,0,0,0
 SOM114,20/11/2018,Mudug,Harardere,Qeycad,7,7,0,0,0,0,0,0
 SOM115,21/11/2018,Mudug,Harardere,Unknown,6,6,0,0,0,0,0,0
 SOM116,21/11/2018,Mudug,Harardere,Unknown,0,0,0,0,0,0,0,0

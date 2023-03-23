@@ -1,431 +1,431 @@
-Strike ID,Date,Loc,Adm_4,Adm_3,Adm_2,Adm_1,Minimum total people killed,Maximum total people killed,Minimum civilians reported killed,Maximum civilians reported killed,Minimum children reported killed,Maximum children reported killed,Minimum reported injured,Maximum reported injured
-B1,17/06/2004,unclear,Wana,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,6,8,2,2,2,2,1,1
-B2,08/05/2005,Toorikhel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,2,0,0,0,0,0,0
-B3,05/11/2005,Mosaki,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,8,8,3,8,2,3,1,1
-B4,01/12/2005,Haisori,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,6,6,2,3,2,2,0,0
-B5,13/01/2006,unclear,Damadola,Bajaur,Malakand,Khyber Pakhtunkhwa,13,22,10,18,5,6,0,0
-B6,30/10/2006,unclear,Chengai,Bajaur,Malakand,Khyber Pakhtunkhwa,81,83,80,82,68,70,3,3
-B7,16/01/2007,Zamazola,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,8,8,8,8,1,1,0,0
-B8,27/04/2007,Saidgai,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,4,3,4,0,0,3,9
-B9,19/06/2007,Mami Rogha,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,20,34,0,34,0,0,10,15
-B10,02/11/2007,Danda Darpakhel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,10,0,0,0,0,6,12
-B11,03/12/2007,unclear,Jani Khel,Bannu,Bannu,Khyber Pakhtunkhwa,0,0,0,0,0,0,1,1
-B12,29/01/2008,unclear,Mirali,North Waziristan,Bannu,Khyber Pakhtunkhwa,12,15,4,6,2,3,1,2
-B13,28/02/2008,Azam Warsak,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,10,13,0,0,0,0,6,16
-B14,16/03/2008,Dhook Pir Bagh,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,18,20,0,4,0,0,5,9
-B15,14/05/2008,unclear,Damadola,Bajaur,Malakand,Khyber Pakhtunkhwa,12,20,4,6,1,4,9,9
-B16,14/06/2008,unclear,Makin,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,1,1,0,1,0,0,0,0
-B17,28/07/2008,Zeralita,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,7,12,1,5,0,2,3,3
-B18,12/08/2008,Bhaggar,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,12,25,0,5,0,0,0,4
-B19,20/08/2008,Zari Noor,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,6,12,0,0,0,0,5,5
-B20,27/08/2008,Ganki Khel,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,0,0,0,0,0,0,4,4
-B21,30/08/2008,Korzai,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,4,5,0,0,0,0,4,4
-B22,30/08/2008,unclear,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,6,11,2,9,1,4,2,8
-B23,02/09/2008,unclear,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,0,10,0,0,0,0,0,1
-B24,04/09/2008,Mohammad Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,7,0,0,0,0,3,4
-B25,05/09/2008,Gurwak,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,12,5,7,3,4,0,0
-B26,08/09/2008,unclear,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,17,23,11,20,5,8,14,25
-B27,12/09/2008,Tol Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,12,15,3,5,2,2,14,14
-B28,17/09/2008,Baghar Cheena,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,4,7,0,0,0,0,3,3
-B29,30/09/2008,Khushali,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,4,8,0,0,0,0,5,9
-B30,03/10/2008,unclear,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,3,3,3,1,1,5,5
-B31,03/10/2008,unclear,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,17,21,7,14,3,3,0,0
-B32,09/10/2008,Tati,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,9,1,9,1,4,2,2
-B33,11/10/2008,unclear,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,5,0,0,0,0,2,2
-B34,16/10/2008,Taparghai,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,2,9,0,4,0,0,1,7
-B35,23/10/2008,Danda Darpakhel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,8,11,7,10,7,7,6,11
-B36,26/10/2008,Mandata,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,18,20,0,4,0,3,2,2
-B37,31/10/2008,Asori,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,25,1,20,0,0,0,0
-B38,31/10/2008,Kari Kot,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,4,12,1,1,0,0,2,30
-B39,07/11/2008,Kumsham,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,11,16,6,11,0,0,17,17
-B40,14/11/2008,unclear,Garyom,North Waziristan,Bannu,Khyber Pakhtunkhwa,11,13,3,12,0,0,2,2
-B41,19/11/2008,unclear,Jani Khel,Bannu,Bannu,Khyber Pakhtunkhwa,3,6,0,3,0,0,7,7
-B42,22/11/2008,Ali Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,6,0,1,0,0,6,6
-B43,27/11/2008,unclear,Wana,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,5,5,0,0,0,0,0,0
-B44,29/11/2008,Chashma,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,3,0,3,0,0,2,3
-B45,05/12/2008,Kateera,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,4,0,0,0,0,2,2
-B46,11/12/2008,Azam Warsak,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,6,7,0,7,0,0,0,0
-B47,15/12/2008,Tapi Tool,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,3,0,3,0,0,3,3
-B48,22/12/2008,Kari Kot,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,3,3,0,0,0,0,5,5
-B49,22/12/2008,Shin Warsak,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,2,4,0,0,0,0,4,4
-B50,01/01/2009,Kari Kot,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,3,5,0,0,0,0,1,2
-B51,02/01/2009,Madin Village,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,3,4,0,0,0,0,3,5
-Ob1,23/01/2009,Zharki,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,7,15,9,11,1,1,1,1
-Ob2,23/01/2009,Ganki Khel,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,5,10,5,10,3,4,2,2
-Ob3,14/02/2009,Narsi Khel,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,25,35,1,9,1,1,11,15
-Ob4,16/02/2009,Sur Pul,unclear,Kurram,Kohat,Khyber Pakhtunkhwa,18,31,0,0,0,0,3,7
-Ob5,01/03/2009,unclear,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,3,12,0,0,0,0,1,3
-Ob6,12/03/2009,Barjo,unclear,Kurram,Kohat,Khyber Pakhtunkhwa,14,26,0,0,0,0,9,50
-Ob7,15/03/2009,unclear,Jani Khel,Bannu,Bannu,Khyber Pakhtunkhwa,2,6,0,0,0,0,3,3
-Ob8,25/03/2009,unclear,Makin,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,6,8,0,0,0,0,5,5
-Ob9,26/03/2009,Sokhel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,5,0,5,0,0,5,5
-Ob10,01/04/2009,Khadezai,unclear,Orakzai,Kohat,Khyber Pakhtunkhwa,10,14,5,5,3,3,4,16
-Ob11,04/04/2009,unclear,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,13,15,8,13,3,5,1,1
-Ob12,08/04/2009,Ganki Khel,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,3,4,0,0,0,0,2,5
-Ob13,19/04/2009,Ganki Khel,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,0,8,0,8,0,0,3,5
-Ob14,29/04/2009,Kaniguram,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,1,10,0,4,0,0,4,4
-Ob15,09/05/2009,Tabbi Langhar Khel,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,6,25,0,4,0,0,7,10
-Ob16,12/05/2009,Sara Khwara,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,5,9,0,0,0,0,4,4
-Ob17,16/05/2009,Khesoor,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,25,40,9,9,0,0,2,2
-Ob18,14/06/2009,Marda Algad,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,3,5,0,3,0,0,0,0
-Ob19,18/06/2009,unclear,Wana,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,12,18,4,4,0,0,10,10
-Ob20,23/06/2009,unclear,Makin,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,5,6,0,0,0,0,7,7
-Ob21,23/06/2009,unclear,Makin,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,60,83,18,50,10,10,27,27
-Ob22,03/07/2009,Mantoi,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,0,5,0,5,0,0,0,0
-Ob23,03/07/2009,Zamarai Nairai,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,10,17,0,0,0,0,27,35
-Ob24,07/07/2009,unclear,Makin,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,14,18,0,0,0,0,10,10
-Ob25,08/07/2009,unclear,Ladha,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,8,10,0,0,0,0,5,12
-Ob26,08/07/2009,unclear,Ladha,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,35,40,0,0,0,0,1,1
-Ob27,10/07/2009,Painda Khel,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,3,5,0,0,0,0,3,3
-Ob28,17/07/2009,Gariwam,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,6,0,0,0,0,4,6
-Ob29,05/08/2009,unclear,Ladha,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,1,12,1,4,0,0,5,5
-Ob30,11/08/2009,unclear,Ladha,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,12,25,0,6,4,4,5,7
-Ob31,21/08/2009,Danda Darpakhel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,17,21,9,13,6,6,2,2
-Ob32,27/08/2009,Taparghai,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,8,10,0,0,0,0,6,9
-Ob33,07/09/2009,Machi Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,8,3,3,0,0,2,7
-Ob34,08/09/2009,Darga Mandi,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,10,15,5,5,3,3,4,5
-Ob35,14/09/2009,Toorikhel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,5,0,0,0,0,2,3
-Ob36,24/09/2009,unclear,Mirali,North Waziristan,Bannu,Khyber Pakhtunkhwa,10,12,0,12,0,0,5,5
-Ob37,29/09/2009,unclear,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,5,6,0,0,0,0,2,6
-Ob38,29/09/2009,Danda Darpakhel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,9,0,4,0,0,2,6
-Ob39,30/09/2009,Norak,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,6,9,0,0,0,0,2,5
-Ob40,15/10/2009,Danda Darpakhel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,4,0,0,0,0,7,7
-Ob41,21/10/2009,Spalaga,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,3,0,0,0,0,8,8
-Ob42,24/10/2009,unclear,Damadola,Bajaur,Malakand,Khyber Pakhtunkhwa,20,30,0,0,0,0,8,8
-Ob43,05/11/2009,Norak,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,6,0,0,0,0,8,8
-Ob44,18/11/2009,Shanakorah,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,6,0,0,0,0,2,15
-Ob45,20/11/2009,Machi Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,14,3,3,1,1,2,12
-Ob46,08/12/2009,Spalaga,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,4,0,0,0,0,3,3
-Ob47,10/12/2009,unclear,Ladha,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,6,6,0,0,0,0,8,8
-Ob48,17/12/2009,unclear,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,2,0,0,0,0,0,0
-Ob49,17/12/2009,Ambar Shaga,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,12,16,6,6,0,0,0,0
-Ob50,18/12/2009,Babrak Ziarat,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,8,5,5,0,0,4,5
-Ob51,26/12/2009,Saidgai,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,13,20,6,6,0,0,12,12
-Ob52,31/12/2009,Machi Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,7,3,3,1,1,2,2
-Ob53,01/01/2010,Ghundikala,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,3,0,0,0,0,3,4
-Ob54,03/01/2010,Mosaki,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,5,1,2,1,1,2,2
-Ob55,06/01/2010,Sanzali,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,7,0,6,0,0,5,5
-Ob56,06/01/2010,Sanzali,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,9,5,5,0,0,3,3
-Ob57,08/01/2010,Tappi,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,6,5,5,1,1,3,3
-Ob58,09/01/2010,Ismail Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,5,0,0,0,0,5,5
-Ob59,09/01/2010,Shaktoi,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,15,18,0,0,0,0,7,14
-Ob60,15/01/2010,Zanani,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,10,0,0,0,0,3,3
-Ob61,15/01/2010,Shaktoi,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,6,10,0,0,0,0,0,0
-Ob62,17/01/2010,Shaktoi,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,14,20,0,0,0,0,4,4
-Ob63,19/01/2010,Deegan,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,9,0,0,0,0,4,4
-Ob64,29/01/2010,Mohammad Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,15,0,0,0,0,4,4
-Ob65,02/02/2010,Toor Narai,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,23,24,0,0,0,0,0,0
-Ob66,02/02/2010,Deegan,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,0,0,0,0,0,0,0,0
-Ob67,02/02/2010,Mohammad Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,0,0,0,0,0,0,0,0
-Ob68,02/02/2010,Pai Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,9,9,5,5,0,0,0,0
-Ob69,14/02/2010,unclear,Mirali,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,7,0,0,0,0,4,4
-Ob70,15/02/2010,Tappi,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,5,0,0,0,0,0,0
-Ob71,17/02/2010,Tabbi,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,4,0,0,0,0,2,3
-Ob72,18/02/2010,Danda Darpakhel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,5,0,0,0,0,4,4
-Ob73,24/02/2010,Darga Mandi,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,13,5,6,1,1,6,6
-Ob74,08/03/2010,unclear,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,9,9,0,0,0,0,2,2
-Ob75,10/03/2010,Mizar Madakhel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,7,8,0,0,0,0,12,12
-Ob76,10/03/2010,Mizar Madakhel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,7,7,4,7,0,0,0,0
-Ob77,16/03/2010,unclear,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,7,11,0,0,0,0,2,2
-Ob78,17/03/2010,Hamzoni,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,5,0,0,0,0,4,4
-Ob79,17/03/2010,Mizar Madakhel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,5,0,0,0,0,0,0
-Ob80,21/03/2010,Inzar,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,8,0,0,0,0,0,0
-Ob81,23/03/2010,Machis,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,6,6,0,0,0,0,3,3
-Ob82,27/03/2010,Hurmuz,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,4,0,4,0,0,5,5
-Ob83,31/03/2010,Tappi,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,6,5,6,1,1,2,2
-Ob84,12/04/2010,Boya,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,13,13,8,13,2,2,2,3
-Ob85,14/04/2010,Ambar Shaga,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,5,0,0,0,0,1,3
-Ob86,16/04/2010,Toorikhel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,4,0,0,0,0,2,2
-Ob87,24/04/2010,Machi Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,7,9,0,0,0,0,0,0
-Ob88,26/04/2010,Khushali,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,8,0,0,0,0,3,3
-Ob89,03/05/2010,Machi Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,6,0,2,0,0,0,0
-Ob90,09/05/2010,unclear,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,10,0,4,0,0,4,4
-Ob91,11/05/2010,unclear,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,8,14,0,4,0,0,12,12
-Ob92,11/05/2010,Gurwak,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,7,15,0,0,0,0,4,4
-Ob93,15/05/2010,unclear,Unclear,Khyber,Peshawar,Khyber Pakhtunkhwa,5,15,0,2,0,0,15,15
-Ob94,21/05/2010,Boya,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,11,11,10,10,7,7,7,10
-Ob95,28/05/2010,Mizai Nari,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,8,12,0,11,0,0,4,4
-Ob96,10/06/2010,Norak,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,7,4,4,0,0,3,3
-Ob97,11/06/2010,Maizer,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,10,15,0,0,0,0,10,12
-Ob98,19/06/2010,Haider Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,16,17,0,0,0,0,10,18
-Ob99,26/06/2010,Khushali,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,4,0,0,0,0,1,3
-Ob100,27/06/2010,Tabbi,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,6,0,0,0,0,4,4
-Ob101,29/06/2010,Kari Kot,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,7,10,0,0,0,0,1,4
-Ob102,15/07/2010,Sheerani,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,9,14,0,7,0,0,3,3
-Ob103,24/07/2010,Dwasarak,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,16,18,0,0,0,0,24,24
-Ob104,25/07/2010,Shaktoi,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,14,32,0,0,0,0,7,12
-Ob105,25/07/2010,Tabbi,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,12,0,0,0,0,2,4
-Ob106,25/07/2010,unclear,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,4,4,0,0,0,0,5,5
-Ob107,14/08/2010,Issori,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,13,14,7,7,1,1,5,6
-Ob108,21/08/2010,Qutab Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,6,0,4,0,0,2,2
-Ob109,23/08/2010,Danda Darpakhel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,20,20,7,9,3,3,15,15
-Ob110,23/08/2010,Darga Mandi,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,7,0,0,0,0,3,12
-Ob111,27/08/2010,Shahidano,unclear,Kurram,Kohat,Khyber Pakhtunkhwa,3,9,0,0,0,0,2,2
-Ob112,27/08/2010,Badshah Kot,unclear,Kurram,Kohat,Khyber Pakhtunkhwa,0,0,0,0,0,0,0,0
-Ob113,27/08/2010,Taaloo Ganj,unclear,Kurram,Kohat,Khyber Pakhtunkhwa,2,3,0,3,0,0,0,0
-Ob114,03/09/2010,unclear,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,6,9,0,0,0,0,2,3
-Ob115,03/09/2010,unclear,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,4,0,0,0,0,2,2
-Ob116,04/09/2010,unclear,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,7,8,0,0,0,0,12,12
-Ob117,06/09/2010,Khar Qamar,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,6,0,0,0,0,1,1
-Ob118,08/09/2010,Danda Darpakhel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,10,4,4,4,4,2,2
-Ob119,08/09/2010,Ambar Shaga,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,4,0,4,0,0,1,2
-Ob120,08/09/2010,Danda Darpakhel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,10,10,0,0,0,0,2,5
-Ob121,09/09/2010,unclear,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,6,0,0,0,0,3,5
-Ob122,12/09/2010,Newey Adda,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,7,0,0,0,0,2,3
-Ob123,14/09/2010,Bushnarai,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,11,12,0,0,0,0,4,4
-Ob124,14/09/2010,Qutab Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,1,4,0,0,0,0,4,4
-Ob125,15/09/2010,Darga Mandi,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,11,15,5,5,0,0,1,5
-Ob126,15/09/2010,Pai Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,7,0,0,0,0,3,3
-Ob127,19/09/2010,Deegan,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,9,5,5,0,0,0,0
-Ob128,20/09/2010,Darazinda,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,6,0,3,0,0,0,0
-Ob129,21/09/2010,Khand Morsak,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,7,8,0,0,0,0,4,5
-Ob130,21/09/2010,Azam Warsak,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,0,16,0,0,0,0,0,0
-Ob131,25/09/2010,unclear,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,4,0,0,0,0,0,0
-Ob132,26/09/2010,Lawra Mandi,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,5,0,0,0,0,2,2
-Ob133,26/09/2010,unclear,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,5,0,0,0,0,1,2
-Ob134,26/09/2010,Sheerani,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,3,0,0,0,0,0,0
-Ob135,27/09/2010,Khushali,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,4,0,0,0,0,0,0
-Ob136,28/09/2010,Zeba,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,4,4,0,0,0,0,2,2
-Ob137,02/10/2010,Asar Village,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,8,10,0,0,0,0,2,4
-Ob138,02/10/2010,Inzarkas,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,7,14,0,0,0,0,2,2
-Ob139,04/10/2010,unclear,Mirali,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,9,0,3,0,0,2,2
-Ob140,06/10/2010,unclear,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,11,0,0,0,0,4,4
-Ob141,06/10/2010,Hurmuz,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,5,0,0,0,0,3,3
-Ob142,07/10/2010,Khaisoori,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,4,0,0,0,0,2,2
-Ob143,08/10/2010,Mohammad Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,6,0,0,0,0,0,0
-Ob144,08/10/2010,Char Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,8,0,4,0,0,0,0
-Ob145,10/10/2010,Shiva,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,9,0,0,0,0,3,3
-Ob146,13/10/2010,unclear,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,6,14,3,6,0,0,0,0
-Ob147,15/10/2010,Aziz Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,6,0,0,0,0,3,3
-Ob148,15/10/2010,Machi Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,5,0,0,0,0,0,0
-Ob149,18/10/2010,unclear,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,6,7,1,1,1,1,1,6
-Ob150,27/10/2010,unclear,Mirali,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,5,0,0,0,0,1,1
-Ob151,27/10/2010,Deegan,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,4,0,0,0,0,1,1
-Ob152,28/10/2010,Ismail Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,8,0,4,0,0,0,0
-Ob153,01/11/2010,Haider Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,6,0,0,0,0,2,2
-Ob154,03/11/2010,Qutab Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,5,0,0,0,0,0,0
-Ob155,03/11/2010,Khaso Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,5,0,0,0,0,0,0
-Ob156,03/11/2010,Pai Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,5,0,0,0,0,0,0
-Ob157,07/11/2010,unclear,Ghulam Khan,North Waziristan,Bannu,Khyber Pakhtunkhwa,8,9,0,0,0,0,2,2
-Ob158,07/11/2010,unclear,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,6,0,0,0,0,1,4
-Ob159,11/11/2010,unclear,Ghulam Khan,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,8,0,0,0,0,5,6
-Ob160,13/11/2010,unclear,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,4,0,4,0,0,1,1
-Ob161,16/11/2010,unclear,Ghulam Khan,North Waziristan,Bannu,Khyber Pakhtunkhwa,20,20,0,9,0,0,0,0
-Ob162,19/11/2010,Norak,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,4,0,0,0,0,1,1
-Ob163,21/11/2010,Khaddi,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,9,0,3,0,0,0,0
-Ob164,22/11/2010,Khesoor,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,6,0,0,0,0,2,3
-Ob165,26/11/2010,Pir Kelev,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,4,1,4,1,1,0,0
-Ob166,28/11/2010,Hassan Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,0,4,0,0,0,0,0,0
-Ob167,06/12/2010,Khushali,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,5,0,2,0,0,3,3
-Ob168,06/12/2010,Kushali,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,4,0,0,0,0,0,0
-Ob169,10/12/2010,Khadar Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,4,0,0,0,0,2,2
-Ob170,14/12/2010,Spalaga,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,4,0,4,0,0,0,0
-Ob171,16/12/2010,unclear,Unclear,Khyber,Peshawar,Khyber Pakhtunkhwa,7,7,0,0,0,0,0,0
-Ob172,17/12/2010,unclear,Unclear,Khyber,Peshawar,Khyber Pakhtunkhwa,7,15,0,0,0,0,7,11
-Ob173,17/12/2010,unclear,Unclear,Khyber,Peshawar,Khyber Pakhtunkhwa,11,15,0,0,0,0,2,2
-Ob174,17/12/2010,unclear,Unclear,Khyber,Peshawar,Khyber Pakhtunkhwa,32,32,2,2,0,0,0,0
-Ob175,27/12/2010,Shera Tala,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,18,22,0,0,0,0,0,0
-Ob176,27/12/2010,Machi Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,4,0,0,0,0,0,0
-Ob177,28/12/2010,unclear,Ghulam Khan,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,7,0,0,0,0,2,2
-Ob178,28/12/2010,unclear,Ghulam Khan,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,12,2,4,0,0,3,3
-Ob179,28/12/2010,unclear,Ghulam Khan,North Waziristan,Bannu,Khyber Pakhtunkhwa,9,10,0,0,0,0,6,6
-Ob180,31/12/2010,unclear,Ghulam Khan,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,8,0,0,0,0,0,0
-Ob181,01/01/2011,Mandi Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,8,10,0,0,0,0,0,0
-Ob182,01/01/2011,Mandi Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,6,0,0,0,0,0,0
-Ob183,01/01/2011,unclear,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,5,0,0,0,0,0,0
-Ob184,01/01/2011,Boya,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,4,0,0,0,0,4,4
-Ob185,07/01/2011,Ghar Laley,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,1,6,0,0,0,0,0,0
-Ob186,12/01/2011,Haider Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,6,0,0,0,0,2,15
-Ob187,18/01/2011,unclear,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,7,0,0,0,0,3,3
-Ob188,23/01/2011,Doga Mada Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,5,0,0,0,0,0,0
-Ob189,23/01/2011,Doga Mada Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,3,0,0,0,0,0,0
-Ob190,23/01/2011,unclear,Razmak,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,6,0,0,0,0,3,3
-Ob191,20/02/2011,Kazha Punga area,Barmal,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,6,8,0,0,0,0,2,2
-Ob192,21/02/2011,Malik Jashdar,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,7,14,0,11,0,0,10,10
-Ob193,24/02/2011,Mohammad Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,7,0,0,0,0,3,2
-Ob194,08/03/2011,Landidog,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,2,5,0,5,0,0,2,2
-Ob195,09/03/2011,unclear,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,5,0,0,0,0,2,3
-Ob196,11/03/2011,Khesoor,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,12,5,5,0,0,0,0
-Ob197,11/03/2011,Ghoroski,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,4,0,0,0,0,0,0
-Ob198,13/03/2011,Azam Warsak,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,0,4,0,0,0,0,0,5
-Ob199,13/03/2011,Qutab Khel,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,7,0,0,0,0,5,5
-Ob200,14/03/2011,Malik Jashdar,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,6,0,0,0,0,0,0
-Ob201,16/03/2011,unclear,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,5,0,0,0,0,0,0
-Ob202,17/03/2011,unclear,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,26,42,19,41,0,1,9,14
-Ob203,13/04/2011,unclear,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,4,7,0,7,0,0,6,10
-Ob204,22/04/2011,unclear,Spinwam,North Waziristan,Bannu,Khyber Pakhtunkhwa,20,26,5,9,3,5,5,10
-Ob205,06/05/2011,Dwa Tooe,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,7,18,6,6,0,0,4,4
-Ob206,10/05/2011,Angor Adda,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,3,5,0,0,0,0,4,4
-Ob207,12/05/2011,unclear,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,8,0,0,0,0,1,1
-Ob208,13/05/2011,Doga Mada Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,5,0,0,0,0,0,0
-Ob209,16/05/2011,Khushali Village,Mirali,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,10,0,0,0,0,2,4
-Ob210,16/05/2011,unclear,Mirali,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,6,0,0,0,0,0,0
-Ob211,20/05/2011,Tappi,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,6,0,0,0,0,0,0
-Ob212,23/05/2011,unclear,Mirali,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,7,0,0,0,0,2,2
-Ob213,03/06/2011,Ghwa Khwa,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,5,12,0,0,0,0,1,3
-Ob214,06/06/2011,"Tigger, Toji Khel Wazir",unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,7,9,0,0,0,0,2,2
-Ob215,06/06/2011,Wacha Dana,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,8,10,0,7,0,0,3,3
-Ob216,06/06/2011,Darnashtra,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,3,5,0,0,0,0,0,0
-Ob217,08/06/2011,Zoynari,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,18,23,0,0,0,0,6,6
-Ob218,08/06/2011,Shawal,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,4,4,0,0,0,0,0,0
-Ob219,15/06/2011,unclear,Wana,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,2,10,0,0,0,0,2,2
-Ob220,15/06/2011,Karez,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,0,0,0,0,0,0,0,0
-Ob221,15/06/2011,unclear,Mirali,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,6,5,6,0,0,0,0
-Ob222,20/06/2011,Khardand,unclear,Kurram,Kohat,Khyber Pakhtunkhwa,5,7,2,7,0,0,0,3
-Ob223,20/06/2011,Zarakai,unclear,Kurram,Kohat,Khyber Pakhtunkhwa,2,5,0,0,0,0,0,0
-Ob224,27/06/2011,Shawal,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,6,12,0,0,0,0,0,0
-Ob225,27/06/2011,Shakai,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,12,21,0,20,0,0,2,2
-Ob226,05/07/2011,unclear,Mirali,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,6,0,3,0,2,5,5
-Ob227,11/07/2011,Gurwak,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,12,0,0,0,0,2,2
-Ob228,12/07/2011,Gurwak,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,12,25,0,0,0,0,0,0
-Ob229,12/07/2011,unclear,Barmal,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,5,13,0,0,0,0,3,5
-Ob230,12/07/2011,unclear,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,13,15,0,4,0,0,0,0
-Ob231,12/07/2011,unclear,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,1,9,1,1,0,0,3,5
-Ob232,20/07/2011,unclear,Mirali,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,4,0,0,0,0,2,2
-Ob233,01/08/2011,Azam Warsak,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,3,6,0,6,0,0,2,7
-Ob234,02/08/2011,Qutab Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,4,0,0,0,0,0,0
-Ob235,10/08/2011,unclear,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,8,25,0,0,0,0,3,8
-Ob236,16/08/2011,unclear,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,7,3,4,1,1,2,2
-Ob237,19/08/2011,Shin Warsak,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,3,4,0,0,0,0,2,2
-Ob238,22/08/2011,unclear,Mirali,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,7,0,4,0,0,3,3
-Ob239,11/09/2011,Hisokhel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,1,5,0,0,0,0,1,3
-Ob240,23/09/2011,Khushali,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,8,0,0,0,0,3,4
-Ob241,27/09/2011,Azam Warsak,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,0,4,0,0,0,0,0,2
-Ob242,30/09/2011,Baghar,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,3,4,0,0,0,0,1,5
-Ob243,13/10/2011,Danda Darpakhel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,1,6,0,0,0,0,4,4
-Ob244,13/10/2011,unclear,Barmal,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,3,6,0,0,0,0,3,3
-Ob245,14/10/2011,Danda Darpakhel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,6,0,0,0,0,0,0
-Ob246,15/10/2011,Angor Adda,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,3,6,0,0,0,0,3,7
-Ob247,26/10/2011,unclear,Barmal,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,13,22,0,0,0,0,6,6
-Ob248,27/10/2011,Azam Warsak,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,4,6,0,0,0,0,3,4
-Ob249,27/10/2011,Hisokhel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,6,0,0,0,0,3,3
-Ob250,30/10/2011,Khar Khama,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,6,4,4,0,0,2,3
-Ob251,31/10/2011,Norak,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,4,2,2,2,2,3,3
-Ob252,03/11/2011,unclear,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,3,0,0,0,0,3,3
-Ob253,15/11/2011,unclear,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,7,0,0,0,0,2,4
-Ob254,16/11/2011,Babar Ghar,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,4,22,0,0,0,0,6,12
-Ob255,17/11/2011,Shawal,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,7,9,0,0,0,0,3,5
-Ob256,10/01/2012,unclear,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,1,4,0,0,0,0,2,2
-Ob257,12/01/2012,unclear,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,9,0,0,0,0,2,3
-Ob258,23/01/2012,Deegan,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,5,0,0,0,0,1,3
-Ob259,23/01/2012,unclear,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,0,2,0,0,0,0,0,0
-Ob260,08/02/2012,unclear,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,9,10,0,0,0,0,2,12
-Ob261,09/02/2012,unclear,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,8,0,3,0,1,3,3
-Ob262,16/02/2012,unclear,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,6,0,0,0,0,4,7
-Ob263,16/02/2012,unclear,Mirali,North Waziristan,Bannu,Khyber Pakhtunkhwa,8,15,0,0,0,0,3,3
-Ob264,09/03/2012,Shaktoi Mandao,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,4,15,0,0,0,0,0,3
-Ob265,09/03/2012,Nishpa,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,6,6,0,0,0,0,0,0
-Ob266,13/03/2012,Wagdalai,Barmal,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,6,8,0,0,0,0,2,4
-Ob267,13/03/2012,unclear,unclear,unclear,unclear,unclear,6,7,0,0,0,0,3,3
-Ob268,30/03/2012,Sarai,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,4,0,0,0,0,3,3
-Ob269,29/04/2012,unclear,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,6,0,0,0,0,1,3
-Ob270,05/05/2012,"Guldar Kot, Dre Nishtar area",unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,8,10,0,0,0,0,1,3
-Ob271,23/05/2012,unclear,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,1,5,0,0,0,0,1,2
-Ob272,24/05/2012,unclear,Mirali,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,12,0,8,0,0,3,4
-Ob273,26/05/2012,unclear,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,1,4,0,0,0,0,1,2
-Ob274,28/05/2012,unclear,Mirali,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,10,0,0,0,0,4,4
-Ob275,28/05/2012,Degan,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,5,0,0,0,0,0,0
-Ob276,02/06/2012,Khawashi Khel,Wana,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,2,4,0,0,0,0,0,0
-Ob277,03/06/2012,unclear,Barmal,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,0,10,0,0,0,0,4,10
-Ob278,04/06/2012,Khushali,Mirali,North Waziristan,Bannu,Khyber Pakhtunkhwa,14,18,0,6,0,0,3,6
-Ob279,13/06/2012,unclear,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,4,0,0,0,0,0,0
-Ob280,14/06/2012,unclear,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,1,4,0,0,0,0,2,3
-Ob281,26/06/2012,Shawal,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,7,0,0,0,0,2,7
-Ob282,01/07/2012,Dre Nishter/Shawal,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,6,9,0,0,0,0,2,3
-Ob283,06/07/2012,Maizer,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,13,24,3,18,0,0,2,22
-Ob284,23/07/2012,Dre Nishter/Shawal,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,11,14,6,14,0,0,2,11
-Ob285,29/07/2012,Kushhali Turkhel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,7,0,3,0,0,4,4
-Ob286,18/08/2012,"Mammon Narai, Shuweda",unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,12,1,1,0,0,2,9
-Ob287,19/08/2012,"Mana, Shawal",Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,7,0,0,0,0,2,3
-Ob288,19/08/2012,"Mana, Shawal",Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,3,0,0,0,0,2,2
-Ob289,21/08/2012,Shnakhura,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,25,1,3,1,1,2,2
-Ob290,24/08/2012,"Makai/Maki Ghar, Shawal",Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,13,22,0,0,0,0,4,14
-Ob291,24/08/2012,"Dara, Shawal",Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,0,0,0,0,0,0,0,0
-Ob292,24/08/2012,"Dre Nishter, Shawal",Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,0,0,0,0,0,0,0,0
-Ob293,01/09/2012,Degan,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,6,0,0,0,0,2,3
-Ob294,21/09/2012,unclear,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,4,0,0,0,0,2,3
-Ob295,24/09/2012,Mosaki - Inzar Abad,Mirali,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,8,0,0,0,0,2,2
-Ob296,01/10/2012,Khadar Khel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,4,0,0,0,0,0,0
-Ob297,10/10/2012,unclear,Mirali,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,6,0,0,0,0,3,3
-Ob298,11/10/2012,Buland Khel,unclear,Orakzai,Kohat,Khyber Pakhtunkhwa,16,26,0,2,0,0,5,15
-Ob299,24/10/2012,Miranshah,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,1,1,1,1,0,0,6,9
-Ob300,29/11/2012,Shin Warsak,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,1,4,0,0,0,0,3,4
-Ob301,01/12/2012,Shin Warsak,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,1,4,0,0,0,0,3,3
-Ob302,06/12/2012,Noorak Mubarak Shahi area,Mirali,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,11,1,1,0,0,1,6
-Ob303,09/12/2012,unclear,Ghulam Khan,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,4,0,3,0,0,0,0
-Ob304,21/12/2012,unclear,Mirali,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,6,0,0,0,0,2,2
-Ob305,29/12/2012,"Gurbaz, Shawal",Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,5,0,0,0,0,2,2
-Ob306,02/01/2013,unclear,Barmal,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,6,11,0,0,0,0,0,0
-Ob307,03/01/2013,Ghundi Killi,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,6,0,0,0,0,1,1
-Ob308,06/01/2013,Smal Narai area,Ladha,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,8,18,0,0,0,0,3,7
-Ob309,08/01/2013,unclear,Mirali,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,9,0,2,0,1,1,4
-Ob310,08/01/2013,Malangan Hassokhel,Mirali,North Waziristan,Bannu,Khyber Pakhtunkhwa,0,9,0,0,0,0,1,4
-Ob311,10/01/2013,unclear,Mirali,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,6,0,0,0,0,0,0
-Ob312,06/02/2013,unclear,Spinwam,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,5,0,2,0,0,1,1
-Ob313,08/02/2013,Babar Ghar,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,6,9,0,0,0,0,2,6
-Ob314,10/03/2013,unclear,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,1,3,0,0,0,0,1,1
-Ob315,22/03/2013,New Adda,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,1,4,0,0,0,0,1,1
-Ob316,14/04/2013,unclear,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,6,0,0,0,0,2,2
-Ob317,17/04/2013,Pobar,Ladha,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,4,6,0,0,0,0,2,7
-Ob318,29/05/2013,Qazi Kot,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,7,0,0,0,0,1,4
-Ob319,07/06/2013,Tehsil Shawal,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,7,11,0,0,0,0,3,4
-Ob320,03/07/2013,Tehsil Shawal,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,16,18,0,0,0,0,5,5
-Ob321,13/07/2013,unclear,Mirali,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,3,0,0,0,0,0,0
-Ob322,28/07/2013,Tehsil Shawal,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,8,0,0,0,0,2,4
-Ob323,31/08/2013,Mossaki,Mirali,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,4,0,0,0,0,1,3
-Ob324,06/09/2013,Tabi,Ghulam Khan,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,7,0,0,0,0,3,7
-Ob325,22/09/2013,unclear,Makin,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,6,7,0,0,0,0,2,4
-Ob326,29/09/2013,Darga Mandi,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,6,0,0,0,0,1,3
-Ob327,30/09/2013,Land Char Khel,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,1,4,0,0,0,0,2,4
-Ob328,31/10/2013,unclear,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,0,5,0,0,0,0,3,3
-Ob329,01/11/2013,Dandi Darpakhel,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,7,0,0,0,0,2,2
-Ob330,21/11/2013,unclear,Tal,Hangu,Kohat,Khyber Pakhtunkhwa,6,9,0,0,0,0,1,9
-Ob331,29/11/2013,unclear,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,3,0,0,0,0,1,2
-Ob332,25/12/2013,Qutab Khel,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,4,0,0,0,0,1,1
-Ob333,11/06/2014,unclear,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,6,0,0,0,0,0,0
-Ob334,12/06/2014,unclear,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,6,10,0,0,0,0,4,4
-Ob335,18/06/2014,unclear,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,8,0,0,0,0,2,4
-Ob336,10/07/2014,Madakhel village,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,6,7,0,0,0,0,2,3
-Ob337,16/07/2014,Saidgai,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,15,24,0,0,0,0,4,6
-Ob338,19/07/2014,Doga Madakhel,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,11,15,0,0,0,0,0,0
-Ob339,05/08/2014,Lawara Mandi village,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,7,0,0,0,0,2,3
-Ob340,24/09/2014,Lwara Mandai,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,11,0,0,0,0,0,0
-Ob341,28/09/2014,unclear,Wana,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,2,4,0,0,0,0,1,4
-Ob342,05/10/2014,Shawal,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,4,5,0,0,0,0,2,3
-Ob343,06/10/2014,Shawal,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,4,8,0,0,0,0,4,6
-Ob344,07/10/2014,Shawal,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,4,7,0,0,0,0,5,11
-Ob345,07/10/2014,Kundser,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,4,0,0,0,0,5,5
-Ob346,08/10/2014,Loman,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,4,0,0,0,0,1,3
-Ob347,09/10/2014,unclear,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,4,0,0,0,0,0,0
-Ob348,11/10/2014,unclear,Unclear,Khyber,Peshawar,Khyber Pakhtunkhwa,4,6,0,0,0,0,2,2
-Ob349,11/10/2014,"Marga, Shawal",Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,4,0,0,0,0,0,0
-Ob350,30/10/2014,Azam Warsak,unclear,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,4,7,0,0,0,0,2,2
-Ob351,11/11/2014,Dawa Toi,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,7,0,2,0,2,2,3
-Ob352,20/11/2014,unclear,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,8,0,0,0,0,2,3
-Ob353,26/11/2014,"Garga, Shawal",Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,9,0,0,0,0,2,3
-Ob354,07/12/2014,Khar Tangi,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,6,0,0,0,0,2,2
-Ob355,20/12/2014,unclear,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,6,0,0,0,0,0,0
-Ob356,26/12/2014,"Kund/Kundghar village, Shawal",Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,5,0,0,0,0,0,0
-Ob357,26/12/2014,"Kund/Kundghar village, Shawal",Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,4,0,0,0,0,0,0
-Ob358,04/01/2015,Lwara Mandai,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,6,10,0,0,0,0,0,0
-Ob359,15/01/2015,Shawal,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,7,2,2,0,0,0,0
-Ob360,15/01/2015,unclear,Ladha,South Waziristan,Dera Ismali Khan,Khyber Pakhtunkhwa,4,7,0,0,0,0,3,4
-Ob361,19/01/2015,"Shahi Khel, Shawal",Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,7,0,0,0,0,4,6
-Ob362,28/01/2015,Shawal,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,6,7,0,0,0,0,2,4
-Ob363,18/03/2015,Shabak,unclear,Kurram,Kohat,Khyber Pakhtunkhwa,3,3,0,0,0,0,0,0
-Ob364,12/04/2015,Shawal,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,4,0,0,0,0,2,2
-Ob365,16/05/2015,"Wara Mandi, Shawal",Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,7,0,0,0,0,2,2
-Ob366,18/05/2015,"Zoy Nari, Shawal",Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,3,6,0,0,0,0,2,3
-Ob367,01/06/2015,Shawal,Miranshah,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,5,0,0,0,0,0,0
-Ob368,06/06/2015,unclear,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,7,9,0,3,0,0,4,4
-Ob369,06/08/2015,Lwara Mandai,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,4,7,0,0,0,0,2,3
-Ob370,01/09/2015,unclear,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,6,0,0,0,0,4,4
-Ob371,09/01/2016,Mangrooti village,Datta Khel,North Waziristan,Bannu,Khyber Pakhtunkhwa,5,5,0,0,0,0,2,2
-Ob372,22/02/2016,unclear,unclear,Kurram,Kohat,Khyber Pakhtunkhwa,4,5,0,0,0,0,1,4
-Ob373,21/05/2016,unclear,Ahmad Wal,Chagai,Rakhshan,Balochistan,2,2,1,1,0,0,0,0
-T001,02/03/2017,unclear,unclear,Kurram,Kohat,Khyber Pakhtunkhwa,2,2,0,0,0,0,0,0
-T002,26/04/2017,Zuwai,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,7,11,0,3,0,0,0,0
-T003,24/05/2017,unclear,unclear,North Waziristan,Bannu,Khyber Pakhtunkhwa,2,3,0,0,0,0,0,0
-T004,13/06/2017,unclear,unclear,Hangu,Kohat,Khyber Pakhtunkhwa,1,3,0,0,0,0,0,3
-T005,15/09/2017,Ghuz Ghari,Upper Kurram,Kurram,Kohat,Khyber Pakhtunkhwa,3,3,0,0,0,0,1,2
-T006,24/01/2018,unclear,unclear,unclear,unclear,unclear,1,3,0,0,0,0,0,0
+Strike ID,Date,Loc,Adm_3,Adm_2,Adm_1,Minimum total people killed,Maximum total people killed,Minimum civilians reported killed,Maximum civilians reported killed,Minimum children reported killed,Maximum children reported killed,Minimum reported injured,Maximum reported injured
+B1,17/06/2004,unclear,Wana,South Waziristan,Khyber Pakhtunkhwa,6,8,2,2,2,2,1,1
+B2,08/05/2005,Toorikhel,unclear,North Waziristan,Khyber Pakhtunkhwa,2,2,0,0,0,0,0,0
+B3,05/11/2005,Mosaki,unclear,North Waziristan,Khyber Pakhtunkhwa,8,8,3,8,2,3,1,1
+B4,01/12/2005,Haisori,unclear,North Waziristan,Khyber Pakhtunkhwa,6,6,2,3,2,2,0,0
+B5,13/01/2006,unclear,Damadola,Bajaur,Khyber Pakhtunkhwa,13,22,10,18,5,6,0,0
+B6,30/10/2006,unclear,Chengai,Bajaur,Khyber Pakhtunkhwa,81,83,80,82,68,70,3,3
+B7,16/01/2007,Zamazola,unclear,South Waziristan,Khyber Pakhtunkhwa,8,8,8,8,1,1,0,0
+B8,27/04/2007,Saidgai,unclear,North Waziristan,Khyber Pakhtunkhwa,3,4,3,4,0,0,3,9
+B9,19/06/2007,Mami Rogha,unclear,North Waziristan,Khyber Pakhtunkhwa,20,34,0,34,0,0,10,15
+B10,02/11/2007,Danda Darpakhel,unclear,North Waziristan,Khyber Pakhtunkhwa,5,10,0,0,0,0,6,12
+B11,03/12/2007,unclear,Jani Khel,Bannu,Khyber Pakhtunkhwa,0,0,0,0,0,0,1,1
+B12,29/01/2008,unclear,Mirali,North Waziristan,Khyber Pakhtunkhwa,12,15,4,6,2,3,1,2
+B13,28/02/2008,Azam Warsak,unclear,South Waziristan,Khyber Pakhtunkhwa,10,13,0,0,0,0,6,16
+B14,16/03/2008,Dhook Pir Bagh,unclear,South Waziristan,Khyber Pakhtunkhwa,18,20,0,4,0,0,5,9
+B15,14/05/2008,unclear,Damadola,Bajaur,Khyber Pakhtunkhwa,12,20,4,6,1,4,9,9
+B16,14/06/2008,unclear,Makin,South Waziristan,Khyber Pakhtunkhwa,1,1,0,1,0,0,0,0
+B17,28/07/2008,Zeralita,unclear,South Waziristan,Khyber Pakhtunkhwa,7,12,1,5,0,2,3,3
+B18,12/08/2008,Bhaggar,unclear,South Waziristan,Khyber Pakhtunkhwa,12,25,0,5,0,0,0,4
+B19,20/08/2008,Zari Noor,unclear,South Waziristan,Khyber Pakhtunkhwa,6,12,0,0,0,0,5,5
+B20,27/08/2008,Ganki Khel,unclear,South Waziristan,Khyber Pakhtunkhwa,0,0,0,0,0,0,4,4
+B21,30/08/2008,Korzai,unclear,South Waziristan,Khyber Pakhtunkhwa,4,5,0,0,0,0,4,4
+B22,30/08/2008,unclear,Miranshah,North Waziristan,Khyber Pakhtunkhwa,6,11,2,9,1,4,2,8
+B23,02/09/2008,unclear,unclear,North Waziristan,Khyber Pakhtunkhwa,0,10,0,0,0,0,0,1
+B24,04/09/2008,Mohammad Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,5,7,0,0,0,0,3,4
+B25,05/09/2008,Gurwak,unclear,North Waziristan,Khyber Pakhtunkhwa,5,12,5,7,3,4,0,0
+B26,08/09/2008,unclear,Miranshah,North Waziristan,Khyber Pakhtunkhwa,17,23,11,20,5,8,14,25
+B27,12/09/2008,Tol Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,12,15,3,5,2,2,14,14
+B28,17/09/2008,Baghar Cheena,unclear,South Waziristan,Khyber Pakhtunkhwa,4,7,0,0,0,0,3,3
+B29,30/09/2008,Khushali,unclear,South Waziristan,Khyber Pakhtunkhwa,4,8,0,0,0,0,5,9
+B30,03/10/2008,unclear,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,3,3,3,3,1,1,5,5
+B31,03/10/2008,unclear,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,17,21,7,14,3,3,0,0
+B32,09/10/2008,Tati,unclear,North Waziristan,Khyber Pakhtunkhwa,5,9,1,9,1,4,2,2
+B33,11/10/2008,unclear,Miranshah,North Waziristan,Khyber Pakhtunkhwa,4,5,0,0,0,0,2,2
+B34,16/10/2008,Taparghai,unclear,South Waziristan,Khyber Pakhtunkhwa,2,9,0,4,0,0,1,7
+B35,23/10/2008,Danda Darpakhel,unclear,North Waziristan,Khyber Pakhtunkhwa,8,11,7,10,7,7,6,11
+B36,26/10/2008,Mandata,unclear,South Waziristan,Khyber Pakhtunkhwa,18,20,0,4,0,3,2,2
+B37,31/10/2008,Asori,unclear,North Waziristan,Khyber Pakhtunkhwa,4,25,1,20,0,0,0,0
+B38,31/10/2008,Kari Kot,unclear,South Waziristan,Khyber Pakhtunkhwa,4,12,1,1,0,0,2,30
+B39,07/11/2008,Kumsham,unclear,North Waziristan,Khyber Pakhtunkhwa,11,16,6,11,0,0,17,17
+B40,14/11/2008,unclear,Garyom,North Waziristan,Khyber Pakhtunkhwa,11,13,3,12,0,0,2,2
+B41,19/11/2008,unclear,Jani Khel,Bannu,Khyber Pakhtunkhwa,3,6,0,3,0,0,7,7
+B42,22/11/2008,Ali Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,4,6,0,1,0,0,6,6
+B43,27/11/2008,unclear,Wana,South Waziristan,Khyber Pakhtunkhwa,5,5,0,0,0,0,0,0
+B44,29/11/2008,Chashma,unclear,North Waziristan,Khyber Pakhtunkhwa,2,3,0,3,0,0,2,3
+B45,05/12/2008,Kateera,unclear,North Waziristan,Khyber Pakhtunkhwa,3,4,0,0,0,0,2,2
+B46,11/12/2008,Azam Warsak,unclear,South Waziristan,Khyber Pakhtunkhwa,6,7,0,7,0,0,0,0
+B47,15/12/2008,Tapi Tool,unclear,North Waziristan,Khyber Pakhtunkhwa,2,3,0,3,0,0,3,3
+B48,22/12/2008,Kari Kot,unclear,South Waziristan,Khyber Pakhtunkhwa,3,3,0,0,0,0,5,5
+B49,22/12/2008,Shin Warsak,unclear,South Waziristan,Khyber Pakhtunkhwa,2,4,0,0,0,0,4,4
+B50,01/01/2009,Kari Kot,unclear,South Waziristan,Khyber Pakhtunkhwa,3,5,0,0,0,0,1,2
+B51,02/01/2009,Madin Village,unclear,South Waziristan,Khyber Pakhtunkhwa,3,4,0,0,0,0,3,5
+Ob1,23/01/2009,Zharki,unclear,North Waziristan,Khyber Pakhtunkhwa,7,15,9,11,1,1,1,1
+Ob2,23/01/2009,Ganki Khel,unclear,South Waziristan,Khyber Pakhtunkhwa,5,10,5,10,3,4,2,2
+Ob3,14/02/2009,Narsi Khel,unclear,South Waziristan,Khyber Pakhtunkhwa,25,35,1,9,1,1,11,15
+Ob4,16/02/2009,Sur Pul,unclear,Kurram,Khyber Pakhtunkhwa,18,31,0,0,0,0,3,7
+Ob5,01/03/2009,unclear,unclear,South Waziristan,Khyber Pakhtunkhwa,3,12,0,0,0,0,1,3
+Ob6,12/03/2009,Barjo,unclear,Kurram,Khyber Pakhtunkhwa,14,26,0,0,0,0,9,50
+Ob7,15/03/2009,unclear,Jani Khel,Bannu,Khyber Pakhtunkhwa,2,6,0,0,0,0,3,3
+Ob8,25/03/2009,unclear,Makin,South Waziristan,Khyber Pakhtunkhwa,6,8,0,0,0,0,5,5
+Ob9,26/03/2009,Sokhel,unclear,North Waziristan,Khyber Pakhtunkhwa,4,5,0,5,0,0,5,5
+Ob10,01/04/2009,Khadezai,unclear,Orakzai,Khyber Pakhtunkhwa,10,14,5,5,3,3,4,16
+Ob11,04/04/2009,unclear,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,13,15,8,13,3,5,1,1
+Ob12,08/04/2009,Ganki Khel,unclear,South Waziristan,Khyber Pakhtunkhwa,3,4,0,0,0,0,2,5
+Ob13,19/04/2009,Ganki Khel,unclear,South Waziristan,Khyber Pakhtunkhwa,0,8,0,8,0,0,3,5
+Ob14,29/04/2009,Kaniguram,unclear,South Waziristan,Khyber Pakhtunkhwa,1,10,0,4,0,0,4,4
+Ob15,09/05/2009,Tabbi Langhar Khel,unclear,South Waziristan,Khyber Pakhtunkhwa,6,25,0,4,0,0,7,10
+Ob16,12/05/2009,Sara Khwara,unclear,South Waziristan,Khyber Pakhtunkhwa,5,9,0,0,0,0,4,4
+Ob17,16/05/2009,Khesoor,unclear,North Waziristan,Khyber Pakhtunkhwa,25,40,9,9,0,0,2,2
+Ob18,14/06/2009,Marda Algad,unclear,South Waziristan,Khyber Pakhtunkhwa,3,5,0,3,0,0,0,0
+Ob19,18/06/2009,unclear,Wana,South Waziristan,Khyber Pakhtunkhwa,12,18,4,4,0,0,10,10
+Ob20,23/06/2009,unclear,Makin,South Waziristan,Khyber Pakhtunkhwa,5,6,0,0,0,0,7,7
+Ob21,23/06/2009,unclear,Makin,South Waziristan,Khyber Pakhtunkhwa,60,83,18,50,10,10,27,27
+Ob22,03/07/2009,Mantoi,unclear,South Waziristan,Khyber Pakhtunkhwa,0,5,0,5,0,0,0,0
+Ob23,03/07/2009,Zamarai Nairai,unclear,South Waziristan,Khyber Pakhtunkhwa,10,17,0,0,0,0,27,35
+Ob24,07/07/2009,unclear,Makin,South Waziristan,Khyber Pakhtunkhwa,14,18,0,0,0,0,10,10
+Ob25,08/07/2009,unclear,Ladha,South Waziristan,Khyber Pakhtunkhwa,8,10,0,0,0,0,5,12
+Ob26,08/07/2009,unclear,Ladha,South Waziristan,Khyber Pakhtunkhwa,35,40,0,0,0,0,1,1
+Ob27,10/07/2009,Painda Khel,unclear,South Waziristan,Khyber Pakhtunkhwa,3,5,0,0,0,0,3,3
+Ob28,17/07/2009,Gariwam,unclear,North Waziristan,Khyber Pakhtunkhwa,5,6,0,0,0,0,4,6
+Ob29,05/08/2009,unclear,Ladha,South Waziristan,Khyber Pakhtunkhwa,1,12,1,4,0,0,5,5
+Ob30,11/08/2009,unclear,Ladha,South Waziristan,Khyber Pakhtunkhwa,12,25,0,6,4,4,5,7
+Ob31,21/08/2009,Danda Darpakhel,unclear,North Waziristan,Khyber Pakhtunkhwa,17,21,9,13,6,6,2,2
+Ob32,27/08/2009,Taparghai,unclear,South Waziristan,Khyber Pakhtunkhwa,8,10,0,0,0,0,6,9
+Ob33,07/09/2009,Machi Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,5,8,3,3,0,0,2,7
+Ob34,08/09/2009,Darga Mandi,unclear,North Waziristan,Khyber Pakhtunkhwa,10,15,5,5,3,3,4,5
+Ob35,14/09/2009,Toorikhel,unclear,North Waziristan,Khyber Pakhtunkhwa,5,5,0,0,0,0,2,3
+Ob36,24/09/2009,unclear,Mirali,North Waziristan,Khyber Pakhtunkhwa,10,12,0,12,0,0,5,5
+Ob37,29/09/2009,unclear,unclear,South Waziristan,Khyber Pakhtunkhwa,5,6,0,0,0,0,2,6
+Ob38,29/09/2009,Danda Darpakhel,unclear,North Waziristan,Khyber Pakhtunkhwa,4,9,0,4,0,0,2,6
+Ob39,30/09/2009,Norak,unclear,North Waziristan,Khyber Pakhtunkhwa,6,9,0,0,0,0,2,5
+Ob40,15/10/2009,Danda Darpakhel,unclear,North Waziristan,Khyber Pakhtunkhwa,3,4,0,0,0,0,7,7
+Ob41,21/10/2009,Spalaga,unclear,North Waziristan,Khyber Pakhtunkhwa,3,3,0,0,0,0,8,8
+Ob42,24/10/2009,unclear,Damadola,Bajaur,Khyber Pakhtunkhwa,20,30,0,0,0,0,8,8
+Ob43,05/11/2009,Norak,unclear,North Waziristan,Khyber Pakhtunkhwa,4,6,0,0,0,0,8,8
+Ob44,18/11/2009,Shanakorah,unclear,North Waziristan,Khyber Pakhtunkhwa,3,6,0,0,0,0,2,15
+Ob45,20/11/2009,Machi Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,3,14,3,3,1,1,2,12
+Ob46,08/12/2009,Spalaga,unclear,North Waziristan,Khyber Pakhtunkhwa,3,4,0,0,0,0,3,3
+Ob47,10/12/2009,unclear,Ladha,South Waziristan,Khyber Pakhtunkhwa,6,6,0,0,0,0,8,8
+Ob48,17/12/2009,unclear,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,2,2,0,0,0,0,0,0
+Ob49,17/12/2009,Ambar Shaga,unclear,North Waziristan,Khyber Pakhtunkhwa,12,16,6,6,0,0,0,0
+Ob50,18/12/2009,Babrak Ziarat,unclear,North Waziristan,Khyber Pakhtunkhwa,5,8,5,5,0,0,4,5
+Ob51,26/12/2009,Saidgai,unclear,North Waziristan,Khyber Pakhtunkhwa,13,20,6,6,0,0,12,12
+Ob52,31/12/2009,Machi Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,3,7,3,3,1,1,2,2
+Ob53,01/01/2010,Ghundikala,unclear,North Waziristan,Khyber Pakhtunkhwa,2,3,0,0,0,0,3,4
+Ob54,03/01/2010,Mosaki,unclear,North Waziristan,Khyber Pakhtunkhwa,5,5,1,2,1,1,2,2
+Ob55,06/01/2010,Sanzali,unclear,North Waziristan,Khyber Pakhtunkhwa,5,7,0,6,0,0,5,5
+Ob56,06/01/2010,Sanzali,unclear,North Waziristan,Khyber Pakhtunkhwa,5,9,5,5,0,0,3,3
+Ob57,08/01/2010,Tappi,unclear,North Waziristan,Khyber Pakhtunkhwa,5,6,5,5,1,1,3,3
+Ob58,09/01/2010,Ismail Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,4,5,0,0,0,0,5,5
+Ob59,09/01/2010,Shaktoi,unclear,North Waziristan,Khyber Pakhtunkhwa,15,18,0,0,0,0,7,14
+Ob60,15/01/2010,Zanani,unclear,North Waziristan,Khyber Pakhtunkhwa,5,10,0,0,0,0,3,3
+Ob61,15/01/2010,Shaktoi,unclear,North Waziristan,Khyber Pakhtunkhwa,6,10,0,0,0,0,0,0
+Ob62,17/01/2010,Shaktoi,unclear,North Waziristan,Khyber Pakhtunkhwa,14,20,0,0,0,0,4,4
+Ob63,19/01/2010,Deegan,unclear,North Waziristan,Khyber Pakhtunkhwa,5,9,0,0,0,0,4,4
+Ob64,29/01/2010,Mohammad Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,2,15,0,0,0,0,4,4
+Ob65,02/02/2010,Toor Narai,unclear,North Waziristan,Khyber Pakhtunkhwa,23,24,0,0,0,0,0,0
+Ob66,02/02/2010,Deegan,unclear,North Waziristan,Khyber Pakhtunkhwa,0,0,0,0,0,0,0,0
+Ob67,02/02/2010,Mohammad Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,0,0,0,0,0,0,0,0
+Ob68,02/02/2010,Pai Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,9,9,5,5,0,0,0,0
+Ob69,14/02/2010,unclear,Mirali,North Waziristan,Khyber Pakhtunkhwa,5,7,0,0,0,0,4,4
+Ob70,15/02/2010,Tappi,unclear,North Waziristan,Khyber Pakhtunkhwa,4,5,0,0,0,0,0,0
+Ob71,17/02/2010,Tabbi,unclear,North Waziristan,Khyber Pakhtunkhwa,4,4,0,0,0,0,2,3
+Ob72,18/02/2010,Danda Darpakhel,unclear,North Waziristan,Khyber Pakhtunkhwa,3,5,0,0,0,0,4,4
+Ob73,24/02/2010,Darga Mandi,unclear,North Waziristan,Khyber Pakhtunkhwa,5,13,5,6,1,1,6,6
+Ob74,08/03/2010,unclear,Miranshah,North Waziristan,Khyber Pakhtunkhwa,9,9,0,0,0,0,2,2
+Ob75,10/03/2010,Mizar Madakhel,unclear,North Waziristan,Khyber Pakhtunkhwa,7,8,0,0,0,0,12,12
+Ob76,10/03/2010,Mizar Madakhel,unclear,North Waziristan,Khyber Pakhtunkhwa,7,7,4,7,0,0,0,0
+Ob77,16/03/2010,unclear,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,7,11,0,0,0,0,2,2
+Ob78,17/03/2010,Hamzoni,unclear,North Waziristan,Khyber Pakhtunkhwa,3,5,0,0,0,0,4,4
+Ob79,17/03/2010,Mizar Madakhel,unclear,North Waziristan,Khyber Pakhtunkhwa,5,5,0,0,0,0,0,0
+Ob80,21/03/2010,Inzar,unclear,North Waziristan,Khyber Pakhtunkhwa,5,8,0,0,0,0,0,0
+Ob81,23/03/2010,Machis,unclear,North Waziristan,Khyber Pakhtunkhwa,6,6,0,0,0,0,3,3
+Ob82,27/03/2010,Hurmuz,unclear,North Waziristan,Khyber Pakhtunkhwa,4,4,0,4,0,0,5,5
+Ob83,31/03/2010,Tappi,unclear,North Waziristan,Khyber Pakhtunkhwa,5,6,5,6,1,1,2,2
+Ob84,12/04/2010,Boya,unclear,North Waziristan,Khyber Pakhtunkhwa,13,13,8,13,2,2,2,3
+Ob85,14/04/2010,Ambar Shaga,unclear,North Waziristan,Khyber Pakhtunkhwa,4,5,0,0,0,0,1,3
+Ob86,16/04/2010,Toorikhel,unclear,North Waziristan,Khyber Pakhtunkhwa,3,4,0,0,0,0,2,2
+Ob87,24/04/2010,Machi Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,7,9,0,0,0,0,0,0
+Ob88,26/04/2010,Khushali,unclear,North Waziristan,Khyber Pakhtunkhwa,3,8,0,0,0,0,3,3
+Ob89,03/05/2010,Machi Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,4,6,0,2,0,0,0,0
+Ob90,09/05/2010,unclear,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,5,10,0,4,0,0,4,4
+Ob91,11/05/2010,unclear,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,8,14,0,4,0,0,12,12
+Ob92,11/05/2010,Gurwak,unclear,North Waziristan,Khyber Pakhtunkhwa,7,15,0,0,0,0,4,4
+Ob93,15/05/2010,unclear,Unclear,Khyber,Khyber Pakhtunkhwa,5,15,0,2,0,0,15,15
+Ob94,21/05/2010,Boya,unclear,North Waziristan,Khyber Pakhtunkhwa,11,11,10,10,7,7,7,10
+Ob95,28/05/2010,Mizai Nari,unclear,South Waziristan,Khyber Pakhtunkhwa,8,12,0,11,0,0,4,4
+Ob96,10/06/2010,Norak,unclear,North Waziristan,Khyber Pakhtunkhwa,2,7,4,4,0,0,3,3
+Ob97,11/06/2010,Maizer,unclear,North Waziristan,Khyber Pakhtunkhwa,10,15,0,0,0,0,10,12
+Ob98,19/06/2010,Haider Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,16,17,0,0,0,0,10,18
+Ob99,26/06/2010,Khushali,unclear,North Waziristan,Khyber Pakhtunkhwa,2,4,0,0,0,0,1,3
+Ob100,27/06/2010,Tabbi,unclear,North Waziristan,Khyber Pakhtunkhwa,5,6,0,0,0,0,4,4
+Ob101,29/06/2010,Kari Kot,unclear,South Waziristan,Khyber Pakhtunkhwa,7,10,0,0,0,0,1,4
+Ob102,15/07/2010,Sheerani,unclear,North Waziristan,Khyber Pakhtunkhwa,9,14,0,7,0,0,3,3
+Ob103,24/07/2010,Dwasarak,unclear,South Waziristan,Khyber Pakhtunkhwa,16,18,0,0,0,0,24,24
+Ob104,25/07/2010,Shaktoi,unclear,North Waziristan,Khyber Pakhtunkhwa,14,32,0,0,0,0,7,12
+Ob105,25/07/2010,Tabbi,unclear,North Waziristan,Khyber Pakhtunkhwa,4,12,0,0,0,0,2,4
+Ob106,25/07/2010,unclear,unclear,South Waziristan,Khyber Pakhtunkhwa,4,4,0,0,0,0,5,5
+Ob107,14/08/2010,Issori,unclear,North Waziristan,Khyber Pakhtunkhwa,13,14,7,7,1,1,5,6
+Ob108,21/08/2010,Qutab Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,4,6,0,4,0,0,2,2
+Ob109,23/08/2010,Danda Darpakhel,unclear,North Waziristan,Khyber Pakhtunkhwa,20,20,7,9,3,3,15,15
+Ob110,23/08/2010,Darga Mandi,unclear,North Waziristan,Khyber Pakhtunkhwa,5,7,0,0,0,0,3,12
+Ob111,27/08/2010,Shahidano,unclear,Kurram,Khyber Pakhtunkhwa,3,9,0,0,0,0,2,2
+Ob112,27/08/2010,Badshah Kot,unclear,Kurram,Khyber Pakhtunkhwa,0,0,0,0,0,0,0,0
+Ob113,27/08/2010,Taaloo Ganj,unclear,Kurram,Khyber Pakhtunkhwa,2,3,0,3,0,0,0,0
+Ob114,03/09/2010,unclear,Miranshah,North Waziristan,Khyber Pakhtunkhwa,6,9,0,0,0,0,2,3
+Ob115,03/09/2010,unclear,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,2,4,0,0,0,0,2,2
+Ob116,04/09/2010,unclear,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,7,8,0,0,0,0,12,12
+Ob117,06/09/2010,Khar Qamar,unclear,North Waziristan,Khyber Pakhtunkhwa,3,6,0,0,0,0,1,1
+Ob118,08/09/2010,Danda Darpakhel,unclear,North Waziristan,Khyber Pakhtunkhwa,5,10,4,4,4,4,2,2
+Ob119,08/09/2010,Ambar Shaga,unclear,North Waziristan,Khyber Pakhtunkhwa,3,4,0,4,0,0,1,2
+Ob120,08/09/2010,Danda Darpakhel,unclear,North Waziristan,Khyber Pakhtunkhwa,10,10,0,0,0,0,2,5
+Ob121,09/09/2010,unclear,Miranshah,North Waziristan,Khyber Pakhtunkhwa,3,6,0,0,0,0,3,5
+Ob122,12/09/2010,Newey Adda,unclear,North Waziristan,Khyber Pakhtunkhwa,5,7,0,0,0,0,2,3
+Ob123,14/09/2010,Bushnarai,unclear,North Waziristan,Khyber Pakhtunkhwa,11,12,0,0,0,0,4,4
+Ob124,14/09/2010,Qutab Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,1,4,0,0,0,0,4,4
+Ob125,15/09/2010,Darga Mandi,unclear,North Waziristan,Khyber Pakhtunkhwa,11,15,5,5,0,0,1,5
+Ob126,15/09/2010,Pai Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,4,7,0,0,0,0,3,3
+Ob127,19/09/2010,Deegan,unclear,North Waziristan,Khyber Pakhtunkhwa,3,9,5,5,0,0,0,0
+Ob128,20/09/2010,Darazinda,unclear,North Waziristan,Khyber Pakhtunkhwa,3,6,0,3,0,0,0,0
+Ob129,21/09/2010,Khand Morsak,unclear,South Waziristan,Khyber Pakhtunkhwa,7,8,0,0,0,0,4,5
+Ob130,21/09/2010,Azam Warsak,unclear,South Waziristan,Khyber Pakhtunkhwa,0,16,0,0,0,0,0,0
+Ob131,25/09/2010,unclear,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,2,4,0,0,0,0,0,0
+Ob132,26/09/2010,Lawra Mandi,unclear,North Waziristan,Khyber Pakhtunkhwa,4,5,0,0,0,0,2,2
+Ob133,26/09/2010,unclear,Miranshah,North Waziristan,Khyber Pakhtunkhwa,3,5,0,0,0,0,1,2
+Ob134,26/09/2010,Sheerani,unclear,North Waziristan,Khyber Pakhtunkhwa,2,3,0,0,0,0,0,0
+Ob135,27/09/2010,Khushali,unclear,North Waziristan,Khyber Pakhtunkhwa,3,4,0,0,0,0,0,0
+Ob136,28/09/2010,Zeba,unclear,South Waziristan,Khyber Pakhtunkhwa,4,4,0,0,0,0,2,2
+Ob137,02/10/2010,Asar Village,unclear,North Waziristan,Khyber Pakhtunkhwa,8,10,0,0,0,0,2,4
+Ob138,02/10/2010,Inzarkas,unclear,North Waziristan,Khyber Pakhtunkhwa,7,14,0,0,0,0,2,2
+Ob139,04/10/2010,unclear,Mirali,North Waziristan,Khyber Pakhtunkhwa,5,9,0,3,0,0,2,2
+Ob140,06/10/2010,unclear,Miranshah,North Waziristan,Khyber Pakhtunkhwa,5,11,0,0,0,0,4,4
+Ob141,06/10/2010,Hurmuz,unclear,North Waziristan,Khyber Pakhtunkhwa,3,5,0,0,0,0,3,3
+Ob142,07/10/2010,Khaisoori,unclear,North Waziristan,Khyber Pakhtunkhwa,4,4,0,0,0,0,2,2
+Ob143,08/10/2010,Mohammad Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,4,6,0,0,0,0,0,0
+Ob144,08/10/2010,Char Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,5,8,0,4,0,0,0,0
+Ob145,10/10/2010,Shiva,unclear,North Waziristan,Khyber Pakhtunkhwa,4,9,0,0,0,0,3,3
+Ob146,13/10/2010,unclear,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,6,14,3,6,0,0,0,0
+Ob147,15/10/2010,Aziz Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,4,6,0,0,0,0,3,3
+Ob148,15/10/2010,Machi Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,3,5,0,0,0,0,0,0
+Ob149,18/10/2010,unclear,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,6,7,1,1,1,1,1,6
+Ob150,27/10/2010,unclear,Mirali,North Waziristan,Khyber Pakhtunkhwa,2,5,0,0,0,0,1,1
+Ob151,27/10/2010,Deegan,unclear,North Waziristan,Khyber Pakhtunkhwa,2,4,0,0,0,0,1,1
+Ob152,28/10/2010,Ismail Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,4,8,0,4,0,0,0,0
+Ob153,01/11/2010,Haider Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,5,6,0,0,0,0,2,2
+Ob154,03/11/2010,Qutab Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,4,5,0,0,0,0,0,0
+Ob155,03/11/2010,Khaso Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,4,5,0,0,0,0,0,0
+Ob156,03/11/2010,Pai Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,4,5,0,0,0,0,0,0
+Ob157,07/11/2010,unclear,Ghulam Khan,North Waziristan,Khyber Pakhtunkhwa,8,9,0,0,0,0,2,2
+Ob158,07/11/2010,unclear,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,3,6,0,0,0,0,1,4
+Ob159,11/11/2010,unclear,Ghulam Khan,North Waziristan,Khyber Pakhtunkhwa,5,8,0,0,0,0,5,6
+Ob160,13/11/2010,unclear,Miranshah,North Waziristan,Khyber Pakhtunkhwa,4,4,0,4,0,0,1,1
+Ob161,16/11/2010,unclear,Ghulam Khan,North Waziristan,Khyber Pakhtunkhwa,20,20,0,9,0,0,0,0
+Ob162,19/11/2010,Norak,unclear,North Waziristan,Khyber Pakhtunkhwa,2,4,0,0,0,0,1,1
+Ob163,21/11/2010,Khaddi,unclear,North Waziristan,Khyber Pakhtunkhwa,5,9,0,3,0,0,0,0
+Ob164,22/11/2010,Khesoor,unclear,North Waziristan,Khyber Pakhtunkhwa,3,6,0,0,0,0,2,3
+Ob165,26/11/2010,Pir Kelev,unclear,North Waziristan,Khyber Pakhtunkhwa,2,4,1,4,1,1,0,0
+Ob166,28/11/2010,Hassan Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,0,4,0,0,0,0,0,0
+Ob167,06/12/2010,Khushali,unclear,North Waziristan,Khyber Pakhtunkhwa,3,5,0,2,0,0,3,3
+Ob168,06/12/2010,Kushali,unclear,North Waziristan,Khyber Pakhtunkhwa,2,4,0,0,0,0,0,0
+Ob169,10/12/2010,Khadar Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,4,4,0,0,0,0,2,2
+Ob170,14/12/2010,Spalaga,unclear,North Waziristan,Khyber Pakhtunkhwa,3,4,0,4,0,0,0,0
+Ob171,16/12/2010,unclear,Unclear,Khyber,Khyber Pakhtunkhwa,7,7,0,0,0,0,0,0
+Ob172,17/12/2010,unclear,Unclear,Khyber,Khyber Pakhtunkhwa,7,15,0,0,0,0,7,11
+Ob173,17/12/2010,unclear,Unclear,Khyber,Khyber Pakhtunkhwa,11,15,0,0,0,0,2,2
+Ob174,17/12/2010,unclear,Unclear,Khyber,Khyber Pakhtunkhwa,32,32,2,2,0,0,0,0
+Ob175,27/12/2010,Shera Tala,unclear,North Waziristan,Khyber Pakhtunkhwa,18,22,0,0,0,0,0,0
+Ob176,27/12/2010,Machi Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,4,4,0,0,0,0,0,0
+Ob177,28/12/2010,unclear,Ghulam Khan,North Waziristan,Khyber Pakhtunkhwa,5,7,0,0,0,0,2,2
+Ob178,28/12/2010,unclear,Ghulam Khan,North Waziristan,Khyber Pakhtunkhwa,5,12,2,4,0,0,3,3
+Ob179,28/12/2010,unclear,Ghulam Khan,North Waziristan,Khyber Pakhtunkhwa,9,10,0,0,0,0,6,6
+Ob180,31/12/2010,unclear,Ghulam Khan,North Waziristan,Khyber Pakhtunkhwa,4,8,0,0,0,0,0,0
+Ob181,01/01/2011,Mandi Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,8,10,0,0,0,0,0,0
+Ob182,01/01/2011,Mandi Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,4,6,0,0,0,0,0,0
+Ob183,01/01/2011,unclear,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,4,5,0,0,0,0,0,0
+Ob184,01/01/2011,Boya,unclear,North Waziristan,Khyber Pakhtunkhwa,4,4,0,0,0,0,4,4
+Ob185,07/01/2011,Ghar Laley,unclear,North Waziristan,Khyber Pakhtunkhwa,1,6,0,0,0,0,0,0
+Ob186,12/01/2011,Haider Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,3,6,0,0,0,0,2,15
+Ob187,18/01/2011,unclear,unclear,North Waziristan,Khyber Pakhtunkhwa,3,7,0,0,0,0,3,3
+Ob188,23/01/2011,Doga Mada Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,2,5,0,0,0,0,0,0
+Ob189,23/01/2011,Doga Mada Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,2,3,0,0,0,0,0,0
+Ob190,23/01/2011,unclear,Razmak,North Waziristan,Khyber Pakhtunkhwa,4,6,0,0,0,0,3,3
+Ob191,20/02/2011,Kazha Punga area,Barmal,South Waziristan,Khyber Pakhtunkhwa,6,8,0,0,0,0,2,2
+Ob192,21/02/2011,Malik Jashdar,unclear,North Waziristan,Khyber Pakhtunkhwa,7,14,0,11,0,0,10,10
+Ob193,24/02/2011,Mohammad Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,4,7,0,0,0,0,3,2
+Ob194,08/03/2011,Landidog,unclear,South Waziristan,Khyber Pakhtunkhwa,2,5,0,5,0,0,2,2
+Ob195,09/03/2011,unclear,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,5,5,0,0,0,0,2,3
+Ob196,11/03/2011,Khesoor,unclear,North Waziristan,Khyber Pakhtunkhwa,4,12,5,5,0,0,0,0
+Ob197,11/03/2011,Ghoroski,unclear,North Waziristan,Khyber Pakhtunkhwa,4,4,0,0,0,0,0,0
+Ob198,13/03/2011,Azam Warsak,unclear,South Waziristan,Khyber Pakhtunkhwa,0,4,0,0,0,0,0,5
+Ob199,13/03/2011,Qutab Khel,Miranshah,North Waziristan,Khyber Pakhtunkhwa,4,7,0,0,0,0,5,5
+Ob200,14/03/2011,Malik Jashdar,unclear,North Waziristan,Khyber Pakhtunkhwa,3,6,0,0,0,0,0,0
+Ob201,16/03/2011,unclear,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,3,5,0,0,0,0,0,0
+Ob202,17/03/2011,unclear,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,26,42,19,41,0,1,9,14
+Ob203,13/04/2011,unclear,unclear,South Waziristan,Khyber Pakhtunkhwa,4,7,0,7,0,0,6,10
+Ob204,22/04/2011,unclear,Spinwam,North Waziristan,Khyber Pakhtunkhwa,20,26,5,9,3,5,5,10
+Ob205,06/05/2011,Dwa Tooe,unclear,North Waziristan,Khyber Pakhtunkhwa,7,18,6,6,0,0,4,4
+Ob206,10/05/2011,Angor Adda,unclear,South Waziristan,Khyber Pakhtunkhwa,3,5,0,0,0,0,4,4
+Ob207,12/05/2011,unclear,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,5,8,0,0,0,0,1,1
+Ob208,13/05/2011,Doga Mada Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,3,5,0,0,0,0,0,0
+Ob209,16/05/2011,Khushali Village,Mirali,North Waziristan,Khyber Pakhtunkhwa,4,10,0,0,0,0,2,4
+Ob210,16/05/2011,unclear,Mirali,North Waziristan,Khyber Pakhtunkhwa,3,6,0,0,0,0,0,0
+Ob211,20/05/2011,Tappi,unclear,North Waziristan,Khyber Pakhtunkhwa,4,6,0,0,0,0,0,0
+Ob212,23/05/2011,unclear,Mirali,North Waziristan,Khyber Pakhtunkhwa,4,7,0,0,0,0,2,2
+Ob213,03/06/2011,Ghwa Khwa,unclear,South Waziristan,Khyber Pakhtunkhwa,5,12,0,0,0,0,1,3
+Ob214,06/06/2011,"Tigger, Toji Khel Wazir",unclear,South Waziristan,Khyber Pakhtunkhwa,7,9,0,0,0,0,2,2
+Ob215,06/06/2011,Wacha Dana,unclear,South Waziristan,Khyber Pakhtunkhwa,8,10,0,7,0,0,3,3
+Ob216,06/06/2011,Darnashtra,unclear,South Waziristan,Khyber Pakhtunkhwa,3,5,0,0,0,0,0,0
+Ob217,08/06/2011,Zoynari,unclear,South Waziristan,Khyber Pakhtunkhwa,18,23,0,0,0,0,6,6
+Ob218,08/06/2011,Shawal,unclear,South Waziristan,Khyber Pakhtunkhwa,4,4,0,0,0,0,0,0
+Ob219,15/06/2011,unclear,Wana,South Waziristan,Khyber Pakhtunkhwa,2,10,0,0,0,0,2,2
+Ob220,15/06/2011,Karez,unclear,South Waziristan,Khyber Pakhtunkhwa,0,0,0,0,0,0,0,0
+Ob221,15/06/2011,unclear,Mirali,North Waziristan,Khyber Pakhtunkhwa,5,6,5,6,0,0,0,0
+Ob222,20/06/2011,Khardand,unclear,Kurram,Khyber Pakhtunkhwa,5,7,2,7,0,0,0,3
+Ob223,20/06/2011,Zarakai,unclear,Kurram,Khyber Pakhtunkhwa,2,5,0,0,0,0,0,0
+Ob224,27/06/2011,Shawal,unclear,South Waziristan,Khyber Pakhtunkhwa,6,12,0,0,0,0,0,0
+Ob225,27/06/2011,Shakai,unclear,South Waziristan,Khyber Pakhtunkhwa,12,21,0,20,0,0,2,2
+Ob226,05/07/2011,unclear,Mirali,North Waziristan,Khyber Pakhtunkhwa,4,6,0,3,0,2,5,5
+Ob227,11/07/2011,Gurwak,unclear,North Waziristan,Khyber Pakhtunkhwa,4,12,0,0,0,0,2,2
+Ob228,12/07/2011,Gurwak,unclear,North Waziristan,Khyber Pakhtunkhwa,12,25,0,0,0,0,0,0
+Ob229,12/07/2011,unclear,Barmal,South Waziristan,Khyber Pakhtunkhwa,5,13,0,0,0,0,3,5
+Ob230,12/07/2011,unclear,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,13,15,0,4,0,0,0,0
+Ob231,12/07/2011,unclear,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,1,9,1,1,0,0,3,5
+Ob232,20/07/2011,unclear,Mirali,North Waziristan,Khyber Pakhtunkhwa,4,4,0,0,0,0,2,2
+Ob233,01/08/2011,Azam Warsak,unclear,South Waziristan,Khyber Pakhtunkhwa,3,6,0,6,0,0,2,7
+Ob234,02/08/2011,Qutab Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,3,4,0,0,0,0,0,0
+Ob235,10/08/2011,unclear,Miranshah,North Waziristan,Khyber Pakhtunkhwa,8,25,0,0,0,0,3,8
+Ob236,16/08/2011,unclear,Miranshah,North Waziristan,Khyber Pakhtunkhwa,2,7,3,4,1,1,2,2
+Ob237,19/08/2011,Shin Warsak,unclear,South Waziristan,Khyber Pakhtunkhwa,3,4,0,0,0,0,2,2
+Ob238,22/08/2011,unclear,Mirali,North Waziristan,Khyber Pakhtunkhwa,3,7,0,4,0,0,3,3
+Ob239,11/09/2011,Hisokhel,unclear,North Waziristan,Khyber Pakhtunkhwa,1,5,0,0,0,0,1,3
+Ob240,23/09/2011,Khushali,unclear,North Waziristan,Khyber Pakhtunkhwa,3,8,0,0,0,0,3,4
+Ob241,27/09/2011,Azam Warsak,unclear,South Waziristan,Khyber Pakhtunkhwa,0,4,0,0,0,0,0,2
+Ob242,30/09/2011,Baghar,unclear,South Waziristan,Khyber Pakhtunkhwa,3,4,0,0,0,0,1,5
+Ob243,13/10/2011,Danda Darpakhel,unclear,North Waziristan,Khyber Pakhtunkhwa,1,6,0,0,0,0,4,4
+Ob244,13/10/2011,unclear,Barmal,South Waziristan,Khyber Pakhtunkhwa,3,6,0,0,0,0,3,3
+Ob245,14/10/2011,Danda Darpakhel,unclear,North Waziristan,Khyber Pakhtunkhwa,3,6,0,0,0,0,0,0
+Ob246,15/10/2011,Angor Adda,unclear,South Waziristan,Khyber Pakhtunkhwa,3,6,0,0,0,0,3,7
+Ob247,26/10/2011,unclear,Barmal,South Waziristan,Khyber Pakhtunkhwa,13,22,0,0,0,0,6,6
+Ob248,27/10/2011,Azam Warsak,unclear,South Waziristan,Khyber Pakhtunkhwa,4,6,0,0,0,0,3,4
+Ob249,27/10/2011,Hisokhel,unclear,North Waziristan,Khyber Pakhtunkhwa,4,6,0,0,0,0,3,3
+Ob250,30/10/2011,Khar Khama,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,4,6,4,4,0,0,2,3
+Ob251,31/10/2011,Norak,unclear,North Waziristan,Khyber Pakhtunkhwa,2,4,2,2,2,2,3,3
+Ob252,03/11/2011,unclear,Miranshah,North Waziristan,Khyber Pakhtunkhwa,2,3,0,0,0,0,3,3
+Ob253,15/11/2011,unclear,Miranshah,North Waziristan,Khyber Pakhtunkhwa,3,7,0,0,0,0,2,4
+Ob254,16/11/2011,Babar Ghar,unclear,South Waziristan,Khyber Pakhtunkhwa,4,22,0,0,0,0,6,12
+Ob255,17/11/2011,Shawal,Miranshah,North Waziristan,Khyber Pakhtunkhwa,7,9,0,0,0,0,3,5
+Ob256,10/01/2012,unclear,Miranshah,North Waziristan,Khyber Pakhtunkhwa,1,4,0,0,0,0,2,2
+Ob257,12/01/2012,unclear,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,5,9,0,0,0,0,2,3
+Ob258,23/01/2012,Deegan,unclear,North Waziristan,Khyber Pakhtunkhwa,2,5,0,0,0,0,1,3
+Ob259,23/01/2012,unclear,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,0,2,0,0,0,0,0,0
+Ob260,08/02/2012,unclear,Miranshah,North Waziristan,Khyber Pakhtunkhwa,9,10,0,0,0,0,2,12
+Ob261,09/02/2012,unclear,Miranshah,North Waziristan,Khyber Pakhtunkhwa,3,8,0,3,0,1,3,3
+Ob262,16/02/2012,unclear,Miranshah,North Waziristan,Khyber Pakhtunkhwa,5,6,0,0,0,0,4,7
+Ob263,16/02/2012,unclear,Mirali,North Waziristan,Khyber Pakhtunkhwa,8,15,0,0,0,0,3,3
+Ob264,09/03/2012,Shaktoi Mandao,unclear,South Waziristan,Khyber Pakhtunkhwa,4,15,0,0,0,0,0,3
+Ob265,09/03/2012,Nishpa,unclear,South Waziristan,Khyber Pakhtunkhwa,6,6,0,0,0,0,0,0
+Ob266,13/03/2012,Wagdalai,Barmal,South Waziristan,Khyber Pakhtunkhwa,6,8,0,0,0,0,2,4
+Ob267,13/03/2012,unclear,unclear,unclear,unclear,6,7,0,0,0,0,3,3
+Ob268,30/03/2012,Sarai,Miranshah,North Waziristan,Khyber Pakhtunkhwa,3,4,0,0,0,0,3,3
+Ob269,29/04/2012,unclear,Miranshah,North Waziristan,Khyber Pakhtunkhwa,3,6,0,0,0,0,1,3
+Ob270,05/05/2012,"Guldar Kot, Dre Nishtar area",unclear,North Waziristan,Khyber Pakhtunkhwa,8,10,0,0,0,0,1,3
+Ob271,23/05/2012,unclear,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,1,5,0,0,0,0,1,2
+Ob272,24/05/2012,unclear,Mirali,North Waziristan,Khyber Pakhtunkhwa,5,12,0,8,0,0,3,4
+Ob273,26/05/2012,unclear,Miranshah,North Waziristan,Khyber Pakhtunkhwa,1,4,0,0,0,0,1,2
+Ob274,28/05/2012,unclear,Mirali,North Waziristan,Khyber Pakhtunkhwa,4,10,0,0,0,0,4,4
+Ob275,28/05/2012,Degan,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,2,5,0,0,0,0,0,0
+Ob276,02/06/2012,Khawashi Khel,Wana,South Waziristan,Khyber Pakhtunkhwa,2,4,0,0,0,0,0,0
+Ob277,03/06/2012,unclear,Barmal,South Waziristan,Khyber Pakhtunkhwa,0,10,0,0,0,0,4,10
+Ob278,04/06/2012,Khushali,Mirali,North Waziristan,Khyber Pakhtunkhwa,14,18,0,6,0,0,3,6
+Ob279,13/06/2012,unclear,Miranshah,North Waziristan,Khyber Pakhtunkhwa,2,4,0,0,0,0,0,0
+Ob280,14/06/2012,unclear,Miranshah,North Waziristan,Khyber Pakhtunkhwa,1,4,0,0,0,0,2,3
+Ob281,26/06/2012,Shawal,Miranshah,North Waziristan,Khyber Pakhtunkhwa,4,7,0,0,0,0,2,7
+Ob282,01/07/2012,Dre Nishter/Shawal,Miranshah,North Waziristan,Khyber Pakhtunkhwa,6,9,0,0,0,0,2,3
+Ob283,06/07/2012,Maizer,unclear,North Waziristan,Khyber Pakhtunkhwa,13,24,3,18,0,0,2,22
+Ob284,23/07/2012,Dre Nishter/Shawal,Miranshah,North Waziristan,Khyber Pakhtunkhwa,11,14,6,14,0,0,2,11
+Ob285,29/07/2012,Kushhali Turkhel,unclear,North Waziristan,Khyber Pakhtunkhwa,4,7,0,3,0,0,4,4
+Ob286,18/08/2012,"Mammon Narai, Shuweda",unclear,North Waziristan,Khyber Pakhtunkhwa,5,12,1,1,0,0,2,9
+Ob287,19/08/2012,"Mana, Shawal",Miranshah,North Waziristan,Khyber Pakhtunkhwa,4,7,0,0,0,0,2,3
+Ob288,19/08/2012,"Mana, Shawal",Miranshah,North Waziristan,Khyber Pakhtunkhwa,2,3,0,0,0,0,2,2
+Ob289,21/08/2012,Shnakhura,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,4,25,1,3,1,1,2,2
+Ob290,24/08/2012,"Makai/Maki Ghar, Shawal",Miranshah,North Waziristan,Khyber Pakhtunkhwa,13,22,0,0,0,0,4,14
+Ob291,24/08/2012,"Dara, Shawal",Miranshah,North Waziristan,Khyber Pakhtunkhwa,0,0,0,0,0,0,0,0
+Ob292,24/08/2012,"Dre Nishter, Shawal",Miranshah,North Waziristan,Khyber Pakhtunkhwa,0,0,0,0,0,0,0,0
+Ob293,01/09/2012,Degan,unclear,North Waziristan,Khyber Pakhtunkhwa,4,6,0,0,0,0,2,3
+Ob294,21/09/2012,unclear,unclear,North Waziristan,Khyber Pakhtunkhwa,3,4,0,0,0,0,2,3
+Ob295,24/09/2012,Mosaki - Inzar Abad,Mirali,North Waziristan,Khyber Pakhtunkhwa,3,8,0,0,0,0,2,2
+Ob296,01/10/2012,Khadar Khel,unclear,North Waziristan,Khyber Pakhtunkhwa,2,4,0,0,0,0,0,0
+Ob297,10/10/2012,unclear,Mirali,North Waziristan,Khyber Pakhtunkhwa,3,6,0,0,0,0,3,3
+Ob298,11/10/2012,Buland Khel,unclear,Orakzai,Khyber Pakhtunkhwa,16,26,0,2,0,0,5,15
+Ob299,24/10/2012,Miranshah,Miranshah,North Waziristan,Khyber Pakhtunkhwa,1,1,1,1,0,0,6,9
+Ob300,29/11/2012,Shin Warsak,unclear,South Waziristan,Khyber Pakhtunkhwa,1,4,0,0,0,0,3,4
+Ob301,01/12/2012,Shin Warsak,unclear,South Waziristan,Khyber Pakhtunkhwa,1,4,0,0,0,0,3,3
+Ob302,06/12/2012,Noorak Mubarak Shahi area,Mirali,North Waziristan,Khyber Pakhtunkhwa,2,11,1,1,0,0,1,6
+Ob303,09/12/2012,unclear,Ghulam Khan,North Waziristan,Khyber Pakhtunkhwa,2,4,0,3,0,0,0,0
+Ob304,21/12/2012,unclear,Mirali,North Waziristan,Khyber Pakhtunkhwa,3,6,0,0,0,0,2,2
+Ob305,29/12/2012,"Gurbaz, Shawal",Miranshah,North Waziristan,Khyber Pakhtunkhwa,4,5,0,0,0,0,2,2
+Ob306,02/01/2013,unclear,Barmal,South Waziristan,Khyber Pakhtunkhwa,6,11,0,0,0,0,0,0
+Ob307,03/01/2013,Ghundi Killi,Miranshah,North Waziristan,Khyber Pakhtunkhwa,3,6,0,0,0,0,1,1
+Ob308,06/01/2013,Smal Narai area,Ladha,South Waziristan,Khyber Pakhtunkhwa,8,18,0,0,0,0,3,7
+Ob309,08/01/2013,unclear,Mirali,North Waziristan,Khyber Pakhtunkhwa,4,9,0,2,0,1,1,4
+Ob310,08/01/2013,Malangan Hassokhel,Mirali,North Waziristan,Khyber Pakhtunkhwa,0,9,0,0,0,0,1,4
+Ob311,10/01/2013,unclear,Mirali,North Waziristan,Khyber Pakhtunkhwa,3,6,0,0,0,0,0,0
+Ob312,06/02/2013,unclear,Spinwam,North Waziristan,Khyber Pakhtunkhwa,3,5,0,2,0,0,1,1
+Ob313,08/02/2013,Babar Ghar,unclear,South Waziristan,Khyber Pakhtunkhwa,6,9,0,0,0,0,2,6
+Ob314,10/03/2013,unclear,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,1,3,0,0,0,0,1,1
+Ob315,22/03/2013,New Adda,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,1,4,0,0,0,0,1,1
+Ob316,14/04/2013,unclear,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,4,6,0,0,0,0,2,2
+Ob317,17/04/2013,Pobar,Ladha,South Waziristan,Khyber Pakhtunkhwa,4,6,0,0,0,0,2,7
+Ob318,29/05/2013,Qazi Kot,Miranshah,North Waziristan,Khyber Pakhtunkhwa,3,7,0,0,0,0,1,4
+Ob319,07/06/2013,Tehsil Shawal,Miranshah,North Waziristan,Khyber Pakhtunkhwa,7,11,0,0,0,0,3,4
+Ob320,03/07/2013,Tehsil Shawal,Miranshah,North Waziristan,Khyber Pakhtunkhwa,16,18,0,0,0,0,5,5
+Ob321,13/07/2013,unclear,Mirali,North Waziristan,Khyber Pakhtunkhwa,2,3,0,0,0,0,0,0
+Ob322,28/07/2013,Tehsil Shawal,Miranshah,North Waziristan,Khyber Pakhtunkhwa,5,8,0,0,0,0,2,4
+Ob323,31/08/2013,Mossaki,Mirali,North Waziristan,Khyber Pakhtunkhwa,3,4,0,0,0,0,1,3
+Ob324,06/09/2013,Tabi,Ghulam Khan,North Waziristan,Khyber Pakhtunkhwa,5,7,0,0,0,0,3,7
+Ob325,22/09/2013,unclear,Makin,South Waziristan,Khyber Pakhtunkhwa,6,7,0,0,0,0,2,4
+Ob326,29/09/2013,Darga Mandi,unclear,North Waziristan,Khyber Pakhtunkhwa,3,6,0,0,0,0,1,3
+Ob327,30/09/2013,Land Char Khel,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,1,4,0,0,0,0,2,4
+Ob328,31/10/2013,unclear,Miranshah,North Waziristan,Khyber Pakhtunkhwa,0,5,0,0,0,0,3,3
+Ob329,01/11/2013,Dandi Darpakhel,unclear,North Waziristan,Khyber Pakhtunkhwa,4,7,0,0,0,0,2,2
+Ob330,21/11/2013,unclear,Tal,Hangu,Khyber Pakhtunkhwa,6,9,0,0,0,0,1,9
+Ob331,29/11/2013,unclear,Miranshah,North Waziristan,Khyber Pakhtunkhwa,2,3,0,0,0,0,1,2
+Ob332,25/12/2013,Qutab Khel,Miranshah,North Waziristan,Khyber Pakhtunkhwa,3,4,0,0,0,0,1,1
+Ob333,11/06/2014,unclear,unclear,North Waziristan,Khyber Pakhtunkhwa,4,6,0,0,0,0,0,0
+Ob334,12/06/2014,unclear,unclear,North Waziristan,Khyber Pakhtunkhwa,6,10,0,0,0,0,4,4
+Ob335,18/06/2014,unclear,unclear,North Waziristan,Khyber Pakhtunkhwa,4,8,0,0,0,0,2,4
+Ob336,10/07/2014,Madakhel village,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,6,7,0,0,0,0,2,3
+Ob337,16/07/2014,Saidgai,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,15,24,0,0,0,0,4,6
+Ob338,19/07/2014,Doga Madakhel,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,11,15,0,0,0,0,0,0
+Ob339,05/08/2014,Lawara Mandi village,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,5,7,0,0,0,0,2,3
+Ob340,24/09/2014,Lwara Mandai,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,5,11,0,0,0,0,0,0
+Ob341,28/09/2014,unclear,Wana,South Waziristan,Khyber Pakhtunkhwa,2,4,0,0,0,0,1,4
+Ob342,05/10/2014,Shawal,unclear,South Waziristan,Khyber Pakhtunkhwa,4,5,0,0,0,0,2,3
+Ob343,06/10/2014,Shawal,unclear,South Waziristan,Khyber Pakhtunkhwa,4,8,0,0,0,0,4,6
+Ob344,07/10/2014,Shawal,unclear,South Waziristan,Khyber Pakhtunkhwa,4,7,0,0,0,0,5,11
+Ob345,07/10/2014,Kundser,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,2,4,0,0,0,0,5,5
+Ob346,08/10/2014,Loman,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,2,4,0,0,0,0,1,3
+Ob347,09/10/2014,unclear,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,3,4,0,0,0,0,0,0
+Ob348,11/10/2014,unclear,Unclear,Khyber,Khyber Pakhtunkhwa,4,6,0,0,0,0,2,2
+Ob349,11/10/2014,"Marga, Shawal",Miranshah,North Waziristan,Khyber Pakhtunkhwa,2,4,0,0,0,0,0,0
+Ob350,30/10/2014,Azam Warsak,unclear,South Waziristan,Khyber Pakhtunkhwa,4,7,0,0,0,0,2,2
+Ob351,11/11/2014,Dawa Toi,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,4,7,0,2,0,2,2,3
+Ob352,20/11/2014,unclear,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,5,8,0,0,0,0,2,3
+Ob353,26/11/2014,"Garga, Shawal",Miranshah,North Waziristan,Khyber Pakhtunkhwa,4,9,0,0,0,0,2,3
+Ob354,07/12/2014,Khar Tangi,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,4,6,0,0,0,0,2,2
+Ob355,20/12/2014,unclear,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,4,6,0,0,0,0,0,0
+Ob356,26/12/2014,"Kund/Kundghar village, Shawal",Miranshah,North Waziristan,Khyber Pakhtunkhwa,4,5,0,0,0,0,0,0
+Ob357,26/12/2014,"Kund/Kundghar village, Shawal",Miranshah,North Waziristan,Khyber Pakhtunkhwa,3,4,0,0,0,0,0,0
+Ob358,04/01/2015,Lwara Mandai,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,6,10,0,0,0,0,0,0
+Ob359,15/01/2015,Shawal,Miranshah,North Waziristan,Khyber Pakhtunkhwa,5,7,2,2,0,0,0,0
+Ob360,15/01/2015,unclear,Ladha,South Waziristan,Khyber Pakhtunkhwa,4,7,0,0,0,0,3,4
+Ob361,19/01/2015,"Shahi Khel, Shawal",Miranshah,North Waziristan,Khyber Pakhtunkhwa,5,7,0,0,0,0,4,6
+Ob362,28/01/2015,Shawal,Miranshah,North Waziristan,Khyber Pakhtunkhwa,6,7,0,0,0,0,2,4
+Ob363,18/03/2015,Shabak,unclear,Kurram,Khyber Pakhtunkhwa,3,3,0,0,0,0,0,0
+Ob364,12/04/2015,Shawal,Miranshah,North Waziristan,Khyber Pakhtunkhwa,4,4,0,0,0,0,2,2
+Ob365,16/05/2015,"Wara Mandi, Shawal",Miranshah,North Waziristan,Khyber Pakhtunkhwa,4,7,0,0,0,0,2,2
+Ob366,18/05/2015,"Zoy Nari, Shawal",Miranshah,North Waziristan,Khyber Pakhtunkhwa,3,6,0,0,0,0,2,3
+Ob367,01/06/2015,Shawal,Miranshah,North Waziristan,Khyber Pakhtunkhwa,4,5,0,0,0,0,0,0
+Ob368,06/06/2015,unclear,unclear,North Waziristan,Khyber Pakhtunkhwa,7,9,0,3,0,0,4,4
+Ob369,06/08/2015,Lwara Mandai,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,4,7,0,0,0,0,2,3
+Ob370,01/09/2015,unclear,unclear,North Waziristan,Khyber Pakhtunkhwa,5,6,0,0,0,0,4,4
+Ob371,09/01/2016,Mangrooti village,Datta Khel,North Waziristan,Khyber Pakhtunkhwa,5,5,0,0,0,0,2,2
+Ob372,22/02/2016,unclear,unclear,Kurram,Khyber Pakhtunkhwa,4,5,0,0,0,0,1,4
+Ob373,21/05/2016,unclear,Ahmad Wal,Chagai,Balochistan,2,2,1,1,0,0,0,0
+T001,02/03/2017,unclear,unclear,Kurram,Khyber Pakhtunkhwa,2,2,0,0,0,0,0,0
+T002,26/04/2017,Zuwai,unclear,North Waziristan,Khyber Pakhtunkhwa,7,11,0,3,0,0,0,0
+T003,24/05/2017,unclear,unclear,North Waziristan,Khyber Pakhtunkhwa,2,3,0,0,0,0,0,0
+T004,13/06/2017,unclear,unclear,Hangu,Khyber Pakhtunkhwa,1,3,0,0,0,0,0,3
+T005,15/09/2017,Ghuz Ghari,Upper Kurram,Kurram,Khyber Pakhtunkhwa,3,3,0,0,0,0,1,2
+T006,24/01/2018,unclear,unclear,unclear,unclear,1,3,0,0,0,0,0,0
