@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drone Wars</title>
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+     <script src="js/leaflet-providers.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script async src="src/droneWarfare.js" type="module"></script>
+    <style>
+        #map {
+            height: 100vh;
+            width: 100%;
+        }
+        #sidebar {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          width: 40%;
+          z-index: 1000;
+          height: 100%;
+          padding: 20px;
+          background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+          color: white;
+          overflow-y: auto;
+          font-family: 'IBM Plex Mono', monospace;
+        }
+        .table {
+          font-size: 0.75em;
+          color: white;
+        }
+
+        .legend {
+          line-height: 18px;
+          color: #555;
+          background-color: rgba(255, 255, 255, 0.75);
+          padding: 5px 10px;
+        }
+        .legend i {
+          width: 18px;
+          height: 18px;
+          float: left;
+          margin-right: 8px;
+          opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <div id="sidebar">
+        <h1 id="header">Drone Warfare</h1>
+        <p id="description">This map shows the locations and human cost of drone strikes in Pakistan, Yemen, Somalia, and Afghanistan from 2004 to 2020.</p>
+        <div id="legend">
+            <h3>Overview</h3>
+            <div id="bar-chart">
+            </div>
+            <div id="breadcrumbs">
+            </div>
+            <div class="data_table">
+                <table id="data_table" class="table table-striped table-bordered table-hover table-sm">
+                    <thead>
+                        <tr>
+                            <th scope="col">Location</th>
+                            <th scope="col">Strikes</th>
+                            <th scope="col">Deaths</th>
+                            <th scope="col">Combatants</th>
+                            <th scope="col">Civilians</th>
+                            <th scope="col">Children</th>
+                        </tr>
+                    </thead>
+                    <tbody id="data_table_body">
+                    </tbody>
+                </table>
+
+            </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+</body>
+</html>
