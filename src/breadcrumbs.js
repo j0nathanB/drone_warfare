@@ -83,7 +83,10 @@ export class Breadcrumbs {
     breadcrumbContainer.appendChild(ul);
   }
 
-  removeBreadcrumbsAfterLevel(level) {
-    // ...
+  updateBreadcrumbsAtMax(admLevel, admName, country) {
+    console.log('updateBreadcrumbsAtMax', this.breadcrumbs, admLevel,admName,country)
+    this.breadcrumbs = this.breadcrumbs.slice(0, admLevel);
+    this.breadcrumbs.push({ "admLevel": admLevel, "admName": admName, "country": country });
+    this.updateBreadcrumbs(this.breadcrumbs);
   }
 }

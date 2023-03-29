@@ -106,6 +106,8 @@ function selectEntity(properties, aState) {
   // Update the breadcrumbs only if their length is shorter than the admLevel (to prevent adding the same breadcrumb twice at the max admLevel)
   if (appState.breadcrumbs.breadcrumbs.length <= appState.admLevel) {
     appState.breadcrumbs.addBreadcrumbs(appState.admLevel , appState.admName.length == 0 ? appState.country : appState.admName, appState.country);
+  } else {
+    appState.breadcrumbs.updateBreadcrumbsAtMax(appState.admLevel, appState.admName, appState.country)
   }
 }
 

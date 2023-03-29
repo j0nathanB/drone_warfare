@@ -10,9 +10,9 @@ export class DataTable {
     return {
       shapeName: data.features[0].properties.shapeISO,
       strike_count: data.features[0].properties.strike_count,
-      max_total: data.features[0].properties.max_total,
-      max_civilians: data.features[0].properties.max_civilians,
-      max_children: data.features[0].properties.max_children
+      max_total: data.features[0].properties.max_total.reduce((a, b) => (a + b), 0),
+      max_civilians: data.features[0].properties.max_civilians.reduce((a, b) => (a + b), 0),
+      max_children: data.features[0].properties.max_children.reduce((a, b) => (a + b), 0)
     };
   }
 

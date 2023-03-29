@@ -53,14 +53,31 @@ export class DroneWarfareMap {
     legend.addTo(map);
   }
 
+  addPopup (feature, layer) {
+    console.log('addPopup', feature, layer)
+
+    const countryNames = {
+      'AFG': 'Afghanistan',
+      'PAK': 'Pakistan',
+      'SOM': 'Somalia',
+      'YEM': 'Yemen',
+    }
+    const name = "shapeISO" in feature.properties ? countryNames[feature.properties.shapeISO] : feature.properties.shapeName;
+
+    layer.bindPopup('<h1>'+name+'</h1><p>name: '+feature.properties.strike_count+'</p>');
+    // layer.bindPopup(popupContent);
+
+    layer.on('mouseover', function (e) {
+      console.log('mouseover', e)
+        this.openPopup();
+    });
+    layer.on('mouseout', function (e) {
+        this.closePopup();
+    });
+}
+
   zoomToFeature(e, bounds) {
     const targetBounds = bounds || e.target.getBounds();
-    // console.log(targetBounds)
-    // targetBounds._northEast.lat += 0.5;
-    // targetBounds._northEast.lng += 0.5;
-    // targetBounds._southWest.lat -= 0.5;
-    // targetBounds._southWest.lng -= 0.5;
-    // console.log(targetBounds)
     const padding = [0, 0];
     this.map.fitBounds(targetBounds, {paddingTopLeft: [500,0], paddingBottomRight: padding});
   }
@@ -100,16 +117,68 @@ export class DroneWarfareMap {
     });
   }
 
+  // onEachFeature = (feature, layer) => {
+  //   layer.on({
+  //       mouseover: (e) => {
+  //         this.highlightFeature(e);
+
+  //         const countryNames = {
+  //           'AFG': 'Afghanistan',
+  //           'PAK': 'Pakistan',
+  //           'SOM': 'Somalia',
+  //           'YEM': 'Yemen',
+  //         }
+  //         const name = "shapeISO" in feature.properties ? countryNames[feature.properties.shapeISO] : feature.properties.shapeName;
+      
+  //         layer.bindPopup('<h1>'+name+'</h1><p>name: '+feature.properties.strike_count+'</p>');
+  //         // layer.bindPopup(popupContent);
+      
+  //         layer.openPopup();
+
+             
+  //         console.log('mouseover', e)
+  //         // this.addPopup(feature, layer)
+  //       },
+  //       mouseout: (e) => {
+  //         this.resetHighlight(e)
+  //         layer.closePopup();
+  //       },
+  //       click: (e) => {
+  //         this.zoomToFeature(e);
+  //         this.selectEntityCallback(e.target.feature.properties, this.appState); // Call this function when an administrative division is clicked
+  //       },
+  //   });
+  // }
+
   onEachFeature = (feature, layer) => {
     layer.on({
-        mouseover: this.highlightFeature,
-        mouseout: this.resetHighlight,
+        mouseover: (e) => {
+          this.highlightFeature(e);
+  
+          const countryNames = {
+            'AFG': 'Afghanistan',
+            'PAK': 'Pakistan',
+            'SOM': 'Somalia',
+            'YEM': 'Yemen',
+          }
+          const name = "shapeName" in feature.properties ? feature.properties.shapeName : countryNames[feature.properties.shapeISO];
+      
+          const popup = L.popup({'className':'popup'})
+            .setLatLng(e.latlng) // Set the popup's position to the mouse cursor's LatLng
+            .setContent('<h3>'+name+'</h3><p>Total strikes: '+feature.properties.strike_count+'</p>')
+            .openOn(this.map);
+        },
+        mouseout: (e) => {
+          this.resetHighlight(e)
+          this.map.closePopup(); // Close the popup when the mouse is not over the feature
+        },
         click: (e) => {
           this.zoomToFeature(e);
           this.selectEntityCallback(e.target.feature.properties, this.appState); // Call this function when an administrative division is clicked
         },
     });
-  }
+  }       
+  
 
   displayFeatures(features) {
     // Create a layer group to hold all GeoJSON layers
