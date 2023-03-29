@@ -9,7 +9,9 @@ export function adjustCenter(map, sidebarWidth) {
 
 export async function loadJSON(filePath) {
   try {
-    const response = await fetch(filePath);
+    const response = await fetch(filePath, {
+      header: {'Access-Control-Allow-Origin':'*'},
+    });
     if (!response.ok) {
       throw new Error(`HTTP error ${response.status}`);
     }
