@@ -5,7 +5,6 @@ import { Sidebar } from './sidebar.js';
 export class DroneWarfareMap {
   constructor(appState, selectEntityCallback) {
     this.appState = appState;
-    this.sidebarWidth = new Sidebar().getWidth();
     this.selectEntityCallback = selectEntityCallback;
     this.map = this.initializeMap();
     this.breadcrumbs = []
@@ -14,7 +13,7 @@ export class DroneWarfareMap {
   initializeMap = () => {
     const map = L.map('map', {'zoomControl': false}).setView([20, 50], 5);
     
-    L.control.zoom({position: 'bottomright'}).addTo(map);
+    L.control.zoom({position: 'topright'}).addTo(map);
     
     L.tileLayer('https://{s}.tile.jawg.io/jawg-light/{z}/{x}/{y}{r}.png?access-token={accessToken}', {
       attribution: '<a href="http://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank">&copy; <b>Jawg</b>Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
@@ -23,7 +22,7 @@ export class DroneWarfareMap {
       subdomains: 'abcd',
       accessToken: 'rBamW4Kz7pPEzv3GqzMbEeKlTfrBVmzSbePyFo7nelia3jGNw44jYWNwoOxog3Mw'
     }).addTo(map);
-
+    
     this.createLegend(map)
 
     return map;
@@ -56,7 +55,14 @@ export class DroneWarfareMap {
 
   zoomToFeature(e, bounds) {
     const targetBounds = bounds || e.target.getBounds();
-    this.map.fitBounds(targetBounds);
+    // console.log(targetBounds)
+    // targetBounds._northEast.lat += 0.5;
+    // targetBounds._northEast.lng += 0.5;
+    // targetBounds._southWest.lat -= 0.5;
+    // targetBounds._southWest.lng -= 0.5;
+    // console.log(targetBounds)
+    const padding = [0, 0];
+    this.map.fitBounds(targetBounds, {paddingTopLeft: [500,0], paddingBottomRight: padding});
   }
 
   style(feature) {
@@ -73,7 +79,6 @@ export class DroneWarfareMap {
 
   highlightFeature = (e) => {
     const layer = e.target;
-  
     layer.setStyle({
         weight: 3,
         color: 'blue',
@@ -110,6 +115,7 @@ export class DroneWarfareMap {
     // Create a layer group to hold all GeoJSON layers
     this.appState.map.geojson = L.layerGroup().addTo(this.map);
     for (let i = 0; i < features.length; i++) {
+      // Skip features that are not administrative divisions
       if('properties' in features[i] && features[i].properties.shapeName === 'unclear') continue;
       const geojsonLayer = L.geoJson(features[i], {
         style: this.style,

@@ -87,16 +87,15 @@ function selectEntity(properties, aState) {
     appState.map.geojson.clearLayers();
   
     // Display the new features
+    console.log('Before displayFeatures:', 'Center:', appState.map.map.getCenter(), 'Zoom:', appState.map.map.getZoom());
     appState.map.displayFeatures(featuresToDisplay);
-  
+    console.log('After displayFeatures:', 'Center:', appState.map.map.getCenter(), 'Zoom:', appState.map.map.getZoom());
   } else {
     appState.admLevel = appState.admLevel - 1;
     featuresToDisplay = appState.geojson[appState.country][appState.admLevel].features;
 
-    console.log(this.appState.admName, featuresToDisplay)
     featuresToDisplay = featuresToDisplay.filter(feature => feature.properties.shapeName === this.appState.admName);
 
-    console.log(featuresToDisplay)
     const featureBounds = L.geoJSON(featuresToDisplay[0]).getBounds()
     appState.map.zoomToFeature(null, featureBounds);
   }  
@@ -105,7 +104,6 @@ function selectEntity(properties, aState) {
   appState.dataTable.loadTable(featuresToDisplay);
 
   // Update the breadcrumbs only if their length is shorter than the admLevel (to prevent adding the same breadcrumb twice at the max admLevel)
-  console.log(appState.admLevel, appState.breadcrumbs.breadcrumbs.length)
   if (appState.breadcrumbs.breadcrumbs.length <= appState.admLevel) {
     appState.breadcrumbs.addBreadcrumbs(appState.admLevel , appState.admName.length == 0 ? appState.country : appState.admName, appState.country);
   }
