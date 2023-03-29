@@ -12,7 +12,7 @@ export class GeoJSONHandler {
     const username = "j0nathanb";
     const repo = "drone_warfare";
     const ref = "main"; // usually "main" or "master"
-    const baseURL = `https://embed.github.com/view/geojson/${username}/${repo}/${ref}/src/geojson`;
+    const baseURL = `https://raw.githubusercontent.com/${username}/${repo}/${ref}/src/geojson/`;
     // use the following line instead if you want to load the files from your local machine
     // const baseURL = '../src/geojson'
 
