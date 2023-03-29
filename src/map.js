@@ -8,7 +8,6 @@ export class DroneWarfareMap {
     this.sidebarWidth = new Sidebar().getWidth();
     this.selectEntityCallback = selectEntityCallback;
     this.map = this.initializeMap();
-    this.info = this.initializeControl()
     this.breadcrumbs = []
   }
 
@@ -27,34 +26,12 @@ export class DroneWarfareMap {
 
     this.createLegend(map)
 
-    // Add click event listeners to breadcrumb links
-    const breadcrumbLinks = document.querySelectorAll('#breadcrumbs a');
-    breadcrumbLinks.forEach(link => {
-      link.addEventListener('click', this.handleBreadcrumbClick);
-    });
-
     return map;
   }
 
-  initializeControl = () => {
-    const info = L.control();
-
-    info.onAdd = (map) => {
-      info._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
-      info.update();
-      return info._div;
-    };
-
-    // method that we will use to update the control based on feature properties passed
-    info.update = function (props) {
-      info._div.innerHTML = '<h4>US Population Density</h4>' +  (props ?
-          '<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
-          : 'Hover over a state');
-    };
-
-    info.addTo(this.map);
-    return info;
-  }
+  resetMapView = () => {
+    this.map.setView([20, 47.5], 4.5);
+  };
 
   createLegend = (map) => {
     const legend = L.control({position: 'bottomright'});
@@ -77,29 +54,9 @@ export class DroneWarfareMap {
     legend.addTo(map);
   }
 
-  
-
-  adjustCenter = (sidebarWidth) => {
-    const mapSize = this.map.getSize();
-    const sidebarCenterOffset = sidebarWidth / 2;
-  
-    // Calculate the offset in terms of map coordinates
-    const offset = this.map.containerPointToLatLng([sidebarCenterOffset, 0]);
-  
-    const currentCenter = this.map.getCenter();
-    const newCenter = L.latLng(currentCenter.lat, currentCenter.lng + (offset.lng - currentCenter.lng) * 2);
-  
-    // Return the new center
-    return newCenter;
-  }
-  
-
-  zoomToFeature = (e, sidebarWidth) => {
-    const targetBounds = e.target.getBounds();
+  zoomToFeature(e, bounds) {
+    const targetBounds = bounds || e.target.getBounds();
     this.map.fitBounds(targetBounds);
-
-    const adjustedCenter = this.adjustCenter(sidebarWidth);
-    // this.map.panTo(adjustedCenter);
   }
 
   style(feature) {
@@ -125,8 +82,6 @@ export class DroneWarfareMap {
     });
   
     layer.bringToFront();
-    // console.log(layer.feature.properties)
-    this.info.update(layer.feature.properties);
   }
   
   resetHighlight = (e)=>  {
@@ -138,8 +93,6 @@ export class DroneWarfareMap {
       // dashArray: '3',
       fillOpacity: 0.7
     });
-
-    this.info.update();
   }
 
   onEachFeature = (feature, layer) => {
@@ -147,8 +100,8 @@ export class DroneWarfareMap {
         mouseover: this.highlightFeature,
         mouseout: this.resetHighlight,
         click: (e) => {
-          this.zoomToFeature(e, this.sidebarWidth);
-          this.selectEntityCallback(e.target.feature.properties, this.appState.map, this.appState.dataTable); // Call this function when an administrative division is clicked
+          this.zoomToFeature(e);
+          this.selectEntityCallback(e.target.feature.properties, this.appState); // Call this function when an administrative division is clicked
         },
     });
   }
@@ -156,8 +109,8 @@ export class DroneWarfareMap {
   displayFeatures(features) {
     // Create a layer group to hold all GeoJSON layers
     this.appState.map.geojson = L.layerGroup().addTo(this.map);
-  
     for (let i = 0; i < features.length; i++) {
+      if('properties' in features[i] && features[i].properties.shapeName === 'unclear') continue;
       const geojsonLayer = L.geoJson(features[i], {
         style: this.style,
         onEachFeature: this.onEachFeature,

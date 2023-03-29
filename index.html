@@ -17,6 +17,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
     <script async src="src/droneWarfare.js" type="module"></script>
     <style>
         #map {
@@ -36,6 +41,7 @@
           overflow-y: auto;
           font-family: 'IBM Plex Mono', monospace;
         }
+
         .table {
           font-size: 0.75em;
           color: white;
@@ -54,13 +60,41 @@
           margin-right: 8px;
           opacity: 0.7;
         }
+
+        #breadcrumbs {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            
+        }
+
+        #breadcrumbs li {
+            display: inline;
+            position: relative;
+            margin-right: 1.5em;
+        }
+
+        #breadcrumbs li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #breadcrumbs li a:hover {
+            color: #ccc; /* or any other color you prefer */
+        }
+
+        #breadcrumbs li:not(:first-child):before {
+            content: ">";
+            position: absolute;
+            left: -1em;
+        }
     </style>
 </head>
 <body>
     <div id="map"></div>
     <div id="sidebar">
         <h1 id="header">Drone Warfare</h1>
-        <p id="description">This map shows the locations and human cost of drone strikes in Pakistan, Yemen, Somalia, and Afghanistan from 2004 to 2020.</p>
+        <p id="description">This map shows the locations and human cost of drone strikes in Pakistan, Yemen, Somalia, and Afghanistan from 2004 to 2020. Data was provided by the Bureau of Investigative Journalism's Drone Warfare project (now Airwars).</p>
         <div id="legend">
             <h3>Overview</h3>
             <div id="bar-chart">
@@ -85,10 +119,5 @@
 
             </div>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://d3js.org/d3.v6.min.js"></script>
 </body>
 </html>
