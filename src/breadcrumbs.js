@@ -42,7 +42,6 @@ export class Breadcrumbs {
 
     // Zoom to the feature
     const featureBounds = L.geoJSON(targetFeature).getBounds();
-    console.log(targetFeature)
     this.appState.map.zoomToFeature(null, featureBounds);
   
     // Update the breadcrumb display
@@ -84,7 +83,6 @@ export class Breadcrumbs {
   }
 
   updateBreadcrumbsAtMax(admLevel, admName, country) {
-    console.log('updateBreadcrumbsAtMax', this.breadcrumbs, admLevel,admName,country)
     this.breadcrumbs = this.breadcrumbs.slice(0, admLevel);
     this.breadcrumbs.push({ "admLevel": admLevel, "admName": admName, "country": country });
     this.updateBreadcrumbs(this.breadcrumbs);

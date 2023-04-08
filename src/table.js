@@ -35,7 +35,7 @@ export class DataTable {
       <td>${values.shapeName}</td>
       <td>${values.strike_count}</td>
       <td>${values.max_total}</td>
-      <td>${values.max_total - values.max_civilians - values.max_children}</td>
+      <td>${Math.max(0, values.max_total - values.max_civilians - values.max_children)}</td>
       <td>${values.max_civilians}</td>
       <td>${values.max_children}</td>
     `;
@@ -62,6 +62,7 @@ export class DataTable {
     }
 
     let unclearRow = this.appState.previousTotals;
+    // console.log(unclearRow)
 
     for (let i = 0; i < data.length; i++) {
       const tableRow = document.createElement('tr');

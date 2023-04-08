@@ -33,12 +33,20 @@ function selectEntity(properties, aState) {
     loadDroneWarfare()
     return
   }
-
   // Update the state object
   appState.admLevel = aState.admLevel;
   appState.admName = aState.admName;
   appState.country = aState.country;
   appState.previousTotals = aState.previousTotals;
+
+  const countrySelected = 'shapeGroup' in properties ? properties.shapeGroup : properties.shapeISO;
+  if (appState.country === countrySelected) {
+    appState.admLevel = appState.admLevel + 1;
+    appState.country = countrySelected;
+  } else {
+    appState.admLevel = 1;
+    appState.country = countrySelected;
+  }
 
   if(appState.admLevel == 0) {
     appState.previousTotals = {
@@ -62,15 +70,6 @@ function selectEntity(properties, aState) {
     };
   }
 
-  const countrySelected = 'shapeGroup' in properties ? properties.shapeGroup : properties.shapeISO;
-  if (appState.country === countrySelected) {
-    appState.admLevel = appState.admLevel + 1;
-    appState.country = countrySelected;
-  } else {
-    appState.admLevel = 1;
-    appState.country = countrySelected;
-  }
-
   if (appState.admLevel > 1) {
     appState.admName = properties.shapeName
   }
@@ -87,9 +86,7 @@ function selectEntity(properties, aState) {
     appState.map.geojson.clearLayers();
   
     // Display the new features
-    console.log('Before displayFeatures:', 'Center:', appState.map.map.getCenter(), 'Zoom:', appState.map.map.getZoom());
     appState.map.displayFeatures(featuresToDisplay);
-    console.log('After displayFeatures:', 'Center:', appState.map.map.getCenter(), 'Zoom:', appState.map.map.getZoom());
   } else {
     appState.admLevel = appState.admLevel - 1;
     featuresToDisplay = appState.geojson[appState.country][appState.admLevel].features;
@@ -116,7 +113,6 @@ function loadDroneWarfare() {
   appState.admName = '';
   appState.country = null;
   appState.previousTotals = {'strikeCount': 0, 'minTotal': 0, 'maxTotal': 0, 'minCivilians': 0, 'maxCivilians': 0, 'minChildren': 0, 'maxChildren': 0};
-  
   const initDisplay = [appState.geojson.AFG[0], appState.geojson.PAK[0], appState.geojson.SOM[0], appState.geojson.YEM[0]];
 
   appState.map.displayFeatures(initDisplay);
