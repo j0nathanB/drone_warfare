@@ -149,7 +149,7 @@
 }
 
 .fade-out {
-  transition: opacity 2s ease-out;
+  transition: opacity 1.5s ease-out;
   opacity: 1;
 }
 
