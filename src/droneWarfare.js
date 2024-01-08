@@ -116,7 +116,7 @@ function loadDroneWarfare() {
   const initDisplay = [appState.geojson.AFG[0], appState.geojson.PAK[0], appState.geojson.SOM[0], appState.geojson.YEM[0]];
 
   appState.map.displayFeatures(initDisplay);
-  appState.dataTable.loadTable(initDisplay)
+  appState.dataTable.loadTable(initDisplay);
 }
 
 async function loadFunctionality() {
@@ -129,6 +129,16 @@ async function loadFunctionality() {
   appState.map = droneWarfareMap;
   appState.dataTable = dataTable;
   loadDroneWarfare()
+
+  function hideLoadingScreen() {
+    const loadingScreen = document.getElementById('loadingScreen');
+    loadingScreen.classList.add('fade-out', 'hidden');
+
+    setTimeout(() => {
+      loadingScreen.parentNode.removeChild(loadingScreen);
+    }, 1500); // 500ms to match CSS transition
+  }
+  hideLoadingScreen();
 }
 
 loadFunctionality();

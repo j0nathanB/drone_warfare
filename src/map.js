@@ -117,39 +117,6 @@ export class DroneWarfareMap {
     });
   }
 
-  // onEachFeature = (feature, layer) => {
-  //   layer.on({
-  //       mouseover: (e) => {
-  //         this.highlightFeature(e);
-
-  //         const countryNames = {
-  //           'AFG': 'Afghanistan',
-  //           'PAK': 'Pakistan',
-  //           'SOM': 'Somalia',
-  //           'YEM': 'Yemen',
-  //         }
-  //         const name = "shapeISO" in feature.properties ? countryNames[feature.properties.shapeISO] : feature.properties.shapeName;
-      
-  //         layer.bindPopup('<h1>'+name+'</h1><p>name: '+feature.properties.strike_count+'</p>');
-  //         // layer.bindPopup(popupContent);
-      
-  //         layer.openPopup();
-
-             
-  //         console.log('mouseover', e)
-  //         // this.addPopup(feature, layer)
-  //       },
-  //       mouseout: (e) => {
-  //         this.resetHighlight(e)
-  //         layer.closePopup();
-  //       },
-  //       click: (e) => {
-  //         this.zoomToFeature(e);
-  //         this.selectEntityCallback(e.target.feature.properties, this.appState); // Call this function when an administrative division is clicked
-  //       },
-  //   });
-  // }
-
   onEachFeature = (feature, layer) => {
     layer.on({
         mouseover: (e) => {
@@ -179,7 +146,6 @@ export class DroneWarfareMap {
     });
   }       
   
-
   displayFeatures(features) {
     // Create a layer group to hold all GeoJSON layers
     this.appState.map.geojson = L.layerGroup().addTo(this.map);
