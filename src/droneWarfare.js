@@ -51,12 +51,12 @@ function selectEntity(properties, aState) {
   if(appState.admLevel == 0) {
     appState.previousTotals = {
       strikeCount: properties.strike_count,
-      minTotal: properties.min_total,
-      maxTotal: properties.max_total,
-      minCivilians: properties.min_civilians,
-      maxCivilians: properties.max_civilians,
-      minChildren: properties.min_children,
-      maxChildren: properties.max_children
+      minTotal: Array.isArray(properties.min_total) ? properties.min_total.reduce((a, b) => (a + b), 0) : properties.min_total,
+      maxTotal: Array.isArray(properties.max_total) ? properties.max_total.reduce((a, b) => (a + b), 0) : properties.max_total,
+      minCivilians: Array.isArray(properties.min_civilians) ? properties.min_civilians.reduce((a, b) => (a + b), 0) : properties.min_civilians,
+      maxCivilians: Array.isArray(properties.max_civilians) ? properties.max_civilians.reduce((a, b) => (a + b), 0) : properties.max_civilians,
+      minChildren: Array.isArray(properties.min_children) ? properties.min_children.reduce((a, b) => (a + b), 0) : properties.min_children,
+      maxChildren: Array.isArray(properties.max_children) ? properties.max_children.reduce((a, b) => (a + b), 0) : properties.max_children
     };
   } else {
     appState.previousTotals = {
@@ -120,7 +120,7 @@ function loadDroneWarfare() {
 }
 
 async function loadFunctionality() {
-  appState.geojson = await geojsonHandler.getData();
+  // Initialize UI components immediately
   const breadcrumbs = new Breadcrumbs(appState, selectEntity);
   const droneWarfareMap = new DroneWarfareMap(appState, selectEntity, breadcrumbs);
   const dataTable = new DataTable(appState, selectEntity, breadcrumbs);
@@ -128,17 +128,39 @@ async function loadFunctionality() {
   appState.breadcrumbs = breadcrumbs;
   appState.map = droneWarfareMap;
   appState.dataTable = dataTable;
-  loadDroneWarfare()
 
-  function hideLoadingScreen() {
-    const loadingScreen = document.getElementById('loadingScreen');
-    loadingScreen.classList.add('fade-out', 'hidden');
+  // Update loading indicator to show data loading phase
+  updateLoadingIndicator('Loading drone strike data...');
 
-    setTimeout(() => {
-      loadingScreen.parentNode.removeChild(loadingScreen);
-    }, 1500); // 500ms to match CSS transition
+  try {
+    // Load data asynchronously while map is already visible
+    appState.geojson = await geojsonHandler.getData();
+    loadDroneWarfare();
+    hideLoadingScreen();
+  } catch (error) {
+    console.error('Failed to load data:', error);
+    updateLoadingIndicator('Failed to load data. Please refresh the page.');
   }
-  hideLoadingScreen();
 }
 
+function updateLoadingIndicator(message) {
+  const loadingDiv = document.getElementById('loading');
+  if (loadingDiv) {
+    loadingDiv.textContent = message;
+  }
+}
+
+function hideLoadingScreen() {
+  const loadingScreen = document.getElementById('loadingScreen');
+  if (loadingScreen) {
+    loadingScreen.classList.add('fade-out', 'hidden');
+    setTimeout(() => {
+      if (loadingScreen.parentNode) {
+        loadingScreen.parentNode.removeChild(loadingScreen);
+      }
+    }, 1500);
+  }
+}
+
+// Initialize immediately
 loadFunctionality();
