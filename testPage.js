@@ -434,7 +434,6 @@ class DroneWarfareApp {
                     margin-bottom: 8px;
                     background: rgba(255, 255, 255, 0.05);
                     border: 1px solid rgba(255, 255, 255, 0.1);
-                    border-radius: 8px;
                     cursor: pointer;
                     transition: all 0.2s;
                 `;
@@ -446,8 +445,9 @@ class DroneWarfareApp {
                         </div>
                         <span style="font-size: 12px; color: rgba(255, 255, 255, 0.6);">${props.strike_count || 0} strikes</span>
                     </div>
-                    <div style="font-size: 12px; color: rgba(255, 255, 255, 0.7);">
-                        Deaths: ${minTotal} to ${maxTotal} • Civilians: ${minCivilians} to ${maxCivilians}
+                    <div style="font-size: 12px; color: rgba(255, 255, 255, 0.7); line-height: 1.4;">
+                        Deaths: ${minTotal} to ${maxTotal}<br>
+                        Civilians: ${minCivilians} to ${maxCivilians}
                     </div>
                 `;
                 
