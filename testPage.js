@@ -208,6 +208,10 @@ class DroneWarfareApp {
             }
         });
 
+        // Reset current country and level
+        this.currentCountry = null;
+        this.currentLevel = 0;
+        
         // Update statistics
         this.updateGlobalStats();
         
@@ -267,6 +271,7 @@ class DroneWarfareApp {
         
         // Update UI
         this.updateCountryStats(country);
+        this.updateRegionalBreakdown();
         this.updateBreadcrumbs([
             { level: 'world', name: 'Global' },
             { level: 'country', name: this.getCountryName(country) }
@@ -320,6 +325,9 @@ class DroneWarfareApp {
             }
         }
         
+        // Update UI
+        this.updateRegionalBreakdown();
+        
         // Update breadcrumbs
         const breadcrumbs = [
             { level: 'world', name: 'Global' },
@@ -350,6 +358,7 @@ class DroneWarfareApp {
         let totalDeaths = { min: 0, max: 0 };
         let totalCivilians = { min: 0, max: 0 };
         let totalChildren = { min: 0, max: 0 };
+        let totalInjured = { min: 0, max: 0 };
         
         Object.keys(this.data).forEach(country => {
             if (this.data[country][0] && this.data[country][0].features) {
@@ -363,6 +372,8 @@ class DroneWarfareApp {
                 const maxCivilians = Array.isArray(props.max_civilians) ? props.max_civilians.reduce((a, b) => a + b, 0) : (props.max_civilians || 0);
                 const minChildren = Array.isArray(props.min_children) ? props.min_children.reduce((a, b) => a + b, 0) : (props.min_children || 0);
                 const maxChildren = Array.isArray(props.max_children) ? props.max_children.reduce((a, b) => a + b, 0) : (props.max_children || 0);
+                const minInjured = Array.isArray(props.min_injured) ? props.min_injured.reduce((a, b) => a + b, 0) : (props.min_injured || 0);
+                const maxInjured = Array.isArray(props.max_injured) ? props.max_injured.reduce((a, b) => a + b, 0) : (props.max_injured || 0);
                 
                 totalDeaths.min += minTotal;
                 totalDeaths.max += maxTotal;
@@ -370,6 +381,8 @@ class DroneWarfareApp {
                 totalCivilians.max += maxCivilians;
                 totalChildren.min += minChildren;
                 totalChildren.max += maxChildren;
+                totalInjured.min += minInjured;
+                totalInjured.max += maxInjured;
             }
         });
         
@@ -378,7 +391,8 @@ class DroneWarfareApp {
             strikes: totalStrikes,
             deaths: `${totalDeaths.min} to ${totalDeaths.max}`,
             civilians: `${totalCivilians.min} to ${totalCivilians.max}`,
-            children: `${totalChildren.min} to ${totalChildren.max}`
+            children: `${totalChildren.min} to ${totalChildren.max}`,
+            injured: `${totalInjured.min} to ${totalInjured.max}`
         });
     }
 
@@ -393,22 +407,45 @@ class DroneWarfareApp {
             const maxCivilians = Array.isArray(props.max_civilians) ? props.max_civilians.reduce((a, b) => a + b, 0) : (props.max_civilians || 0);
             const minChildren = Array.isArray(props.min_children) ? props.min_children.reduce((a, b) => a + b, 0) : (props.min_children || 0);
             const maxChildren = Array.isArray(props.max_children) ? props.max_children.reduce((a, b) => a + b, 0) : (props.max_children || 0);
+            const minInjured = Array.isArray(props.min_injured) ? props.min_injured.reduce((a, b) => a + b, 0) : (props.min_injured || 0);
+            const maxInjured = Array.isArray(props.max_injured) ? props.max_injured.reduce((a, b) => a + b, 0) : (props.max_injured || 0);
             
             this.updateStatsDisplay({
                 strikes: props.strike_count || 0,
                 deaths: `${minTotal} to ${maxTotal}`,
                 civilians: `${minCivilians} to ${maxCivilians}`,
-                children: `${minChildren} to ${maxChildren}`
+                children: `${minChildren} to ${maxChildren}`,
+                injured: `${minInjured} to ${maxInjured}`
             });
         }
     }
 
     updateStatsDisplay(stats) {
-        const statCards = document.querySelectorAll('.stat-card');
-        if (statCards[0]) statCards[0].querySelector('.stat-value').textContent = stats.strikes;
-        if (statCards[1]) statCards[1].querySelector('.stat-value').textContent = stats.deaths;
-        if (statCards[2]) statCards[2].querySelector('.stat-value').textContent = stats.civilians;
-        if (statCards[3]) statCards[3].querySelector('.stat-value').textContent = stats.children;
+        // Update stat values in the stat rows
+        const statRows = document.querySelectorAll('.stat-row');
+        
+        // Find and update each stat by label
+        statRows.forEach(row => {
+            const label = row.querySelector('.stat-label');
+            const value = row.querySelector('.stat-value');
+            
+            if (label && value) {
+                const labelText = label.textContent.toLowerCase();
+                
+                if (labelText.includes('strikes')) {
+                    value.textContent = stats.strikes;
+                } else if (labelText.includes('total deaths')) {
+                    value.textContent = stats.deaths;
+                } else if (labelText.includes('civilians')) {
+                    value.textContent = stats.civilians;
+                } else if (labelText.includes('children')) {
+                    value.textContent = stats.children;
+                } else if (labelText.includes('injured')) {
+                    // Add injured stats if available
+                    value.textContent = stats.injured || 'No data';
+                }
+            }
+        });
     }
 
     updateRegionalBreakdown() {
@@ -417,63 +454,90 @@ class DroneWarfareApp {
         
         regionList.innerHTML = '';
         
-        const countries = [
-            { code: 'AFG', name: 'Afghanistan' },
-            { code: 'PAK', name: 'Pakistan' },
-            { code: 'SOM', name: 'Somalia' },
-            { code: 'YEM', name: 'Yemen' }
-        ];
-        
-        countries.forEach(country => {
-            if (this.data[country.code][0] && this.data[country.code][0].features) {
-                const props = this.data[country.code][0].features[0].properties;
+        // If no country is selected, show all countries
+        if (!this.currentCountry || this.currentLevel === 0) {
+            const countries = [
+                { code: 'AFG', name: 'Afghanistan' },
+                { code: 'PAK', name: 'Pakistan' },
+                { code: 'SOM', name: 'Somalia' },
+                { code: 'YEM', name: 'Yemen' }
+            ];
+            
+            countries.forEach(country => {
+                if (this.data[country.code][0] && this.data[country.code][0].features) {
+                    const props = this.data[country.code][0].features[0].properties;
+                    
+                    // Calculate totals properly
+                    const minTotal = Array.isArray(props.min_total) ? props.min_total.reduce((a, b) => a + b, 0) : (props.min_total || 0);
+                    const maxTotal = Array.isArray(props.max_total) ? props.max_total.reduce((a, b) => a + b, 0) : (props.max_total || 0);
+                    const minCivilians = Array.isArray(props.min_civilians) ? props.min_civilians.reduce((a, b) => a + b, 0) : (props.min_civilians || 0);
+                    const maxCivilians = Array.isArray(props.max_civilians) ? props.max_civilians.reduce((a, b) => a + b, 0) : (props.max_civilians || 0);
+                    
+                    this.createRegionItem(country.name, props.strike_count || 0, minTotal, maxTotal, minCivilians, maxCivilians, 
+                        () => this.selectCountry(country.code), regionList);
+                }
+            });
+        } else {
+            // Show administrative subdivisions for the selected country
+            const adminLevel = this.currentLevel;
+            if (this.data[this.currentCountry][adminLevel] && this.data[this.currentCountry][adminLevel].features) {
+                const features = this.data[this.currentCountry][adminLevel].features;
                 
-                // Calculate totals properly
-                const minTotal = Array.isArray(props.min_total) ? props.min_total.reduce((a, b) => a + b, 0) : (props.min_total || 0);
-                const maxTotal = Array.isArray(props.max_total) ? props.max_total.reduce((a, b) => a + b, 0) : (props.max_total || 0);
-                const minCivilians = Array.isArray(props.min_civilians) ? props.min_civilians.reduce((a, b) => a + b, 0) : (props.min_civilians || 0);
-                const maxCivilians = Array.isArray(props.max_civilians) ? props.max_civilians.reduce((a, b) => a + b, 0) : (props.max_civilians || 0);
-                
-                const regionItem = document.createElement('div');
-                regionItem.style.cssText = `
-                    padding: 12px;
-                    margin-bottom: 8px;
-                    background: rgba(255, 255, 255, 0.05);
-                    border: 1px solid rgba(255, 255, 255, 0.1);
-                    cursor: pointer;
-                    transition: all 0.2s;
-                `;
-                
-                regionItem.innerHTML = `
-                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px;">
-                        <div style="display: flex; align-items: center; gap: 8px;">
-                            <span style="font-weight: 500; color: #ffffff;">${country.name}</span>
-                        </div>
-                        <span style="font-size: 12px; color: rgba(255, 255, 255, 0.6);">${props.strike_count || 0} strikes</span>
-                    </div>
-                    <div style="font-size: 12px; color: rgba(255, 255, 255, 0.7); line-height: 1.4;">
-                        Deaths: ${minTotal} to ${maxTotal}<br>
-                        Civilians: ${minCivilians} to ${maxCivilians}
-                    </div>
-                `;
-                
-                regionItem.addEventListener('mouseover', () => {
-                    regionItem.style.background = 'rgba(255, 255, 255, 0.1)';
-                    regionItem.style.transform = 'translateY(-1px)';
+                features.forEach(feature => {
+                    const props = feature.properties;
+                    const name = props.shapeName || props.name || 'Unknown Region';
+                    
+                    // Calculate stats for this region
+                    const strikes = props.dates ? props.dates.length : 0;
+                    const minTotal = Array.isArray(props.min_total) ? props.min_total.reduce((a, b) => a + b, 0) : (props.min_total || 0);
+                    const maxTotal = Array.isArray(props.max_total) ? props.max_total.reduce((a, b) => a + b, 0) : (props.max_total || 0);
+                    const minCivilians = Array.isArray(props.min_civilians) ? props.min_civilians.reduce((a, b) => a + b, 0) : (props.min_civilians || 0);
+                    const maxCivilians = Array.isArray(props.max_civilians) ? props.max_civilians.reduce((a, b) => a + b, 0) : (props.max_civilians || 0);
+                    
+                    this.createRegionItem(name, strikes, minTotal, maxTotal, minCivilians, maxCivilians, 
+                        () => this.selectRegion(this.currentCountry, this.currentLevel, props), regionList);
                 });
-                
-                regionItem.addEventListener('mouseout', () => {
-                    regionItem.style.background = 'rgba(255, 255, 255, 0.05)';
-                    regionItem.style.transform = 'translateY(0)';
-                });
-                
-                regionItem.addEventListener('click', () => {
-                    this.selectCountry(country.code);
-                });
-                
-                regionList.appendChild(regionItem);
             }
+        }
+    }
+
+    createRegionItem(name, strikes, minTotal, maxTotal, minCivilians, maxCivilians, clickHandler, container) {
+        const regionItem = document.createElement('div');
+        regionItem.style.cssText = `
+            padding: 12px;
+            margin-bottom: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            transition: all 0.2s;
+        `;
+        
+        regionItem.innerHTML = `
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="font-weight: 500; color: #ffffff;">${name}</span>
+                </div>
+                <span style="font-size: 12px; color: rgba(255, 255, 255, 0.6);">${strikes} strikes</span>
+            </div>
+            <div style="font-size: 12px; color: rgba(255, 255, 255, 0.7); line-height: 1.4;">
+                Deaths: ${minTotal} to ${maxTotal}<br>
+                Civilians: ${minCivilians} to ${maxCivilians}
+            </div>
+        `;
+        
+        regionItem.addEventListener('mouseover', () => {
+            regionItem.style.background = 'rgba(255, 255, 255, 0.1)';
+            regionItem.style.transform = 'translateY(-1px)';
         });
+        
+        regionItem.addEventListener('mouseout', () => {
+            regionItem.style.background = 'rgba(255, 255, 255, 0.05)';
+            regionItem.style.transform = 'translateY(0)';
+        });
+        
+        regionItem.addEventListener('click', clickHandler);
+        
+        container.appendChild(regionItem);
     }
 
     updateBreadcrumbs(path) {
