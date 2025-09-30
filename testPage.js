@@ -39,8 +39,14 @@ class DroneWarfareApp {
         // Initialize UI controls
         this.initializeControls();
         
+        // Reinitialize timeline with actual data
+        this.initializeTimeline();
+        
         // Display initial view
         this.displayGlobalView();
+        
+        // Hide all view modes initially (default to map view)
+        this.hideAllViewModes();
         
         this.showLoader(false);
     }
@@ -562,24 +568,39 @@ class DroneWarfareApp {
 
     initializeTimeline() {
         const timelineBars = document.querySelector('.timeline-bars');
+        if (!timelineBars) {
+            console.warn('Timeline bars container not found');
+            return;
+        }
+        
         timelineBars.innerHTML = '';
         
         // Calculate strikes per year
         const strikesByYear = {};
         for (let year = 2004; year <= 2020; year++) {
-            strikesByYear[year] = this.allStrikes.filter(s => s.year === year).length;
+            strikesByYear[year] = this.allStrikes ? this.allStrikes.filter(s => s.year === year).length : 0;
         }
+        
+        console.log('Strikes by year:', strikesByYear);
+        console.log('Total strikes:', this.allStrikes ? this.allStrikes.length : 0);
         
         // Find max for scaling
         const maxStrikes = Math.max(...Object.values(strikesByYear));
+        console.log('Max strikes in a year:', maxStrikes);
         
         // Create bars
         for (let year = 2004; year <= 2020; year++) {
             const bar = document.createElement('div');
             bar.className = 'timeline-bar';
             bar.dataset.year = year;
-            const height = (strikesByYear[year] / maxStrikes) * 100;
+            
+            // Calculate height with minimum of 10% and handle division by zero
+            let height = 10; // minimum height for visibility
+            if (maxStrikes > 0) {
+                height = Math.max(10, (strikesByYear[year] / maxStrikes) * 90 + 10);
+            }
             bar.style.height = `${height}%`;
+            bar.style.minHeight = '8px'; // Ensure bars are always visible
             bar.title = `${year}: ${strikesByYear[year]} strikes`;
             
             bar.addEventListener('click', () => {
@@ -811,19 +832,22 @@ class DroneWarfareApp {
     switchViewMode(mode) {
         this.showLoader(true);
         
+        // Hide all UI elements first
+        this.hideAllViewModes();
+        
         setTimeout(() => {
             switch(mode) {
                 case 'map':
-                    // Default map view
+                    // Default map view - timeline hidden
                     this.displayGlobalView();
                     break;
                 case 'timeline':
-                    // Focus on timeline
-                    document.querySelector('.timeline-container').scrollIntoView({ behavior: 'smooth' });
+                    // Show timeline
+                    this.showTimeline();
                     break;
                 case 'compare':
                     // Show comparison panel
-                    document.querySelector('.comparison-panel').classList.add('active');
+                    document.querySelector('.comparison-panel')?.classList.add('active');
                     break;
                 case 'stories':
                     // Would load individual strike stories
@@ -831,7 +855,30 @@ class DroneWarfareApp {
                     break;
             }
             this.showLoader(false);
-        }, 500);
+        }, 200);
+    }
+
+    hideAllViewModes() {
+        // Hide timeline
+        const timeline = document.querySelector('.timeline-container');
+        if (timeline) {
+            timeline.classList.remove('visible');
+        }
+        
+        // Hide comparison panel
+        const comparison = document.querySelector('.comparison-panel');
+        if (comparison) {
+            comparison.classList.remove('active');
+        }
+    }
+
+    showTimeline() {
+        const timeline = document.querySelector('.timeline-container');
+        if (timeline) {
+            timeline.classList.add('visible');
+            // Reinitialize timeline to ensure it's up to date
+            this.initializeTimeline();
+        }
     }
 
     showRegionDetails(properties) {
