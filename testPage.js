@@ -211,6 +211,7 @@ class DroneWarfareApp {
         // Reset current country and level
         this.currentCountry = null;
         this.currentLevel = 0;
+        this.currentParentRegion = null;
         
         // Update statistics
         this.updateGlobalStats();
@@ -228,6 +229,7 @@ class DroneWarfareApp {
     selectCountry(country) {
         this.currentCountry = country;
         this.currentLevel = 1;
+        this.currentParentRegion = null; // Reset parent region tracking
         
         // Clear layers
         this.layers.boundaries.clearLayers();
@@ -280,6 +282,7 @@ class DroneWarfareApp {
 
     selectRegion(country, level, properties) {
         this.currentLevel = level + 1;
+        this.currentParentRegion = properties.shapeName; // Track the current parent region
         
         // Check if we can go deeper
         const maxLevel = country === 'PAK' ? 3 : 2;
@@ -351,6 +354,108 @@ class DroneWarfareApp {
             fillOpacity: 0.2,
             weight: 1
         });
+    }
+
+    highlightRegionOnMap(regionName) {
+        // Find and highlight the corresponding region on the map
+        this.layers.boundaries.eachLayer(geoJsonLayer => {
+            // Handle both direct geoJSON layers and nested layer groups
+            if (geoJsonLayer.feature) {
+                // Direct geoJSON layer
+                this.checkAndHighlightLayer(geoJsonLayer, regionName);
+            } else if (geoJsonLayer.eachLayer) {
+                // Layer group containing geoJSON layers
+                geoJsonLayer.eachLayer(subLayer => {
+                    this.checkAndHighlightLayer(subLayer, regionName);
+                });
+            }
+        });
+    }
+
+    checkAndHighlightLayer(geoJsonLayer, regionName) {
+        const feature = geoJsonLayer.feature;
+        if (feature && feature.properties) {
+            const props = feature.properties;
+            
+            // Check if this feature matches the region name
+            const featureName = props.shapeName || props.name || this.getCountryName(props.shapeISO);
+            
+            if (featureName === regionName) {
+                
+                // Store original style before highlighting
+                if (!geoJsonLayer._originalStyle) {
+                    geoJsonLayer._originalStyle = {
+                        fillColor: geoJsonLayer.options.fillColor,
+                        fillOpacity: geoJsonLayer.options.fillOpacity,
+                        color: geoJsonLayer.options.color,
+                        weight: geoJsonLayer.options.weight,
+                        opacity: geoJsonLayer.options.opacity
+                    };
+                }
+                
+                // Highlight this feature
+                geoJsonLayer.setStyle({
+                    fillOpacity: 0.6,
+                    weight: 3,
+                    color: '#fbbf24',
+                    fillColor: '#fbbf24'
+                });
+                
+                // Store reference to highlighted layer for cleanup
+                this.highlightedLayer = geoJsonLayer;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    removeHighlightFromMap() {
+        // Remove highlight from previously highlighted layer
+        if (this.highlightedLayer) {
+            // Restore original style if stored, otherwise use computed style
+            if (this.highlightedLayer._originalStyle) {
+                this.highlightedLayer.setStyle(this.highlightedLayer._originalStyle);
+            } else {
+                // Fallback to computed style
+                const feature = this.highlightedLayer.feature;
+                const originalStyle = this.getFeatureStyle(feature);
+                this.highlightedLayer.setStyle(originalStyle);
+            }
+            
+            this.highlightedLayer = null;
+        }
+    }
+
+    getFeatureStyle(feature) {
+        // Get the original styling for a feature
+        const props = feature.properties;
+        
+        // Check if this is a country-level feature (has shapeISO)
+        if (props.shapeISO) {
+            const countryColors = {
+                AFG: '#ef4444',
+                PAK: '#3b82f6', 
+                SOM: '#10b981',
+                YEM: '#f59e0b'
+            };
+            
+            return {
+                fillColor: countryColors[props.shapeISO] || '#3b82f6',
+                fillOpacity: 0.3,
+                color: countryColors[props.shapeISO] || '#3b82f6',
+                weight: 2,
+                opacity: 0.8
+            };
+        } else {
+            // Administrative subdivision (province, district, etc.)
+            return {
+                fillColor: '#3b82f6',
+                fillOpacity: 0.2,
+                color: '#3b82f6',
+                weight: 1,
+                opacity: 0.6
+            };
+        }
     }
 
     updateGlobalStats() {
@@ -483,7 +588,15 @@ class DroneWarfareApp {
             if (this.data[this.currentCountry][adminLevel] && this.data[this.currentCountry][adminLevel].features) {
                 const features = this.data[this.currentCountry][adminLevel].features;
                 
-                features.forEach(feature => {
+                // Filter features to only show those belonging to the current parent region
+                let filteredFeatures = features;
+                if (this.currentLevel > 1 && this.currentParentRegion) {
+                    filteredFeatures = features.filter(f => 
+                        f.properties.parentAdm === this.currentParentRegion
+                    );
+                }
+                
+                filteredFeatures.forEach(feature => {
                     const props = feature.properties;
                     const name = props.shapeName || props.name || 'Unknown Region';
                     
@@ -528,11 +641,15 @@ class DroneWarfareApp {
         regionItem.addEventListener('mouseover', () => {
             regionItem.style.background = 'rgba(255, 255, 255, 0.1)';
             regionItem.style.transform = 'translateY(-1px)';
+            // Highlight corresponding region on map
+            this.highlightRegionOnMap(name);
         });
         
         regionItem.addEventListener('mouseout', () => {
             regionItem.style.background = 'rgba(255, 255, 255, 0.05)';
             regionItem.style.transform = 'translateY(0)';
+            // Remove highlight from map
+            this.removeHighlightFromMap();
         });
         
         regionItem.addEventListener('click', clickHandler);
@@ -628,6 +745,90 @@ class DroneWarfareApp {
 
         // Depth slider
         this.initializeDepthSlider();
+
+        // Initialize stat card hover effects
+        this.initializeStatCardHovers();
+    }
+
+    initializeStatCardHovers() {
+        // Add hover effects to the main stat card
+        const statCard = document.querySelector('.stat-card');
+        if (statCard) {
+            statCard.addEventListener('mouseover', () => {
+                // If we're in global view, highlight all countries
+                if (!this.currentCountry || this.currentLevel === 0) {
+                    this.highlightAllCountries();
+                } else {
+                    // If we're in country view, highlight the current country
+                    this.highlightRegionOnMap(this.getCountryName(this.currentCountry));
+                }
+            });
+            
+            statCard.addEventListener('mouseout', () => {
+                this.removeHighlightFromMap();
+                this.removeAllCountryHighlights();
+            });
+        }
+    }
+
+    highlightAllCountries() {
+        // Highlight all boundaries when hovering over global stats
+        this.layers.boundaries.eachLayer(geoJsonLayer => {
+            // Handle both direct geoJSON layers and nested layer groups
+            if (geoJsonLayer.feature) {
+                // Direct geoJSON layer
+                this.highlightLayer(geoJsonLayer);
+            } else if (geoJsonLayer.eachLayer) {
+                // Layer group containing geoJSON layers
+                geoJsonLayer.eachLayer(subLayer => {
+                    this.highlightLayer(subLayer);
+                });
+            }
+        });
+    }
+
+    highlightLayer(geoJsonLayer) {
+        // Store original style before highlighting
+        if (!geoJsonLayer._originalStyle) {
+            geoJsonLayer._originalStyle = {
+                fillColor: geoJsonLayer.options.fillColor,
+                fillOpacity: geoJsonLayer.options.fillOpacity,
+                color: geoJsonLayer.options.color,
+                weight: geoJsonLayer.options.weight,
+                opacity: geoJsonLayer.options.opacity
+            };
+        }
+        
+        geoJsonLayer.setStyle({
+            fillOpacity: 0.5,
+            weight: 3,
+            color: '#fbbf24'
+        });
+    }
+
+    removeAllCountryHighlights() {
+        // Remove highlights from all features
+        this.layers.boundaries.eachLayer(geoJsonLayer => {
+            // Handle both direct geoJSON layers and nested layer groups
+            if (geoJsonLayer.feature) {
+                // Direct geoJSON layer
+                this.restoreLayerStyle(geoJsonLayer);
+            } else if (geoJsonLayer.eachLayer) {
+                // Layer group containing geoJSON layers
+                geoJsonLayer.eachLayer(subLayer => {
+                    this.restoreLayerStyle(subLayer);
+                });
+            }
+        });
+    }
+
+    restoreLayerStyle(geoJsonLayer) {
+        if (geoJsonLayer._originalStyle) {
+            geoJsonLayer.setStyle(geoJsonLayer._originalStyle);
+        } else if (geoJsonLayer.feature) {
+            const originalStyle = this.getFeatureStyle(geoJsonLayer.feature);
+            geoJsonLayer.setStyle(originalStyle);
+        }
     }
 
     initializeTimeline() {
