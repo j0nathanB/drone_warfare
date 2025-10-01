@@ -331,6 +331,9 @@ class DroneWarfareApp {
         // Update UI
         this.updateRegionalBreakdown();
         
+        // Update statistics for the selected region
+        this.updateRegionStats(properties);
+        
         // Update breadcrumbs
         const breadcrumbs = [
             { level: 'world', name: 'Global' },
@@ -523,6 +526,26 @@ class DroneWarfareApp {
                 injured: `${minInjured} to ${maxInjured}`
             });
         }
+    }
+
+    updateRegionStats(properties) {
+        // Sum arrays properly for region-specific data
+        const minTotal = Array.isArray(properties.min_total) ? properties.min_total.reduce((a, b) => a + b, 0) : (properties.min_total || 0);
+        const maxTotal = Array.isArray(properties.max_total) ? properties.max_total.reduce((a, b) => a + b, 0) : (properties.max_total || 0);
+        const minCivilians = Array.isArray(properties.min_civilians) ? properties.min_civilians.reduce((a, b) => a + b, 0) : (properties.min_civilians || 0);
+        const maxCivilians = Array.isArray(properties.max_civilians) ? properties.max_civilians.reduce((a, b) => a + b, 0) : (properties.max_civilians || 0);
+        const minChildren = Array.isArray(properties.min_children) ? properties.min_children.reduce((a, b) => a + b, 0) : (properties.min_children || 0);
+        const maxChildren = Array.isArray(properties.max_children) ? properties.max_children.reduce((a, b) => a + b, 0) : (properties.max_children || 0);
+        const minInjured = Array.isArray(properties.min_injured) ? properties.min_injured.reduce((a, b) => a + b, 0) : (properties.min_injured || 0);
+        const maxInjured = Array.isArray(properties.max_injured) ? properties.max_injured.reduce((a, b) => a + b, 0) : (properties.max_injured || 0);
+        
+        this.updateStatsDisplay({
+            strikes: properties.strike_count || 0,
+            deaths: `${minTotal} to ${maxTotal}`,
+            civilians: `${minCivilians} to ${maxCivilians}`,
+            children: `${minChildren} to ${maxChildren}`,
+            injured: `${minInjured} to ${maxInjured}`
+        });
     }
 
     updateStatsDisplay(stats) {

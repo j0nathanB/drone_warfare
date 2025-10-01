@@ -24,6 +24,43 @@ const canGoDeeper = (admLevel, country) => {
   return admLevel <= 2;
 };
 
+// Function to update statistics display in the UI
+function updateStatistics(totals) {
+  const formatNumber = (num) => {
+    if (num === 0 || num === null || num === undefined) return '0';
+    return num.toLocaleString();
+  };
+  
+  const formatRange = (min, max) => {
+    if (min === max) return formatNumber(min);
+    return `${formatNumber(min)} to ${formatNumber(max)}`;
+  };
+
+  // Update each statistic element
+  const totalStrikesEl = document.querySelector('[data-cy="total-strikes"]');
+  if (totalStrikesEl) {
+    totalStrikesEl.textContent = formatNumber(totals.strikeCount);
+  }
+
+  const totalKilledEl = document.querySelector('[data-cy="total-killed"]');
+  if (totalKilledEl) {
+    totalKilledEl.textContent = formatRange(totals.minTotal, totals.maxTotal);
+  }
+
+  const civiliansKilledEl = document.querySelector('[data-cy="civilians-killed"]');
+  if (civiliansKilledEl) {
+    civiliansKilledEl.textContent = formatRange(totals.minCivilians, totals.maxCivilians);
+  }
+
+  const childrenKilledEl = document.querySelector('[data-cy="children-killed"]');
+  if (childrenKilledEl) {
+    childrenKilledEl.textContent = formatRange(totals.minChildren, totals.maxChildren);
+  }
+
+  // Note: Injured data is not available in the current data structure
+  // Keeping the existing display for now
+};
+
 // Function to update the state object when a country is selected
 function selectEntity(properties, aState) {
   if (properties === null) {
@@ -48,38 +85,30 @@ function selectEntity(properties, aState) {
     appState.country = countrySelected;
   }
 
-  if(appState.admLevel == 0) {
-    appState.previousTotals = {
-      strikeCount: properties.strike_count,
-      minTotal: Array.isArray(properties.min_total) ? properties.min_total.reduce((a, b) => (a + b), 0) : properties.min_total,
-      maxTotal: Array.isArray(properties.max_total) ? properties.max_total.reduce((a, b) => (a + b), 0) : properties.max_total,
-      minCivilians: Array.isArray(properties.min_civilians) ? properties.min_civilians.reduce((a, b) => (a + b), 0) : properties.min_civilians,
-      maxCivilians: Array.isArray(properties.max_civilians) ? properties.max_civilians.reduce((a, b) => (a + b), 0) : properties.max_civilians,
-      minChildren: Array.isArray(properties.min_children) ? properties.min_children.reduce((a, b) => (a + b), 0) : properties.min_children,
-      maxChildren: Array.isArray(properties.max_children) ? properties.max_children.reduce((a, b) => (a + b), 0) : properties.max_children
-    };
-  } else {
-    appState.previousTotals = {
-      strikeCount: properties.dates.length,
-      minTotal: properties.min_total.reduce((a, b) => (a + b), 0),
-      maxTotal: properties.max_total.reduce((a, b) => (a + b), 0),
-      minCivilians: properties.min_civilians.reduce((a, b) => (a + b), 0),
-      maxCivilians: properties.max_civilians.reduce((a, b) => (a + b), 0),
-      minChildren: properties.min_children.reduce((a, b) => (a + b), 0),
-      maxChildren: properties.max_children.reduce((a, b) => (a + b), 0)
-    };
-  }
+  // Calculate statistics - all levels use the same data structure
+  appState.previousTotals = {
+    strikeCount: properties.strike_count || 0,
+    minTotal: Array.isArray(properties.min_total) ? properties.min_total.reduce((a, b) => (a + b), 0) : (properties.min_total || 0),
+    maxTotal: Array.isArray(properties.max_total) ? properties.max_total.reduce((a, b) => (a + b), 0) : (properties.max_total || 0),
+    minCivilians: Array.isArray(properties.min_civilians) ? properties.min_civilians.reduce((a, b) => (a + b), 0) : (properties.min_civilians || 0),
+    maxCivilians: Array.isArray(properties.max_civilians) ? properties.max_civilians.reduce((a, b) => (a + b), 0) : (properties.max_civilians || 0),
+    minChildren: Array.isArray(properties.min_children) ? properties.min_children.reduce((a, b) => (a + b), 0) : (properties.min_children || 0),
+    maxChildren: Array.isArray(properties.max_children) ? properties.max_children.reduce((a, b) => (a + b), 0) : (properties.max_children || 0)
+  };
 
   if (appState.admLevel > 1) {
     appState.admName = properties.shapeName
   }
+
+  // Update the statistics display
+  updateStatistics(appState.previousTotals);
 
   let featuresToDisplay = [];
   if (canGoDeeper(appState.admLevel, appState.country)) {
     featuresToDisplay = appState.geojson[appState.country][appState.admLevel].features;
 
     if (appState.admLevel > 1) {
-      featuresToDisplay = featuresToDisplay.filter(feature => feature.properties.parentAdm === this.appState.admName);
+      featuresToDisplay = featuresToDisplay.filter(feature => feature.properties.parentAdm === appState.admName);
     }
   
     // Clear previously displayed features
@@ -91,7 +120,7 @@ function selectEntity(properties, aState) {
     appState.admLevel = appState.admLevel - 1;
     featuresToDisplay = appState.geojson[appState.country][appState.admLevel].features;
 
-    featuresToDisplay = featuresToDisplay.filter(feature => feature.properties.shapeName === this.appState.admName);
+    featuresToDisplay = featuresToDisplay.filter(feature => feature.properties.shapeName === appState.admName);
 
     const featureBounds = L.geoJSON(featuresToDisplay[0]).getBounds()
     appState.map.zoomToFeature(null, featureBounds);
@@ -112,8 +141,35 @@ function loadDroneWarfare() {
   appState.admLevel = 0;
   appState.admName = '';
   appState.country = null;
-  appState.previousTotals = {'strikeCount': 0, 'minTotal': 0, 'maxTotal': 0, 'minCivilians': 0, 'maxCivilians': 0, 'minChildren': 0, 'maxChildren': 0};
+  
+  // Calculate global totals
   const initDisplay = [appState.geojson.AFG[0], appState.geojson.PAK[0], appState.geojson.SOM[0], appState.geojson.YEM[0]];
+  const globalTotals = {
+    strikeCount: 0,
+    minTotal: 0,
+    maxTotal: 0,
+    minCivilians: 0,
+    maxCivilians: 0,
+    minChildren: 0,
+    maxChildren: 0
+  };
+  
+  // Sum up totals from all countries
+  initDisplay.forEach(country => {
+    const props = country.properties;
+    globalTotals.strikeCount += props.strike_count || 0;
+    globalTotals.minTotal += Array.isArray(props.min_total) ? props.min_total.reduce((a, b) => (a + b), 0) : (props.min_total || 0);
+    globalTotals.maxTotal += Array.isArray(props.max_total) ? props.max_total.reduce((a, b) => (a + b), 0) : (props.max_total || 0);
+    globalTotals.minCivilians += Array.isArray(props.min_civilians) ? props.min_civilians.reduce((a, b) => (a + b), 0) : (props.min_civilians || 0);
+    globalTotals.maxCivilians += Array.isArray(props.max_civilians) ? props.max_civilians.reduce((a, b) => (a + b), 0) : (props.max_civilians || 0);
+    globalTotals.minChildren += Array.isArray(props.min_children) ? props.min_children.reduce((a, b) => (a + b), 0) : (props.min_children || 0);
+    globalTotals.maxChildren += Array.isArray(props.max_children) ? props.max_children.reduce((a, b) => (a + b), 0) : (props.max_children || 0);
+  });
+  
+  appState.previousTotals = globalTotals;
+  
+  // Update the statistics display
+  updateStatistics(appState.previousTotals);
 
   appState.map.displayFeatures(initDisplay);
   appState.dataTable.loadTable(initDisplay);
