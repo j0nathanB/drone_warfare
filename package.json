@@ -9,7 +9,9 @@
     "minify:js": "echo 'JS minification would go here'",
     "minify:css": "echo 'CSS minification would go here'",
     "serve": "python3 -m http.server 8080 --bind 127.0.0.1",
-    "test": "echo 'Tests would go here'"
+    "test": "cypress run",
+    "test:open": "cypress open",
+    "test:ci": "cypress run --headless --browser chrome"
   },
   "keywords": [
     "drone-warfare",
@@ -21,8 +23,9 @@
   "author": "Drone Warfare Visualization",
   "license": "MIT",
   "devDependencies": {
-    "terser": "^5.16.0",
-    "clean-css-cli": "^5.6.0"
+    "clean-css-cli": "^5.6.0",
+    "cypress": "^15.3.0",
+    "terser": "^5.16.0"
   },
   "engines": {
     "node": ">=14.0.0"

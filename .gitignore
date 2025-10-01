@@ -1,2 +1,6 @@
 .DS_Store
 data/cleanup/nga
+node_modules/
+cypress/videos/
+cypress/screenshots/
+*.log

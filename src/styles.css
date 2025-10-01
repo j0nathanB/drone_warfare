@@ -486,9 +486,65 @@ body {
   background: rgba(15, 15, 15, 0.95);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 16px;
+  border-radius: 8px;
   z-index: 1000;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  min-width: 200px;
 }
+
+
+.layer-controls-toggle {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Atkinson Hyperlegible Mono', monospace;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  transition: color 0.2s ease;
+}
+
+.layer-controls-toggle:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.layer-controls-toggle:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.caret-text {
+  font-family: 'Atkinson Hyperlegible Mono', monospace;
+  font-size: 14px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+  transform-origin: center;
+  display: inline-block;
+}
+
+.layer-controls.collapsed .caret-text {
+  transform: rotate(90deg);
+}
+
+.layer-controls-content {
+  padding: 16px;
+  max-height: 300px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.layer-controls.collapsed .layer-controls-content {
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 
 .layer-toggle {
   display: flex;
@@ -496,17 +552,98 @@ body {
   gap: 12px;
   padding: 8px 0;
   cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-radius: 4px;
+  margin: 0 -4px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.layer-toggle:hover {
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .layer-toggle input[type="checkbox"] {
   width: 16px;
   height: 16px;
   accent-color: #3b82f6;
+  cursor: pointer;
 }
 
 .layer-toggle label {
   font-size: 14px;
   cursor: pointer;
+  color: rgba(255, 255, 255, 0.9);
+  user-select: none;
+}
+
+/* Layer toggle feedback animations */
+.layer-toggle.layer-enabled {
+  background: rgba(59, 130, 246, 0.1);
+  border-left: 2px solid #3b82f6;
+}
+
+.layer-toggle.layer-disabled {
+  background: rgba(239, 68, 68, 0.1);
+  border-left: 2px solid #ef4444;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .layer-controls {
+    right: 10px;
+    top: 10px;
+    min-width: 180px;
+    max-width: calc(100vw - 20px);
+  }
+  
+  .layer-controls-toggle {
+    padding: 8px;
+    min-width: 32px;
+    min-height: 32px;
+  }
+  
+  .layer-toggle {
+    padding: 12px 4px;
+  }
+  
+  .layer-toggle input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .layer-toggle label {
+    font-size: 15px;
+  }
+}
+
+/* Ensure proper touch targets on mobile */
+@media (max-width: 768px) {
+  .layer-controls-toggle,
+  .layer-toggle {
+    min-height: 44px;
+  }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .layer-controls,
+  .layer-controls-content,
+  .caret-text,
+  .layer-controls-toggle {
+    transition: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .layer-controls {
+    border: 2px solid rgba(255, 255, 255, 0.5);
+  }
+  
+  .layer-controls-toggle:focus {
+    outline: 3px solid #ffffff;
+  }
 }
 
 /* Timeline */

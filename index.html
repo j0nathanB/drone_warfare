@@ -29,7 +29,7 @@
             </div>
 
             <!-- Visual Breadcrumbs -->
-            <div class="visual-breadcrumbs">
+            <div class="visual-breadcrumbs" data-cy="breadcrumbs">
                 <div class="breadcrumb-path">
                     <div class="breadcrumb-node" data-level="world">
                         <span>Global</span>
@@ -55,23 +55,23 @@
             </div>
 
             <!-- Info Panel -->
-            <div class="info-panel">
+            <div class="info-panel" data-cy="statistics-panel">
                 <div class="stats-grid">
                     <div class="stat-card">
                         <div class="stat-row">
-                            <span class="stat-label">Total strikes:</span>
+                            <span class="stat-label">Total Strikes:</span>
                             <span class="stat-value stat-exact">423</span>
                         </div>
                         <div class="stat-row">
-                            <span class="stat-label">Total deaths:</span>
+                            <span class="stat-label">Total Killed:</span>
                             <span class="stat-value stat-range">3,712 to 4,312</span>
                         </div>
                         <div class="stat-row">
-                            <span class="stat-label">Civilians killed:</span>
+                            <span class="stat-label">Civilians Killed:</span>
                             <span class="stat-value stat-range">280 to 340</span>
                         </div>
                         <div class="stat-row">
-                            <span class="stat-label">Children killed:</span>
+                            <span class="stat-label">Children Killed:</span>
                             <span class="stat-value stat-range">163 to 203</span>
                         </div>
                         <div class="stat-row">
@@ -95,23 +95,27 @@
             <div id="map"></div>
             
             <!-- Layer Controls -->
-            <div class="layer-controls">
-                <h4 style="margin-bottom: 12px; font-size: 14px;">Data Layers</h4>
-                <div class="layer-toggle">
-                    <input type="checkbox" id="heatmap" checked>
-                    <label for="heatmap">Heat Map</label>
-                </div>
-                <div class="layer-toggle">
-                    <input type="checkbox" id="boundaries" checked>
-                    <label for="boundaries">Boundaries</label>
-                </div>
-                <div class="layer-toggle">
-                    <input type="checkbox" id="strikes">
-                    <label for="strikes">Strike Points</label>
-                </div>
-                <div class="layer-toggle">
-                    <input type="checkbox" id="civilian">
-                    <label for="civilian">Civilian Impact</label>
+            <div class="layer-controls" data-cy="layer-controls">
+                <button class="layer-controls-toggle" data-cy="layer-controls-toggle" aria-expanded="true" aria-label="Toggle data layers panel">
+                    Data Layers <span class="caret-text">></span>
+                </button>
+                <div class="layer-controls-content" data-cy="layer-controls-content">
+                    <div class="layer-toggle">
+                        <input type="checkbox" id="heatmap" checked>
+                        <label for="heatmap">Heat Map</label>
+                    </div>
+                    <div class="layer-toggle">
+                        <input type="checkbox" id="boundaries" checked>
+                        <label for="boundaries">Boundaries</label>
+                    </div>
+                    <div class="layer-toggle">
+                        <input type="checkbox" id="strikes">
+                        <label for="strikes">Strike Points</label>
+                    </div>
+                    <div class="layer-toggle">
+                        <input type="checkbox" id="civilian">
+                        <label for="civilian">Civilian Impact</label>
+                    </div>
                 </div>
             </div>
 
@@ -176,6 +180,7 @@
     </div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script type="module" src="src/layerControls.js"></script>
     <script src="testPage.js"></script>
 </body>
 </html>
