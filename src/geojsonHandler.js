@@ -14,8 +14,8 @@ export class GeoJSONHandler {
     const ref = "main";
     // Use optimized files for better performance (85% smaller file sizes)
     // const baseURL = `https://raw.githubusercontent.com/${username}/${repo}/${ref}/data/`;
-    // use the following line instead if you want to load the files from your local machine
-    const baseURL = '../data'
+    // Use dynamic path resolution to work with both file:// and http:// protocols
+    const baseURL = './data'
 
     // Load all files in parallel using Promise.all for better performance
     const [

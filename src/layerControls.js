@@ -210,11 +210,5 @@ export class LayerControls {
   }
 }
 
-// Auto-initialize when DOM is ready
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => {
-    window.layerControls = new LayerControls()
-  })
-} else {
-  window.layerControls = new LayerControls()
-}
+// LayerControls is now initialized in the main application
+// No auto-initialization needed here

@@ -449,6 +449,33 @@ body {
   border-bottom: none;
 }
 
+/* Regional breakdown table styling */
+#region-list table {
+  font-size: 0.85em;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#region-list tbody tr {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#region-list tbody tr:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#region-list td {
+  padding: 6px 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#region-list th {
+  font-size: 0.75em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
 .stat-label {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.8);

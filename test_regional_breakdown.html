@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Regional Breakdown</title>
+    <script>
+        async function testRegionalBreakdown() {
+            console.log('Testing regional breakdown...');
+            
+            // Test 1: Check if DOM element exists
+            const tableBody = document.getElementById('data_table_body');
+            if (tableBody) {
+                console.log('✓ data_table_body element found');
+            } else {
+                console.log('✗ data_table_body element NOT found');
+                return;
+            }
+            
+            // Test 2: Try to load a GeoJSON file
+            try {
+                const response = await fetch('./data/AFG_Adm_0-optimized.geojson');
+                if (response.ok) {
+                    const data = await response.json();
+                    console.log('✓ GeoJSON data loaded successfully');
+                    console.log(`  - Features: ${data.features ? data.features.length : 'N/A'}`);
+                    
+                    // Test 3: Try to create table content
+                    if (data.features && data.features.length > 0) {
+                        const feature = data.features[0];
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${feature.properties.shapeISO || 'Unknown'}</td>
+                            <td>${feature.properties.strike_count || 0}</td>
+                            <td>Test</td>
+                            <td>Test</td>
+                            <td>Test</td>
+                            <td>Test</td>
+                        `;
+                        tableBody.appendChild(row);
+                        console.log('✓ Table row created successfully');
+                    }
+                } else {
+                    console.log('✗ Failed to load GeoJSON data');
+                }
+            } catch (error) {
+                console.log('✗ Error loading data:', error.message);
+            }
+        }
+        
+        window.addEventListener('DOMContentLoaded', testRegionalBreakdown);
+    </script>
+</head>
+<body>
+    <h1>Regional Breakdown Test</h1>
+    <div id="region-list">
+        <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+                <tr style="background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8);">
+                    <th>Region</th>
+                    <th>Strikes</th>
+                    <th>Total</th>
+                    <th>Military</th>
+                    <th>Civilians</th>
+                    <th>Children</th>
+                </tr>
+            </thead>
+            <tbody id="data_table_body">
+                <!-- Dynamic content -->
+            </tbody>
+        </table>
+    </div>
+    
+    <div style="margin-top: 20px;">
+        <p>Check the browser console for test results.</p>
+    </div>
+</body>
+</html>

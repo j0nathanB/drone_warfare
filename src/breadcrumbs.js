@@ -4,6 +4,9 @@ export class Breadcrumbs {
     this.breadcrumbs = [];
     this.appState = appState;
     this.selectEntity = selectEntity;
+    
+    // Initialize breadcrumbs display on page load
+    this.updateBreadcrumbs(this.breadcrumbs);
   }
 
   addBreadcrumbs = (admLevel, admName, country) => {
@@ -50,36 +53,47 @@ export class Breadcrumbs {
   };  
 
   updateBreadcrumbs(breadcrumbs) {
-    const breadcrumbContainer = document.getElementById('breadcrumbs');
+    const breadcrumbContainer = document.querySelector('[data-cy="breadcrumbs"] .breadcrumb-path');
+    if (!breadcrumbContainer) return;
+    
     breadcrumbContainer.innerHTML = '';
   
-    const ul = document.createElement('ul');
-  
-    // Add the "All" breadcrumb
-    const allLi = document.createElement('li');
-    const allA = document.createElement('a');
-    allA.href = '#';
-    allA.id = 'home';
-    allA.textContent = 'All';
-    allA.setAttribute('data-level', 0)
-    allA.addEventListener('click', this.handleBreadcrumbClick);
-    allLi.appendChild(allA);
-    ul.appendChild(allLi);
+    // Add the "Global" breadcrumb node
+    const globalNode = document.createElement('div');
+    globalNode.className = 'breadcrumb-node breadcrumb-item';
+    globalNode.setAttribute('data-cy', 'breadcrumb-global');
+    globalNode.setAttribute('data-level', '0');
+    globalNode.innerHTML = '<span>Global View</span>';
+    globalNode.addEventListener('click', this.handleBreadcrumbClick);
+    breadcrumbContainer.appendChild(globalNode);
 
     breadcrumbs.forEach((breadcrumb, index) => {
-      const li = document.createElement('li');
-      const a = document.createElement('a');
-      a.href = '#';
-      a.setAttribute('data-level', breadcrumb.admLevel);
-      a.textContent = breadcrumb.admName;
-  
-      a.addEventListener('click', this.handleBreadcrumbClick);
-  
-      li.appendChild(a);
-      ul.appendChild(li);
+      // Add arrow between breadcrumbs
+      if (index >= 0) {
+        const arrow = document.createElement('div');
+        arrow.className = 'breadcrumb-arrow';
+        arrow.innerHTML = '→';
+        breadcrumbContainer.appendChild(arrow);
+      }
+
+      // Add breadcrumb node
+      const node = document.createElement('div');
+      node.className = 'breadcrumb-node breadcrumb-item';
+      node.setAttribute('data-level', breadcrumb.admLevel);
+      
+      // Set appropriate data-cy based on level
+      if (breadcrumb.admLevel === 1) {
+        node.setAttribute('data-cy', 'breadcrumb-country');
+      } else if (breadcrumb.admLevel === 2) {
+        node.setAttribute('data-cy', 'breadcrumb-region');
+      } else {
+        node.setAttribute('data-cy', `breadcrumb-level-${breadcrumb.admLevel}`);
+      }
+      
+      node.innerHTML = `<span>${breadcrumb.admName}</span>`;
+      node.addEventListener('click', this.handleBreadcrumbClick);
+      breadcrumbContainer.appendChild(node);
     });
-  
-    breadcrumbContainer.appendChild(ul);
   }
 
   updateBreadcrumbsAtMax(admLevel, admName, country) {

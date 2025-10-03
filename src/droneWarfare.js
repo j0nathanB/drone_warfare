@@ -2,6 +2,10 @@ import { DataTable } from './table.js';
 import { DroneWarfareMap } from './map.js';
 import { GeoJSONHandler } from './geojsonHandler.js';
 import { Breadcrumbs } from './breadcrumbs.js';
+import { LayerControls } from './layerControls.js';
+import { Timeline } from './timeline.js';
+import { StrikeVisualization } from './strikeVisualization.js';
+import { ViewModeSystem } from './viewModeSystem.js';
 
 // Initialize the state object
 const appState = {
@@ -60,6 +64,30 @@ function updateStatistics(totals) {
   // Note: Injured data is not available in the current data structure
   // Keeping the existing display for now
 };
+
+// Function to update statistics for a specific year based on strike data
+function updateYearStatistics(yearStrikes) {
+  let stats = {
+    strikeCount: yearStrikes.length,
+    minTotal: 0,
+    maxTotal: 0,
+    minCivilians: 0,
+    maxCivilians: 0,
+    minChildren: 0,
+    maxChildren: 0
+  };
+  
+  yearStrikes.forEach(strike => {
+    stats.minTotal += strike.minTotal || 0;
+    stats.maxTotal += strike.maxTotal || 0;
+    stats.minCivilians += strike.minCivilians || 0;
+    stats.maxCivilians += strike.maxCivilians || 0;
+    stats.minChildren += strike.minChildren || 0;
+    stats.maxChildren += strike.maxChildren || 0;
+  });
+  
+  updateStatistics(stats);
+}
 
 // Function to update the state object when a country is selected
 function selectEntity(properties, aState) {
@@ -142,8 +170,14 @@ function loadDroneWarfare() {
   appState.admName = '';
   appState.country = null;
   
-  // Calculate global totals
-  const initDisplay = [appState.geojson.AFG[0], appState.geojson.PAK[0], appState.geojson.SOM[0], appState.geojson.YEM[0]];
+  // Calculate global totals - extract first feature from each country FeatureCollection
+  const initDisplay = [
+    appState.geojson.AFG[0]?.features?.[0] || appState.geojson.AFG[0],
+    appState.geojson.PAK[0]?.features?.[0] || appState.geojson.PAK[0],
+    appState.geojson.SOM[0]?.features?.[0] || appState.geojson.SOM[0],
+    appState.geojson.YEM[0]?.features?.[0] || appState.geojson.YEM[0]
+  ].filter(Boolean);
+  
   const globalTotals = {
     strikeCount: 0,
     minTotal: 0,
@@ -156,6 +190,10 @@ function loadDroneWarfare() {
   
   // Sum up totals from all countries
   initDisplay.forEach(country => {
+    if (!country || !country.properties) {
+      console.warn('Invalid country data:', country);
+      return;
+    }
     const props = country.properties;
     globalTotals.strikeCount += props.strike_count || 0;
     globalTotals.minTotal += Array.isArray(props.min_total) ? props.min_total.reduce((a, b) => (a + b), 0) : (props.min_total || 0);
@@ -180,10 +218,36 @@ async function loadFunctionality() {
   const breadcrumbs = new Breadcrumbs(appState, selectEntity);
   const droneWarfareMap = new DroneWarfareMap(appState, selectEntity, breadcrumbs);
   const dataTable = new DataTable(appState, selectEntity, breadcrumbs);
+  const layerControls = new LayerControls();
+  
+  // Initialize year filtering callback
+  const onYearSelect = (year, yearStrikes) => {
+    // Update strike visualization with filtered data
+    if (appState.strikeVisualization) {
+      appState.strikeVisualization.filterByYear(year);
+    }
+    
+    // Update statistics for the selected year
+    if (year && yearStrikes) {
+      updateYearStatistics(yearStrikes);
+    } else {
+      // Reset to global statistics
+      updateStatistics(appState.previousTotals);
+    }
+  };
+  
+  // Initialize new modules
+  const timeline = new Timeline(appState, onYearSelect);
+  const strikeVisualization = new StrikeVisualization(appState, droneWarfareMap.map);
+  const viewModeSystem = new ViewModeSystem(appState, timeline, strikeVisualization);
   
   appState.breadcrumbs = breadcrumbs;
   appState.map = droneWarfareMap;
   appState.dataTable = dataTable;
+  appState.layerControls = layerControls;
+  appState.timeline = timeline;
+  appState.strikeVisualization = strikeVisualization;
+  appState.viewModeSystem = viewModeSystem;
 
   // Update loading indicator to show data loading phase
   updateLoadingIndicator('Loading drone strike data...');
@@ -191,6 +255,11 @@ async function loadFunctionality() {
   try {
     // Load data asynchronously while map is already visible
     appState.geojson = await geojsonHandler.getData();
+    
+    // Process strike data for new modules
+    strikeVisualization.processStrikeData();
+    timeline.processStrikeData();
+    
     loadDroneWarfare();
     hideLoadingScreen();
   } catch (error) {

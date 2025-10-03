@@ -13,10 +13,10 @@
         <header class="header">
             <h1>Drone Strike Analysis 2004-2020</h1>
             <div class="view-modes">
-                <button class="view-mode-btn active" data-mode="map">Map View</button>
-                <button class="view-mode-btn" data-mode="timeline">Timeline</button>
-                <button class="view-mode-btn" data-mode="compare">Compare</button>
-                <button class="view-mode-btn" data-mode="stories">Stories</button>
+                <button class="view-mode-btn active" data-cy="map-view-btn" data-mode="map">Map View</button>
+                <button class="view-mode-btn" data-cy="timeline-view-btn" data-mode="timeline">Timeline</button>
+                <button class="view-mode-btn" data-cy="compare-view-btn" data-mode="compare">Compare</button>
+                <button class="view-mode-btn" data-cy="stories-view-btn" data-mode="stories">Stories</button>
             </div>
         </header>
 
@@ -31,40 +31,35 @@
             <!-- Visual Breadcrumbs -->
             <div class="visual-breadcrumbs" data-cy="breadcrumbs">
                 <div class="breadcrumb-path">
-                    <div class="breadcrumb-node" data-level="world">
+                    <div class="breadcrumb-node" data-cy="breadcrumb-global" data-level="world">
                         <span>Global</span>
                     </div>
-                    <span class="breadcrumb-arrow">→</span>
-                    <div class="breadcrumb-node active" data-level="country">
-                        <span>Pakistan</span>
-                    </div>
                 </div>
-                
             </div>
 
             <!-- Info Panel -->
             <div class="info-panel" data-cy="statistics-panel">
                 <div class="stats-grid">
-                    <div class="stat-card">
+                    <div class="stat-card" data-cy="stats-card">
                         <div class="stat-row">
                             <span class="stat-label">Total Strikes:</span>
-                            <span class="stat-value stat-exact" data-cy="total-strikes">423</span>
+                            <span class="stat-value stat-exact" data-cy="total-strikes">0</span>
                         </div>
                         <div class="stat-row">
                             <span class="stat-label">Total Killed:</span>
-                            <span class="stat-value stat-range" data-cy="total-killed">3,712 to 4,312</span>
+                            <span class="stat-value stat-range" data-cy="total-killed">0 to 0</span>
                         </div>
                         <div class="stat-row">
                             <span class="stat-label">Civilians Killed:</span>
-                            <span class="stat-value stat-range" data-cy="civilians-killed">280 to 340</span>
+                            <span class="stat-value stat-range" data-cy="civilians-killed">0 to 0</span>
                         </div>
                         <div class="stat-row">
                             <span class="stat-label">Children Killed:</span>
-                            <span class="stat-value stat-range" data-cy="children-killed">163 to 203</span>
+                            <span class="stat-value stat-range" data-cy="children-killed">0 to 0</span>
                         </div>
                         <div class="stat-row">
                             <span class="stat-label">Injured:</span>
-                            <span class="stat-value stat-range" data-cy="injured">1,652 to 2,417</span>
+                            <span class="stat-value stat-range" data-cy="injured">0 to 0</span>
                         </div>
                     </div>
                 </div>
@@ -72,8 +67,22 @@
                 <h3 style="margin-bottom: 16px; font-size: 16px; color: rgba(255,255,255,0.8);">
                     Regional Breakdown
                 </h3>
-                <div id="region-list">
-                    <!-- Dynamic content -->
+                <div id="region-list" data-cy="region-list">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr style="background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8);">
+                                <th style="padding: 8px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.2);">Region</th>
+                                <th style="padding: 8px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.2);">Strikes</th>
+                                <th style="padding: 8px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.2);">Total</th>
+                                <th style="padding: 8px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.2);">Military</th>
+                                <th style="padding: 8px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.2);">Civilians</th>
+                                <th style="padding: 8px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.2);">Children</th>
+                            </tr>
+                        </thead>
+                        <tbody id="data_table_body" data-cy="data-table-body">
+                            <!-- Dynamic content -->
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </aside>
@@ -159,16 +168,15 @@
         </div>
 
         <!-- Loading Overlay -->
-        <div class="loading-overlay">
+        <div id="loadingScreen" class="loading-overlay">
             <div class="loading-content">
                 <div class="loading-spinner"></div>
-                <p>Loading strike data...</p>
+                <p id="loading">Loading strike data...</p>
             </div>
         </div>
     </div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script type="module" src="src/layerControls.js"></script>
-    <script src="testPage.js"></script>
+    <script type="module" src="src/droneWarfare.js"></script>
 </body>
 </html>

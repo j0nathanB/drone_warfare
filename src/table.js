@@ -7,12 +7,15 @@ export class DataTable {
   }
 
   getValuesForAdmLevel0(data) {
+    // Handle both FeatureCollection and individual feature formats
+    const properties = data.features ? data.features[0].properties : data.properties;
+    
     return {
-      shapeName: data.features[0].properties.shapeISO,
-      strike_count: data.features[0].properties.strike_count,
-      max_total: data.features[0].properties.max_total.reduce((a, b) => (a + b), 0),
-      max_civilians: data.features[0].properties.max_civilians.reduce((a, b) => (a + b), 0),
-      max_children: data.features[0].properties.max_children.reduce((a, b) => (a + b), 0)
+      shapeName: properties.shapeISO || properties.shapeName,
+      strike_count: properties.strike_count,
+      max_total: Array.isArray(properties.max_total) ? properties.max_total.reduce((a, b) => (a + b), 0) : (properties.max_total || 0),
+      max_civilians: Array.isArray(properties.max_civilians) ? properties.max_civilians.reduce((a, b) => (a + b), 0) : (properties.max_civilians || 0),
+      max_children: Array.isArray(properties.max_children) ? properties.max_children.reduce((a, b) => (a + b), 0) : (properties.max_children || 0)
     };
   }
 
