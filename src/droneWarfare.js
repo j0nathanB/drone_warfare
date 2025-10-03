@@ -3,6 +3,7 @@ import { DroneWarfareMap } from './map.js';
 import { GeoJSONHandler } from './geojsonHandler.js';
 import { Breadcrumbs } from './breadcrumbs.js';
 import { LayerControls } from './layerControls.js';
+import { HeaderControls } from './headerControls.js';
 import { Timeline } from './timeline.js';
 import { StrikeVisualization } from './strikeVisualization.js';
 import { ViewModeSystem } from './viewModeSystem.js';
@@ -237,14 +238,19 @@ async function loadFunctionality() {
   };
   
   // Initialize new modules
+  const headerControls = new HeaderControls();
   const timeline = new Timeline(appState, onYearSelect);
   const strikeVisualization = new StrikeVisualization(appState, droneWarfareMap.map);
   const viewModeSystem = new ViewModeSystem(appState, timeline, strikeVisualization);
+  
+  // Setup layer synchronization
+  headerControls.setupLayerSync();
   
   appState.breadcrumbs = breadcrumbs;
   appState.map = droneWarfareMap;
   appState.dataTable = dataTable;
   appState.layerControls = layerControls;
+  appState.headerControls = headerControls;
   appState.timeline = timeline;
   appState.strikeVisualization = strikeVisualization;
   appState.viewModeSystem = viewModeSystem;

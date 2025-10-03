@@ -13,10 +13,32 @@
         <header class="header">
             <h1>Drone Strike Analysis 2004-2020</h1>
             <div class="view-modes">
-                <button class="view-mode-btn active" data-cy="map-view-btn" data-mode="map">Map View</button>
-                <button class="view-mode-btn" data-cy="timeline-view-btn" data-mode="timeline">Timeline</button>
-                <button class="view-mode-btn" data-cy="compare-view-btn" data-mode="compare">Compare</button>
-                <button class="view-mode-btn" data-cy="stories-view-btn" data-mode="stories">Stories</button>
+                <div class="data-layers-dropdown">
+                    <button class="data-layers-btn" data-cy="data-layers-btn">
+                        Data Layers
+                        <span class="dropdown-caret">▼</span>
+                    </button>
+                    <div class="data-layers-content" data-cy="data-layers-content">
+                        <div class="layer-toggle">
+                            <input type="checkbox" id="header-heatmap" checked>
+                            <label for="header-heatmap">Heat Map</label>
+                        </div>
+                        <div class="layer-toggle">
+                            <input type="checkbox" id="header-boundaries" checked>
+                            <label for="header-boundaries">Boundaries</label>
+                        </div>
+                        <div class="layer-toggle">
+                            <input type="checkbox" id="header-strikes">
+                            <label for="header-strikes">Strike Points</label>
+                        </div>
+                        <div class="layer-toggle">
+                            <input type="checkbox" id="header-civilian">
+                            <label for="header-civilian">Civilian Impact</label>
+                        </div>
+                    </div>
+                </div>
+                <button class="view-mode-btn toggle-btn" data-cy="timeline-view-btn" data-mode="timeline">Timeline</button>
+                <button class="view-mode-btn toggle-btn" data-cy="compare-view-btn" data-mode="compare">Compare</button>
             </div>
         </header>
 
@@ -91,30 +113,6 @@
         <div class="map-container">
             <div id="map"></div>
             
-            <!-- Layer Controls -->
-            <div class="layer-controls" data-cy="layer-controls">
-                <button class="layer-controls-toggle" data-cy="layer-controls-toggle" aria-expanded="true" aria-label="Toggle data layers panel">
-                    Data Layers <span class="caret-text">></span>
-                </button>
-                <div class="layer-controls-content" data-cy="layer-controls-content">
-                    <div class="layer-toggle">
-                        <input type="checkbox" id="heatmap" checked>
-                        <label for="heatmap">Heat Map</label>
-                    </div>
-                    <div class="layer-toggle">
-                        <input type="checkbox" id="boundaries" checked>
-                        <label for="boundaries">Boundaries</label>
-                    </div>
-                    <div class="layer-toggle">
-                        <input type="checkbox" id="strikes">
-                        <label for="strikes">Strike Points</label>
-                    </div>
-                    <div class="layer-toggle">
-                        <input type="checkbox" id="civilian">
-                        <label for="civilian">Civilian Impact</label>
-                    </div>
-                </div>
-            </div>
 
             <!-- Mini Map -->
             <div class="mini-map">

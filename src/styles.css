@@ -271,7 +271,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 24px;
-  z-index: 1000;
+  z-index: 1001;
 }
 
 .header h1 {
@@ -283,8 +283,100 @@ body {
 .view-modes {
   display: flex;
   gap: 8px;
+  align-items: center;
 }
 
+/* Data Layers Dropdown */
+.data-layers-dropdown {
+  position: relative;
+}
+
+.data-layers-btn {
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+  font-family: 'Atkinson Hyperlegible Mono', monospace;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.data-layers-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+.dropdown-caret {
+  font-size: 12px;
+  transition: transform 0.2s;
+}
+
+.data-layers-dropdown.open .dropdown-caret {
+  transform: rotate(180deg);
+}
+
+.data-layers-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background: rgba(15, 15, 15, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  padding: 12px;
+  margin-top: 4px;
+  display: none !important;
+  z-index: 1100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+}
+
+/* Ensure dropdown stays closed unless explicitly opened */
+.data-layers-dropdown:not(.open) .data-layers-content {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.data-layers-dropdown.open .data-layers-content {
+  display: block !important;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.data-layers-content .layer-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.data-layers-content .layer-toggle:last-child {
+  border-bottom: none;
+}
+
+.data-layers-content .layer-toggle input[type="checkbox"] {
+  margin: 0;
+}
+
+.data-layers-content .layer-toggle label {
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 0;
+}
+
+/* View Mode Buttons (now toggle buttons) */
 .view-mode-btn {
   padding: 8px 16px;
   background: rgba(255, 255, 255, 0.1);
@@ -301,7 +393,7 @@ body {
   transform: translateY(-1px);
 }
 
-.view-mode-btn.active {
+.view-mode-btn.toggle-btn.active {
   background: #3b82f6;
   border-color: #3b82f6;
 }

@@ -11,6 +11,7 @@ export class ViewModeSystem {
     initialize() {
         this.createViewComponents();
         this.bindEvents();
+        this.bindHeaderToggleEvents();
         this.showViewMode('map'); // Default to map view
     }
 
@@ -439,10 +440,14 @@ export class ViewModeSystem {
     }
 
     bindEvents() {
-        // View mode button clicks
+        // View mode button clicks (for any remaining old-style buttons)
         document.querySelectorAll('.view-mode-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 const mode = e.target.dataset.mode;
+                if (mode === 'timeline' || mode === 'compare') {
+                    // Handle as toggle for new header buttons
+                    return;
+                }
                 this.showViewMode(mode);
             });
         });
@@ -450,6 +455,42 @@ export class ViewModeSystem {
         // Comparison panel events
         this.bindComparisonEvents();
         this.bindStoriesEvents();
+    }
+
+    bindHeaderToggleEvents() {
+        // Listen for timeline toggle events from header
+        document.addEventListener('timelineToggled', (event) => {
+            const { isActive } = event.detail;
+            this.handleTimelineToggle(isActive);
+        });
+
+        // Listen for compare toggle events from header
+        document.addEventListener('compareToggled', (event) => {
+            const { isActive } = event.detail;
+            this.handleCompareToggle(isActive);
+        });
+    }
+
+    handleTimelineToggle(isActive) {
+        if (isActive) {
+            this.timeline.show();
+        } else {
+            this.timeline.hide();
+        }
+    }
+
+    handleCompareToggle(isActive) {
+        const comparisonPanel = document.querySelector('.comparison-panel');
+        if (comparisonPanel) {
+            if (isActive) {
+                comparisonPanel.style.display = 'block';
+                // Initialize comparison if needed
+                this.activateCompareMode();
+            } else {
+                comparisonPanel.style.display = 'none';
+                this.deactivateCompareMode();
+            }
+        }
     }
 
     bindComparisonEvents() {
@@ -690,6 +731,15 @@ export class ViewModeSystem {
 
     getCurrentMode() {
         return this.currentMode;
+    }
+
+    // Compare mode activation/deactivation
+    activateCompareMode() {
+        this.updateComparison();
+    }
+
+    deactivateCompareMode() {
+        // Clean up any compare-specific state if needed
     }
 
     // Method to update data when app state changes
