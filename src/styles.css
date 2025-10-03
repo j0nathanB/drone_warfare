@@ -367,6 +367,41 @@ body {
 
 .data-layers-content .layer-toggle input[type="checkbox"] {
   margin: 0;
+  width: 16px;
+  height: 16px;
+  accent-color: #3b82f6;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  outline: none;
+}
+
+.data-layers-content .layer-toggle input[type="checkbox"]:checked {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  position: relative;
+}
+
+.data-layers-content .layer-toggle input[type="checkbox"]:checked::after {
+  content: "✓";
+  position: absolute;
+  top: -2px;
+  left: 1px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.data-layers-content .layer-toggle input[type="checkbox"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+.data-layers-content .layer-toggle input[type="checkbox"]:hover {
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 .data-layers-content .layer-toggle label {
@@ -687,6 +722,37 @@ body {
   height: 16px;
   accent-color: #3b82f6;
   cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  outline: none;
+}
+
+.layer-toggle input[type="checkbox"]:checked {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  position: relative;
+}
+
+.layer-toggle input[type="checkbox"]:checked::after {
+  content: "✓";
+  position: absolute;
+  top: -2px;
+  left: 1px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.layer-toggle input[type="checkbox"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+.layer-toggle input[type="checkbox"]:hover {
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 .layer-toggle label {
@@ -699,12 +765,21 @@ body {
 /* Layer toggle feedback animations */
 .layer-toggle.layer-enabled {
   background: rgba(59, 130, 246, 0.1);
-  border-left: 2px solid #3b82f6;
 }
 
 .layer-toggle.layer-disabled {
   background: rgba(239, 68, 68, 0.1);
-  border-left: 2px solid #ef4444;
+}
+
+/* Layer toggle collapsed state */
+.layer-toggle.collapsed {
+  min-height: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.layer-toggle.collapsed:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* Mobile optimizations */

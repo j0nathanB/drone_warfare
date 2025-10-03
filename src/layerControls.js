@@ -10,8 +10,16 @@ export class LayerControls {
   }
 
   init() {
-    this.bindEvents()
-    this.setupInitialState()
+    // Wait for DOM to be ready if not already
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        this.bindEvents()
+        this.setupInitialState()
+      })
+    } else {
+      this.bindEvents()
+      this.setupInitialState()
+    }
   }
 
   bindEvents() {
@@ -36,6 +44,12 @@ export class LayerControls {
     const layerToggles = document.querySelectorAll('.layer-toggle input[type="checkbox"]')
     layerToggles.forEach(toggle => {
       toggle.addEventListener('change', this.handleLayerToggle.bind(this))
+    })
+
+    // Add click listeners to layer-toggle divs for toggling checkbox visibility
+    const layerToggleContainers = document.querySelectorAll('.layer-toggle')
+    layerToggleContainers.forEach(container => {
+      container.addEventListener('click', this.handleLayerToggleContainerClick.bind(this))
     })
   }
 
@@ -142,6 +156,24 @@ export class LayerControls {
     this.showLayerFeedback(event.target, isEnabled)
   }
 
+  handleLayerToggleContainerClick(event) {
+    // Prevent event if the click was on the checkbox itself to avoid double-triggering
+    if (event.target.type === 'checkbox') {
+      return
+    }
+
+    const container = event.currentTarget
+    const checkbox = container.querySelector('input[type="checkbox"]')
+    
+    if (!checkbox) return
+
+    // Toggle the checkbox state
+    checkbox.checked = !checkbox.checked
+    
+    // Dispatch the change event to trigger the layer toggle handler
+    checkbox.dispatchEvent(new Event('change', { bubbles: true }))
+  }
+
   getLayerType(layerId) {
     const layerTypes = {
       'heatmap': 'heatmap',
@@ -206,6 +238,11 @@ export class LayerControls {
     const layerToggles = document.querySelectorAll('.layer-toggle input[type="checkbox"]')
     layerToggles.forEach(toggle => {
       toggle.removeEventListener('change', this.handleLayerToggle.bind(this))
+    })
+
+    const layerToggleContainers = document.querySelectorAll('.layer-toggle')
+    layerToggleContainers.forEach(container => {
+      container.removeEventListener('click', this.handleLayerToggleContainerClick.bind(this))
     })
   }
 }
