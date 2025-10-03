@@ -18,151 +18,46 @@ export class Timeline {
     }
 
     createTimelineHTML() {
-        // Check if timeline container already exists
-        let timelineContainer = document.querySelector('[data-cy="timeline-container"]');
-        if (!timelineContainer) {
-            timelineContainer = document.createElement('div');
-            timelineContainer.setAttribute('data-cy', 'timeline-container');
-            timelineContainer.className = 'timeline-container';
-            timelineContainer.innerHTML = `
-                <div class="timeline-header">
-                    <h3>Timeline View</h3>
-                    <div class="timeline-controls" data-cy="timeline-controls">
-                        <button class="play-btn" data-cy="play-btn">Play</button>
-                        <button class="reset-timeline-btn" data-cy="reset-timeline-btn">Reset</button>
-                        <span class="timeline-selected-year" data-cy="timeline-selected-year">All Years</span>
-                    </div>
-                </div>
-                <div class="timeline-bars" data-cy="timeline-bars"></div>
-                <div class="timeline-tooltip" data-cy="timeline-tooltip"></div>
-            `;
-            
-            // Add CSS styles
-            const style = document.createElement('style');
-            style.textContent = `
-                .timeline-container {
-                    position: absolute;
-                    bottom: 20px;
-                    left: 20px;
-                    right: 20px;
-                    background: rgba(15, 15, 15, 0.95);
-                    border: 1px solid rgba(255, 255, 255, 0.2);
-                    border-radius: 12px;
-                    padding: 20px;
-                    color: white;
-                    z-index: 1000;
-                    display: none;
-                }
-                
-                .timeline-container.visible {
-                    display: block;
-                }
-                
-                .timeline-header {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    margin-bottom: 15px;
-                }
-                
-                .timeline-header h3 {
-                    margin: 0;
-                    font-size: 18px;
-                }
-                
-                .timeline-controls {
-                    display: flex;
-                    gap: 10px;
-                    align-items: center;
-                }
-                
-                .timeline-controls button {
-                    padding: 8px 16px;
-                    background: #3b82f6;
-                    border: none;
-                    border-radius: 6px;
-                    color: white;
-                    cursor: pointer;
-                    transition: background 0.2s;
-                }
-                
-                .timeline-controls button:hover {
-                    background: #2563eb;
-                }
-                
-                .timeline-selected-year {
-                    font-weight: 500;
-                    color: #fbbf24;
-                }
-                
-                .timeline-bars {
-                    display: flex;
-                    align-items: end;
-                    gap: 2px;
-                    height: 100px;
-                    padding: 10px 0;
-                }
-                
-                .timeline-bar {
-                    flex: 1;
-                    background: #3b82f6;
-                    cursor: pointer;
-                    transition: all 0.2s;
-                    border-radius: 2px 2px 0 0;
-                    min-height: 8px;
-                    opacity: 0.7;
-                }
-                
-                .timeline-bar:hover {
-                    opacity: 1;
-                    background: #2563eb;
-                }
-                
-                .timeline-bar.selected {
-                    background: #fbbf24;
-                    opacity: 1;
-                }
-                
-                .timeline-tooltip {
-                    position: absolute;
-                    background: rgba(0, 0, 0, 0.9);
-                    color: white;
-                    padding: 8px 12px;
-                    border-radius: 4px;
-                    font-size: 12px;
-                    pointer-events: none;
-                    z-index: 1001;
-                    display: none;
-                    white-space: nowrap;
-                }
-                
-                @media (max-width: 768px) {
-                    .timeline-container {
-                        left: 10px;
-                        right: 10px;
-                        bottom: 10px;
-                        padding: 15px;
-                    }
-                    
-                    .timeline-header {
-                        flex-direction: column;
-                        gap: 10px;
-                    }
-                    
-                    .timeline-controls {
-                        flex-wrap: wrap;
-                        justify-content: center;
-                    }
-                }
-            `;
-            
-            document.head.appendChild(style);
-            document.body.appendChild(timelineContainer);
+        // Use existing timeline container from HTML
+        this.timelineContainer = document.querySelector('.timeline-container');
+        if (!this.timelineContainer) {
+            console.error('Timeline container not found in HTML');
+            return;
         }
         
-        this.timelineContainer = timelineContainer;
-        this.timelineBars = timelineContainer.querySelector('[data-cy="timeline-bars"]');
-        this.tooltip = timelineContainer.querySelector('[data-cy="timeline-tooltip"]');
+        // Find the timeline bars container
+        this.timelineBars = this.timelineContainer.querySelector('.timeline-bars');
+        
+        // Create tooltip if it doesn't exist
+        let tooltip = this.timelineContainer.querySelector('.timeline-tooltip');
+        if (!tooltip) {
+            tooltip = document.createElement('div');
+            tooltip.className = 'timeline-tooltip';
+            tooltip.style.cssText = `
+                position: absolute;
+                background: rgba(0, 0, 0, 0.9);
+                color: white;
+                padding: 8px 12px;
+                border-radius: 4px;
+                font-size: 12px;
+                pointer-events: none;
+                z-index: 1001;
+                display: none;
+                white-space: nowrap;
+            `;
+            this.timelineContainer.appendChild(tooltip);
+        }
+        this.tooltip = tooltip;
+        
+        // Update the play controls to include our buttons
+        const playControls = this.timelineContainer.querySelector('.play-controls');
+        if (playControls) {
+            playControls.innerHTML = `
+                <button class="play-btn" data-cy="play-btn">Play</button>
+                <button class="play-btn" data-cy="reset-timeline-btn">Reset</button>
+                <span class="timeline-selected-year" data-cy="timeline-selected-year" style="margin-left: 12px; font-weight: 500; color: #fbbf24;">All Years</span>
+            `;
+        }
     }
 
     bindEvents() {
@@ -215,6 +110,11 @@ export class Timeline {
     }
 
     renderTimeline() {
+        if (!this.timelineBars) {
+            console.error('Timeline bars container not found');
+            return;
+        }
+        
         this.timelineBars.innerHTML = '';
         
         // Calculate strikes per year

@@ -24,162 +24,17 @@ export class StrikeVisualization {
     }
 
     createLayerControls() {
-        // Check if layer controls already exist
-        let layerControlsContainer = document.querySelector('[data-cy="strike-layer-controls"]');
-        if (!layerControlsContainer) {
-            // Find existing layer controls or create new container
-            const existingControls = document.querySelector('.layer-controls') || document.querySelector('[data-cy="layer-controls"]');
-            
-            if (existingControls) {
-                // Add to existing controls
-                const strikeControls = document.createElement('div');
-                strikeControls.setAttribute('data-cy', 'strike-layer-controls');
-                strikeControls.innerHTML = `
-                    <div class="control-group">
-                        <h4>Strike Visualization</h4>
-                        <label class="control-item">
-                            <input type="checkbox" data-cy="layer-toggle-strikes" id="layer-strikes">
-                            <span>Strike Points</span>
-                        </label>
-                        <label class="control-item">
-                            <input type="checkbox" data-cy="layer-toggle-civilian" id="layer-civilian">
-                            <span>Civilian Impact</span>
-                        </label>
-                        <label class="control-item">
-                            <input type="checkbox" data-cy="layer-toggle-heatmap" id="layer-heatmap">
-                            <span>Heatmap</span>
-                        </label>
-                    </div>
-                `;
-                existingControls.appendChild(strikeControls);
-            } else {
-                // Create new layer controls container
-                layerControlsContainer = document.createElement('div');
-                layerControlsContainer.setAttribute('data-cy', 'layer-controls');
-                layerControlsContainer.className = 'layer-controls';
-                layerControlsContainer.innerHTML = `
-                    <div class="layer-controls-header">
-                        <h3>Layer Controls</h3>
-                        <button class="collapse-btn" data-cy="collapse-layer-controls">−</button>
-                    </div>
-                    <div class="layer-controls-content">
-                        <div data-cy="strike-layer-controls">
-                            <div class="control-group">
-                                <h4>Strike Visualization</h4>
-                                <label class="control-item">
-                                    <input type="checkbox" data-cy="layer-toggle-strikes" id="layer-strikes">
-                                    <span>Strike Points</span>
-                                </label>
-                                <label class="control-item">
-                                    <input type="checkbox" data-cy="layer-toggle-civilian" id="layer-civilian">
-                                    <span>Civilian Impact</span>
-                                </label>
-                                <label class="control-item">
-                                    <input type="checkbox" data-cy="layer-toggle-heatmap" id="layer-heatmap">
-                                    <span>Heatmap</span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                
-                // Add CSS styles
-                this.addLayerControlStyles();
-                
-                document.body.appendChild(layerControlsContainer);
-            }
-        }
+        // Use existing layer controls from HTML - no need to create new ones
+        // The HTML already contains the necessary checkboxes:
+        // - Strike Points: id="strikes"
+        // - Civilian Impact: id="civilian" 
+        // - Heat Map: id="heatmap"
     }
 
-    addLayerControlStyles() {
-        const style = document.createElement('style');
-        style.textContent = `
-            .layer-controls {
-                position: absolute;
-                top: 20px;
-                right: 20px;
-                background: rgba(15, 15, 15, 0.95);
-                border: 1px solid rgba(255, 255, 255, 0.2);
-                border-radius: 12px;
-                padding: 16px;
-                color: white;
-                z-index: 1000;
-                min-width: 200px;
-            }
-            
-            .layer-controls-header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-bottom: 12px;
-            }
-            
-            .layer-controls-header h3 {
-                margin: 0;
-                font-size: 16px;
-            }
-            
-            .collapse-btn {
-                background: none;
-                border: none;
-                color: white;
-                font-size: 18px;
-                cursor: pointer;
-                padding: 0;
-                width: 24px;
-                height: 24px;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            
-            .collapse-btn:hover {
-                background: rgba(255, 255, 255, 0.1);
-            }
-            
-            .control-group {
-                margin-bottom: 16px;
-            }
-            
-            .control-group h4 {
-                margin: 0 0 8px 0;
-                font-size: 14px;
-                color: #fbbf24;
-            }
-            
-            .control-item {
-                display: flex;
-                align-items: center;
-                gap: 8px;
-                margin-bottom: 8px;
-                cursor: pointer;
-                font-size: 14px;
-            }
-            
-            .control-item input[type="checkbox"] {
-                margin: 0;
-            }
-            
-            .control-item:hover {
-                color: #fbbf24;
-            }
-            
-            @media (max-width: 768px) {
-                .layer-controls {
-                    top: 10px;
-                    right: 10px;
-                    left: 10px;
-                    width: auto;
-                }
-            }
-        `;
-        document.head.appendChild(style);
-    }
 
     bindEvents() {
-        // Strike points toggle
-        const strikesToggle = document.querySelector('[data-cy="layer-toggle-strikes"]');
+        // Strike points toggle - use existing HTML checkbox
+        const strikesToggle = document.getElementById('strikes');
         strikesToggle?.addEventListener('change', (e) => {
             if (e.target.checked) {
                 this.showStrikePoints();
@@ -190,8 +45,8 @@ export class StrikeVisualization {
             }
         });
 
-        // Civilian impact toggle
-        const civilianToggle = document.querySelector('[data-cy="layer-toggle-civilian"]');
+        // Civilian impact toggle - use existing HTML checkbox
+        const civilianToggle = document.getElementById('civilian');
         civilianToggle?.addEventListener('change', (e) => {
             if (e.target.checked) {
                 this.showCivilianImpact();
@@ -202,8 +57,8 @@ export class StrikeVisualization {
             }
         });
 
-        // Heatmap toggle
-        const heatmapToggle = document.querySelector('[data-cy="layer-toggle-heatmap"]');
+        // Heatmap toggle - use existing HTML checkbox
+        const heatmapToggle = document.getElementById('heatmap');
         heatmapToggle?.addEventListener('change', (e) => {
             if (e.target.checked) {
                 this.showHeatmap();
@@ -212,15 +67,6 @@ export class StrikeVisualization {
                 this.hideHeatmap();
                 this.map.removeLayer(this.layers.heatmap);
             }
-        });
-
-        // Collapse button
-        const collapseBtn = document.querySelector('[data-cy="collapse-layer-controls"]');
-        collapseBtn?.addEventListener('click', () => {
-            const content = document.querySelector('.layer-controls-content');
-            const isCollapsed = content.style.display === 'none';
-            content.style.display = isCollapsed ? 'block' : 'none';
-            collapseBtn.textContent = isCollapsed ? '−' : '+';
         });
     }
 
@@ -392,9 +238,9 @@ export class StrikeVisualization {
 
     updateVisibleLayers() {
         // Check which layers are currently enabled and update them
-        const strikesEnabled = document.querySelector('[data-cy="layer-toggle-strikes"]')?.checked;
-        const civilianEnabled = document.querySelector('[data-cy="layer-toggle-civilian"]')?.checked;
-        const heatmapEnabled = document.querySelector('[data-cy="layer-toggle-heatmap"]')?.checked;
+        const strikesEnabled = document.getElementById('strikes')?.checked;
+        const civilianEnabled = document.getElementById('civilian')?.checked;
+        const heatmapEnabled = document.getElementById('heatmap')?.checked;
         
         if (strikesEnabled) {
             this.showStrikePoints();

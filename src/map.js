@@ -25,7 +25,7 @@ export class DroneWarfareMap {
   }
 
   initializeMap = () => {
-    const map = L.map('map', {'zoomControl': false}).setView([20, 50], 5);
+    const map = L.map('map', {'zoomControl': false}).setView([20, 65], 4);
     
     L.control.zoom({position: 'topright'}).addTo(map);
     
@@ -41,7 +41,7 @@ export class DroneWarfareMap {
   }
 
   resetMapView = () => {
-    this.map.setView([20, 47.5], 4.5);
+    this.map.setView([20, 65], 4);
   };
 
   createLegend = (map) => {
