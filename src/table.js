@@ -59,6 +59,79 @@ export class DataTable {
   
 
   loadTable(data = []) {
+    const regionCards = document.getElementById('region-cards');
+    const regionList = document.getElementById('region-list');
+
+    if (this.appState.admLevel === 0) {
+      // Global view - show cards
+      if (regionCards) regionCards.style.display = 'grid';
+      if (regionList) regionList.style.display = 'none';
+      this.loadCards(data);
+    } else {
+      // Country/region view - show table
+      if (regionCards) regionCards.style.display = 'none';
+      if (regionList) regionList.style.display = 'block';
+      this.loadTableRows(data);
+    }
+  }
+
+  loadCards(data = []) {
+    const regionCards = document.getElementById('region-cards');
+    if (!regionCards) return;
+
+    // Clear existing cards
+    regionCards.innerHTML = '';
+
+    const countryNames = {
+      'AFG': 'Afghanistan',
+      'PAK': 'Pakistan',
+      'SOM': 'Somalia',
+      'YEM': 'Yemen'
+    };
+
+    for (let i = 0; i < data.length; i++) {
+      const values = this.getValuesForAdmLevel0(data[i]);
+      const countryCode = values.shapeName;
+      const countryName = countryNames[countryCode] || countryCode;
+
+      const card = document.createElement('div');
+      card.className = 'country-card';
+      card.innerHTML = `
+        <div class="country-card-header">
+          <h4>${countryName}</h4>
+          <span class="country-strikes">${values.strike_count} strikes</span>
+        </div>
+        <div class="country-card-stats">
+          <div class="country-stat">
+            <span class="country-stat-label">Total Killed</span>
+            <span class="country-stat-value">${values.max_total.toLocaleString()}</span>
+          </div>
+          <div class="country-stat">
+            <span class="country-stat-label">Civilians</span>
+            <span class="country-stat-value">${values.max_civilians.toLocaleString()}</span>
+          </div>
+          <div class="country-stat">
+            <span class="country-stat-label">Children</span>
+            <span class="country-stat-value">${values.max_children.toLocaleString()}</span>
+          </div>
+        </div>
+      `;
+
+      const featureBounds = L.geoJSON(data[i]).getBounds();
+      card.addEventListener('click', () => {
+        if ('features' in data[i]) {
+          this.selectEntityCallback(data[i].features[0].properties, this.appState);
+        } else {
+          this.selectEntityCallback(data[i].properties, this.appState);
+        }
+        this.appState.map.zoomToFeature(null, featureBounds);
+      });
+
+      regionCards.appendChild(card);
+    }
+  }
+
+  loadTableRows(data = []) {
     // Clear the table before loading new data
     while (this.tableBody.firstChild) {
       this.tableBody.removeChild(this.tableBody.firstChild);
@@ -73,7 +146,7 @@ export class DataTable {
       this.tableBody.appendChild(tableRow);
       unclearRow = this.updateUnclearRow(unclearRow, data[i]);
       const featureBounds = L.geoJSON(data[i]).getBounds();
-      
+
       // When the user clicks on a country in the table
       tableRow.addEventListener('click', () => {
         if ('features' in data[i]) {
@@ -85,21 +158,22 @@ export class DataTable {
       });
     }
 
-    // Create the unclear row HTML
-    const unclearRowHtml = `
-      <tr>
-        <td>Unclear</td>
-        <td>${unclearRow.strikeCount}</td>
-        <td>${unclearRow.maxTotal}</td>
-        <td>${unclearRow.maxTotal - unclearRow.maxCivilians - unclearRow.maxChildren}</td>
-        <td>${unclearRow.maxCivilians}</td>
-        <td>${unclearRow.maxChildren}</td>
-      </tr>
-    `;
-    const tableRowUnclear = document.createElement('tr');
-    tableRowUnclear.innerHTML = unclearRowHtml;
-    // Append the unclear row to the table
-    this.tableBody.appendChild(tableRowUnclear);
-    // this.table.innerHTML += unclearRowHtml;
+    // Only add the unclear row if not at global level (admLevel > 0)
+    if (this.appState.admLevel > 0) {
+      const unclearRowHtml = `
+        <tr>
+          <td>Unclear</td>
+          <td>${unclearRow.strikeCount}</td>
+          <td>${unclearRow.maxTotal}</td>
+          <td>${unclearRow.maxTotal - unclearRow.maxCivilians - unclearRow.maxChildren}</td>
+          <td>${unclearRow.maxCivilians}</td>
+          <td>${unclearRow.maxChildren}</td>
+        </tr>
+      `;
+      const tableRowUnclear = document.createElement('tr');
+      tableRowUnclear.innerHTML = unclearRowHtml;
+      // Append the unclear row to the table
+      this.tableBody.appendChild(tableRowUnclear);
+    }
   }
 }

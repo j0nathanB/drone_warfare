@@ -7,6 +7,7 @@ import { HeaderControls } from './headerControls.js';
 import { Timeline } from './timeline.js';
 import { StrikeVisualization } from './strikeVisualization.js';
 import { ViewModeSystem } from './viewModeSystem.js';
+import { DropdownNavigation } from './dropdownNavigation.js';
 
 // Initialize the state object
 const appState = {
@@ -35,7 +36,7 @@ function updateStatistics(totals) {
     if (num === 0 || num === null || num === undefined) return '0';
     return num.toLocaleString();
   };
-  
+
   const formatRange = (min, max) => {
     if (min === max) return formatNumber(min);
     return `${formatNumber(min)} to ${formatNumber(max)}`;
@@ -164,6 +165,17 @@ function selectEntity(properties, aState) {
   } else {
     appState.breadcrumbs.updateBreadcrumbsAtMax(appState.admLevel, appState.admName, appState.country)
   }
+
+  // Sync checkbox state with current country's ADM1 visibility when navigating to country level
+  if (appState.admLevel === 1 && appState.country) {
+    const adm1Checkbox = document.getElementById('header-boundary-adm1');
+    if (adm1Checkbox && appState.map) {
+      const currentVisibility = appState.map.countryAdm1Visibility[appState.country];
+      if (adm1Checkbox.checked !== currentVisibility) {
+        adm1Checkbox.checked = currentVisibility;
+      }
+    }
+  }
 }
 
 function loadDroneWarfare() {
@@ -206,12 +218,18 @@ function loadDroneWarfare() {
   });
   
   appState.previousTotals = globalTotals;
-  
+
   // Update the statistics display
   updateStatistics(appState.previousTotals);
 
   appState.map.displayFeatures(initDisplay);
   appState.dataTable.loadTable(initDisplay);
+
+  // Display heatmap by default (since checkbox is checked)
+  const heatmapCheckbox = document.getElementById('header-heatmap');
+  if (heatmapCheckbox && heatmapCheckbox.checked) {
+    appState.map.displayHeatmap();
+  }
 }
 
 async function loadFunctionality() {
@@ -220,14 +238,14 @@ async function loadFunctionality() {
   const droneWarfareMap = new DroneWarfareMap(appState, selectEntity, breadcrumbs);
   const dataTable = new DataTable(appState, selectEntity, breadcrumbs);
   const layerControls = new LayerControls();
-  
+
   // Initialize year filtering callback
   const onYearSelect = (year, yearStrikes) => {
     // Update strike visualization with filtered data
     if (appState.strikeVisualization) {
       appState.strikeVisualization.filterByYear(year);
     }
-    
+
     // Update statistics for the selected year
     if (year && yearStrikes) {
       updateYearStatistics(yearStrikes);
@@ -236,16 +254,16 @@ async function loadFunctionality() {
       updateStatistics(appState.previousTotals);
     }
   };
-  
+
   // Initialize new modules
   const headerControls = new HeaderControls();
   const timeline = new Timeline(appState, onYearSelect);
   const strikeVisualization = new StrikeVisualization(appState, droneWarfareMap.map);
   const viewModeSystem = new ViewModeSystem(appState, timeline, strikeVisualization);
-  
+
   // Setup layer synchronization
   headerControls.setupLayerSync();
-  
+
   appState.breadcrumbs = breadcrumbs;
   appState.map = droneWarfareMap;
   appState.dataTable = dataTable;
@@ -255,17 +273,28 @@ async function loadFunctionality() {
   appState.strikeVisualization = strikeVisualization;
   appState.viewModeSystem = viewModeSystem;
 
+  // Note: DropdownNavigation will be initialized after data loads
+  appState.dropdownNavigation = null;
+
+  // Expose appState and selectEntity globally for testing and external access
+  window.appState = appState;
+  window.selectEntity = selectEntity;
+
   // Update loading indicator to show data loading phase
   updateLoadingIndicator('Loading drone strike data...');
 
   try {
     // Load data asynchronously while map is already visible
     appState.geojson = await geojsonHandler.getData();
-    
+
+    // Initialize dropdown navigation AFTER data is loaded
+    const dropdownNavigation = new DropdownNavigation(appState, selectEntity, breadcrumbs);
+    appState.dropdownNavigation = dropdownNavigation;
+
     // Process strike data for new modules
     strikeVisualization.processStrikeData();
     timeline.processStrikeData();
-    
+
     loadDroneWarfare();
     hideLoadingScreen();
   } catch (error) {

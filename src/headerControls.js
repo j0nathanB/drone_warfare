@@ -55,6 +55,34 @@ export class HeaderControls {
     headerCheckboxes.forEach(checkbox => {
       checkbox.addEventListener('change', this.handleHeaderLayerToggle.bind(this))
     })
+
+    // Add click listeners to layer-toggle containers for better UX
+    const layerToggleContainers = document.querySelectorAll('.data-layers-content .layer-toggle')
+    layerToggleContainers.forEach(container => {
+      // Skip disabled containers
+      if (container.classList.contains('layer-disabled')) {
+        return
+      }
+      container.addEventListener('click', this.handleLayerToggleContainerClick.bind(this))
+    })
+  }
+
+  handleLayerToggleContainerClick(event) {
+    // Prevent event if the click was on the checkbox itself to avoid double-triggering
+    if (event.target.type === 'checkbox' || event.target.tagName === 'INPUT') {
+      return
+    }
+
+    const container = event.currentTarget
+    const checkbox = container.querySelector('input[type="checkbox"]')
+
+    if (!checkbox || checkbox.disabled) return
+
+    // Toggle the checkbox state
+    checkbox.checked = !checkbox.checked
+
+    // Dispatch the change event to trigger the layer toggle handler
+    checkbox.dispatchEvent(new Event('change', { bubbles: true }))
   }
 
   setupInitialState() {
@@ -140,7 +168,7 @@ export class HeaderControls {
   handleHeaderLayerToggle(event) {
     const layerId = event.target.id.replace('header-', '') // Remove 'header-' prefix
     const isEnabled = event.target.checked
-    
+
     // Sync with main layer controls
     const mainCheckbox = document.getElementById(layerId)
     if (mainCheckbox && mainCheckbox.checked !== isEnabled) {
@@ -148,7 +176,16 @@ export class HeaderControls {
       mainCheckbox.dispatchEvent(new Event('change'))
     }
 
-    // Dispatch custom event
+    // Dispatch custom event directly to map
+    document.dispatchEvent(new CustomEvent('layerToggled', {
+      detail: {
+        layerId,
+        isEnabled,
+        source: 'header'
+      }
+    }))
+
+    // Also dispatch headerLayerToggled for other listeners
     document.dispatchEvent(new CustomEvent('headerLayerToggled', {
       detail: {
         layerId,
@@ -172,7 +209,11 @@ export class HeaderControls {
     // Sync header checkboxes with main layer controls
     const layerMappings = [
       { header: 'header-heatmap', main: 'heatmap' },
-      { header: 'header-boundaries', main: 'boundaries' },
+      { header: 'header-bubblemap', main: 'bubblemap' },
+      { header: 'header-boundary-country', main: 'boundary-country' },
+      { header: 'header-boundary-adm1', main: 'boundary-adm1' },
+      { header: 'header-boundary-adm2', main: 'boundary-adm2' },
+      { header: 'header-boundary-adm3', main: 'boundary-adm3' },
       { header: 'header-strikes', main: 'strikes' },
       { header: 'header-civilian', main: 'civilian' }
     ]
@@ -180,7 +221,7 @@ export class HeaderControls {
     layerMappings.forEach(mapping => {
       const headerCheckbox = document.getElementById(mapping.header)
       const mainCheckbox = document.getElementById(mapping.main)
-      
+
       if (headerCheckbox && mainCheckbox) {
         headerCheckbox.checked = mainCheckbox.checked
       }

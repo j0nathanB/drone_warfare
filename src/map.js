@@ -16,7 +16,32 @@ export class DroneWarfareMap {
       geojson: null,
       civilian: L.layerGroup().addTo(this.map),
       strikes: L.layerGroup().addTo(this.map),
-      heatmap: null
+      heatmap: L.layerGroup().addTo(this.map),
+      bubblemap: L.layerGroup().addTo(this.map)
+    };
+
+    // Initialize boundary layer tracking for granular control
+    this.boundaryLayers = {
+      country: { visible: true, layer: null },
+      adm1: { visible: true, layer: null },
+      adm2: { visible: false, layer: null },
+      adm3: { visible: false, layer: null }
+    };
+
+    // Track per-country ADM1 visibility for context-aware toggling
+    this.countryAdm1Visibility = {
+      'AFG': true,  // Default to true (checkbox is checked by default)
+      'PAK': true,
+      'SOM': true,
+      'YEM': true
+    };
+
+    // Track per-country ADM2 visibility for context-aware toggling
+    this.countryAdm2Visibility = {
+      'AFG': false,
+      'PAK': false,
+      'SOM': false,
+      'YEM': false
     };
     
     // Listen for layer toggle events
@@ -190,6 +215,62 @@ export class DroneWarfareMap {
           }
         }
         break;
+      case 'heatmap':
+        if (isEnabled) {
+          this.displayHeatmap();
+        } else {
+          this.layers.heatmap.clearLayers();
+        }
+        break;
+      case 'bubblemap':
+        if (isEnabled) {
+          this.displayBubblemap();
+        } else {
+          this.layers.bubblemap.clearLayers();
+        }
+        break;
+      case 'boundary-country':
+        this.boundaryLayers.country.visible = isEnabled;
+        this.updateBoundaryVisibility();
+        break;
+      case 'boundary-adm1':
+        // Context-aware ADM1 toggling based on current breadcrumb location
+        if (this.appState.admLevel === 0) {
+          // Global level: toggle ADM1 for ALL countries
+          this.boundaryLayers.adm1.visible = isEnabled;
+          Object.keys(this.countryAdm1Visibility).forEach(country => {
+            this.countryAdm1Visibility[country] = isEnabled;
+          });
+        } else if (this.appState.country) {
+          // Country/province level: toggle ADM1 only for current country
+          this.countryAdm1Visibility[this.appState.country] = isEnabled;
+
+          // Update global visibility if any country has ADM1 visible
+          this.boundaryLayers.adm1.visible = Object.values(this.countryAdm1Visibility).some(v => v);
+        }
+        this.updateBoundaryVisibility();
+        break;
+      case 'boundary-adm2':
+        // Context-aware ADM2 toggling based on current breadcrumb location
+        if (this.appState.admLevel === 0) {
+          // Global level: toggle ADM2 for ALL countries
+          this.boundaryLayers.adm2.visible = isEnabled;
+          Object.keys(this.countryAdm2Visibility).forEach(country => {
+            this.countryAdm2Visibility[country] = isEnabled;
+          });
+        } else if (this.appState.country) {
+          // Country/province level: toggle ADM2 only for current country
+          this.countryAdm2Visibility[this.appState.country] = isEnabled;
+
+          // Update global visibility if any country has ADM2 visible
+          this.boundaryLayers.adm2.visible = Object.values(this.countryAdm2Visibility).some(v => v);
+        }
+        this.updateBoundaryVisibility();
+        break;
+      case 'boundary-adm3':
+        this.boundaryLayers.adm3.visible = isEnabled;
+        this.updateBoundaryVisibility();
+        break;
     }
   }
 
@@ -296,18 +377,31 @@ export class DroneWarfareMap {
     // Create a layer group to hold all GeoJSON layers
     this.layers.geojson = L.layerGroup().addTo(this.map);
     this.appState.map.geojson = this.layers.geojson; // Keep backward compatibility
-    
+
     for (let i = 0; i < features.length; i++) {
       // Skip features that are not administrative divisions
       if('properties' in features[i] && features[i].properties.shapeName === 'unclear') continue;
-      const geojsonLayer = L.geoJson(features[i], {
+
+      // Tag feature with its actual admin level and country for context-aware boundary toggling
+      const feature = features[i];
+      if (feature.properties.shapeISO) {
+        // Country level feature (ADM0)
+        feature.properties._admLevel = 0;
+        feature.properties._country = feature.properties.shapeISO || feature.properties.shapeGroup;
+      } else {
+        // Sub-national feature (ADM1, ADM2, ADM3)
+        feature.properties._admLevel = this.appState.admLevel;
+        feature.properties._country = this.appState.country;
+      }
+
+      const geojsonLayer = L.geoJson(feature, {
         style: this.style,
         onEachFeature: this.onEachFeature,
       });
-      
+
       // Add CSS classes for styling based on level
-      this.addFeatureClasses(geojsonLayer, features[i]);
-  
+      this.addFeatureClasses(geojsonLayer, feature);
+
       // Add the GeoJSON layer to the layer group
       this.layers.geojson.addLayer(geojsonLayer);
     }
@@ -630,5 +724,153 @@ export class DroneWarfareMap {
   get leafletMap() {
     return this.map;
   }
-  
+
+  // Heat map visualization
+  displayHeatmap() {
+    this.layers.heatmap.clearLayers();
+
+    const currentFeatures = this.getCurrentDisplayedFeatures();
+
+    currentFeatures.forEach(feature => {
+      if (feature.properties && feature.properties.strike_count > 0) {
+        const centroid = this.getFeatureCentroid(feature);
+        if (centroid) {
+          const strikeCount = feature.properties.strike_count || 0;
+
+          // Calculate heat intensity based on strike count
+          const maxStrikes = Math.max(...currentFeatures.map(f => f.properties.strike_count || 0));
+          const intensity = strikeCount / maxStrikes;
+
+          // Create a circle with color based on intensity
+          const radius = Math.sqrt(strikeCount) * 8000;
+          const heatColor = this.getHeatColor(intensity);
+
+          const circle = L.circle(centroid, {
+            radius: radius,
+            fillColor: heatColor,
+            fillOpacity: 0.5 + (intensity * 0.3),
+            color: heatColor,
+            weight: 1,
+            opacity: 0.8
+          });
+
+          circle.bindPopup(`
+            <div style="font-family: Arial, sans-serif;">
+              <strong>Strike Intensity</strong><br>
+              <strong>Region:</strong> ${feature.properties.shapeName || feature.properties.shapeISO || 'Unknown'}<br>
+              <strong>Total Strikes:</strong> ${strikeCount}<br>
+              <strong>Intensity:</strong> ${(intensity * 100).toFixed(1)}%
+            </div>
+          `);
+
+          this.layers.heatmap.addLayer(circle);
+        }
+      }
+    });
+  }
+
+  getHeatColor(intensity) {
+    // Color scale from blue (low) to red (high)
+    if (intensity < 0.2) return '#3b82f6'; // blue
+    if (intensity < 0.4) return '#10b981'; // green
+    if (intensity < 0.6) return '#f59e0b'; // yellow/orange
+    if (intensity < 0.8) return '#f97316'; // orange
+    return '#ef4444'; // red
+  }
+
+  // Bubble map visualization
+  displayBubblemap() {
+    this.layers.bubblemap.clearLayers();
+
+    const currentFeatures = this.getCurrentDisplayedFeatures();
+
+    currentFeatures.forEach(feature => {
+      if (feature.properties && feature.properties.strike_count > 0) {
+        const centroid = this.getFeatureCentroid(feature);
+        if (centroid) {
+          const strikeCount = feature.properties.strike_count || 0;
+          const maxTotal = Array.isArray(feature.properties.max_total) ?
+            feature.properties.max_total.reduce((a, b) => a + b, 0) : (feature.properties.max_total || 0);
+
+          // Bubble size based on total casualties
+          const radius = Math.sqrt(maxTotal) * 3000;
+
+          // Create bubble with proportional sizing
+          const bubble = L.circle(centroid, {
+            radius: radius,
+            fillColor: '#8b5cf6',
+            fillOpacity: 0.4,
+            color: '#7c3aed',
+            weight: 2,
+            opacity: 0.8
+          });
+
+          bubble.bindPopup(`
+            <div style="font-family: Arial, sans-serif;">
+              <strong>Casualty Bubble</strong><br>
+              <strong>Region:</strong> ${feature.properties.shapeName || feature.properties.shapeISO || 'Unknown'}<br>
+              <strong>Total Strikes:</strong> ${strikeCount}<br>
+              <strong>Total Casualties:</strong> ${maxTotal}
+            </div>
+          `);
+
+          this.layers.bubblemap.addLayer(bubble);
+        }
+      }
+    });
+  }
+
+  // Update boundary visibility based on admin level controls
+  updateBoundaryVisibility() {
+    if (!this.layers.geojson) return;
+
+    this.layers.geojson.eachLayer(geoJsonLayer => {
+      this.updateLayerVisibility(geoJsonLayer);
+    });
+  }
+
+  updateLayerVisibility(geoJsonLayer) {
+    if (geoJsonLayer.feature) {
+      // Direct geoJSON layer
+      this.setLayerVisibility(geoJsonLayer);
+    } else if (geoJsonLayer.eachLayer) {
+      // Layer group containing geoJSON layers
+      geoJsonLayer.eachLayer(subLayer => {
+        this.setLayerVisibility(subLayer);
+      });
+    }
+  }
+
+  setLayerVisibility(geoJsonLayer) {
+    const feature = geoJsonLayer.feature;
+    if (!feature || !feature.properties) return;
+
+    let shouldBeVisible = true;
+
+    // Use the feature's tagged admin level instead of current app state level
+    const featureAdmLevel = feature.properties._admLevel;
+    const featureCountry = feature.properties._country;
+
+    if (featureAdmLevel === 0) {
+      // Country level (adm0)
+      shouldBeVisible = this.boundaryLayers.country.visible;
+    } else if (featureAdmLevel === 1) {
+      // ADM1 level - check per-country visibility
+      shouldBeVisible = this.countryAdm1Visibility[featureCountry] || false;
+    } else if (featureAdmLevel === 2) {
+      // ADM2 level - check per-country visibility
+      shouldBeVisible = this.countryAdm2Visibility[featureCountry] || false;
+    } else if (featureAdmLevel === 3) {
+      // ADM3 level
+      shouldBeVisible = this.boundaryLayers.adm3.visible;
+    }
+
+    // Apply visibility by adjusting opacity
+    if (shouldBeVisible) {
+      geoJsonLayer.setStyle({ opacity: 1, fillOpacity: 0.7 });
+    } else {
+      geoJsonLayer.setStyle({ opacity: 0, fillOpacity: 0 });
+    }
+  }
+
 }

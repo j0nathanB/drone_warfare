@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run test:ci:*)",
+      "Bash(open:*)",
+      "Bash(npm run test:*)",
+      "Bash(npm run test:ci:12-context-aware-adm1-toggle:*)",
+      "Bash(npx cypress run:*)",
+      "Bash(npm run test:ci:13-hierarchical-dropdown-navigation:*)",
+      "Bash(curl -s http://127.0.0.1:8080)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

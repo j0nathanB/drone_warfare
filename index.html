@@ -15,25 +15,36 @@
             <div class="view-modes">
                 <div class="data-layers-dropdown">
                     <button class="data-layers-btn" data-cy="data-layers-btn">
-                        Data Layers
+                        Layers
                         <span class="dropdown-caret">▼</span>
                     </button>
                     <div class="data-layers-content" data-cy="data-layers-content">
                         <div class="layer-toggle">
                             <input type="checkbox" id="header-heatmap" checked>
-                            <label for="header-heatmap">Heat Map</label>
+                            <label for="header-heatmap">Heat map</label>
                         </div>
                         <div class="layer-toggle">
-                            <input type="checkbox" id="header-boundaries" checked>
-                            <label for="header-boundaries">Boundaries</label>
+                            <input type="checkbox" id="header-bubblemap">
+                            <label for="header-bubblemap">Bubble map</label>
                         </div>
-                        <div class="layer-toggle">
-                            <input type="checkbox" id="header-strikes">
-                            <label for="header-strikes">Strike Points</label>
-                        </div>
-                        <div class="layer-toggle">
-                            <input type="checkbox" id="header-civilian">
-                            <label for="header-civilian">Civilian Impact</label>
+                        <div class="layer-section">
+                            <div class="layer-section-header">Boundaries</div>
+                            <div class="layer-toggle layer-indent">
+                                <input type="checkbox" id="header-boundary-country" checked>
+                                <label for="header-boundary-country">Country</label>
+                            </div>
+                            <div class="layer-toggle layer-indent">
+                                <input type="checkbox" id="header-boundary-adm1" checked>
+                                <label for="header-boundary-adm1">Adm1</label>
+                            </div>
+                            <div class="layer-toggle layer-indent">
+                                <input type="checkbox" id="header-boundary-adm2">
+                                <label for="header-boundary-adm2">Adm2</label>
+                            </div>
+                            <div class="layer-toggle layer-indent layer-disabled">
+                                <input type="checkbox" id="header-boundary-adm3" disabled>
+                                <label for="header-boundary-adm3">Adm3</label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -48,6 +59,44 @@
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="2"/>
                 </svg>
+            </div>
+
+            <!-- Hierarchical Dropdown Navigation -->
+            <div class="dropdown-navigation" data-cy="dropdown-navigation">
+                <div class="nav-dropdown-group">
+                    <label for="nav-dropdown-global">Global</label>
+                    <select id="nav-dropdown-global" data-cy="nav-dropdown-global" class="nav-dropdown">
+                        <option value="global" selected>Global</option>
+                    </select>
+                </div>
+
+                <div class="nav-dropdown-group">
+                    <label for="nav-dropdown-country">Country</label>
+                    <select id="nav-dropdown-country" data-cy="nav-dropdown-country" class="nav-dropdown">
+                        <option value="">Select country...</option>
+                    </select>
+                </div>
+
+                <div class="nav-dropdown-group">
+                    <label for="nav-dropdown-adm1">Adm1</label>
+                    <select id="nav-dropdown-adm1" data-cy="nav-dropdown-adm1" class="nav-dropdown">
+                        <option value="">Select region...</option>
+                    </select>
+                </div>
+
+                <div class="nav-dropdown-group">
+                    <label for="nav-dropdown-adm2">Adm2</label>
+                    <select id="nav-dropdown-adm2" data-cy="nav-dropdown-adm2" class="nav-dropdown">
+                        <option value="">Select district...</option>
+                    </select>
+                </div>
+
+                <div class="nav-dropdown-group">
+                    <label for="nav-dropdown-adm3">Adm3</label>
+                    <select id="nav-dropdown-adm3" data-cy="nav-dropdown-adm3" class="nav-dropdown dropdown-disabled" disabled>
+                        <option value="">Select locality...</option>
+                    </select>
+                </div>
             </div>
 
             <!-- Visual Breadcrumbs -->
@@ -89,7 +138,13 @@
                 <h3 style="margin-bottom: 16px; font-size: 16px; color: rgba(255,255,255,0.8);">
                     Regional Breakdown
                 </h3>
-                <div id="region-list" data-cy="region-list">
+                <!-- Cards view for global level -->
+                <div id="region-cards" data-cy="region-cards" style="display: grid;">
+                    <!-- Dynamic cards will be inserted here -->
+                </div>
+
+                <!-- Table view for country/region levels -->
+                <div id="region-list" data-cy="region-list" style="display: none;">
                     <table style="width: 100%; border-collapse: collapse;">
                         <thead>
                             <tr style="background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8);">

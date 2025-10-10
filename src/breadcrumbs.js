@@ -16,21 +16,26 @@ export class Breadcrumbs {
 
   handleBreadcrumbClick = (e) => {
     e.preventDefault();
-  
+
     const clickedLevel = Number(e.target.getAttribute('data-level'));
     this.breadcrumbs = this.breadcrumbs.slice(0, clickedLevel + 1);
-    
+
     if (clickedLevel === 0) {
       this.appState.admLevel = 0;
       this.selectEntity(null, this.appState)
       this.breadcrumbs = [];
       this.updateBreadcrumbs(this.breadcrumbs);
+
+      // Sync dropdowns to global state
+      if (this.appState.dropdownNavigation) {
+        this.appState.dropdownNavigation.syncWithAppState();
+      }
       return;
     }
 
     const currentBreadcrumb = this.breadcrumbs[clickedLevel - 1];
     const admLevelFeatures = this.appState.geojson[currentBreadcrumb.country][clickedLevel - 1].features;
-  
+
     let targetFeature = null;
     // If there is only one feature, it is at the country level, so select it
     if (admLevelFeatures.length === 1) {
@@ -46,10 +51,15 @@ export class Breadcrumbs {
     // Zoom to the feature
     const featureBounds = L.geoJSON(targetFeature).getBounds();
     this.appState.map.zoomToFeature(null, featureBounds);
-  
+
     // Update the breadcrumb display
     this.breadcrumbs = this.breadcrumbs.slice(0, clickedLevel);
     this.updateBreadcrumbs(this.breadcrumbs);
+
+    // Sync dropdowns with new state
+    if (this.appState.dropdownNavigation) {
+      this.appState.dropdownNavigation.syncWithAppState();
+    }
   };  
 
   updateBreadcrumbs(breadcrumbs) {

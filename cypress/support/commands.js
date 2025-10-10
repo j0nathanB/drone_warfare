@@ -32,18 +32,20 @@ Cypress.Commands.add('getStatistic', (statName) => {
   })
 })
 
-// Navigate to specific country by name
-Cypress.Commands.add('navigateToCountry', (countryName) => {
-  cy.get('.leaflet-interactive').each(($el) => {
-    cy.wrap($el).click({ force: true })
-    cy.wait(500)
-    
-    cy.get('[data-cy="breadcrumbs"]').then(($breadcrumb) => {
-      if ($breadcrumb.text().includes(countryName)) {
-        return false // Found the country, break the loop
-      }
-    })
-  })
+// Tab navigation support
+Cypress.Commands.add('tab', { prevSubject: 'optional' }, (subject) => {
+  cy.wrap(subject).trigger('keydown', { keyCode: 9, which: 9, key: 'Tab' })
+})
+
+// Navigate to specific country by name (using dropdown navigation for reliability)
+Cypress.Commands.add('navigateToCountry', (countryCode) => {
+  // Use the dropdown navigation which is more reliable
+  cy.get('[data-cy="nav-dropdown-country"]').select(countryCode)
+  cy.wait(500) // Wait for the navigation to complete
+
+  // Verify navigation occurred
+  cy.window().its('appState.admLevel').should('eq', 1)
+  cy.window().its('appState.country').should('eq', countryCode)
 })
 
 // Navigate through administrative hierarchy

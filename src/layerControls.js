@@ -142,7 +142,7 @@ export class LayerControls {
   handleLayerToggle(event) {
     const layerId = event.target.id
     const isEnabled = event.target.checked
-    
+
     // Dispatch custom event with layer information
     document.dispatchEvent(new CustomEvent('layerToggled', {
       detail: {
@@ -152,8 +152,7 @@ export class LayerControls {
       }
     }))
 
-    // Add visual feedback
-    this.showLayerFeedback(event.target, isEnabled)
+    // Visual feedback removed - only checkbox toggle should be visible
   }
 
   handleLayerToggleContainerClick(event) {
@@ -182,18 +181,6 @@ export class LayerControls {
       'civilian': 'overlay'
     }
     return layerTypes[layerId] || 'unknown'
-  }
-
-  showLayerFeedback(checkbox, isEnabled) {
-    const label = checkbox.closest('.layer-toggle')
-    if (!label) return
-
-    // Add temporary feedback class
-    label.classList.add(isEnabled ? 'layer-enabled' : 'layer-disabled')
-    
-    setTimeout(() => {
-      label.classList.remove('layer-enabled', 'layer-disabled')
-    }, 300)
   }
 
   // Public API methods
