@@ -42,6 +42,7 @@ export class DropdownNavigation {
     this.populateAllAdm1Options() // Initially show all ADM1s
     this.populateAllAdm2Options() // Initially show all ADM2s
     this.bindEvents()
+    this.resizeAllDropdowns() // Initial resize
   }
 
   bindEvents() {
@@ -85,7 +86,7 @@ export class DropdownNavigation {
     ]
 
     // Clear existing options except placeholder
-    this.dropdowns.country.innerHTML = '<option value="">Select country...</option>'
+    this.dropdowns.country.innerHTML = '<option value="">Country</option>'
 
     countries.forEach(country => {
       const option = document.createElement('option')
@@ -100,7 +101,7 @@ export class DropdownNavigation {
    * Populate ADM1 dropdown with all regions from all countries
    */
   populateAllAdm1Options() {
-    this.dropdowns.adm1.innerHTML = '<option value="">Select region...</option>'
+    this.dropdowns.adm1.innerHTML = '<option value="">ADM1</option>'
 
     const countries = ['AFG', 'PAK', 'SOM', 'YEM']
     countries.forEach(countryCode => {
@@ -121,7 +122,7 @@ export class DropdownNavigation {
    * Populate ADM2 dropdown with all districts from all countries
    */
   populateAllAdm2Options() {
-    this.dropdowns.adm2.innerHTML = '<option value="">Select district...</option>'
+    this.dropdowns.adm2.innerHTML = '<option value="">ADM2</option>'
 
     const countries = ['AFG', 'PAK', 'SOM', 'YEM']
     countries.forEach(countryCode => {
@@ -143,7 +144,7 @@ export class DropdownNavigation {
    * Filter ADM1 dropdown based on selected country
    */
   filterAdm1ByCountry(countryCode) {
-    this.dropdowns.adm1.innerHTML = '<option value="">Select region...</option>'
+    this.dropdowns.adm1.innerHTML = '<option value="">ADM1</option>'
 
     if (!countryCode || !this.appState.geojson[countryCode]) {
       this.populateAllAdm1Options()
@@ -164,7 +165,7 @@ export class DropdownNavigation {
    * Filter ADM2 dropdown based on selected country and optionally ADM1
    */
   filterAdm2(countryCode, adm1Name = null) {
-    this.dropdowns.adm2.innerHTML = '<option value="">Select district...</option>'
+    this.dropdowns.adm2.innerHTML = '<option value="">ADM2</option>'
 
     if (!countryCode || !this.appState.geojson[countryCode]) {
       this.populateAllAdm2Options()
@@ -196,7 +197,7 @@ export class DropdownNavigation {
    * Filter ADM3 dropdown based on selected ADM2 (Pakistan only)
    */
   filterAdm3(countryCode, adm2Name) {
-    this.dropdowns.adm3.innerHTML = '<option value="">Select locality...</option>'
+    this.dropdowns.adm3.innerHTML = '<option value="">ADM3</option>'
 
     if (countryCode !== 'PAK' || !adm2Name) {
       return
@@ -230,7 +231,7 @@ export class DropdownNavigation {
     } else {
       this.dropdowns.adm3.disabled = true
       this.dropdowns.adm3.classList.add('dropdown-disabled')
-      this.dropdowns.adm3.innerHTML = '<option value="">Select locality...</option>'
+      this.dropdowns.adm3.innerHTML = '<option value="">ADM3</option>'
     }
   }
 
@@ -258,6 +259,9 @@ export class DropdownNavigation {
     this.dropdowns.adm2.value = ''
     this.dropdowns.adm3.value = ''
 
+    // Resize dropdowns to fit content
+    this.resizeAllDropdowns()
+
     // Navigate to country
     this.navigateToCountry(countryCode)
   }
@@ -282,6 +286,9 @@ export class DropdownNavigation {
     this.dropdowns.adm2.value = ''
     this.dropdowns.adm3.value = ''
 
+    // Resize dropdowns to fit content
+    this.resizeAllDropdowns()
+
     // Navigate to ADM1
     this.navigateToAdm1(this.currentState.country, adm1Name)
   }
@@ -303,6 +310,9 @@ export class DropdownNavigation {
 
     // Reset ADM3 selection
     this.dropdowns.adm3.value = ''
+
+    // Resize dropdowns to fit content
+    this.resizeAllDropdowns()
 
     // Navigate to ADM2
     this.navigateToAdm2(this.currentState.country, adm2Name)
@@ -498,5 +508,52 @@ export class DropdownNavigation {
     const adm3Features = this.appState.geojson[countryCode][3].features
     const adm3Feature = adm3Features.find(f => f.properties.shapeName === adm3Name)
     return adm3Feature ? adm3Feature.properties.parentAdm : null
+  }
+
+  /**
+   * Resize a dropdown to fit its content
+   */
+  resizeDropdown(dropdown) {
+    if (!dropdown) return
+
+    // Create temporary element to measure text width
+    const tempSelect = document.createElement('select')
+    tempSelect.style.position = 'absolute'
+    tempSelect.style.visibility = 'hidden'
+    tempSelect.style.fontSize = getComputedStyle(dropdown).fontSize
+    tempSelect.style.fontFamily = getComputedStyle(dropdown).fontFamily
+    tempSelect.style.padding = getComputedStyle(dropdown).padding
+    document.body.appendChild(tempSelect)
+
+    // Get the widest option text (or selected option)
+    let maxWidth = 0
+    const selectedOption = dropdown.options[dropdown.selectedIndex]
+    const textToMeasure = selectedOption ? selectedOption.text : dropdown.options[0]?.text || 'Country'
+
+    // Create option and measure
+    const tempOption = document.createElement('option')
+    tempOption.text = textToMeasure
+    tempSelect.appendChild(tempOption)
+
+    // Measure width and add padding for dropdown arrow
+    const measuredWidth = tempSelect.offsetWidth
+    maxWidth = Math.max(maxWidth, measuredWidth)
+
+    // Clean up
+    document.body.removeChild(tempSelect)
+
+    // Set width with padding for arrow (22px) plus some buffer
+    dropdown.style.width = `${maxWidth + 30}px`
+  }
+
+  /**
+   * Resize all dropdowns
+   */
+  resizeAllDropdowns() {
+    Object.values(this.dropdowns).forEach(dropdown => {
+      if (dropdown && dropdown.tagName === 'SELECT') {
+        this.resizeDropdown(dropdown)
+      }
+    })
   }
 }

@@ -12,6 +12,30 @@
         <!-- Header -->
         <header class="header">
             <h1>Drone Strike Analysis 2004-2020</h1>
+
+            <!-- Breadcrumb/Dropdown Navigation -->
+            <div class="header-breadcrumb-nav" data-cy="header-breadcrumb-nav">
+                <div class="breadcrumb-node" data-cy="breadcrumb-global" data-level="0">
+                    <span>Global</span>
+                </div>
+                <span class="breadcrumb-separator">-</span>
+                <select id="nav-dropdown-country" data-cy="nav-dropdown-country" class="breadcrumb-dropdown">
+                    <option value="">Country</option>
+                </select>
+                <span class="breadcrumb-separator">-</span>
+                <select id="nav-dropdown-adm1" data-cy="nav-dropdown-adm1" class="breadcrumb-dropdown">
+                    <option value="">Adm1</option>
+                </select>
+                <span class="breadcrumb-separator">-</span>
+                <select id="nav-dropdown-adm2" data-cy="nav-dropdown-adm2" class="breadcrumb-dropdown">
+                    <option value="">Adm2</option>
+                </select>
+                <span class="breadcrumb-separator">-</span>
+                <select id="nav-dropdown-adm3" data-cy="nav-dropdown-adm3" class="breadcrumb-dropdown dropdown-disabled" disabled>
+                    <option value="">Adm3</option>
+                </select>
+            </div>
+
             <div class="view-modes">
                 <div class="data-layers-dropdown">
                     <button class="data-layers-btn" data-cy="data-layers-btn">
@@ -61,48 +85,10 @@
                 </svg>
             </div>
 
-            <!-- Hierarchical Dropdown Navigation -->
-            <div class="dropdown-navigation" data-cy="dropdown-navigation">
-                <div class="nav-dropdown-group">
-                    <label for="nav-dropdown-global">Global</label>
-                    <select id="nav-dropdown-global" data-cy="nav-dropdown-global" class="nav-dropdown">
-                        <option value="global" selected>Global</option>
-                    </select>
-                </div>
-
-                <div class="nav-dropdown-group">
-                    <label for="nav-dropdown-country">Country</label>
-                    <select id="nav-dropdown-country" data-cy="nav-dropdown-country" class="nav-dropdown">
-                        <option value="">Select country...</option>
-                    </select>
-                </div>
-
-                <div class="nav-dropdown-group">
-                    <label for="nav-dropdown-adm1">Adm1</label>
-                    <select id="nav-dropdown-adm1" data-cy="nav-dropdown-adm1" class="nav-dropdown">
-                        <option value="">Select region...</option>
-                    </select>
-                </div>
-
-                <div class="nav-dropdown-group">
-                    <label for="nav-dropdown-adm2">Adm2</label>
-                    <select id="nav-dropdown-adm2" data-cy="nav-dropdown-adm2" class="nav-dropdown">
-                        <option value="">Select district...</option>
-                    </select>
-                </div>
-
-                <div class="nav-dropdown-group">
-                    <label for="nav-dropdown-adm3">Adm3</label>
-                    <select id="nav-dropdown-adm3" data-cy="nav-dropdown-adm3" class="nav-dropdown dropdown-disabled" disabled>
-                        <option value="">Select locality...</option>
-                    </select>
-                </div>
-            </div>
-
-            <!-- Visual Breadcrumbs -->
-            <div class="visual-breadcrumbs" data-cy="breadcrumbs">
+            <!-- Visual Breadcrumbs (kept for backwards compatibility with sidebar breadcrumbs.js) -->
+            <div class="visual-breadcrumbs" data-cy="breadcrumbs" style="display: none;">
                 <div class="breadcrumb-path">
-                    <div class="breadcrumb-node" data-cy="breadcrumb-global" data-level="world">
+                    <div class="breadcrumb-node" data-cy="breadcrumb-sidebar-global" data-level="world">
                         <span>Global</span>
                     </div>
                 </div>

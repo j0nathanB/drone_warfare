@@ -4,9 +4,15 @@ export class Breadcrumbs {
     this.breadcrumbs = [];
     this.appState = appState;
     this.selectEntity = selectEntity;
-    
+
     // Initialize breadcrumbs display on page load
     this.updateBreadcrumbs(this.breadcrumbs);
+
+    // Wire up header breadcrumb Global click handler
+    const headerGlobalBreadcrumb = document.querySelector('.header-breadcrumb-nav .breadcrumb-node');
+    if (headerGlobalBreadcrumb) {
+      headerGlobalBreadcrumb.addEventListener('click', this.handleBreadcrumbClick.bind(this));
+    }
   }
 
   addBreadcrumbs = (admLevel, admName, country) => {
