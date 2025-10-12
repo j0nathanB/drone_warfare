@@ -19,21 +19,13 @@
                     <span>Global</span>
                 </div>
                 <span class="breadcrumb-separator">-</span>
-                <select id="nav-dropdown-country" data-cy="nav-dropdown-country" class="breadcrumb-dropdown">
-                    <option value="">Country</option>
-                </select>
+                <div id="nav-dropdown-country-wrapper"></div>
                 <span class="breadcrumb-separator">-</span>
-                <select id="nav-dropdown-adm1" data-cy="nav-dropdown-adm1" class="breadcrumb-dropdown">
-                    <option value="">Adm1</option>
-                </select>
+                <div id="nav-dropdown-adm1-wrapper"></div>
                 <span class="breadcrumb-separator">-</span>
-                <select id="nav-dropdown-adm2" data-cy="nav-dropdown-adm2" class="breadcrumb-dropdown">
-                    <option value="">Adm2</option>
-                </select>
+                <div id="nav-dropdown-adm2-wrapper"></div>
                 <span class="breadcrumb-separator">-</span>
-                <select id="nav-dropdown-adm3" data-cy="nav-dropdown-adm3" class="breadcrumb-dropdown dropdown-disabled" disabled>
-                    <option value="">Adm3</option>
-                </select>
+                <div id="nav-dropdown-adm3-wrapper"></div>
             </div>
 
             <div class="view-modes">
@@ -96,6 +88,9 @@
 
             <!-- Info Panel -->
             <div class="info-panel" data-cy="statistics-panel">
+                <!-- Current Location Header -->
+                <h2 class="location-header" data-cy="location-header">Global</h2>
+
                 <div class="stats-grid">
                     <div class="stat-card" data-cy="stats-card">
                         <div class="stat-row">

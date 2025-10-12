@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Dropdown Test</title>
+    <style>
+        body {
+            padding: 40px;
+            background: #1a1a2e;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(0,255,0,0.1);
+            border-radius: 4px;
+            white-space: pre-wrap;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dropdown Population Test</h1>
+
+    <div class="test-section">
+        <h2>Instructions</h2>
+        <p>1. Wait for page to load</p>
+        <p>2. Click on each dropdown below</p>
+        <p>3. Check if options appear</p>
+    </div>
+
+    <div class="test-section">
+        <h2>Dropdowns</h2>
+        <div style="display: flex; gap: 10px; margin: 20px 0;">
+            <div id="nav-dropdown-country-wrapper"></div>
+            <div id="nav-dropdown-adm1-wrapper"></div>
+            <div id="nav-dropdown-adm2-wrapper"></div>
+            <div id="nav-dropdown-adm3-wrapper"></div>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>Debug Info</h2>
+        <div id="result">Loading...</div>
+    </div>
+
+    <script type="module">
+        import { CustomDropdown } from './src/customDropdown.js';
+        import { DropdownNavigation } from './src/dropdownNavigation.js';
+        import { GeoJSONHandler } from './src/geojsonHandler.js';
+
+        const result = document.getElementById('result');
+
+        function log(msg) {
+            result.textContent += msg + '\n';
+            console.log(msg);
+        }
+
+        async function test() {
+            log('Starting test...');
+
+            // Create fake appState
+            const appState = {
+                geojson: {},
+                country: null,
+                adm1: null,
+                adm2: null,
+                adm3: null,
+                admLevel: 0
+            };
+
+            log('Loading GeoJSON data...');
+            const geojsonHandler = new GeoJSONHandler();
+
+            try {
+                appState.geojson = await geojsonHandler.getData();
+                log(`GeoJSON loaded. Countries: ${Object.keys(appState.geojson).join(', ')}`);
+
+                // Check data structure
+                for (const country of Object.keys(appState.geojson)) {
+                    const countryData = appState.geojson[country];
+                    const adm1Count = countryData.adm1 ? countryData.adm1.features.length : 0;
+                    const adm2Count = countryData.adm2 ? countryData.adm2.features.length : 0;
+                    log(`${country}: ${adm1Count} ADM1, ${adm2Count} ADM2`);
+                }
+
+                log('\nCreating DropdownNavigation...');
+                const dropdown = new DropdownNavigation(
+                    appState,
+                    (props, state) => {
+                        log(`selectEntity called: ${JSON.stringify(props?.shapeName || 'null')}`);
+                    },
+                    { handleBreadcrumbClick: () => {} }
+                );
+
+                log('DropdownNavigation created!');
+
+                // Check dropdown populations
+                setTimeout(() => {
+                    const countryOptions = dropdown.dropdowns.country.getOptions();
+                    const adm1Options = dropdown.dropdowns.adm1.getOptions();
+                    const adm2Options = dropdown.dropdowns.adm2.getOptions();
+
+                    log(`\nDropdown counts:`);
+                    log(`Country: ${countryOptions.length} options`);
+                    log(`ADM1: ${adm1Options.length} options`);
+                    log(`ADM2: ${adm2Options.length} options`);
+
+                    // Check DOM
+                    const adm1DomOptions = dropdown.dropdowns.adm1.menu.querySelectorAll('.dropdown-option');
+                    const adm2DomOptions = dropdown.dropdowns.adm2.menu.querySelectorAll('.dropdown-option');
+
+                    log(`\nDOM counts:`);
+                    log(`ADM1 in DOM: ${adm1DomOptions.length}`);
+                    log(`ADM2 in DOM: ${adm2DomOptions.length}`);
+
+                    log('\n✅ Test complete! Try clicking the dropdowns above.');
+                }, 500);
+
+            } catch (error) {
+                log(`ERROR: ${error.message}`);
+                console.error(error);
+            }
+        }
+
+        test();
+    </script>
+</body>
+</html>

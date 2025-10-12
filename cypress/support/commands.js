@@ -37,10 +37,17 @@ Cypress.Commands.add('tab', { prevSubject: 'optional' }, (subject) => {
   cy.wrap(subject).trigger('keydown', { keyCode: 9, which: 9, key: 'Tab' })
 })
 
-// Navigate to specific country by name (using dropdown navigation for reliability)
+// Navigate to specific country by name (using custom dropdown navigation)
 Cypress.Commands.add('navigateToCountry', (countryCode) => {
-  // Use the dropdown navigation which is more reliable
-  cy.get('[data-cy="nav-dropdown-country"]').select(countryCode)
+  // Click the custom dropdown trigger to open menu
+  cy.get('[data-cy="nav-dropdown-country"]').click()
+
+  // Click the option from the dropdown menu
+  cy.get('[data-cy="dropdown-menu-country"]')
+    .should('be.visible')
+    .contains('.dropdown-option', countryCode)
+    .click()
+
   cy.wait(500) // Wait for the navigation to complete
 
   // Verify navigation occurred

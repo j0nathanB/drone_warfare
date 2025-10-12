@@ -71,9 +71,9 @@ export class Breadcrumbs {
   updateBreadcrumbs(breadcrumbs) {
     const breadcrumbContainer = document.querySelector('[data-cy="breadcrumbs"] .breadcrumb-path');
     if (!breadcrumbContainer) return;
-    
+
     breadcrumbContainer.innerHTML = '';
-  
+
     // Add the "Global" breadcrumb node
     const globalNode = document.createElement('div');
     globalNode.className = 'breadcrumb-node breadcrumb-item';
@@ -96,7 +96,7 @@ export class Breadcrumbs {
       const node = document.createElement('div');
       node.className = 'breadcrumb-node breadcrumb-item';
       node.setAttribute('data-level', breadcrumb.admLevel);
-      
+
       // Set appropriate data-cy based on level
       if (breadcrumb.admLevel === 1) {
         node.setAttribute('data-cy', 'breadcrumb-country');
@@ -105,11 +105,28 @@ export class Breadcrumbs {
       } else {
         node.setAttribute('data-cy', `breadcrumb-level-${breadcrumb.admLevel}`);
       }
-      
+
       node.innerHTML = `<span>${breadcrumb.admName}</span>`;
       node.addEventListener('click', this.handleBreadcrumbClick);
       breadcrumbContainer.appendChild(node);
     });
+
+    // Update location header
+    this.updateLocationHeader(breadcrumbs);
+  }
+
+  updateLocationHeader(breadcrumbs) {
+    const locationHeader = document.querySelector('[data-cy="location-header"]');
+    if (!locationHeader) return;
+
+    if (breadcrumbs.length === 0) {
+      // At global level
+      locationHeader.textContent = 'Global';
+    } else {
+      // Build hierarchical location string
+      const locationPath = breadcrumbs.map(bc => bc.admName).join(' - ');
+      locationHeader.textContent = locationPath;
+    }
   }
 
   updateBreadcrumbsAtMax(admLevel, admName, country) {

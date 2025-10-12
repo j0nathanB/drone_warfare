@@ -1,29 +1,33 @@
 /**
- * Dropdown Navigation System
+ * Dropdown Navigation System (Custom Dropdown Integration)
  *
- * Implements hierarchical dropdown navigation with cascading filters:
+ * Implements hierarchical dropdown navigation with cascading filters using
+ * custom JavaScript dropdowns instead of native select elements.
+ *
  * Global -> Country -> ADM1 -> ADM2 -> ADM3 (Pakistan only)
  *
  * Features:
+ * - Custom dropdown component with consistent widths
  * - Auto-filtering based on parent selection
  * - ADM3 enabled only for Pakistan when ADM2 is selected
  * - Synchronization with breadcrumb navigation
- * - Preserves existing breadcrumb behavior
+ * - Text truncation with ellipsis for long options
  */
+
+import { CustomDropdown } from './customDropdown.js'
 
 export class DropdownNavigation {
   constructor(appState, selectEntity, breadcrumbs) {
     this.appState = appState
-    this.selectEntity = selectEntity
+    this.selectEntityOriginal = selectEntity
     this.breadcrumbs = breadcrumbs
 
-    // Dropdown elements
+    // Custom dropdown instances
     this.dropdowns = {
-      global: document.getElementById('nav-dropdown-global'),
-      country: document.getElementById('nav-dropdown-country'),
-      adm1: document.getElementById('nav-dropdown-adm1'),
-      adm2: document.getElementById('nav-dropdown-adm2'),
-      adm3: document.getElementById('nav-dropdown-adm3')
+      country: null,
+      adm1: null,
+      adm2: null,
+      adm3: null
     }
 
     // Current state
@@ -37,40 +41,95 @@ export class DropdownNavigation {
     this.init()
   }
 
-  init() {
-    this.populateCountryDropdown()
-    this.populateAllAdm1Options() // Initially show all ADM1s
-    this.populateAllAdm2Options() // Initially show all ADM2s
-    this.bindEvents()
-    this.resizeAllDropdowns() // Initial resize
-  }
+  /**
+   * Helper to find feature by name and call selectEntity with proper properties
+   */
+  selectEntity(entityName, level) {
+    if (entityName === null && level === 0) {
+      // Reset to global
+      this.selectEntityOriginal(null, this.appState)
+      return
+    }
 
-  bindEvents() {
-    // Global dropdown
-    this.dropdowns.global.addEventListener('change', (e) => {
-      if (e.target.value === 'global') {
-        this.resetToGlobal()
+    // For country level (level 1)
+    if (level === 1) {
+      const countryCode = entityName
+      const countryData = this.appState.geojson[countryCode]
+
+      // Access country data via array index [0]
+      if (countryData && countryData[0] && countryData[0].features.length > 0) {
+        const feature = countryData[0].features[0]
+        this.selectEntityOriginal(feature.properties, this.appState)
+      }
+      return
+    }
+
+    // For ADM1, ADM2, ADM3 levels, find the feature
+    // level 2 = ADM1 (index 1), level 3 = ADM2 (index 2), level 4 = ADM3 (index 3)
+    const dataIndex = level - 1
+    let found = false
+
+    Object.keys(this.appState.geojson).forEach(countryCode => {
+      if (found) return
+
+      const countryData = this.appState.geojson[countryCode]
+      if (countryData[dataIndex] && countryData[dataIndex].features) {
+        const feature = countryData[dataIndex].features.find(f =>
+          f.properties.shapeName === entityName
+        )
+
+        if (feature) {
+          this.selectEntityOriginal(feature.properties, this.appState)
+          found = true
+        }
       }
     })
+  }
 
-    // Country dropdown
-    this.dropdowns.country.addEventListener('change', (e) => {
-      this.onCountryChange(e.target.value)
+  init() {
+    this.initializeDropdowns()
+    this.populateCountryDropdown()
+    this.populateAllAdm1Options()
+    this.populateAllAdm2Options()
+    this.populateAllAdm3Options()
+  }
+
+  initializeDropdowns() {
+    // Create Country dropdown
+    this.dropdowns.country = new CustomDropdown({
+      id: 'country',
+      containerId: 'nav-dropdown-country-wrapper',
+      placeholder: 'Country',
+      dataAttr: 'nav-dropdown-country',
+      onChange: (value, text) => this.onCountryChange(value, text)
     })
 
-    // ADM1 dropdown
-    this.dropdowns.adm1.addEventListener('change', (e) => {
-      this.onAdm1Change(e.target.value)
+    // Create ADM1 dropdown
+    this.dropdowns.adm1 = new CustomDropdown({
+      id: 'adm1',
+      containerId: 'nav-dropdown-adm1-wrapper',
+      placeholder: 'Adm1',
+      dataAttr: 'nav-dropdown-adm1',
+      onChange: (value, text) => this.onAdm1Change(value, text)
     })
 
-    // ADM2 dropdown
-    this.dropdowns.adm2.addEventListener('change', (e) => {
-      this.onAdm2Change(e.target.value)
+    // Create ADM2 dropdown
+    this.dropdowns.adm2 = new CustomDropdown({
+      id: 'adm2',
+      containerId: 'nav-dropdown-adm2-wrapper',
+      placeholder: 'Adm2',
+      dataAttr: 'nav-dropdown-adm2',
+      onChange: (value, text) => this.onAdm2Change(value, text)
     })
 
-    // ADM3 dropdown
-    this.dropdowns.adm3.addEventListener('change', (e) => {
-      this.onAdm3Change(e.target.value)
+    // Create ADM3 dropdown (disabled by default)
+    this.dropdowns.adm3 = new CustomDropdown({
+      id: 'adm3',
+      containerId: 'nav-dropdown-adm3-wrapper',
+      placeholder: 'Adm3',
+      dataAttr: 'nav-dropdown-adm3',
+      disabled: true,
+      onChange: (value, text) => this.onAdm3Change(value, text)
     })
   }
 
@@ -85,160 +144,133 @@ export class DropdownNavigation {
       { code: 'YEM', name: 'Yemen' }
     ]
 
-    // Clear existing options except placeholder
-    this.dropdowns.country.innerHTML = '<option value="">Country</option>'
+    const options = countries.map(country => ({
+      value: country.code,
+      text: country.name,
+      dataAttrs: { country: country.code }
+    }))
 
-    countries.forEach(country => {
-      const option = document.createElement('option')
-      option.value = country.code
-      option.textContent = country.name
-      option.setAttribute('data-country', country.code)
-      this.dropdowns.country.appendChild(option)
-    })
+    this.dropdowns.country.populateOptions(options)
   }
 
   /**
-   * Populate ADM1 dropdown with all regions from all countries
+   * Populate ADM1 dropdown with all provinces from all countries
    */
   populateAllAdm1Options() {
-    this.dropdowns.adm1.innerHTML = '<option value="">ADM1</option>'
+    const adm1Options = []
+    const seen = new Set()
 
-    const countries = ['AFG', 'PAK', 'SOM', 'YEM']
-    countries.forEach(countryCode => {
-      if (this.appState.geojson[countryCode] && this.appState.geojson[countryCode][1]) {
-        const adm1Features = this.appState.geojson[countryCode][1].features
-        adm1Features.forEach(feature => {
-          const option = document.createElement('option')
-          option.value = feature.properties.shapeName
-          option.textContent = feature.properties.shapeName
-          option.setAttribute('data-country', countryCode)
-          this.dropdowns.adm1.appendChild(option)
+    if (!this.appState.geojson) {
+      console.warn('DropdownNavigation: geojson not available for ADM1 population')
+      return
+    }
+
+    Object.keys(this.appState.geojson).forEach(countryCode => {
+      const countryData = this.appState.geojson[countryCode]
+      // Access ADM1 data via array index [1]
+      if (countryData[1] && countryData[1].features) {
+        countryData[1].features.forEach(feature => {
+          const adm1Name = feature.properties.shapeName
+          const key = `${countryCode}-${adm1Name}`
+
+          if (!seen.has(key)) {
+            seen.add(key)
+            adm1Options.push({
+              value: adm1Name,
+              text: adm1Name,
+              dataAttrs: {
+                country: countryCode,
+                parent: countryCode
+              }
+            })
+          }
         })
       }
     })
+
+    adm1Options.sort((a, b) => a.text.localeCompare(b.text))
+    this.dropdowns.adm1.populateOptions(adm1Options)
   }
 
   /**
    * Populate ADM2 dropdown with all districts from all countries
    */
   populateAllAdm2Options() {
-    this.dropdowns.adm2.innerHTML = '<option value="">ADM2</option>'
+    const adm2Options = []
+    const seen = new Set()
 
-    const countries = ['AFG', 'PAK', 'SOM', 'YEM']
-    countries.forEach(countryCode => {
-      if (this.appState.geojson[countryCode] && this.appState.geojson[countryCode][2]) {
-        const adm2Features = this.appState.geojson[countryCode][2].features
-        adm2Features.forEach(feature => {
-          const option = document.createElement('option')
-          option.value = feature.properties.shapeName
-          option.textContent = feature.properties.shapeName
-          option.setAttribute('data-country', countryCode)
-          option.setAttribute('data-parent', feature.properties.parentAdm)
-          this.dropdowns.adm2.appendChild(option)
+    if (!this.appState.geojson) {
+      console.warn('DropdownNavigation: geojson not available for ADM2 population')
+      return
+    }
+
+    Object.keys(this.appState.geojson).forEach(countryCode => {
+      const countryData = this.appState.geojson[countryCode]
+      // Access ADM2 data via array index [2]
+      if (countryData[2] && countryData[2].features) {
+        countryData[2].features.forEach(feature => {
+          const adm2Name = feature.properties.shapeName
+          const adm1Parent = feature.properties.parentAdm || ''
+          const key = `${countryCode}-${adm1Parent}-${adm2Name}`
+
+          if (!seen.has(key)) {
+            seen.add(key)
+            adm2Options.push({
+              value: adm2Name,
+              text: adm2Name,
+              dataAttrs: {
+                country: countryCode,
+                parent: adm1Parent
+              }
+            })
+          }
         })
       }
     })
+
+    adm2Options.sort((a, b) => a.text.localeCompare(b.text))
+    this.dropdowns.adm2.populateOptions(adm2Options)
   }
 
   /**
-   * Filter ADM1 dropdown based on selected country
+   * Populate ADM3 dropdown with all localities (Pakistan only)
    */
-  filterAdm1ByCountry(countryCode) {
-    this.dropdowns.adm1.innerHTML = '<option value="">ADM1</option>'
+  populateAllAdm3Options() {
+    const adm3Options = []
+    const seen = new Set()
 
-    if (!countryCode || !this.appState.geojson[countryCode]) {
-      this.populateAllAdm1Options()
-      return
+    if (!this.appState.geojson || !this.appState.geojson.PAK) return
+
+    const pakistanData = this.appState.geojson.PAK
+    // Access ADM3 data via array index [3] (Pakistan only)
+    if (pakistanData[3] && pakistanData[3].features) {
+      pakistanData[3].features.forEach(feature => {
+        const adm3Name = feature.properties.shapeName
+        const adm2Parent = feature.properties.parentAdm || ''
+        const key = `PAK-${adm2Parent}-${adm3Name}`
+
+        if (!seen.has(key)) {
+          seen.add(key)
+          adm3Options.push({
+            value: adm3Name,
+            text: adm3Name,
+            dataAttrs: {
+              country: 'PAK',
+              parent: adm2Parent
+            }
+          })
+        }
+      })
     }
 
-    const adm1Features = this.appState.geojson[countryCode][1].features
-    adm1Features.forEach(feature => {
-      const option = document.createElement('option')
-      option.value = feature.properties.shapeName
-      option.textContent = feature.properties.shapeName
-      option.setAttribute('data-country', countryCode)
-      this.dropdowns.adm1.appendChild(option)
-    })
-  }
-
-  /**
-   * Filter ADM2 dropdown based on selected country and optionally ADM1
-   */
-  filterAdm2(countryCode, adm1Name = null) {
-    this.dropdowns.adm2.innerHTML = '<option value="">ADM2</option>'
-
-    if (!countryCode || !this.appState.geojson[countryCode]) {
-      this.populateAllAdm2Options()
-      return
-    }
-
-    if (!this.appState.geojson[countryCode][2]) {
-      return // No ADM2 data for this country
-    }
-
-    const adm2Features = this.appState.geojson[countryCode][2].features
-
-    adm2Features.forEach(feature => {
-      // If ADM1 is selected, only show ADM2s that belong to it
-      if (adm1Name && feature.properties.parentAdm !== adm1Name) {
-        return
-      }
-
-      const option = document.createElement('option')
-      option.value = feature.properties.shapeName
-      option.textContent = feature.properties.shapeName
-      option.setAttribute('data-country', countryCode)
-      option.setAttribute('data-parent', feature.properties.parentAdm)
-      this.dropdowns.adm2.appendChild(option)
-    })
-  }
-
-  /**
-   * Filter ADM3 dropdown based on selected ADM2 (Pakistan only)
-   */
-  filterAdm3(countryCode, adm2Name) {
-    this.dropdowns.adm3.innerHTML = '<option value="">ADM3</option>'
-
-    if (countryCode !== 'PAK' || !adm2Name) {
-      return
-    }
-
-    if (!this.appState.geojson[countryCode][3]) {
-      return // No ADM3 data
-    }
-
-    const adm3Features = this.appState.geojson[countryCode][3].features
-
-    adm3Features.forEach(feature => {
-      if (feature.properties.parentAdm === adm2Name) {
-        const option = document.createElement('option')
-        option.value = feature.properties.shapeName
-        option.textContent = feature.properties.shapeName
-        option.setAttribute('data-country', countryCode)
-        option.setAttribute('data-parent', feature.properties.parentAdm)
-        this.dropdowns.adm3.appendChild(option)
-      }
-    })
-  }
-
-  /**
-   * Enable or disable ADM3 dropdown based on country and ADM2 selection
-   */
-  updateAdm3State(countryCode, adm2Selected) {
-    if (countryCode === 'PAK' && adm2Selected) {
-      this.dropdowns.adm3.disabled = false
-      this.dropdowns.adm3.classList.remove('dropdown-disabled')
-    } else {
-      this.dropdowns.adm3.disabled = true
-      this.dropdowns.adm3.classList.add('dropdown-disabled')
-      this.dropdowns.adm3.innerHTML = '<option value="">ADM3</option>'
-    }
+    adm3Options.sort((a, b) => a.text.localeCompare(b.text))
+    this.dropdowns.adm3.populateOptions(adm3Options)
   }
 
   /**
    * Handle country selection
    */
-  onCountryChange(countryCode) {
+  onCountryChange(countryCode, countryName) {
     if (!countryCode) {
       this.resetToGlobal()
       return
@@ -249,28 +281,32 @@ export class DropdownNavigation {
     this.currentState.adm2 = null
     this.currentState.adm3 = null
 
-    // Filter child dropdowns
+    // Filter ADM1 options by country
     this.filterAdm1ByCountry(countryCode)
-    this.filterAdm2(countryCode)
-    this.updateAdm3State(countryCode, false)
 
-    // Reset child dropdown selections
-    this.dropdowns.adm1.value = ''
-    this.dropdowns.adm2.value = ''
-    this.dropdowns.adm3.value = ''
+    // Filter ADM2 options by country
+    this.filterAdm2ByCountry(countryCode)
 
-    // Resize dropdowns to fit content
-    this.resizeAllDropdowns()
+    // Reset ADM3 (disable unless Pakistan + ADM2 selected)
+    this.dropdowns.adm2.reset()
+    this.dropdowns.adm3.reset()
+    this.dropdowns.adm3.disable()
 
     // Navigate to country
-    this.navigateToCountry(countryCode)
+    this.selectEntity(countryCode, 1)
   }
 
   /**
-   * Handle ADM1 selection
+   * Handle ADM1 (province) selection
    */
-  onAdm1Change(adm1Name) {
-    if (!adm1Name || !this.currentState.country) {
+  onAdm1Change(adm1Name, displayName) {
+    if (!adm1Name) {
+      // Reset to country level
+      if (this.currentState.country) {
+        this.onCountryChange(this.currentState.country, '')
+      } else {
+        this.resetToGlobal()
+      }
       return
     }
 
@@ -278,105 +314,118 @@ export class DropdownNavigation {
     this.currentState.adm2 = null
     this.currentState.adm3 = null
 
-    // Filter ADM2 by parent ADM1
-    this.filterAdm2(this.currentState.country, adm1Name)
-    this.updateAdm3State(this.currentState.country, false)
+    // Filter ADM2 options by ADM1
+    this.filterAdm2ByAdm1(adm1Name)
 
-    // Reset child dropdown selections
-    this.dropdowns.adm2.value = ''
-    this.dropdowns.adm3.value = ''
-
-    // Resize dropdowns to fit content
-    this.resizeAllDropdowns()
+    // Reset ADM3
+    this.dropdowns.adm3.reset()
+    this.dropdowns.adm3.disable()
 
     // Navigate to ADM1
-    this.navigateToAdm1(this.currentState.country, adm1Name)
+    this.selectEntity(adm1Name, 2)
   }
 
   /**
-   * Handle ADM2 selection
+   * Handle ADM2 (district) selection
    */
-  onAdm2Change(adm2Name) {
-    if (!adm2Name || !this.currentState.country) {
+  onAdm2Change(adm2Name, displayName) {
+    if (!adm2Name) {
+      // Reset to ADM1 level
+      if (this.currentState.adm1) {
+        this.onAdm1Change(this.currentState.adm1, '')
+      } else if (this.currentState.country) {
+        this.onCountryChange(this.currentState.country, '')
+      } else {
+        this.resetToGlobal()
+      }
       return
     }
 
     this.currentState.adm2 = adm2Name
     this.currentState.adm3 = null
 
-    // Enable ADM3 for Pakistan
-    this.updateAdm3State(this.currentState.country, true)
-    this.filterAdm3(this.currentState.country, adm2Name)
-
-    // Reset ADM3 selection
-    this.dropdowns.adm3.value = ''
-
-    // Resize dropdowns to fit content
-    this.resizeAllDropdowns()
+    // Enable ADM3 if Pakistan
+    if (this.currentState.country === 'PAK') {
+      this.filterAdm3ByAdm2(adm2Name)
+      this.dropdowns.adm3.enable()
+    } else {
+      this.dropdowns.adm3.reset()
+      this.dropdowns.adm3.disable()
+    }
 
     // Navigate to ADM2
-    this.navigateToAdm2(this.currentState.country, adm2Name)
+    this.selectEntity(adm2Name, 3)
   }
 
   /**
-   * Handle ADM3 selection (Pakistan only)
+   * Handle ADM3 (locality) selection (Pakistan only)
    */
-  onAdm3Change(adm3Name) {
-    if (!adm3Name || this.currentState.country !== 'PAK') {
+  onAdm3Change(adm3Name, displayName) {
+    if (!adm3Name) {
+      // Reset to ADM2 level
+      if (this.currentState.adm2) {
+        this.onAdm2Change(this.currentState.adm2, '')
+      }
       return
     }
 
     this.currentState.adm3 = adm3Name
 
     // Navigate to ADM3
-    this.navigateToAdm3(this.currentState.country, adm3Name)
+    this.selectEntity(adm3Name, 4)
   }
 
   /**
-   * Navigate to country level
+   * Filter ADM1 dropdown by country
    */
-  navigateToCountry(countryCode) {
-    const countryFeature = this.appState.geojson[countryCode][0].features[0]
-    if (countryFeature) {
-      this.selectEntity(countryFeature.properties, this.appState)
+  filterAdm1ByCountry(countryCode) {
+    const visibleCount = this.dropdowns.adm1.filterOptions(opt => {
+      return opt.dataAttrs.country === countryCode
+    })
+
+    if (visibleCount === 0) {
+      this.dropdowns.adm1.reset()
     }
   }
 
   /**
-   * Navigate to ADM1 level
+   * Filter ADM2 dropdown by country
    */
-  navigateToAdm1(countryCode, adm1Name) {
-    const adm1Features = this.appState.geojson[countryCode][1].features
-    const targetFeature = adm1Features.find(f => f.properties.shapeName === adm1Name)
+  filterAdm2ByCountry(countryCode) {
+    const visibleCount = this.dropdowns.adm2.filterOptions(opt => {
+      return opt.dataAttrs.country === countryCode
+    })
 
-    if (targetFeature) {
-      this.selectEntity(targetFeature.properties, this.appState)
+    if (visibleCount === 0) {
+      this.dropdowns.adm2.reset()
     }
   }
 
   /**
-   * Navigate to ADM2 level
+   * Filter ADM2 dropdown by ADM1
    */
-  navigateToAdm2(countryCode, adm2Name) {
-    const adm2Features = this.appState.geojson[countryCode][2].features
-    const targetFeature = adm2Features.find(f => f.properties.shapeName === adm2Name)
+  filterAdm2ByAdm1(adm1Name) {
+    const visibleCount = this.dropdowns.adm2.filterOptions(opt => {
+      return opt.dataAttrs.country === this.currentState.country &&
+             opt.dataAttrs.parent === adm1Name
+    })
 
-    if (targetFeature) {
-      this.selectEntity(targetFeature.properties, this.appState)
+    if (visibleCount === 0) {
+      this.dropdowns.adm2.reset()
     }
   }
 
   /**
-   * Navigate to ADM3 level (Pakistan only)
+   * Filter ADM3 dropdown by ADM2 (Pakistan only)
    */
-  navigateToAdm3(countryCode, adm3Name) {
-    if (countryCode !== 'PAK') return
+  filterAdm3ByAdm2(adm2Name) {
+    const visibleCount = this.dropdowns.adm3.filterOptions(opt => {
+      return opt.dataAttrs.country === 'PAK' &&
+             opt.dataAttrs.parent === adm2Name
+    })
 
-    const adm3Features = this.appState.geojson[countryCode][3].features
-    const targetFeature = adm3Features.find(f => f.properties.shapeName === adm3Name)
-
-    if (targetFeature) {
-      this.selectEntity(targetFeature.properties, this.appState)
+    if (visibleCount === 0) {
+      this.dropdowns.adm3.reset()
     }
   }
 
@@ -391,169 +440,84 @@ export class DropdownNavigation {
       adm3: null
     }
 
-    // Reset dropdown values
-    this.dropdowns.global.value = 'global'
-    this.dropdowns.country.value = ''
-    this.dropdowns.adm1.value = ''
-    this.dropdowns.adm2.value = ''
-    this.dropdowns.adm3.value = ''
+    // Reset all dropdowns
+    this.dropdowns.country.reset()
+    this.dropdowns.adm1.reset()
+    this.dropdowns.adm2.reset()
+    this.dropdowns.adm3.reset()
 
-    // Restore all options
+    // Repopulate all options
     this.populateAllAdm1Options()
     this.populateAllAdm2Options()
-    this.updateAdm3State(null, false)
+
+    // Disable ADM3
+    this.dropdowns.adm3.disable()
 
     // Navigate to global
-    this.selectEntity(null, this.appState)
+    this.selectEntity(null, 0)
   }
 
   /**
-   * Update dropdowns based on current app state (for breadcrumb sync)
+   * Sync dropdowns with current app state (called by breadcrumb navigation)
    */
   syncWithAppState() {
-    const { admLevel, country, admName } = this.appState
+    const state = this.appState
 
-    if (admLevel === 0) {
-      // Global view
-      this.resetToGlobal()
-    } else if (admLevel === 1) {
-      // Country level
-      this.currentState.country = country
-      this.dropdowns.country.value = country || ''
-      this.filterAdm1ByCountry(country)
-      this.filterAdm2(country)
-      this.updateAdm3State(country, false)
-
-      // Reset child dropdowns
-      this.dropdowns.adm1.value = ''
-      this.dropdowns.adm2.value = ''
-      this.dropdowns.adm3.value = ''
-    } else if (admLevel === 2) {
-      // ADM1 level
-      this.currentState.country = country
-      this.currentState.adm1 = admName
-      this.dropdowns.country.value = country
-      this.filterAdm1ByCountry(country)
-      this.dropdowns.adm1.value = admName
-      this.filterAdm2(country, admName)
-      this.updateAdm3State(country, false)
-
-      // Reset child dropdowns
-      this.dropdowns.adm2.value = ''
-      this.dropdowns.adm3.value = ''
-    } else if (admLevel === 3) {
-      // ADM2 level
-      const adm1Parent = this.getAdm1ParentForAdm2(country, admName)
-      this.currentState.country = country
-      this.currentState.adm1 = adm1Parent
-      this.currentState.adm2 = admName
-      this.dropdowns.country.value = country
-      this.filterAdm1ByCountry(country)
-      if (adm1Parent) {
-        this.dropdowns.adm1.value = adm1Parent
-      }
-      this.filterAdm2(country, adm1Parent)
-      this.dropdowns.adm2.value = admName
-      this.updateAdm3State(country, true)
-      this.filterAdm3(country, admName)
-
-      // Reset ADM3 dropdown
-      this.dropdowns.adm3.value = ''
-    } else if (admLevel === 4) {
-      // ADM3 level (Pakistan only)
-      const adm2Parent = this.getAdm2ParentForAdm3(country, admName)
-      const adm1Parent = adm2Parent ? this.getAdm1ParentForAdm2(country, adm2Parent) : null
-
-      this.currentState.country = country
-      this.currentState.adm1 = adm1Parent
-      this.currentState.adm2 = adm2Parent
-      this.currentState.adm3 = admName
-
-      this.dropdowns.country.value = country
-      this.filterAdm1ByCountry(country)
-      if (adm1Parent) {
-        this.dropdowns.adm1.value = adm1Parent
-      }
-      this.filterAdm2(country, adm1Parent)
-      if (adm2Parent) {
-        this.dropdowns.adm2.value = adm2Parent
-      }
-      this.updateAdm3State(country, true)
-      this.filterAdm3(country, adm2Parent)
-      this.dropdowns.adm3.value = admName
-    }
-  }
-
-  /**
-   * Get ADM1 parent for a given ADM2
-   */
-  getAdm1ParentForAdm2(countryCode, adm2Name) {
-    if (!this.appState.geojson[countryCode] || !this.appState.geojson[countryCode][2]) {
-      return null
+    // Sync country
+    if (state.country && state.country !== this.currentState.country) {
+      this.currentState.country = state.country
+      this.dropdowns.country.syncValue(state.country, state.country)
+      this.filterAdm1ByCountry(state.country)
+      this.filterAdm2ByCountry(state.country)
+    } else if (!state.country) {
+      this.dropdowns.country.reset()
+      this.currentState.country = null
     }
 
-    const adm2Features = this.appState.geojson[countryCode][2].features
-    const adm2Feature = adm2Features.find(f => f.properties.shapeName === adm2Name)
-    return adm2Feature ? adm2Feature.properties.parentAdm : null
-  }
-
-  /**
-   * Get ADM2 parent for a given ADM3
-   */
-  getAdm2ParentForAdm3(countryCode, adm3Name) {
-    if (!this.appState.geojson[countryCode] || !this.appState.geojson[countryCode][3]) {
-      return null
+    // Sync ADM1
+    if (state.adm1 && state.adm1 !== this.currentState.adm1) {
+      this.currentState.adm1 = state.adm1
+      this.dropdowns.adm1.syncValue(state.adm1, state.adm1)
+      this.filterAdm2ByAdm1(state.adm1)
+    } else if (!state.adm1) {
+      this.dropdowns.adm1.reset()
+      this.currentState.adm1 = null
     }
 
-    const adm3Features = this.appState.geojson[countryCode][3].features
-    const adm3Feature = adm3Features.find(f => f.properties.shapeName === adm3Name)
-    return adm3Feature ? adm3Feature.properties.parentAdm : null
-  }
+    // Sync ADM2
+    if (state.adm2 && state.adm2 !== this.currentState.adm2) {
+      this.currentState.adm2 = state.adm2
+      this.dropdowns.adm2.syncValue(state.adm2, state.adm2)
 
-  /**
-   * Resize a dropdown to fit its content
-   */
-  resizeDropdown(dropdown) {
-    if (!dropdown) return
-
-    // Create temporary element to measure text width
-    const tempSelect = document.createElement('select')
-    tempSelect.style.position = 'absolute'
-    tempSelect.style.visibility = 'hidden'
-    tempSelect.style.fontSize = getComputedStyle(dropdown).fontSize
-    tempSelect.style.fontFamily = getComputedStyle(dropdown).fontFamily
-    tempSelect.style.padding = getComputedStyle(dropdown).padding
-    document.body.appendChild(tempSelect)
-
-    // Get the widest option text (or selected option)
-    let maxWidth = 0
-    const selectedOption = dropdown.options[dropdown.selectedIndex]
-    const textToMeasure = selectedOption ? selectedOption.text : dropdown.options[0]?.text || 'Country'
-
-    // Create option and measure
-    const tempOption = document.createElement('option')
-    tempOption.text = textToMeasure
-    tempSelect.appendChild(tempOption)
-
-    // Measure width and add padding for dropdown arrow
-    const measuredWidth = tempSelect.offsetWidth
-    maxWidth = Math.max(maxWidth, measuredWidth)
-
-    // Clean up
-    document.body.removeChild(tempSelect)
-
-    // Set width with padding for arrow (22px) plus some buffer
-    dropdown.style.width = `${maxWidth + 30}px`
-  }
-
-  /**
-   * Resize all dropdowns
-   */
-  resizeAllDropdowns() {
-    Object.values(this.dropdowns).forEach(dropdown => {
-      if (dropdown && dropdown.tagName === 'SELECT') {
-        this.resizeDropdown(dropdown)
+      // Enable ADM3 if Pakistan
+      if (this.currentState.country === 'PAK') {
+        this.filterAdm3ByAdm2(state.adm2)
+        this.dropdowns.adm3.enable()
       }
-    })
+    } else if (!state.adm2) {
+      this.dropdowns.adm2.reset()
+      this.currentState.adm2 = null
+      this.dropdowns.adm3.disable()
+    }
+
+    // Sync ADM3
+    if (state.adm3 && state.adm3 !== this.currentState.adm3) {
+      this.currentState.adm3 = state.adm3
+      this.dropdowns.adm3.syncValue(state.adm3, state.adm3)
+    } else if (!state.adm3) {
+      this.dropdowns.adm3.reset()
+      this.currentState.adm3 = null
+    }
+
+    // Handle reset to global
+    if (state.admLevel === 0) {
+      this.dropdowns.country.reset()
+      this.dropdowns.adm1.reset()
+      this.dropdowns.adm2.reset()
+      this.dropdowns.adm3.reset()
+      this.populateAllAdm1Options()
+      this.populateAllAdm2Options()
+      this.dropdowns.adm3.disable()
+    }
   }
 }

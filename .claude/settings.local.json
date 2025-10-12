@@ -7,7 +7,13 @@
       "Bash(npm run test:ci:12-context-aware-adm1-toggle:*)",
       "Bash(npx cypress run:*)",
       "Bash(npm run test:ci:13-hierarchical-dropdown-navigation:*)",
-      "Bash(curl -s http://127.0.0.1:8080)"
+      "Bash(curl -s http://127.0.0.1:8080)",
+      "Bash(npm run test:ci:14-custom-dropdown-styling:*)",
+      "Bash(pkill:*)",
+      "Bash(timeout 30 npx cypress run:*)",
+      "Bash(npm run test:ci:15-location-header:*)",
+      "Bash(npm run test:open:*)",
+      "Bash(timeout 20 npx cypress run --headless --spec \"cypress/e2e/16-dropdown-population-fix.cy.js\")"
     ],
     "deny": [],
     "ask": []
