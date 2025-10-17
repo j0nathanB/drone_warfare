@@ -15,7 +15,8 @@
       "Bash(npm run test:open:*)",
       "Bash(timeout 20 npx cypress run --headless --spec \"cypress/e2e/16-dropdown-population-fix.cy.js\")",
       "Bash(timeout 20 npx cypress run --headless --spec \"cypress/e2e/15-location-header.cy.js\")",
-      "Bash(curl -s http://127.0.0.1:8080/src/breadcrumbs.js)"
+      "Bash(curl -s http://127.0.0.1:8080/src/breadcrumbs.js)",
+      "Bash(timeout 20 npx cypress run:*)"
     ],
     "deny": [],
     "ask": []

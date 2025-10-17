@@ -18,6 +18,7 @@ const appState = {
   map: null,
   dataTable: null,
   previousTotals: {'strikeCount': 0, 'minTotal': 0, 'maxTotal': 0, 'minCivilians': 0, 'maxCivilians': 0, 'minChildren': 0, 'maxChildren': 0},
+  showZeroStrikes: false, // Filter state: false = hide zero strikes (default), true = show all
 };
 
 const geojsonHandler = new GeoJSONHandler();
@@ -28,6 +29,19 @@ const canGoDeeper = (admLevel, country) => {
     return true;
   }
   return admLevel <= 2;
+};
+
+// Filter features based on strike count
+const filterFeaturesByStrikes = (features) => {
+  if (appState.showZeroStrikes) {
+    // Show all features regardless of strike count
+    return features;
+  }
+  // Filter out features with zero strikes
+  return features.filter(feature => {
+    const strikeCount = feature.properties.strike_count || 0;
+    return strikeCount > 0;
+  });
 };
 
 // Function to update statistics display in the UI
@@ -142,10 +156,13 @@ function selectEntity(properties, aState) {
     if (appState.admLevel > 1) {
       featuresToDisplay = featuresToDisplay.filter(feature => feature.properties.parentAdm === appState.admName);
     }
-  
+
+    // Apply strike filter
+    featuresToDisplay = filterFeaturesByStrikes(featuresToDisplay);
+
     // Clear previously displayed features
     appState.map.geojson.clearLayers();
-  
+
     // Display the new features
     appState.map.displayFeatures(featuresToDisplay);
   } else {
@@ -156,7 +173,7 @@ function selectEntity(properties, aState) {
 
     const featureBounds = L.geoJSON(featuresToDisplay[0]).getBounds()
     appState.map.zoomToFeature(null, featureBounds);
-  }  
+  }
 
   // Update the table based on the new state
   appState.dataTable.loadTable(featuresToDisplay);
@@ -298,11 +315,52 @@ async function loadFunctionality() {
     timeline.processStrikeData();
 
     loadDroneWarfare();
+
+    // Setup filter empty strikes checkbox
+    setupFilterEmptyStrikesCheckbox();
+
     hideLoadingScreen();
   } catch (error) {
     console.error('Failed to load data:', error);
     updateLoadingIndicator('Failed to load data. Please refresh the page.');
   }
+}
+
+// Setup the filter empty strikes checkbox event listener
+function setupFilterEmptyStrikesCheckbox() {
+  const checkbox = document.getElementById('filter-empty-strikes');
+  if (!checkbox) {
+    console.warn('Filter empty strikes checkbox not found');
+    return;
+  }
+
+  checkbox.addEventListener('change', (event) => {
+    appState.showZeroStrikes = event.target.checked;
+
+    // Re-apply current view with new filter
+    if (appState.admLevel === 0) {
+      // At global level
+      loadDroneWarfare();
+    } else {
+      // At a specific administrative level - refresh current view
+      let featuresToDisplay = appState.geojson[appState.country][appState.admLevel].features;
+
+      // Apply parent filter if needed
+      if (appState.admLevel > 1) {
+        featuresToDisplay = featuresToDisplay.filter(feature =>
+          feature.properties.parentAdm === appState.admName
+        );
+      }
+
+      // Apply strike filter
+      featuresToDisplay = filterFeaturesByStrikes(featuresToDisplay);
+
+      // Update map and table
+      appState.map.geojson.clearLayers();
+      appState.map.displayFeatures(featuresToDisplay);
+      appState.dataTable.loadTable(featuresToDisplay);
+    }
+  });
 }
 
 function updateLoadingIndicator(message) {
