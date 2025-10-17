@@ -125,9 +125,9 @@ export class DroneWarfareMap {
       fillColor: getColor(maxTotal),
       weight: 2,
       opacity: 1,
-      color: 'red',
+      color: 'white',
       // dashArray: '3',
-      fillOpacity: 0.7
+      fillOpacity: 0
     }
   }
 
@@ -135,11 +135,11 @@ export class DroneWarfareMap {
     const layer = e.target;
     layer.setStyle({
         weight: 3,
-        color: 'blue',
+        color: 'white',
         dashArray: '',
-        fillOpacity: 0.7
+        fillOpacity: 0
     });
-  
+
     layer.bringToFront();
   }
   
@@ -148,9 +148,9 @@ export class DroneWarfareMap {
     later.setStyle({
       weight: 2,
       opacity: 1,
-      color: 'red',
+      color: 'white',
       // dashArray: '3',
-      fillOpacity: 0.7
+      fillOpacity: 0
     });
   }
 
@@ -581,29 +581,22 @@ export class DroneWarfareMap {
 
   getFeatureStyle(feature) {
     const props = feature.properties;
-    
+
     // Check if this is a country-level feature (has shapeISO)
     if (props.shapeISO) {
-      const countryColors = {
-        AFG: '#ef4444',
-        PAK: '#3b82f6', 
-        SOM: '#10b981',
-        YEM: '#f59e0b'
-      };
-      
       return {
-        fillColor: countryColors[props.shapeISO] || '#3b82f6',
-        fillOpacity: 0.3,
-        color: countryColors[props.shapeISO] || '#3b82f6',
+        fillColor: 'white',
+        fillOpacity: 0,
+        color: 'white',
         weight: 2,
         opacity: 0.8
       };
     } else {
       // Administrative subdivision (province, district, etc.)
       return {
-        fillColor: '#3b82f6',
-        fillOpacity: 0.2,
-        color: '#3b82f6',
+        fillColor: 'white',
+        fillOpacity: 0,
+        color: 'white',
         weight: 1,
         opacity: 0.6
       };
@@ -867,7 +860,7 @@ export class DroneWarfareMap {
 
     // Apply visibility by adjusting opacity
     if (shouldBeVisible) {
-      geoJsonLayer.setStyle({ opacity: 1, fillOpacity: 0.7 });
+      geoJsonLayer.setStyle({ opacity: 1, fillOpacity: 0 });
     } else {
       geoJsonLayer.setStyle({ opacity: 0, fillOpacity: 0 });
     }

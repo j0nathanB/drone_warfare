@@ -5,6 +5,14 @@ export class Breadcrumbs {
     this.appState = appState;
     this.selectEntity = selectEntity;
 
+    // Country code to name mapping
+    this.countryNames = {
+      'AFG': 'Afghanistan',
+      'PAK': 'Pakistan',
+      'SOM': 'Somalia',
+      'YEM': 'Yemen'
+    };
+
     // Initialize breadcrumbs display on page load
     this.updateBreadcrumbs(this.breadcrumbs);
 
@@ -24,13 +32,12 @@ export class Breadcrumbs {
     e.preventDefault();
 
     const clickedLevel = Number(e.target.getAttribute('data-level'));
-    this.breadcrumbs = this.breadcrumbs.slice(0, clickedLevel + 1);
 
     if (clickedLevel === 0) {
       this.appState.admLevel = 0;
-      this.selectEntity(null, this.appState)
       this.breadcrumbs = [];
       this.updateBreadcrumbs(this.breadcrumbs);
+      this.selectEntity(null, this.appState)
 
       // Sync dropdowns to global state
       if (this.appState.dropdownNavigation) {
@@ -47,20 +54,20 @@ export class Breadcrumbs {
     if (admLevelFeatures.length === 1) {
       this.appState.admLevel = clickedLevel - 1;
       targetFeature = admLevelFeatures[0];
+      // Clear breadcrumbs BEFORE calling selectEntity to prevent duplicates
+      this.breadcrumbs = [];
       this.selectEntity(admLevelFeatures[0].properties, this.appState);
     } else {
       targetFeature = admLevelFeatures.find(feature => feature.properties.shapeName === currentBreadcrumb.admName);
       this.appState.admLevel = clickedLevel - 1;
+      // Keep breadcrumbs up to clicked level minus 1 (parent level)
+      this.breadcrumbs = this.breadcrumbs.slice(0, clickedLevel - 1);
       this.selectEntity(targetFeature.properties, this.appState);
     }
 
     // Zoom to the feature
     const featureBounds = L.geoJSON(targetFeature).getBounds();
     this.appState.map.zoomToFeature(null, featureBounds);
-
-    // Update the breadcrumb display
-    this.breadcrumbs = this.breadcrumbs.slice(0, clickedLevel);
-    this.updateBreadcrumbs(this.breadcrumbs);
 
     // Sync dropdowns with new state
     if (this.appState.dropdownNavigation) {
@@ -106,7 +113,12 @@ export class Breadcrumbs {
         node.setAttribute('data-cy', `breadcrumb-level-${breadcrumb.admLevel}`);
       }
 
-      node.innerHTML = `<span>${breadcrumb.admName}</span>`;
+      // Display full country name for country-level breadcrumbs
+      const displayName = (breadcrumb.admLevel === 1 && this.countryNames[breadcrumb.admName])
+        ? this.countryNames[breadcrumb.admName]
+        : breadcrumb.admName;
+
+      node.innerHTML = `<span>${displayName}</span>`;
       node.addEventListener('click', this.handleBreadcrumbClick);
       breadcrumbContainer.appendChild(node);
     });
@@ -124,7 +136,14 @@ export class Breadcrumbs {
       locationHeader.textContent = 'Global';
     } else {
       // Build hierarchical location string
-      const locationPath = breadcrumbs.map(bc => bc.admName).join(' - ');
+      // Convert country codes to full names
+      const locationPath = breadcrumbs.map(bc => {
+        // If this is a country-level breadcrumb (admLevel 1), use country name instead of code
+        if (bc.admLevel === 1 && this.countryNames[bc.admName]) {
+          return this.countryNames[bc.admName];
+        }
+        return bc.admName;
+      }).join(' - ');
       locationHeader.textContent = locationPath;
     }
   }

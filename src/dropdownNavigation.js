@@ -458,18 +458,102 @@ export class DropdownNavigation {
   }
 
   /**
+   * Infer country code from ADM1 name by searching geojson data
+   */
+  inferCountryFromAdm1(adm1Name) {
+    if (!this.appState.geojson || !adm1Name) return null
+
+    for (const countryCode of Object.keys(this.appState.geojson)) {
+      const countryData = this.appState.geojson[countryCode]
+      if (countryData[1] && countryData[1].features) {
+        const found = countryData[1].features.find(f =>
+          f.properties.shapeName === adm1Name
+        )
+        if (found) return countryCode
+      }
+    }
+    return null
+  }
+
+  /**
+   * Infer country code from ADM2 name by searching geojson data
+   */
+  inferCountryFromAdm2(adm2Name) {
+    if (!this.appState.geojson || !adm2Name) return null
+
+    for (const countryCode of Object.keys(this.appState.geojson)) {
+      const countryData = this.appState.geojson[countryCode]
+      if (countryData[2] && countryData[2].features) {
+        const found = countryData[2].features.find(f =>
+          f.properties.shapeName === adm2Name
+        )
+        if (found) return countryCode
+      }
+    }
+    return null
+  }
+
+  /**
+   * Infer country code from ADM3 name by searching geojson data
+   */
+  inferCountryFromAdm3(adm3Name) {
+    if (!this.appState.geojson || !adm3Name) return null
+
+    // ADM3 only exists in Pakistan
+    const pakistanData = this.appState.geojson.PAK
+    if (pakistanData && pakistanData[3] && pakistanData[3].features) {
+      const found = pakistanData[3].features.find(f =>
+        f.properties.shapeName === adm3Name
+      )
+      if (found) return 'PAK'
+    }
+    return null
+  }
+
+  /**
+   * Get country name from country code
+   */
+  getCountryName(countryCode) {
+    const countryNames = {
+      'AFG': 'Afghanistan',
+      'PAK': 'Pakistan',
+      'SOM': 'Somalia',
+      'YEM': 'Yemen'
+    }
+    return countryNames[countryCode] || countryCode
+  }
+
+  /**
    * Sync dropdowns with current app state (called by breadcrumb navigation)
    */
   syncWithAppState() {
     const state = this.appState
 
-    // Sync country
-    if (state.country && state.country !== this.currentState.country) {
-      this.currentState.country = state.country
-      this.dropdowns.country.syncValue(state.country, state.country)
-      this.filterAdm1ByCountry(state.country)
-      this.filterAdm2ByCountry(state.country)
-    } else if (!state.country) {
+    // ENHANCEMENT: Infer country if not set but ADM1/ADM2/ADM3 is present
+    let inferredCountry = state.country
+
+    if (!inferredCountry && state.adm3) {
+      inferredCountry = this.inferCountryFromAdm3(state.adm3)
+    }
+    if (!inferredCountry && state.adm2) {
+      inferredCountry = this.inferCountryFromAdm2(state.adm2)
+    }
+    if (!inferredCountry && state.adm1) {
+      inferredCountry = this.inferCountryFromAdm1(state.adm1)
+    }
+
+    // Sync country (using inferred country if necessary)
+    if (inferredCountry) {
+      // Always update if we have an inferred country
+      if (inferredCountry !== this.currentState.country) {
+        this.currentState.country = inferredCountry
+        this.filterAdm1ByCountry(inferredCountry)
+        this.filterAdm2ByCountry(inferredCountry)
+      }
+      // Update dropdown display even if currentState already matches
+      const countryName = this.getCountryName(inferredCountry)
+      this.dropdowns.country.syncValue(inferredCountry, countryName)
+    } else if (!inferredCountry && !state.country) {
       this.dropdowns.country.reset()
       this.currentState.country = null
     }

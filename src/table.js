@@ -38,7 +38,6 @@ export class DataTable {
       <td>${values.shapeName}</td>
       <td>${values.strike_count}</td>
       <td>${values.max_total}</td>
-      <td>${Math.max(0, values.max_total - values.max_civilians - values.max_children)}</td>
       <td>${values.max_civilians}</td>
       <td>${values.max_children}</td>
     `;
@@ -165,7 +164,6 @@ export class DataTable {
           <td>Unclear</td>
           <td>${unclearRow.strikeCount}</td>
           <td>${unclearRow.maxTotal}</td>
-          <td>${unclearRow.maxTotal - unclearRow.maxCivilians - unclearRow.maxChildren}</td>
           <td>${unclearRow.maxCivilians}</td>
           <td>${unclearRow.maxChildren}</td>
         </tr>

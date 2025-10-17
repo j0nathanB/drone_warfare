@@ -111,8 +111,10 @@ function selectEntity(properties, aState) {
     appState.admLevel = appState.admLevel + 1;
     appState.country = countrySelected;
   } else {
+    // Switching to a different country - clear breadcrumbs to prevent showing "Country1 - Country2"
     appState.admLevel = 1;
     appState.country = countrySelected;
+    appState.breadcrumbs.breadcrumbs = [];
   }
 
   // Calculate statistics - all levels use the same data structure

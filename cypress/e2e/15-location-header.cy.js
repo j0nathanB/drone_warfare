@@ -252,12 +252,69 @@ describe('Current Location Header', () => {
       cy.get('[data-cy="data-table-body"]').find('tr').first().click()
       cy.wait(500)
 
-      const provinceName = Cypress.$('[data-cy="breadcrumbs"] .breadcrumb-node').last().text().trim()
+      // Get the province name from breadcrumbs AFTER navigation completes
+      cy.get('[data-cy="breadcrumbs"] .breadcrumb-node').last().invoke('text').then(provinceName => {
+        const cleanProvinceName = provinceName.trim()
 
-      // Location header should be "Afghanistan - [Province]"
+        // Location header should be "Afghanistan - [Province]"
+        cy.get('[data-cy="location-header"]').then($header => {
+          const text = $header.text()
+          expect(text).to.equal(`Afghanistan - ${cleanProvinceName}`)
+        })
+      })
+    })
+
+    it('should NOT show "Country1 - Country2" when switching countries via breadcrumbs', () => {
+      // Navigate to Afghanistan first
+      cy.navigateToCountry('Afghanistan')
+      cy.wait(500)
+      cy.get('[data-cy="location-header"]').should('contain', 'Afghanistan')
+      cy.get('[data-cy="location-header"]').should('not.contain', '-')
+
+      // Navigate back to global
+      cy.get('[data-cy="breadcrumb-global"]').first().click()
+      cy.wait(500)
+      cy.get('[data-cy="location-header"]').should('contain', 'Global')
+
+      // Navigate to Pakistan
+      cy.navigateToCountry('Pakistan')
+      cy.wait(500)
+
+      // Should show ONLY "Pakistan", NOT "Afghanistan - Pakistan"
       cy.get('[data-cy="location-header"]').then($header => {
         const text = $header.text()
-        expect(text).to.equal(`Afghanistan - ${provinceName}`)
+        expect(text).to.equal('Pakistan')
+        expect(text).to.not.contain('Afghanistan')
+      })
+    })
+
+    it('should correctly update when switching countries via breadcrumb click', () => {
+      // Navigate to Afghanistan and drill down to ADM1
+      cy.navigateToCountry('Afghanistan')
+      cy.wait(500)
+      cy.get('[data-cy="data-table-body"]').find('tr').first().click()
+      cy.wait(500)
+
+      // Location header should show "Afghanistan - [Province]"
+      cy.get('[data-cy="location-header"]').then($header => {
+        const text = $header.text()
+        expect(text).to.include('Afghanistan')
+        expect(text).to.include('-')
+      })
+
+      // Navigate back to Global by clicking the header breadcrumb, then back to Afghanistan
+      cy.get('[data-cy="breadcrumb-global"]').first().click()
+      cy.wait(500)
+      cy.get('[data-cy="location-header"]').should('contain', 'Global')
+
+      cy.navigateToCountry('Afghanistan')
+      cy.wait(500)
+
+      // Should show ONLY "Afghanistan", not duplicate countries
+      cy.get('[data-cy="location-header"]').then($header => {
+        const text = $header.text()
+        expect(text).to.equal('Afghanistan')
+        expect(text).to.not.match(/Afghanistan.*Afghanistan/)
       })
     })
   })
