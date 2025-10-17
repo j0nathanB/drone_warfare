@@ -542,7 +542,7 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 200px;
+  min-width: 220px;
   background: rgba(15, 15, 15, 0.95);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -689,7 +689,7 @@ body {
   cursor: not-allowed !important;
 }
 
-/* View Mode Buttons (now toggle buttons) */
+/* Legacy standalone view mode buttons (no longer used) */
 .view-mode-btn {
   padding: 8px 16px;
   background: rgba(255, 255, 255, 0.1);

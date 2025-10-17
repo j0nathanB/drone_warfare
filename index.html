@@ -31,17 +31,28 @@
             <div class="view-modes">
                 <div class="data-layers-dropdown">
                     <button class="data-layers-btn" data-cy="data-layers-btn">
-                        Layers
+                        Data Visualization
                         <span class="dropdown-caret">▼</span>
                     </button>
                     <div class="data-layers-content" data-cy="data-layers-content">
-                        <div class="layer-toggle">
-                            <input type="checkbox" id="header-heatmap" checked>
-                            <label for="header-heatmap">Heat map</label>
-                        </div>
-                        <div class="layer-toggle">
-                            <input type="checkbox" id="header-bubblemap">
-                            <label for="header-bubblemap">Bubble map</label>
+                        <div class="layer-section">
+                            <div class="layer-section-header">Views</div>
+                            <div class="layer-toggle">
+                                <input type="checkbox" id="header-heatmap" checked>
+                                <label for="header-heatmap">Heat map</label>
+                            </div>
+                            <div class="layer-toggle">
+                                <input type="checkbox" id="header-bubblemap">
+                                <label for="header-bubblemap">Bubble map</label>
+                            </div>
+                            <div class="layer-toggle">
+                                <input type="checkbox" id="header-timeline" data-cy="timeline-view-btn" data-mode="timeline">
+                                <label for="header-timeline">Timeline</label>
+                            </div>
+                            <div class="layer-toggle">
+                                <input type="checkbox" id="header-compare" data-cy="compare-view-btn" data-mode="compare">
+                                <label for="header-compare">Compare</label>
+                            </div>
                         </div>
                         <div class="layer-section">
                             <div class="layer-section-header">Boundaries</div>
@@ -64,8 +75,6 @@
                         </div>
                     </div>
                 </div>
-                <button class="view-mode-btn toggle-btn" data-cy="timeline-view-btn" data-mode="timeline">Timeline</button>
-                <button class="view-mode-btn toggle-btn" data-cy="compare-view-btn" data-mode="compare">Compare</button>
             </div>
         </header>
 

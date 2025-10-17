@@ -31,16 +31,20 @@ export class HeaderControls {
       })
     }
 
-    // Timeline toggle button
-    const timelineBtn = document.querySelector('[data-cy="timeline-view-btn"]')
-    if (timelineBtn) {
-      timelineBtn.addEventListener('click', this.toggleTimeline.bind(this))
+    // Timeline toggle checkbox
+    const timelineCheckbox = document.querySelector('[data-cy="timeline-view-btn"]')
+    if (timelineCheckbox) {
+      timelineCheckbox.addEventListener('change', () => {
+        this.toggleTimeline()
+      })
     }
 
-    // Compare toggle button
-    const compareBtn = document.querySelector('[data-cy="compare-view-btn"]')
-    if (compareBtn) {
-      compareBtn.addEventListener('click', this.toggleCompare.bind(this))
+    // Compare toggle checkbox
+    const compareCheckbox = document.querySelector('[data-cy="compare-view-btn"]')
+    if (compareCheckbox) {
+      compareCheckbox.addEventListener('change', () => {
+        this.toggleCompare()
+      })
     }
 
     // Header layer checkbox events (sync with map layer controls)
@@ -124,43 +128,37 @@ export class HeaderControls {
   }
 
   toggleTimeline() {
-    this.timelineActive = !this.timelineActive
-    const timelineBtn = document.querySelector('[data-cy="timeline-view-btn"]')
-    
-    if (timelineBtn) {
-      if (this.timelineActive) {
-        timelineBtn.classList.add('active')
-      } else {
-        timelineBtn.classList.remove('active')
-      }
+    const timelineCheckbox = document.querySelector('[data-cy="timeline-view-btn"]')
+
+    if (timelineCheckbox) {
+      this.timelineActive = timelineCheckbox.checked
+    } else {
+      this.timelineActive = !this.timelineActive
     }
 
     // Dispatch custom event for timeline functionality
     document.dispatchEvent(new CustomEvent('timelineToggled', {
-      detail: { 
+      detail: {
         isActive: this.timelineActive,
-        shouldShow: this.timelineActive 
+        shouldShow: this.timelineActive
       }
     }))
   }
 
   toggleCompare() {
-    this.compareActive = !this.compareActive
-    const compareBtn = document.querySelector('[data-cy="compare-view-btn"]')
-    
-    if (compareBtn) {
-      if (this.compareActive) {
-        compareBtn.classList.add('active')
-      } else {
-        compareBtn.classList.remove('active')
-      }
+    const compareCheckbox = document.querySelector('[data-cy="compare-view-btn"]')
+
+    if (compareCheckbox) {
+      this.compareActive = compareCheckbox.checked
+    } else {
+      this.compareActive = !this.compareActive
     }
 
     // Dispatch custom event for compare functionality
     document.dispatchEvent(new CustomEvent('compareToggled', {
-      detail: { 
+      detail: {
         isActive: this.compareActive,
-        shouldShow: this.compareActive 
+        shouldShow: this.compareActive
       }
     }))
   }
