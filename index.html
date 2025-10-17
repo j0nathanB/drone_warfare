@@ -13,19 +13,13 @@
         <header class="header">
             <h1>Drone Strike Analysis 2004-2020</h1>
 
-            <!-- Breadcrumb/Dropdown Navigation -->
-            <div class="header-breadcrumb-nav" data-cy="header-breadcrumb-nav">
-                <div class="breadcrumb-node" data-cy="breadcrumb-global" data-level="0">
-                    <span>Global</span>
+            <!-- Visual Breadcrumbs (moved from sidebar) -->
+            <div class="visual-breadcrumbs" data-cy="breadcrumbs">
+                <div class="breadcrumb-path">
+                    <div class="breadcrumb-node" data-cy="breadcrumb-sidebar-global" data-level="world">
+                        <span>Global</span>
+                    </div>
                 </div>
-                <span class="breadcrumb-separator">-</span>
-                <div id="nav-dropdown-country-wrapper"></div>
-                <span class="breadcrumb-separator">-</span>
-                <div id="nav-dropdown-adm1-wrapper"></div>
-                <span class="breadcrumb-separator">-</span>
-                <div id="nav-dropdown-adm2-wrapper"></div>
-                <span class="breadcrumb-separator">-</span>
-                <div id="nav-dropdown-adm3-wrapper"></div>
             </div>
 
             <div class="view-modes">
@@ -91,15 +85,6 @@
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="2"/>
                 </svg>
-            </div>
-
-            <!-- Visual Breadcrumbs (kept for backwards compatibility with sidebar breadcrumbs.js) -->
-            <div class="visual-breadcrumbs" data-cy="breadcrumbs" style="display: none;">
-                <div class="breadcrumb-path">
-                    <div class="breadcrumb-node" data-cy="breadcrumb-sidebar-global" data-level="world">
-                        <span>Global</span>
-                    </div>
-                </div>
             </div>
 
             <!-- Info Panel -->

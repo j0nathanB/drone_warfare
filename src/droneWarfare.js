@@ -7,7 +7,7 @@ import { HeaderControls } from './headerControls.js';
 import { Timeline } from './timeline.js';
 import { StrikeVisualization } from './strikeVisualization.js';
 import { ViewModeSystem } from './viewModeSystem.js';
-import { DropdownNavigation } from './dropdownNavigation.js';
+// import { DropdownNavigation } from './dropdownNavigation.js'; // Disabled - using breadcrumbs in header instead
 
 // Initialize the state object
 const appState = {
@@ -307,8 +307,9 @@ async function loadFunctionality() {
     appState.geojson = await geojsonHandler.getData();
 
     // Initialize dropdown navigation AFTER data is loaded
-    const dropdownNavigation = new DropdownNavigation(appState, selectEntity, breadcrumbs);
-    appState.dropdownNavigation = dropdownNavigation;
+    // DISABLED: Using breadcrumbs in header instead of custom dropdowns
+    // const dropdownNavigation = new DropdownNavigation(appState, selectEntity, breadcrumbs);
+    // appState.dropdownNavigation = dropdownNavigation;
 
     // Process strike data for new modules
     strikeVisualization.processStrikeData();

@@ -17,7 +17,7 @@ export class Breadcrumbs {
     this.updateBreadcrumbs(this.breadcrumbs);
 
     // Wire up header breadcrumb Global click handler
-    const headerGlobalBreadcrumb = document.querySelector('.header-breadcrumb-nav .breadcrumb-node');
+    const headerGlobalBreadcrumb = document.querySelector('.visual-breadcrumbs .breadcrumb-node');
     if (headerGlobalBreadcrumb) {
       headerGlobalBreadcrumb.addEventListener('click', this.handleBreadcrumbClick.bind(this));
     }
