@@ -130,11 +130,21 @@
                     <table style="width: 100%; border-collapse: collapse;">
                         <thead>
                             <tr style="background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8);">
-                                <th style="padding: 8px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.2);">Region</th>
-                                <th style="padding: 8px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.2);">Strikes</th>
-                                <th style="padding: 8px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.2);">Total</th>
-                                <th style="padding: 8px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.2);">Civilians</th>
-                                <th style="padding: 8px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.2);">Children</th>
+                                <th class="sortable-header" data-sortable="true" data-column="region" aria-label="Sort by Region" style="padding: 8px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.2); cursor: pointer; user-select: none;">
+                                    Region <span class="sort-indicator"></span>
+                                </th>
+                                <th class="sortable-header" data-sortable="true" data-column="strikes" aria-label="Sort by Strikes" style="padding: 8px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.2); cursor: pointer; user-select: none;">
+                                    Strikes <span class="sort-indicator"></span>
+                                </th>
+                                <th class="sortable-header" data-sortable="true" data-column="total" aria-label="Sort by Total Killed" style="padding: 8px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.2); cursor: pointer; user-select: none;">
+                                    Total <span class="sort-indicator"></span>
+                                </th>
+                                <th class="sortable-header" data-sortable="true" data-column="civilians" aria-label="Sort by Civilians Killed" style="padding: 8px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.2); cursor: pointer; user-select: none;">
+                                    Civilians <span class="sort-indicator"></span>
+                                </th>
+                                <th class="sortable-header" data-sortable="true" data-column="children" aria-label="Sort by Children Killed" style="padding: 8px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.2); cursor: pointer; user-select: none;">
+                                    Children <span class="sort-indicator"></span>
+                                </th>
                             </tr>
                         </thead>
                         <tbody id="data_table_body" data-cy="data-table-body">

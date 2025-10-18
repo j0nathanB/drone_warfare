@@ -4,6 +4,178 @@ export class DataTable {
     this.tableBody = document.getElementById('data_table_body');
     this.appState = appState;
     this.selectEntityCallback = selectEntityCallback;
+    this.currentSortColumn = null;
+    this.currentSortDirection = null;
+    this.tableData = [];
+    this.sortingInitialized = false;
+  }
+
+  initializeSorting() {
+    if (this.sortingInitialized) return; // Don't re-initialize
+
+    // Add click handlers to all sortable headers
+    const headers = document.querySelectorAll('#region-list .sortable-header');
+    headers.forEach(header => {
+      header.addEventListener('click', () => {
+        const column = header.dataset.column;
+        this.handleSort(column, header);
+      });
+    });
+
+    this.sortingInitialized = true;
+  }
+
+  handleSort(column, headerElement) {
+    // Determine sort direction
+    if (this.currentSortColumn === column) {
+      // Toggle direction if same column
+      this.currentSortDirection = this.currentSortDirection === 'asc' ? 'desc' : 'asc';
+    } else {
+      // New column, default to ascending
+      this.currentSortColumn = column;
+      this.currentSortDirection = 'asc';
+    }
+
+    // Update UI indicators
+    this.updateSortIndicators(column, this.currentSortDirection);
+
+    // Sort and re-render table
+    this.sortTableData(column, this.currentSortDirection);
+    this.renderSortedTable();
+  }
+
+  updateSortIndicators(activeColumn, direction) {
+    // Remove active state from all headers
+    const allHeaders = document.querySelectorAll('.sortable-header');
+    allHeaders.forEach(header => {
+      header.removeAttribute('data-sort-direction');
+      header.removeAttribute('aria-sort');
+      header.classList.remove('active');
+      // Clear sort indicator
+      const indicator = header.querySelector('.sort-indicator');
+      if (indicator) {
+        indicator.textContent = '';
+      }
+    });
+
+    // Add active state to current header
+    const activeHeader = document.querySelector(`.sortable-header[data-column="${activeColumn}"]`);
+    if (activeHeader) {
+      activeHeader.setAttribute('data-sort-direction', direction);
+      activeHeader.setAttribute('aria-sort', direction === 'asc' ? 'ascending' : 'descending');
+      activeHeader.classList.add('active');
+
+      // Set sort indicator text
+      const indicator = activeHeader.querySelector('.sort-indicator');
+      if (indicator) {
+        indicator.textContent = direction === 'asc' ? '▲' : '▼';
+      }
+    }
+  }
+
+  sortTableData(column, direction) {
+    // Separate "Unclear" row if it exists
+    const unclearIndex = this.tableData.findIndex(item =>
+      item.isUnclear || (item.properties && item.properties.shapeName === 'Unclear')
+    );
+
+    let unclearRow = null;
+    if (unclearIndex !== -1) {
+      unclearRow = this.tableData.splice(unclearIndex, 1)[0];
+    }
+
+    // Sort the data
+    this.tableData.sort((a, b) => {
+      const aValues = this.appState.admLevel === 0
+        ? this.getValuesForAdmLevel0(a)
+        : this.getValuesForOtherAdmLevels(a);
+
+      const bValues = this.appState.admLevel === 0
+        ? this.getValuesForAdmLevel0(b)
+        : this.getValuesForOtherAdmLevels(b);
+
+      let aValue, bValue;
+
+      switch (column) {
+        case 'region':
+          aValue = aValues.shapeName;
+          bValue = bValues.shapeName;
+          // Text sorting
+          return direction === 'asc'
+            ? aValue.localeCompare(bValue)
+            : bValue.localeCompare(aValue);
+
+        case 'strikes':
+          aValue = aValues.strike_count;
+          bValue = bValues.strike_count;
+          break;
+
+        case 'total':
+          aValue = aValues.max_total;
+          bValue = bValues.max_total;
+          break;
+
+        case 'civilians':
+          aValue = aValues.max_civilians;
+          bValue = bValues.max_civilians;
+          break;
+
+        case 'children':
+          aValue = aValues.max_children;
+          bValue = bValues.max_children;
+          break;
+
+        default:
+          return 0;
+      }
+
+      // Numeric sorting
+      return direction === 'asc' ? aValue - bValue : bValue - aValue;
+    });
+
+    // Re-add "Unclear" row at the end
+    if (unclearRow) {
+      this.tableData.push(unclearRow);
+    }
+  }
+
+  renderSortedTable() {
+    // Clear table
+    while (this.tableBody.firstChild) {
+      this.tableBody.removeChild(this.tableBody.firstChild);
+    }
+
+    // Render sorted data
+    this.tableData.forEach(item => {
+      if (item.isUnclear) {
+        // Render unclear row
+        const unclearRowHtml = `
+          <td>Unclear</td>
+          <td>${item.strikeCount}</td>
+          <td>${item.maxTotal}</td>
+          <td>${item.maxCivilians}</td>
+          <td>${item.maxChildren}</td>
+        `;
+        const tableRow = document.createElement('tr');
+        tableRow.innerHTML = unclearRowHtml;
+        this.tableBody.appendChild(tableRow);
+      } else {
+        // Render regular row
+        const tableRow = document.createElement('tr');
+        tableRow.innerHTML = this.createTableRowContent(item, this.appState.admLevel);
+        this.tableBody.appendChild(tableRow);
+
+        const featureBounds = L.geoJSON(item).getBounds();
+        tableRow.addEventListener('click', () => {
+          if ('features' in item) {
+            this.selectEntityCallback(item.features[0].properties, this.appState);
+          } else {
+            this.selectEntityCallback(item.properties, this.appState);
+          }
+          this.appState.map.zoomToFeature(null, featureBounds);
+        });
+      }
+    });
   }
 
   getValuesForAdmLevel0(data) {
@@ -71,6 +243,8 @@ export class DataTable {
       if (regionCards) regionCards.style.display = 'none';
       if (regionList) regionList.style.display = 'block';
       this.loadTableRows(data);
+      // Initialize sorting after table is visible
+      this.initializeSorting();
     }
   }
 
@@ -131,6 +305,9 @@ export class DataTable {
   }
 
   loadTableRows(data = []) {
+    // Store the data for sorting
+    this.tableData = [...data];
+
     // Clear the table before loading new data
     while (this.tableBody.firstChild) {
       this.tableBody.removeChild(this.tableBody.firstChild);
@@ -159,6 +336,16 @@ export class DataTable {
 
     // Only add the unclear row if not at global level (admLevel > 0)
     if (this.appState.admLevel > 0) {
+      // Add unclear row to tableData for sorting
+      const unclearRowData = {
+        isUnclear: true,
+        strikeCount: unclearRow.strikeCount,
+        maxTotal: unclearRow.maxTotal,
+        maxCivilians: unclearRow.maxCivilians,
+        maxChildren: unclearRow.maxChildren
+      };
+      this.tableData.push(unclearRowData);
+
       const unclearRowHtml = `
         <tr>
           <td>Unclear</td>
@@ -172,6 +359,13 @@ export class DataTable {
       tableRowUnclear.innerHTML = unclearRowHtml;
       // Append the unclear row to the table
       this.tableBody.appendChild(tableRowUnclear);
+    }
+
+    // Apply current sort if one is active
+    if (this.currentSortColumn && this.currentSortDirection) {
+      this.sortTableData(this.currentSortColumn, this.currentSortDirection);
+      this.renderSortedTable();
+      this.updateSortIndicators(this.currentSortColumn, this.currentSortDirection);
     }
   }
 }
