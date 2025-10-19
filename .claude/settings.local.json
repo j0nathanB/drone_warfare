@@ -17,7 +17,9 @@
       "Bash(timeout 20 npx cypress run --headless --spec \"cypress/e2e/15-location-header.cy.js\")",
       "Bash(curl -s http://127.0.0.1:8080/src/breadcrumbs.js)",
       "Bash(timeout 20 npx cypress run:*)",
-      "Bash(timeout 45 npx cypress run:*)"
+      "Bash(timeout 45 npx cypress run:*)",
+      "Bash(cat:*)",
+      "Bash(timeout 60 npx cypress run:*)"
     ],
     "deny": [],
     "ask": []

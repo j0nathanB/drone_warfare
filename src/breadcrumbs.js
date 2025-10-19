@@ -47,23 +47,66 @@ export class Breadcrumbs {
     }
 
     const currentBreadcrumb = this.breadcrumbs[clickedLevel - 1];
-    const admLevelFeatures = this.appState.geojson[currentBreadcrumb.country][clickedLevel - 1].features;
+
+    console.log('[Breadcrumb Click]', {
+      clickedLevel,
+      currentBreadcrumb,
+      currentAppState: {
+        admLevel: this.appState.admLevel,
+        country: this.appState.country,
+        admName: this.appState.admName
+      }
+    });
+
+    // clickedLevel is the breadcrumb admLevel (1 = country, 2 = province, etc.)
+    // geojson array: geojson[country][0] = country level, [1] = province level, etc.
+    // So we need to use clickedLevel - 1 to access geojson
+    const geojsonIndex = clickedLevel - 1;
+    const admLevelFeatures = this.appState.geojson[currentBreadcrumb.country][geojsonIndex].features;
 
     let targetFeature = null;
-    // If there is only one feature, it is at the country level, so select it
-    if (admLevelFeatures.length === 1) {
-      this.appState.admLevel = clickedLevel - 1;
-      targetFeature = admLevelFeatures[0];
+
+    // Special case for country-level breadcrumb (admLevel 1)
+    if (clickedLevel === 1) {
+      console.log('[Breadcrumb Click] Country-level click detected (clickedLevel === 1)');
+      targetFeature = admLevelFeatures[0]; // Country level has only 1 feature
+      // Set admLevel to 0 (parent of country) because selectEntity will increment to 1
+      this.appState.admLevel = 0;
       // Clear breadcrumbs BEFORE calling selectEntity to prevent duplicates
       this.breadcrumbs = [];
-      this.selectEntity(admLevelFeatures[0].properties, this.appState);
+      console.log('[Breadcrumb Click] Before selectEntity:',{
+        admLevel: this.appState.admLevel,
+        country: this.appState.country,
+        featureName: targetFeature.properties.shapeName
+      });
+      this.selectEntity(targetFeature.properties, this.appState);
     } else {
+      console.log('[Breadcrumb Click] Sub-national level click detected');
+      // For sub-national levels, find the specific feature by name
       targetFeature = admLevelFeatures.find(feature => feature.properties.shapeName === currentBreadcrumb.admName);
+
+      // Set appState to parent level because selectEntity will increment by 1
+      // We want to navigate TO clickedLevel, so set to clickedLevel - 1
       this.appState.admLevel = clickedLevel - 1;
-      // Keep breadcrumbs up to clicked level minus 1 (parent level)
+
+      // Remove breadcrumbs AFTER the clicked level
+      // Keep breadcrumbs up to (but not including) the clicked level
+      // selectEntity will re-add the clicked breadcrumb
       this.breadcrumbs = this.breadcrumbs.slice(0, clickedLevel - 1);
+
+      console.log('[Breadcrumb Click] Before selectEntity:', {
+        admLevel: this.appState.admLevel,
+        country: this.appState.country,
+        featureName: targetFeature?.properties.shapeName
+      });
       this.selectEntity(targetFeature.properties, this.appState);
     }
+
+    console.log('[Breadcrumb Click] After selectEntity:', {
+      admLevel: this.appState.admLevel,
+      country: this.appState.country,
+      admName: this.appState.admName
+    });
 
     // Zoom to the feature
     const featureBounds = L.geoJSON(targetFeature).getBounds();

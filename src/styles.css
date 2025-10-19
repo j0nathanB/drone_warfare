@@ -634,7 +634,7 @@ body {
 
 /* Sidebar Styles */
 .sidebar {
-  width: 400px;
+  width: 505px;
   background: rgba(15, 15, 15, 0.95);
   backdrop-filter: blur(20px);
   border-right: 1px solid rgba(255, 255, 255, 0.1);
@@ -648,7 +648,7 @@ body {
 }
 
 .sidebar.collapsed {
-  transform: translateX(-400px);
+  transform: translateX(-480px);
 }
 
 .sidebar-toggle {
@@ -892,7 +892,7 @@ body {
 
 .country-stat-value {
   display: block;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   color: #ffffff;
 }

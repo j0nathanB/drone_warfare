@@ -718,46 +718,53 @@ export class DroneWarfareMap {
     return this.map;
   }
 
-  // Heat map visualization
+  // Heat map visualization - shades boundary polygons based on strike intensity
   displayHeatmap() {
     this.layers.heatmap.clearLayers();
 
     const currentFeatures = this.getCurrentDisplayedFeatures();
 
+    // Calculate max strikes for intensity normalization
+    const maxStrikes = Math.max(...currentFeatures.map(f => f.properties.strike_count || 0));
+
     currentFeatures.forEach(feature => {
       if (feature.properties && feature.properties.strike_count > 0) {
-        const centroid = this.getFeatureCentroid(feature);
-        if (centroid) {
-          const strikeCount = feature.properties.strike_count || 0;
+        const strikeCount = feature.properties.strike_count || 0;
 
-          // Calculate heat intensity based on strike count
-          const maxStrikes = Math.max(...currentFeatures.map(f => f.properties.strike_count || 0));
-          const intensity = strikeCount / maxStrikes;
+        // Calculate heat intensity based on strike count
+        const intensity = strikeCount / maxStrikes;
 
-          // Create a circle with color based on intensity
-          const radius = Math.sqrt(strikeCount) * 8000;
-          const heatColor = this.getHeatColor(intensity);
+        // Get heat color based on intensity
+        const heatColor = this.getHeatColor(intensity);
 
-          const circle = L.circle(centroid, {
-            radius: radius,
+        // Create polygon from feature geometry (not a circle!)
+        // Use L.geoJSON to convert GeoJSON to Leaflet layers
+        const geoJsonLayer = L.geoJSON(feature, {
+          style: {
             fillColor: heatColor,
-            fillOpacity: 0.5 + (intensity * 0.3),
-            color: heatColor,
-            weight: 1,
+            fillOpacity: 0.4 + (intensity * 0.3), // Semi-transparent, more opaque for higher intensity
+            color: heatColor, // Border color matches fill
+            weight: 2, // Visible border for region separation
             opacity: 0.8
-          });
+          }
+        });
 
-          circle.bindPopup(`
-            <div style="font-family: Arial, sans-serif;">
-              <strong>Strike Intensity</strong><br>
-              <strong>Region:</strong> ${feature.properties.shapeName || feature.properties.shapeISO || 'Unknown'}<br>
-              <strong>Total Strikes:</strong> ${strikeCount}<br>
-              <strong>Intensity:</strong> ${(intensity * 100).toFixed(1)}%
-            </div>
-          `);
+        // Bind popup with strike information to each layer
+        geoJsonLayer.bindPopup(`
+          <div style="font-family: Arial, sans-serif;">
+            <strong>Strike Intensity Heatmap</strong><br>
+            <strong>Region:</strong> ${feature.properties.shapeName || feature.properties.shapeISO || 'Unknown'}<br>
+            <strong>Total Strikes:</strong> ${strikeCount}<br>
+            <strong>Intensity:</strong> ${(intensity * 100).toFixed(1)}%
+          </div>
+        `);
 
-          this.layers.heatmap.addLayer(circle);
-        }
+        // Store reference to original feature for later access
+        // L.geoJSON creates a FeatureGroup/LayerGroup, so we need to add each sub-layer
+        geoJsonLayer.eachLayer(layer => {
+          layer.feature = feature; // Store feature reference
+          this.layers.heatmap.addLayer(layer); // Add individual polygon layer
+        });
       }
     });
   }

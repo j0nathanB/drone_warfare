@@ -181,12 +181,15 @@ export class DataTable {
   getValuesForAdmLevel0(data) {
     // Handle both FeatureCollection and individual feature formats
     const properties = data.features ? data.features[0].properties : data.properties;
-    
+
     return {
       shapeName: properties.shapeISO || properties.shapeName,
       strike_count: properties.strike_count,
+      min_total: Array.isArray(properties.min_total) ? properties.min_total.reduce((a, b) => (a + b), 0) : (properties.min_total || 0),
       max_total: Array.isArray(properties.max_total) ? properties.max_total.reduce((a, b) => (a + b), 0) : (properties.max_total || 0),
+      min_civilians: Array.isArray(properties.min_civilians) ? properties.min_civilians.reduce((a, b) => (a + b), 0) : (properties.min_civilians || 0),
       max_civilians: Array.isArray(properties.max_civilians) ? properties.max_civilians.reduce((a, b) => (a + b), 0) : (properties.max_civilians || 0),
+      min_children: Array.isArray(properties.min_children) ? properties.min_children.reduce((a, b) => (a + b), 0) : (properties.min_children || 0),
       max_children: Array.isArray(properties.max_children) ? properties.max_children.reduce((a, b) => (a + b), 0) : (properties.max_children || 0)
     };
   }
@@ -277,15 +280,15 @@ export class DataTable {
         <div class="country-card-stats">
           <div class="country-stat">
             <span class="country-stat-label">Total Killed</span>
-            <span class="country-stat-value">${values.max_total.toLocaleString()}</span>
+            <span class="country-stat-value">${values.min_total === values.max_total ? values.max_total.toLocaleString() : `${values.min_total.toLocaleString()} to ${values.max_total.toLocaleString()}`}</span>
           </div>
           <div class="country-stat">
             <span class="country-stat-label">Civilians</span>
-            <span class="country-stat-value">${values.max_civilians.toLocaleString()}</span>
+            <span class="country-stat-value">${values.min_civilians === values.max_civilians ? values.max_civilians.toLocaleString() : `${values.min_civilians.toLocaleString()} to ${values.max_civilians.toLocaleString()}`}</span>
           </div>
           <div class="country-stat">
             <span class="country-stat-label">Children</span>
-            <span class="country-stat-value">${values.max_children.toLocaleString()}</span>
+            <span class="country-stat-value">${values.min_children === values.max_children ? values.max_children.toLocaleString() : `${values.min_children.toLocaleString()} to ${values.max_children.toLocaleString()}`}</span>
           </div>
         </div>
       `;
