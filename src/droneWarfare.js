@@ -163,8 +163,16 @@ function selectEntity(properties, aState) {
     // Clear previously displayed features
     appState.map.geojson.clearLayers();
 
+    // When showing child subdivisions (ADM2+), also display the parent boundary as context
+    let parentBoundary = null;
+    if (appState.admLevel > 1) {
+      // Get the parent feature from one level up
+      const parentFeatures = appState.geojson[appState.country][appState.admLevel - 1].features;
+      parentBoundary = parentFeatures.find(f => f.properties.shapeName === appState.admName);
+    }
+
     // Display the new features
-    appState.map.displayFeatures(featuresToDisplay);
+    appState.map.displayFeatures(featuresToDisplay, parentBoundary);
   } else {
     appState.admLevel = appState.admLevel - 1;
     featuresToDisplay = appState.geojson[appState.country][appState.admLevel].features;
@@ -201,7 +209,9 @@ function loadDroneWarfare() {
   appState.admLevel = 0;
   appState.admName = '';
   appState.country = null;
-  
+
+  console.log('loadDroneWarfare called, geojson keys:', Object.keys(appState.geojson));
+
   // Calculate global totals - extract first feature from each country FeatureCollection
   const initDisplay = [
     appState.geojson.AFG[0]?.features?.[0] || appState.geojson.AFG[0],
@@ -209,7 +219,14 @@ function loadDroneWarfare() {
     appState.geojson.SOM[0]?.features?.[0] || appState.geojson.SOM[0],
     appState.geojson.YEM[0]?.features?.[0] || appState.geojson.YEM[0]
   ].filter(Boolean);
-  
+
+  console.log('initDisplay length:', initDisplay.length);
+  console.log('initDisplay[0]:', initDisplay[0]);
+  if (initDisplay[0]?.properties) {
+    console.log('First country properties:', initDisplay[0].properties);
+  }
+
+  // Calculate global totals from ADM1 level (provinces) since ADM0 doesn't have aggregated data
   const globalTotals = {
     strikeCount: 0,
     minTotal: 0,
@@ -219,27 +236,33 @@ function loadDroneWarfare() {
     minChildren: 0,
     maxChildren: 0
   };
-  
-  // Sum up totals from all countries
-  initDisplay.forEach(country => {
-    if (!country || !country.properties) {
-      console.warn('Invalid country data:', country);
-      return;
-    }
-    const props = country.properties;
-    globalTotals.strikeCount += props.strike_count || 0;
-    globalTotals.minTotal += Array.isArray(props.min_total) ? props.min_total.reduce((a, b) => (a + b), 0) : (props.min_total || 0);
-    globalTotals.maxTotal += Array.isArray(props.max_total) ? props.max_total.reduce((a, b) => (a + b), 0) : (props.max_total || 0);
-    globalTotals.minCivilians += Array.isArray(props.min_civilians) ? props.min_civilians.reduce((a, b) => (a + b), 0) : (props.min_civilians || 0);
-    globalTotals.maxCivilians += Array.isArray(props.max_civilians) ? props.max_civilians.reduce((a, b) => (a + b), 0) : (props.max_civilians || 0);
-    globalTotals.minChildren += Array.isArray(props.min_children) ? props.min_children.reduce((a, b) => (a + b), 0) : (props.min_children || 0);
-    globalTotals.maxChildren += Array.isArray(props.max_children) ? props.max_children.reduce((a, b) => (a + b), 0) : (props.max_children || 0);
+
+  // Aggregate from all provinces (ADM1 level) across all countries
+  ['AFG', 'PAK', 'SOM', 'YEM'].forEach(countryCode => {
+    const adm1Features = appState.geojson[countryCode][1]?.features || [];
+    adm1Features.forEach(feature => {
+      const props = feature.properties;
+      globalTotals.strikeCount += props.strike_count || 0;
+      globalTotals.minTotal += Array.isArray(props.min_total) ? props.min_total.reduce((a, b) => (a + b), 0) : (props.min_total || 0);
+      globalTotals.maxTotal += Array.isArray(props.max_total) ? props.max_total.reduce((a, b) => (a + b), 0) : (props.max_total || 0);
+      globalTotals.minCivilians += Array.isArray(props.min_civilians) ? props.min_civilians.reduce((a, b) => (a + b), 0) : (props.min_civilians || 0);
+      globalTotals.maxCivilians += Array.isArray(props.max_civilians) ? props.max_civilians.reduce((a, b) => (a + b), 0) : (props.max_civilians || 0);
+      globalTotals.minChildren += Array.isArray(props.min_children) ? props.min_children.reduce((a, b) => (a + b), 0) : (props.min_children || 0);
+      globalTotals.maxChildren += Array.isArray(props.max_children) ? props.max_children.reduce((a, b) => (a + b), 0) : (props.max_children || 0);
+    });
   });
   
   appState.previousTotals = globalTotals;
 
+  console.log('Global totals calculated:', globalTotals);
+
   // Update the statistics display
   updateStatistics(appState.previousTotals);
+
+  console.log('Displaying features:', initDisplay.map(f => ({
+    name: f.properties?.shapeName,
+    strikes: f.properties?.strike_count
+  })));
 
   appState.map.displayFeatures(initDisplay);
   appState.dataTable.loadTable(initDisplay);
@@ -305,6 +328,12 @@ async function loadFunctionality() {
   try {
     // Load data asynchronously while map is already visible
     appState.geojson = await geojsonHandler.getData();
+    console.log('Data loaded, geojson structure:', {
+      AFG: appState.geojson.AFG?.length,
+      PAK: appState.geojson.PAK?.length,
+      SOM: appState.geojson.SOM?.length,
+      YEM: appState.geojson.YEM?.length
+    });
 
     // Initialize dropdown navigation AFTER data is loaded
     // DISABLED: Using breadcrumbs in header instead of custom dropdowns
@@ -316,6 +345,21 @@ async function loadFunctionality() {
     timeline.processStrikeData();
 
     loadDroneWarfare();
+
+    // Display strike points if checkbox is checked (default state)
+    const strikesCheckbox = document.getElementById('strikes');
+    console.log('Strikes checkbox checked:', strikesCheckbox?.checked);
+    console.log('Strike visualization has', strikeVisualization.allStrikes.length, 'strikes');
+
+    if (strikesCheckbox && strikesCheckbox.checked) {
+      try {
+        strikeVisualization.showStrikePoints();
+        droneWarfareMap.map.addLayer(strikeVisualization.layers.strikes);
+        console.log('Strike points displayed successfully');
+      } catch (error) {
+        console.error('Error displaying strike points:', error);
+      }
+    }
 
     // Setup filter empty strikes checkbox
     setupFilterEmptyStrikesCheckbox();
@@ -356,9 +400,16 @@ function setupFilterEmptyStrikesCheckbox() {
       // Apply strike filter
       featuresToDisplay = filterFeaturesByStrikes(featuresToDisplay);
 
+      // Get parent boundary if showing child subdivisions
+      let parentBoundary = null;
+      if (appState.admLevel > 1) {
+        const parentFeatures = appState.geojson[appState.country][appState.admLevel - 1].features;
+        parentBoundary = parentFeatures.find(f => f.properties.shapeName === appState.admName);
+      }
+
       // Update map and table
       appState.map.geojson.clearLayers();
-      appState.map.displayFeatures(featuresToDisplay);
+      appState.map.displayFeatures(featuresToDisplay, parentBoundary);
       appState.dataTable.loadTable(featuresToDisplay);
     }
   });

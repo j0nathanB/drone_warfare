@@ -373,10 +373,43 @@ export class DroneWarfareMap {
     this.layers.strikes.clearLayers();
   }
 
-  displayFeatures(features) {
+  displayFeatures(features, parentBoundary = null) {
     // Create a layer group to hold all GeoJSON layers
     this.layers.geojson = L.layerGroup().addTo(this.map);
     this.appState.map.geojson = this.layers.geojson; // Keep backward compatibility
+
+    // If a parent boundary is provided, display it first with outline-only style
+    if (parentBoundary) {
+      // Tag parent boundary with its actual admin level (one level up from current)
+      parentBoundary.properties._admLevel = this.appState.admLevel - 1;
+      parentBoundary.properties._country = this.appState.country;
+      parentBoundary.properties._isParentBoundary = true; // Mark as parent for special styling
+
+      const parentLayer = L.geoJson(parentBoundary, {
+        style: {
+          fillColor: 'transparent',
+          fillOpacity: 0,
+          color: '#fbbf24', // Yellow/gold outline for parent boundary
+          weight: 3,
+          opacity: 0.8,
+          dashArray: '5, 5' // Dashed line to distinguish from child boundaries
+        },
+        onEachFeature: (feature, layer) => {
+          // Add hover popup for parent boundary
+          layer.on('mouseover', (e) => {
+            const popup = L.popup({'className':'popup'})
+              .setLatLng(e.latlng)
+              .setContent(`<h3>${feature.properties.shapeName}</h3><p>Parent Region</p>`)
+              .openOn(this.map);
+          });
+          layer.on('mouseout', () => {
+            this.map.closePopup();
+          });
+        }
+      });
+
+      this.layers.geojson.addLayer(parentLayer);
+    }
 
     for (let i = 0; i < features.length; i++) {
       // Skip features that are not administrative divisions
@@ -405,7 +438,7 @@ export class DroneWarfareMap {
       // Add the GeoJSON layer to the layer group
       this.layers.geojson.addLayer(geojsonLayer);
     }
-    
+
     // Update civilian impact if layer is enabled
     const civilianToggle = document.getElementById('civilian');
     if (civilianToggle && civilianToggle.checked) {

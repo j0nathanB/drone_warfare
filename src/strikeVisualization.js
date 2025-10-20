@@ -71,43 +71,62 @@ export class StrikeVisualization {
     }
 
     processStrikeData() {
-        // Extract all strikes from country level data
+        // Extract all strikes from location-level data (Point geometries)
         this.allStrikes = [];
-        
+
+        // Location data is at different indices for each country:
+        // AFG: [3], PAK: [4], SOM: [3], YEM: [3]
+        const locationIndices = {
+            AFG: 3,
+            PAK: 4,
+            SOM: 3,
+            YEM: 3
+        };
+
         Object.keys(this.appState.geojson).forEach(country => {
-            if (this.appState.geojson[country][0] && this.appState.geojson[country][0].features) {
-                const countryFeature = this.appState.geojson[country][0].features[0];
-                if (countryFeature && countryFeature.properties) {
-                    const props = countryFeature.properties;
-                    
-                    // Process dates and create strike records
-                    if (props.dates && Array.isArray(props.dates)) {
-                        props.dates.forEach((date, index) => {
-                            const [day, month, year] = date.split('/');
-                            const strikeDate = new Date(`${year}-${month}-${day}`);
-                            
-                            this.allStrikes.push({
-                                country: country,
-                                date: strikeDate,
-                                year: parseInt(year),
-                                minTotal: props.min_total?.[index] || 0,
-                                maxTotal: props.max_total?.[index] || 0,
-                                minCivilians: props.min_civilians?.[index] || 0,
-                                maxCivilians: props.max_civilians?.[index] || 0,
-                                minChildren: props.min_children?.[index] || 0,
-                                maxChildren: props.max_children?.[index] || 0,
-                                location: props.locations?.[index] || null,
-                                coordinates: this.getStrikeCoordinates(country)
+            const locIndex = locationIndices[country];
+            const locationData = this.appState.geojson[country][locIndex];
+
+            if (locationData && locationData.features) {
+                locationData.features.forEach(feature => {
+                    if (feature.geometry && feature.geometry.type === 'Point' && feature.properties) {
+                        const props = feature.properties;
+                        const coords = feature.geometry.coordinates;
+
+                        // Note: This GeoJSON file uses non-standard [lat, lng] order instead of [lng, lat]
+                        // Leaflet expects [lat, lng], so we use coordinates as-is
+                        const leafletCoords = [coords[0], coords[1]]; // Already [lat, lng]
+
+                        // Process dates and create strike records for each strike at this location
+                        if (props.dates && Array.isArray(props.dates)) {
+                            props.dates.forEach((date, index) => {
+                                const [day, month, year] = date.split('/');
+                                const strikeDate = new Date(`${year}-${month}-${day}`);
+
+                                this.allStrikes.push({
+                                    country: country,
+                                    date: strikeDate,
+                                    year: parseInt(year),
+                                    minTotal: props.min_total?.[index] || 0,
+                                    maxTotal: props.max_total?.[index] || 0,
+                                    minCivilians: props.min_civilians?.[index] || 0,
+                                    maxCivilians: props.max_civilians?.[index] || 0,
+                                    minChildren: props.min_children?.[index] || 0,
+                                    maxChildren: props.max_children?.[index] || 0,
+                                    coordinates: leafletCoords
+                                });
                             });
-                        });
+                        }
                     }
-                }
+                });
             }
         });
 
         // Sort strikes by date
         this.allStrikes.sort((a, b) => a.date - b.date);
         this.filteredStrikes = [...this.allStrikes];
+
+        console.log(`Loaded ${this.allStrikes.length} strike records from location data`);
     }
 
     getStrikeCoordinates(country) {

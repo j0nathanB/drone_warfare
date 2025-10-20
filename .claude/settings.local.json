@@ -19,7 +19,17 @@
       "Bash(timeout 20 npx cypress run:*)",
       "Bash(timeout 45 npx cypress run:*)",
       "Bash(cat:*)",
-      "Bash(timeout 60 npx cypress run:*)"
+      "Bash(timeout 60 npx cypress run:*)",
+      "Bash(curl -s http://127.0.0.1:8080/src/droneWarfare.js)",
+      "Bash(node:*)",
+      "Bash(awk:*)",
+      "Bash(python3:*)",
+      "Bash(curl -s http://127.0.0.1:8080/src/strikeVisualization.js)",
+      "Bash(curl -s http://127.0.0.1:8080/src/utils.js)",
+      "Bash(curl -s http://127.0.0.1:8080/test-simple.html)",
+      "Bash(curl -s http://127.0.0.1:8080/data/cleanup/10_geojson_output/AFG_Loc.geojson)",
+      "Bash(curl -s http://127.0.0.1:8080/data/AFG_Adm_0-gadm.geojson)",
+      "Bash(curl -s http://127.0.0.1:8080/data/AFG_Adm_1-gadm.geojson)"
     ],
     "deny": [],
     "ask": []

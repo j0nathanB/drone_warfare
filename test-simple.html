@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Test</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script type="module">
+        import { StrikeVisualization } from './src/strikeVisualization.js';
+        import { GeoJSONHandler } from './src/geojsonHandler.js';
+
+        async function test() {
+            const output = document.getElementById('output');
+            output.innerHTML = 'Loading data...';
+
+            try {
+                const geojsonHandler = new GeoJSONHandler();
+                const geojson = await geojsonHandler.getData();
+
+                output.innerHTML += '<br>Data loaded successfully!';
+                output.innerHTML += '<br>Countries: ' + Object.keys(geojson).join(', ');
+
+                // Test StrikeVisualization data processing
+                const appState = { geojson };
+                const mockMap = {
+                    addLayer: () => {},
+                    removeLayer: () => {}
+                };
+
+                const strikeViz = new StrikeVisualization(appState, mockMap);
+                strikeViz.processStrikeData();
+
+                output.innerHTML += '<br>Strike records loaded: ' + strikeViz.allStrikes.length;
+                output.innerHTML += '<br><strong>SUCCESS!</strong>';
+            } catch (error) {
+                output.innerHTML += '<br><strong>ERROR:</strong> ' + error.message;
+                console.error(error);
+            }
+        }
+
+        test();
+    </script>
+</body>
+</html>

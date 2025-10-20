@@ -12,10 +12,11 @@ export class GeoJSONHandler {
     const username = "j0nathanb";
     const repo = "drone_warfare";
     const ref = "main";
-    // Use optimized files for better performance (85% smaller file sizes)
+    // Using GADM high-detail boundaries for all countries
     // const baseURL = `https://raw.githubusercontent.com/${username}/${repo}/${ref}/data/`;
     // Use dynamic path resolution to work with both file:// and http:// protocols
     const baseURL = './data'
+    const locURL = './data/cleanup/10_geojson_output' // Location data still from old source
 
     // Load all files in parallel using Promise.all for better performance
     const [
@@ -24,23 +25,23 @@ export class GeoJSONHandler {
       somAdm0, somAdm1, somAdm2, somLoc,
       yemAdm0, yemAdm1, yemAdm2, yemLoc
     ] = await Promise.all([
-      loadJSON(`${baseURL}/AFG_Adm_0-optimized.geojson`),
-      loadJSON(`${baseURL}/AFG_Adm_1-optimized.geojson`),
-      loadJSON(`${baseURL}/AFG_Adm_2-optimized.geojson`),
-      loadJSON(`${baseURL}/AFG_Loc-optimized.geojson`),
-      loadJSON(`${baseURL}/PAK_Adm_0-optimized.geojson`),
-      loadJSON(`${baseURL}/PAK_Adm_1-optimized.geojson`),
-      loadJSON(`${baseURL}/PAK_Adm_2-optimized.geojson`),
-      loadJSON(`${baseURL}/PAK_Adm_3-optimized.geojson`),
-      loadJSON(`${baseURL}/PAK_Loc-optimized.geojson`),
-      loadJSON(`${baseURL}/SOM_Adm_0-optimized.geojson`),
-      loadJSON(`${baseURL}/SOM_Adm_1-optimized.geojson`),
-      loadJSON(`${baseURL}/SOM_Adm_2-optimized.geojson`),
-      loadJSON(`${baseURL}/SOM_Loc-optimized.geojson`),
-      loadJSON(`${baseURL}/YEM_Adm_0-optimized.geojson`),
-      loadJSON(`${baseURL}/YEM_Adm_1-optimized.geojson`),
-      loadJSON(`${baseURL}/YEM_Adm_2-optimized.geojson`),
-      loadJSON(`${baseURL}/YEM_Loc-optimized.geojson`)
+      loadJSON(`${baseURL}/AFG_Adm_0-gadm.geojson`),
+      loadJSON(`${baseURL}/AFG_Adm_1-gadm.geojson`),
+      loadJSON(`${baseURL}/AFG_Adm_2-gadm.geojson`),
+      loadJSON(`${locURL}/AFG_Loc.geojson`),
+      loadJSON(`${baseURL}/PAK_Adm_0-gadm.geojson`),
+      loadJSON(`${baseURL}/PAK_Adm_1-gadm.geojson`),
+      loadJSON(`${baseURL}/PAK_Adm_2-gadm.geojson`),
+      loadJSON(`${baseURL}/PAK_Adm_3-gadm.geojson`),
+      loadJSON(`${locURL}/PAK_Loc.geojson`),
+      loadJSON(`${baseURL}/SOM_Adm_0-gadm.geojson`),
+      loadJSON(`${baseURL}/SOM_Adm_1-gadm.geojson`),
+      loadJSON(`${baseURL}/SOM_Adm_2-gadm.geojson`),
+      loadJSON(`${locURL}/SOM_Loc.geojson`),
+      loadJSON(`${baseURL}/YEM_Adm_0-gadm.geojson`),
+      loadJSON(`${baseURL}/YEM_Adm_1-gadm.geojson`),
+      loadJSON(`${baseURL}/YEM_Adm_2-gadm.geojson`),
+      loadJSON(`${locURL}/YEM_Loc.geojson`)
     ]);
 
     // Assign loaded data to results
