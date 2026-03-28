@@ -731,7 +731,7 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
     document.querySelectorAll('.story-block, .gap-block, .about-block, .story-stats, .country-card').forEach(el => {
-      el.classList.add('fade-in');
+      el.classList.add('scroll-reveal');
       observer.observe(el);
     });
   }
@@ -762,17 +762,15 @@
     initScrollAnimations();
   }
 
-  // Add fade-in animation CSS dynamically (respects reduced motion)
+  // Add scroll reveal CSS dynamically (respects reduced motion)
   const style = document.createElement('style');
   style.textContent = `
     @media (prefers-reduced-motion: no-preference) {
-      .fade-in {
-        opacity: 0;
+      .scroll-reveal {
         transform: translateY(20px);
-        transition: opacity 0.6s ease, transform 0.6s ease;
+        transition: transform 0.6s ease;
       }
-      .fade-in.visible {
-        opacity: 1;
+      .scroll-reveal.visible {
         transform: translateY(0);
       }
     }

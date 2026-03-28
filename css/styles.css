@@ -8,7 +8,7 @@
   --color-bg-card: #222;
   --color-text: #e0ddd5;
   --color-text-muted: #9e9890;
-  --color-text-dim: #7a7470;
+  --color-text-dim: #958f8b;
   --color-accent: #c4956a;
   --color-accent-light: #d4a87a;
   --color-border: #333;
@@ -20,7 +20,7 @@
   --color-strike-high: #a83220;
   --color-strike-max: #7a1a10;
   --color-civilian: #c46a3a;
-  --color-children: #d44a2a;
+  --color-children: #e8603e;
   --color-military: #6a8a6a;
   --color-zero: #2a2a2a;
   --color-reported: #c4956a;
@@ -791,7 +791,7 @@ fieldset {
 }
 
 .no-article .strike-rank {
-  color: var(--color-border);
+  color: #6a6a6a;
 }
 
 .strike-detail {
