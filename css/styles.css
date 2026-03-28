@@ -378,13 +378,8 @@ fieldset {
    ============================================ */
 
 #data {
-  padding: 4rem 0 0;
+  padding: 4rem 2rem 0;
   background: var(--color-bg);
-}
-
-#data .section-header {
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 .map-container {
@@ -392,6 +387,8 @@ fieldset {
   display: grid;
   grid-template-columns: 240px 1fr;
   grid-template-rows: 1fr auto auto;
+  max-width: var(--max-width);
+  margin: 0 auto;
   height: calc(100vh - 100px);
   min-height: 600px;
   background: var(--color-bg);
@@ -486,6 +483,12 @@ fieldset {
   color: var(--color-text);
   cursor: pointer;
   margin-bottom: 0.25rem;
+}
+
+.checkbox-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.25rem 0.5rem;
 }
 
 .radio-group input,
