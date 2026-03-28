@@ -156,17 +156,19 @@
             <button class="toggle-btn active" data-view="fog" aria-pressed="true">Fog of War</button>
             <button class="toggle-btn" data-view="heat" aria-pressed="false">Heat Map</button>
           </div>
+          <p class="control-hint" id="view-hint">Individual strikes and the limits of the record. Regions show "somewhere in here."</p>
         </fieldset>
 
         <fieldset class="control-group">
           <legend class="control-label">Resolution</legend>
-          <input type="range" id="resolution-slider" min="0" max="3" value="3" step="1" aria-label="Map resolution level" aria-valuetext="Location">
+          <input type="range" id="resolution-slider" min="0" max="3" value="3" step="1" aria-label="Map resolution level" aria-valuetext="Location" aria-describedby="resolution-hint">
           <div class="slider-labels" aria-hidden="true">
             <span>Country</span>
             <span>Province</span>
             <span>District</span>
             <span>Location</span>
           </div>
+          <p class="control-hint" id="resolution-hint">How precisely do we know where each strike landed?</p>
         </fieldset>
 
         <fieldset class="control-group">
@@ -176,6 +178,7 @@
             <label><input type="radio" name="lethality" value="civilians"> Civilian</label>
             <label><input type="radio" name="lethality" value="children"> Children</label>
           </div>
+          <p class="control-hint">Which casualty type drives the size and color of markers.</p>
         </fieldset>
 
         <fieldset class="control-group">
@@ -194,6 +197,7 @@
             <button class="toggle-btn active" data-estimate="min" aria-pressed="true">Minimum</button>
             <button class="toggle-btn" data-estimate="max" aria-pressed="false">Maximum</button>
           </div>
+          <p class="control-hint">TBIJ records a range for every casualty figure. Choose which end to display.</p>
         </fieldset>
       </div>
 

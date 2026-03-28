@@ -626,6 +626,11 @@
 
   function bindControls() {
     // View toggle
+    const viewHints = {
+      fog: 'Individual strikes and the limits of the record. Regions show \u201Csomewhere in here.\u201D',
+      heat: 'Strike frequency and intensity by area. Deeper color means more strikes.'
+    };
+    const viewHintEl = document.getElementById('view-hint');
     document.querySelectorAll('[data-view]').forEach(btn => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('[data-view]').forEach(b => {
@@ -635,6 +640,7 @@
         btn.classList.add('active');
         btn.setAttribute('aria-pressed', 'true');
         state.view = btn.dataset.view;
+        if (viewHintEl) viewHintEl.textContent = viewHints[state.view];
         renderMap();
       });
     });

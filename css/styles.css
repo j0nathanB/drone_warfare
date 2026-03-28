@@ -182,10 +182,7 @@ fieldset {
 }
 
 .scroll-cue {
-  position: absolute;
-  bottom: 3rem;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: 3rem;
   text-align: center;
   color: var(--color-text-dim);
   font-family: var(--font-sans);
@@ -422,6 +419,15 @@ fieldset {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   margin-bottom: 0.5rem;
+}
+
+/* Control hints */
+.control-hint {
+  margin-top: 0.4rem;
+  font-size: 0.65rem;
+  line-height: 1.4;
+  color: var(--color-text-dim);
+  font-style: italic;
 }
 
 /* Toggle buttons */
