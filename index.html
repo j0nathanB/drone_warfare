@@ -15,35 +15,40 @@
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600;8..60,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
+  <!-- Skip link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- ============================================ -->
   <!-- HERO -->
   <!-- ============================================ -->
-  <section id="hero">
+  <header id="hero" role="banner">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>Drone Report</h1>
       <p class="hero-subtitle">18 years. 4 countries. 5,184 strikes.</p>
       <p class="hero-subtext">The human cost of remote warfare</p>
-      <div class="scroll-cue">
+      <div class="scroll-cue" aria-hidden="true">
         <span>Scroll to begin</span>
         <div class="scroll-arrow"></div>
       </div>
     </div>
-  </section>
+  </header>
+
+  <main id="main-content">
 
   <!-- ============================================ -->
   <!-- SECTION 1: THE STORY -->
   <!-- ============================================ -->
-  <section id="story">
+  <section id="story" aria-labelledby="story-heading">
     <div class="section-header">
-      <span class="section-number">I</span>
-      <h2>The Story</h2>
+      <span class="section-number" aria-hidden="true">I</span>
+      <h2 id="story-heading">The Story</h2>
     </div>
 
     <div class="story-content">
@@ -66,16 +71,16 @@
         <h3>The Civilian Cost</h3>
         <p>The official framing was precision. The record says otherwise. Across all four countries, between 977 and 2,300 civilians were killed, including 326 to 480 children. In Pakistan, only 4% of those killed were ever identified as al-Qaeda members. In Afghanistan, 77% of strikes reported zero casualties &mdash; not because they missed, but because no one was counting.</p>
 
-        <div class="story-stats">
-          <div class="stat">
+        <div class="story-stats" role="list" aria-label="Casualty statistics">
+          <div class="stat" role="listitem">
             <span class="stat-number">9,418&ndash;17,800</span>
             <span class="stat-label">Total killed</span>
           </div>
-          <div class="stat">
+          <div class="stat" role="listitem">
             <span class="stat-number">977&ndash;2,300</span>
             <span class="stat-label">Civilians killed</span>
           </div>
-          <div class="stat">
+          <div class="stat" role="listitem">
             <span class="stat-number">326&ndash;480</span>
             <span class="stat-label">Children killed</span>
           </div>
@@ -107,27 +112,27 @@
       <!-- Country Arcs -->
       <div class="story-block story-countries">
         <h3>Four Countries, Four Arcs</h3>
-        <div class="country-cards">
-          <div class="country-card" data-country="af">
+        <div class="country-cards" role="list">
+          <article class="country-card" data-country="af" role="listitem">
             <h4>Afghanistan</h4>
             <span class="country-strikes">4,238 strikes</span>
             <p>The largest and least documented campaign. Excellent data at the province level, near-zero at district or location. 77% of strikes report zero casualties. The US military reported at province level &mdash; beneath that, a void.</p>
-          </div>
-          <div class="country-card" data-country="pk">
+          </article>
+          <article class="country-card" data-country="pk" role="listitem">
             <h4>Pakistan</h4>
             <span class="country-strikes">430 strikes</span>
             <p>The longest-running and most scrutinized program. Best detail at all levels. The campaign peaked under Obama's first term &mdash; 311 strikes &mdash; and virtually ended under Trump. 92.6% of strikes hit North and South Waziristan.</p>
-          </div>
-          <div class="country-card" data-country="ye">
+          </article>
+          <article class="country-card" data-country="ye" role="listitem">
             <h4>Yemen</h4>
             <span class="country-strikes">326 strikes</span>
             <p>Good province coverage, patchy below that. The Arab Spring surge of 2011-2013 gave way to Trump's unprecedented escalation &mdash; 100+ strikes in 2017, more than the previous four years combined. Twenty strikes in a single morning.</p>
-          </div>
-          <div class="country-card" data-country="so">
+          </article>
+          <article class="country-card" data-country="so" role="listitem">
             <h4>Somalia</h4>
             <span class="country-strikes">190 strikes</span>
             <p>The weakest overall documentation, but the most improvable. 77% of strikes occurred under Trump. The lowest confirmed civilian casualty rate &mdash; which may say more about reporting than restraint.</p>
-          </div>
+          </article>
         </div>
       </div>
     </div>
@@ -136,104 +141,105 @@
   <!-- ============================================ -->
   <!-- SECTION 2: THE DATA -->
   <!-- ============================================ -->
-  <section id="data">
+  <section id="data" aria-labelledby="data-heading">
     <div class="section-header">
-      <span class="section-number">II</span>
-      <h2>The Data</h2>
+      <span class="section-number" aria-hidden="true">II</span>
+      <h2 id="data-heading">The Data</h2>
     </div>
 
     <div class="map-container">
       <!-- Controls Panel -->
-      <div class="map-controls">
-        <div class="control-group">
-          <label class="control-label">View</label>
-          <div class="toggle-group">
-            <button class="toggle-btn active" data-view="fog">Fog of War</button>
-            <button class="toggle-btn" data-view="heat">Heat Map</button>
+      <div class="map-controls" role="region" aria-label="Map controls">
+        <fieldset class="control-group">
+          <legend class="control-label">View</legend>
+          <div class="toggle-group" role="group">
+            <button class="toggle-btn active" data-view="fog" aria-pressed="true">Fog of War</button>
+            <button class="toggle-btn" data-view="heat" aria-pressed="false">Heat Map</button>
           </div>
-        </div>
+        </fieldset>
 
-        <div class="control-group">
-          <label class="control-label">Resolution</label>
-          <input type="range" id="resolution-slider" min="0" max="3" value="3" step="1">
-          <div class="slider-labels">
+        <fieldset class="control-group">
+          <legend class="control-label">Resolution</legend>
+          <input type="range" id="resolution-slider" min="0" max="3" value="3" step="1" aria-label="Map resolution level" aria-valuetext="Location">
+          <div class="slider-labels" aria-hidden="true">
             <span>Country</span>
             <span>Province</span>
             <span>District</span>
             <span>Location</span>
           </div>
-        </div>
+        </fieldset>
 
-        <div class="control-group">
-          <label class="control-label">Showing</label>
+        <fieldset class="control-group">
+          <legend class="control-label">Showing</legend>
           <div class="radio-group">
             <label><input type="radio" name="lethality" value="total" checked> All casualties</label>
             <label><input type="radio" name="lethality" value="civilians"> Civilian</label>
             <label><input type="radio" name="lethality" value="children"> Children</label>
           </div>
-        </div>
+        </fieldset>
 
-        <div class="control-group">
-          <label class="control-label">Countries</label>
+        <fieldset class="control-group">
+          <legend class="control-label">Countries</legend>
           <div class="checkbox-group">
-            <label><input type="checkbox" value="AFG" checked> <span class="country-tag af">AF</span></label>
-            <label><input type="checkbox" value="PAK" checked> <span class="country-tag pk">PK</span></label>
-            <label><input type="checkbox" value="YEM" checked> <span class="country-tag ye">YE</span></label>
-            <label><input type="checkbox" value="SOM" checked> <span class="country-tag so">SO</span></label>
+            <label><input type="checkbox" value="AFG" checked> <span class="country-tag af">AF</span><span class="sr-only">Afghanistan</span></label>
+            <label><input type="checkbox" value="PAK" checked> <span class="country-tag pk">PK</span><span class="sr-only">Pakistan</span></label>
+            <label><input type="checkbox" value="YEM" checked> <span class="country-tag ye">YE</span><span class="sr-only">Yemen</span></label>
+            <label><input type="checkbox" value="SOM" checked> <span class="country-tag so">SO</span><span class="sr-only">Somalia</span></label>
           </div>
-        </div>
+        </fieldset>
 
-        <div class="control-group">
-          <label class="control-label">Estimate</label>
-          <div class="toggle-group">
-            <button class="toggle-btn active" data-estimate="min">Minimum</button>
-            <button class="toggle-btn" data-estimate="max">Maximum</button>
+        <fieldset class="control-group">
+          <legend class="control-label">Estimate</legend>
+          <div class="toggle-group" role="group">
+            <button class="toggle-btn active" data-estimate="min" aria-pressed="true">Minimum</button>
+            <button class="toggle-btn" data-estimate="max" aria-pressed="false">Maximum</button>
           </div>
-        </div>
+        </fieldset>
       </div>
 
       <!-- Map -->
-      <div id="map"></div>
+      <div id="map" role="application" aria-label="Interactive drone strike map" aria-roledescription="map"></div>
 
       <!-- Map info tooltip -->
-      <div id="map-info" class="map-info hidden">
+      <div id="map-info" class="map-info hidden" role="status" aria-live="polite">
         <div class="map-info-content"></div>
       </div>
 
       <!-- Timeline -->
-      <div class="timeline-container">
+      <div class="timeline-container" role="region" aria-label="Timeline controls">
         <div class="timeline-controls">
-          <button id="play-btn" class="play-btn" title="Play timeline">
-            <span class="play-icon">&#9654;</span>
+          <button id="play-btn" class="play-btn" aria-label="Play timeline animation">
+            <span class="play-icon" aria-hidden="true">&#9654;</span>
           </button>
-          <span id="timeline-date-display" class="timeline-date">Nov 2002 &mdash; Mar 2020</span>
+          <span id="timeline-date-display" class="timeline-date" aria-live="polite" aria-atomic="true">Nov 2002 &mdash; Mar 2020</span>
         </div>
         <div class="timeline-slider-wrap">
-          <div id="timeline-slider"></div>
+          <div id="timeline-slider" role="img" aria-label="Monthly strike frequency histogram. Use the brush to select a date range."></div>
         </div>
-        <div class="admin-filters">
+        <fieldset class="admin-filters">
+          <legend class="sr-only">Filter by presidential administration</legend>
           <label><input type="checkbox" name="admin" value="bush1" checked> <span>Bush I<br><small>2001&ndash;05</small></span></label>
           <label><input type="checkbox" name="admin" value="bush2" checked> <span>Bush II<br><small>2005&ndash;09</small></span></label>
           <label><input type="checkbox" name="admin" value="obama1" checked> <span>Obama I<br><small>2009&ndash;13</small></span></label>
           <label><input type="checkbox" name="admin" value="obama2" checked> <span>Obama II<br><small>2013&ndash;17</small></span></label>
           <label><input type="checkbox" name="admin" value="trump" checked> <span>Trump<br><small>2017&ndash;21</small></span></label>
-        </div>
+        </fieldset>
       </div>
 
       <!-- Caveat strip -->
-      <div class="map-caveat">
+      <aside class="map-caveat" role="note">
         Strikes without precise locations are attributed to region centroids. All casualty figures are min&ndash;max ranges from TBIJ data.
-      </div>
+      </aside>
     </div>
   </section>
 
   <!-- ============================================ -->
   <!-- SECTION 3: THE GAP -->
   <!-- ============================================ -->
-  <section id="gap">
+  <section id="gap" aria-labelledby="gap-heading">
     <div class="section-header">
-      <span class="section-number">III</span>
-      <h2>The Gap</h2>
+      <span class="section-number" aria-hidden="true">III</span>
+      <h2 id="gap-heading">The Gap</h2>
     </div>
 
     <div class="gap-intro">
@@ -245,8 +251,8 @@
       <h3>The Zero-Casualty Paradox</h3>
       <p>77.4% of Afghanistan strikes report zero people killed. That's 3,281 out of 4,238 strikes. These aren't misses &mdash; they're the reporting gap. The US military was the primary source, and they simply didn't count.</p>
       <div class="zero-grid-container">
-        <div id="zero-grid"></div>
-        <div class="zero-grid-legend">
+        <div id="zero-grid" role="img" aria-label="Grid of 4,238 dots representing Afghanistan strikes. 957 are highlighted to show strikes with reported casualties. 3,281 are dimmed to represent strikes reporting zero casualties."></div>
+        <div class="zero-grid-legend" aria-hidden="true">
           <span class="legend-item"><span class="legend-dot reported"></span> Casualties reported (957)</span>
           <span class="legend-item"><span class="legend-dot zero"></span> Zero reported (3,281)</span>
         </div>
@@ -257,9 +263,9 @@
     <div class="gap-block" id="no-articles">
       <h3>The Strikes Nobody Wrote About</h3>
       <p>The five deadliest strikes for children. The top two have TBIJ articles investigating what happened. Ranks 3 through 5 &mdash; all Afghanistan, 2016 to 2018 &mdash; have none. The data records the deaths. No journalism investigated them.</p>
-      <div class="strike-cards">
-        <div class="strike-card has-article">
-          <div class="strike-rank">#1</div>
+      <div class="strike-cards" role="list" aria-label="Five deadliest strikes for children">
+        <article class="strike-card has-article" role="listitem">
+          <div class="strike-rank" aria-hidden="true">#1</div>
           <div class="strike-detail">
             <div class="strike-id">B6 &mdash; Pakistan</div>
             <div class="strike-date">October 30, 2006</div>
@@ -267,9 +273,9 @@
             <div class="strike-desc">Bajaur madrassa. Youngest victim: age 7.</div>
             <div class="strike-article"><span class="article-badge">Article exists</span></div>
           </div>
-        </div>
-        <div class="strike-card has-article">
-          <div class="strike-rank">#2</div>
+        </article>
+        <article class="strike-card has-article" role="listitem">
+          <div class="strike-rank" aria-hidden="true">#2</div>
           <div class="strike-detail">
             <div class="strike-id">YEM002 &mdash; Yemen</div>
             <div class="strike-date">December 17, 2009</div>
@@ -277,9 +283,9 @@
             <div class="strike-desc">Al-Majala cruise missile. 5 pregnant women among dead.</div>
             <div class="strike-article"><span class="article-badge">Article exists</span></div>
           </div>
-        </div>
-        <div class="strike-card no-article">
-          <div class="strike-rank">#3</div>
+        </article>
+        <article class="strike-card no-article" role="listitem">
+          <div class="strike-rank" aria-hidden="true">#3</div>
           <div class="strike-detail">
             <div class="strike-id">AFG0284 &mdash; Afghanistan</div>
             <div class="strike-date">November 3, 2016</div>
@@ -287,9 +293,9 @@
             <div class="strike-desc"></div>
             <div class="strike-article"><span class="article-badge missing">No article</span></div>
           </div>
-        </div>
-        <div class="strike-card no-article">
-          <div class="strike-rank">#4</div>
+        </article>
+        <article class="strike-card no-article" role="listitem">
+          <div class="strike-rank" aria-hidden="true">#4</div>
           <div class="strike-detail">
             <div class="strike-id">AFG0623 &mdash; Afghanistan</div>
             <div class="strike-date">September 23, 2018</div>
@@ -297,9 +303,9 @@
             <div class="strike-desc"></div>
             <div class="strike-article"><span class="article-badge missing">No article</span></div>
           </div>
-        </div>
-        <div class="strike-card no-article">
-          <div class="strike-rank">#5</div>
+        </article>
+        <article class="strike-card no-article" role="listitem">
+          <div class="strike-rank" aria-hidden="true">#5</div>
           <div class="strike-detail">
             <div class="strike-id">AFG0389 &mdash; Afghanistan</div>
             <div class="strike-date">August 30, 2017</div>
@@ -307,7 +313,7 @@
             <div class="strike-desc"></div>
             <div class="strike-article"><span class="article-badge missing">No article</span></div>
           </div>
-        </div>
+        </article>
       </div>
     </div>
 
@@ -316,29 +322,29 @@
       <h3>The Range Problem</h3>
       <p>Every casualty figure in the TBIJ database is a range &mdash; a minimum and a maximum. The gap between them is the uncertainty. Choosing one end or the other tells a very different story.</p>
       <div class="sankey-controls">
-        <div class="toggle-group">
-          <button class="toggle-btn active" data-sankey="min">Minimum estimate</button>
-          <button class="toggle-btn" data-sankey="max">Maximum estimate</button>
+        <div class="toggle-group" role="group" aria-label="Sankey estimate toggle">
+          <button class="toggle-btn active" data-sankey="min" aria-pressed="true">Minimum estimate</button>
+          <button class="toggle-btn" data-sankey="max" aria-pressed="false">Maximum estimate</button>
         </div>
-        <div class="sankey-country-filter">
-          <button class="toggle-btn active" data-sankey-country="all">All</button>
-          <button class="toggle-btn" data-sankey-country="AFG">AF</button>
-          <button class="toggle-btn" data-sankey-country="PAK">PK</button>
-          <button class="toggle-btn" data-sankey-country="YEM">YE</button>
-          <button class="toggle-btn" data-sankey-country="SOM">SO</button>
+        <div class="sankey-country-filter" role="group" aria-label="Sankey country filter">
+          <button class="toggle-btn active" data-sankey-country="all" aria-pressed="true">All</button>
+          <button class="toggle-btn" data-sankey-country="AFG" aria-pressed="false">AF</button>
+          <button class="toggle-btn" data-sankey-country="PAK" aria-pressed="false">PK</button>
+          <button class="toggle-btn" data-sankey-country="YEM" aria-pressed="false">YE</button>
+          <button class="toggle-btn" data-sankey-country="SOM" aria-pressed="false">SO</button>
         </div>
       </div>
-      <div id="sankey-chart"></div>
+      <div id="sankey-chart" role="img" aria-label="Sankey diagram showing casualty breakdown: total killed flows into military and civilian, civilian flows into adults and children."></div>
     </div>
   </section>
 
   <!-- ============================================ -->
   <!-- SECTION 4: ABOUT -->
   <!-- ============================================ -->
-  <section id="about">
+  <section id="about" aria-labelledby="about-heading">
     <div class="section-header">
-      <span class="section-number">IV</span>
-      <h2>About</h2>
+      <span class="section-number" aria-hidden="true">IV</span>
+      <h2 id="about-heading">About</h2>
     </div>
 
     <div class="about-content">
@@ -365,15 +371,16 @@
 
       <div class="about-block">
         <h3>Geographic Confidence</h3>
-        <table class="about-table">
+        <table class="about-table" aria-label="Percentage of strikes resolved to each geographic level by country">
+          <caption class="sr-only">Geographic confidence: percentage of strikes resolved at each administrative level</caption>
           <thead>
-            <tr><th>Level</th><th>AF</th><th>PK</th><th>YE</th><th>SO</th></tr>
+            <tr><th scope="col">Level</th><th scope="col"><abbr title="Afghanistan">AF</abbr></th><th scope="col"><abbr title="Pakistan">PK</abbr></th><th scope="col"><abbr title="Yemen">YE</abbr></th><th scope="col"><abbr title="Somalia">SO</abbr></th></tr>
           </thead>
           <tbody>
-            <tr><td>Country</td><td>100%</td><td>100%</td><td>100%</td><td>100%</td></tr>
-            <tr><td>Province</td><td>99.5%</td><td>99.5%</td><td>92.0%</td><td>75.3%</td></tr>
-            <tr><td>District</td><td>8.8%</td><td>99.5%</td><td>39.3%</td><td>51.1%</td></tr>
-            <tr><td>Location</td><td>4.2%</td><td>65.6%</td><td>26.7%</td><td>34.7%</td></tr>
+            <tr><th scope="row">Country</th><td>100%</td><td>100%</td><td>100%</td><td>100%</td></tr>
+            <tr><th scope="row">Province</th><td>99.5%</td><td>99.5%</td><td>92.0%</td><td>75.3%</td></tr>
+            <tr><th scope="row">District</th><td>8.8%</td><td>99.5%</td><td>39.3%</td><td>51.1%</td></tr>
+            <tr><th scope="row">Location</th><td>4.2%</td><td>65.6%</td><td>26.7%</td><td>34.7%</td></tr>
           </tbody>
         </table>
         <p class="table-note">Percentage of strikes resolved to each geographic level. The pipeline's match rates are 78&ndash;100% wherever source data exists &mdash; the constraint is what TBIJ's sources recorded, not the matching process.</p>
@@ -391,7 +398,9 @@
     </div>
   </section>
 
-  <footer>
+  </main>
+
+  <footer role="contentinfo">
     <p>Built on data from The Bureau of Investigative Journalism. This is their journalism, presented interactively.</p>
   </footer>
 

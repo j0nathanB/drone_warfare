@@ -460,12 +460,14 @@
       state.playing = false;
       btn.classList.remove('playing');
       btn.querySelector('.play-icon').textContent = '\u25B6';
+      btn.setAttribute('aria-label', 'Play timeline animation');
       return;
     }
 
     state.playing = true;
     btn.classList.add('playing');
     btn.querySelector('.play-icon').textContent = '\u275A\u275A';
+    btn.setAttribute('aria-label', 'Pause timeline animation');
 
     const startDate = new Date(2002, 10, 1);
     const endDate = new Date(2020, 2, 31);
@@ -626,16 +628,23 @@
     // View toggle
     document.querySelectorAll('[data-view]').forEach(btn => {
       btn.addEventListener('click', () => {
-        document.querySelectorAll('[data-view]').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('[data-view]').forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-pressed', 'false');
+        });
         btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
         state.view = btn.dataset.view;
         renderMap();
       });
     });
 
     // Resolution slider
-    document.getElementById('resolution-slider').addEventListener('input', (e) => {
+    const resolutionLabels = ['Country', 'Province', 'District', 'Location'];
+    const resSlider = document.getElementById('resolution-slider');
+    resSlider.addEventListener('input', (e) => {
       state.resolution = +e.target.value;
+      resSlider.setAttribute('aria-valuetext', resolutionLabels[state.resolution]);
       renderMap();
     });
 
@@ -650,8 +659,12 @@
     // Estimate toggle
     document.querySelectorAll('[data-estimate]').forEach(btn => {
       btn.addEventListener('click', () => {
-        document.querySelectorAll('[data-estimate]').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('[data-estimate]').forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-pressed', 'false');
+        });
         btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
         state.estimate = btn.dataset.estimate;
         renderMap();
       });
@@ -681,8 +694,12 @@
     // Sankey controls
     document.querySelectorAll('[data-sankey]').forEach(btn => {
       btn.addEventListener('click', () => {
-        document.querySelectorAll('[data-sankey]').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('[data-sankey]').forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-pressed', 'false');
+        });
         btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
         state.sankeyEstimate = btn.dataset.sankey;
         renderSankey();
       });
@@ -690,8 +707,12 @@
 
     document.querySelectorAll('[data-sankey-country]').forEach(btn => {
       btn.addEventListener('click', () => {
-        document.querySelectorAll('[data-sankey-country]').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('[data-sankey-country]').forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-pressed', 'false');
+        });
         btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
         state.sankeyCountry = btn.dataset.sankeyCountry;
         renderSankey();
       });
@@ -724,8 +745,10 @@
     // Show loading state
     const mapEl = document.getElementById('map');
     const loadingDiv = document.createElement('div');
-    loadingDiv.style.cssText = 'position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:1000;color:#8a8680;font-family:Inter,sans-serif;font-size:0.85rem;';
+    loadingDiv.style.cssText = 'position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:1000;color:#9e9890;font-family:Atkinson Hyperlegible Next,sans-serif;font-size:0.85rem;';
     loadingDiv.textContent = 'Loading strike data\u2026';
+    loadingDiv.setAttribute('role', 'status');
+    loadingDiv.setAttribute('aria-live', 'polite');
     mapEl.style.position = 'relative';
     mapEl.appendChild(loadingDiv);
 
@@ -739,17 +762,19 @@
     initScrollAnimations();
   }
 
-  // Add fade-in animation CSS dynamically
+  // Add fade-in animation CSS dynamically (respects reduced motion)
   const style = document.createElement('style');
   style.textContent = `
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
+    @media (prefers-reduced-motion: no-preference) {
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   `;
   document.head.appendChild(style);

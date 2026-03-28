@@ -7,8 +7,8 @@
   --color-bg-alt: #1a1a1a;
   --color-bg-card: #222;
   --color-text: #e0ddd5;
-  --color-text-muted: #8a8680;
-  --color-text-dim: #5a5650;
+  --color-text-muted: #9e9890;
+  --color-text-dim: #7a7470;
   --color-accent: #c4956a;
   --color-accent-light: #d4a87a;
   --color-border: #333;
@@ -31,8 +31,8 @@
   --color-ye: #c4956a;
   --color-so: #b47a8a;
 
-  --font-serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-serif: 'Atkinson Hyperlegible Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-sans: 'Atkinson Hyperlegible Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   --max-width: 900px;
   --section-padding: 6rem 2rem;
@@ -48,6 +48,12 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   background: var(--color-bg);
   color: var(--color-text);
@@ -55,6 +61,64 @@ body {
   font-size: 18px;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  padding: 0.5rem 1rem;
+  border-radius: 0 0 4px 4px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  z-index: 10000;
+  transition: top 0.15s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.toggle-btn:focus-visible,
+.play-btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(196, 149, 106, 0.25);
+}
+
+/* Fieldset reset for a11y grouping without visual chrome */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* ============================================
@@ -135,7 +199,12 @@ body {
   height: 40px;
   background: var(--color-text-dim);
   margin: 0.75rem auto 0;
-  animation: pulse-down 2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .scroll-arrow {
+    animation: pulse-down 2s ease-in-out infinite;
+  }
 }
 
 @keyframes pulse-down {
@@ -369,11 +438,11 @@ body {
   padding: 0.4rem 0.5rem;
   background: transparent;
   border: none;
-  color: var(--color-text-muted);
+  color: var(--color-text);
   font-family: var(--font-sans);
   font-size: 0.75rem;
   cursor: pointer;
-  transition: all 0.15s;
+  transition: background 0.15s, color 0.15s;
 }
 
 .toggle-btn.active {
@@ -384,7 +453,7 @@ body {
 
 .toggle-btn:hover:not(.active) {
   background: var(--color-border);
-  color: var(--color-text);
+  color: #fff;
 }
 
 /* Resolution slider */
@@ -408,7 +477,7 @@ body {
   align-items: center;
   gap: 0.4rem;
   font-size: 0.8rem;
-  color: var(--color-text-muted);
+  color: var(--color-text);
   cursor: pointer;
   margin-bottom: 0.25rem;
 }
@@ -506,7 +575,7 @@ body {
   color: var(--color-accent);
   cursor: pointer;
   font-size: 0.7rem;
-  transition: all 0.15s;
+  transition: border-color 0.15s, background 0.15s;
 }
 
 .play-btn:hover {
@@ -703,7 +772,6 @@ body {
   background: var(--color-bg-alt);
   border: 1px solid var(--color-border);
   border-radius: 4px;
-  transition: border-color 0.15s;
 }
 
 .strike-card.has-article {
@@ -767,12 +835,12 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  background: rgba(196, 149, 106, 0.15);
-  color: var(--color-accent);
+  background: rgba(196, 149, 106, 0.25);
+  color: var(--color-accent-light);
 }
 
 .article-badge.missing {
-  background: rgba(100, 100, 100, 0.15);
+  background: rgba(100, 100, 100, 0.2);
   color: var(--color-text-dim);
 }
 
@@ -901,9 +969,10 @@ body {
   letter-spacing: 0.1em;
 }
 
-.about-table td:first-child {
+.about-table th[scope="row"] {
   text-align: left;
   font-weight: 500;
+  color: var(--color-text);
 }
 
 .table-note {
@@ -1008,8 +1077,10 @@ footer {
   50% { opacity: 0.35; }
 }
 
-.fog-region {
-  animation: region-pulse 3s ease-in-out infinite;
+@media (prefers-reduced-motion: no-preference) {
+  .fog-region {
+    animation: region-pulse 3s ease-in-out infinite;
+  }
 }
 
 /* ============================================
