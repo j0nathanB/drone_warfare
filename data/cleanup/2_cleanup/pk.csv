@@ -1,0 +1,431 @@
+Strike ID,Date,Adm_2,Adm_1,Minimum total people killed,Maximum total people killed,Minimum civilians reported killed,Maximum civilians reported killed,Minimum children reported killed,Maximum children reported killed,Minimum reported injured,Maximum reported injured,Adm_3
+B1,17/06/2004,Wana,South Waziristan,6,8,2,2,2,2,1,1,Unknown
+B2,08/05/2005,Toorikhel,North Waziristan,2,2,0,0,0,0,0,0,Unknown
+B3,05/11/2005,Mosaki,North Waziristan,8,8,3,8,2,3,1,1,Unknown
+B4,01/12/2005,Haisori,North Waziristan,6,6,2,3,2,2,0,0,Unknown
+B5,13/01/2006,Damadola,Bajaur Agency,13,22,10,18,5,6,0,0,Unknown
+B6,30/10/2006,Chenegai,Bajaur Agency,81,83,80,82,68,70,3,3,Unknown
+B7,16/01/2007,Zamazola,South Waziristan,8,8,8,8,1,1,0,0,Unknown
+B8,27/04/2007,Saidgai,North Waziristan,3,4,3,4,0,0,3,9,Unknown
+B9,19/06/2007,Mami Rogha,North Waziristan,20,34,0,34,0,0,10,15,Unknown
+B10,02/11/2007,Danda Darpakhel,North Waziristan,5,10,0,0,0,0,6,12,Unknown
+B11,03/12/2007,Jani Khel,Bannu Frontier Region,0,0,0,0,0,0,1,1,Unknown
+B12,29/01/2008,Mir Ali,North Waziristan,12,15,4,6,2,3,1,2,Unknown
+B13,28/02/2008,Azam Warsak,South Waziristan,10,13,0,0,0,0,6,16,Unknown
+B14,16/03/2008,Dhook Pir Bagh,South Waziristan,18,20,0,4,0,0,5,9,Unknown
+B15,14/05/2008,Damadola,Bajaur Agency,12,20,4,6,1,4,9,9,Unknown
+B16,14/06/2008,Makeen,South Waziristan,1,1,0,1,0,0,0,0,Unknown
+B17,28/07/2008,Zeralita,South Waziristan,7,12,1,5,0,2,3,3,Unknown
+B18,12/08/2008,Bhaggar,South Waziristan,12,25,0,5,0,0,0,4,Unknown
+B19,20/08/2008,Zari Noor,South Waziristan,6,12,0,0,0,0,5,5,Unknown
+B20,27/08/2008,Ganki Khel,South Waziristan,0,0,0,0,0,0,4,4,Unknown
+B21,30/08/2008,Korzai,South Waziristan,4,5,0,0,0,0,4,4,Unknown
+B22,30/08/2008,Miram Shah,North Waziristan,6,11,2,9,1,4,2,8,Unknown
+B23,02/09/2008,Unknown,North Waziristan,0,10,0,0,0,0,0,1,Unknown
+B24,04/09/2008,Mohammad Khel,North Waziristan,5,7,0,0,0,0,3,4,Unknown
+B25,05/09/2008,Gurwak,North Waziristan,5,12,5,7,3,4,0,0,Unknown
+B26,08/09/2008,Miram Shah,North Waziristan,17,23,11,20,5,8,14,25,Unknown
+B27,12/09/2008,Tol Khel,North Waziristan,12,15,3,5,2,2,14,14,Unknown
+B28,17/09/2008,Baghar Cheena,South Waziristan,4,7,0,0,0,0,3,3,Unknown
+B29,30/09/2008,Khushali,South Waziristan,4,8,0,0,0,0,5,9,Unknown
+B30,03/10/2008,Datta Khel,North Waziristan,3,3,3,3,1,1,5,5,Unknown
+B31,03/10/2008,Datta Khel,North Waziristan,17,21,7,14,3,3,0,0,Unknown
+B32,09/10/2008,Tati,North Waziristan,5,9,1,9,1,4,2,2,Unknown
+B33,11/10/2008,Miram Shah,North Waziristan,4,5,0,0,0,0,2,2,Unknown
+B34,16/10/2008,Taparghai,South Waziristan,2,9,0,4,0,0,1,7,Unknown
+B35,23/10/2008,Danda Darpakhel,North Waziristan,8,11,7,10,7,7,6,11,Unknown
+B36,26/10/2008,Mandata,South Waziristan,18,20,0,4,0,3,2,2,Unknown
+B37,31/10/2008,Asori,North Waziristan,4,25,1,20,0,0,0,0,Unknown
+B38,31/10/2008,Kari Kot,South Waziristan,4,12,1,1,0,0,2,30,Unknown
+B39,07/11/2008,Kumsham,North Waziristan,11,16,6,11,0,0,17,17,Unknown
+B40,14/11/2008,Garyom,North Waziristan,11,13,3,12,0,0,2,2,Unknown
+B41,19/11/2008,Jani Khel,Bannu Frontier Region,3,6,0,3,0,0,7,7,Unknown
+B42,22/11/2008,Ali Khel,North Waziristan,4,6,0,1,0,0,6,6,Unknown
+B43,27/11/2008,Wana,South Waziristan,5,5,0,0,0,0,0,0,Unknown
+B44,29/11/2008,Chashma,North Waziristan,2,3,0,3,0,0,2,3,Unknown
+B45,05/12/2008,Kateera,North Waziristan,3,4,0,0,0,0,2,2,Unknown
+B46,11/12/2008,Azam Warsak,South Waziristan,6,7,0,7,0,0,0,0,Unknown
+B47,15/12/2008,Tapi Tool,North Waziristan,2,3,0,3,0,0,3,3,Unknown
+B48,22/12/2008,Kari Kot,South Waziristan,3,3,0,0,0,0,5,5,Unknown
+B49,22/12/2008,Shin Warsak,South Waziristan,2,4,0,0,0,0,4,4,Unknown
+B50,01/01/2009,Kari Kot,South Waziristan,3,5,0,0,0,0,1,2,Unknown
+B51,02/01/2009,Madin Village,South Waziristan,3,4,0,0,0,0,3,5,Unknown
+Ob1,23/01/2009,Zharki,North Waziristan,7,15,9,11,1,1,1,1,Unknown
+Ob2,23/01/2009,Ganki Khel,South Waziristan,5,10,5,10,3,4,2,2,Unknown
+Ob3,14/02/2009,Narsi Khel,South Waziristan,25,35,1,9,1,1,11,15,Unknown
+Ob4,16/02/2009,Sur Pul,Kurram Agency,18,31,0,0,0,0,3,7,Unknown
+Ob5,01/03/2009,Sararogha,South Waziristan,3,12,0,0,0,0,1,3,Unknown
+Ob6,12/03/2009,Barjo,Kurram Agency,14,26,0,0,0,0,9,50,Unknown
+Ob7,15/03/2009,Jani Khel,Bannu Frontier Region,2,6,0,0,0,0,3,3,Unknown
+Ob8,25/03/2009,Makeen,South Waziristan,6,8,0,0,0,0,5,5,Unknown
+Ob9,26/03/2009,Sokhel,North Waziristan,4,5,0,5,0,0,5,5,Unknown
+Ob10,01/04/2009,Khadezai,Orakzai Agency,10,14,5,5,3,3,4,16,Unknown
+Ob11,04/04/2009,Datta Khel,North Waziristan,13,15,8,13,3,5,1,1,Unknown
+Ob12,08/04/2009,Ganki Khel,South Waziristan,3,4,0,0,0,0,2,5,Unknown
+Ob13,19/04/2009,Ganki Khel,South Waziristan,0,8,0,8,0,0,3,5,Unknown
+Ob14,29/04/2009,Kaniguram,South Waziristan,1,10,0,4,0,0,4,4,Unknown
+Ob15,09/05/2009,Tabbi Langhar Khel,South Waziristan,6,25,0,4,0,0,7,10,Unknown
+Ob16,12/05/2009,Sara Khwara,South Waziristan,5,9,0,0,0,0,4,4,Unknown
+Ob17,16/05/2009,Khesoor,North Waziristan,25,40,9,9,0,0,2,2,Unknown
+Ob18,14/06/2009,Marda Algad,South Waziristan,3,5,0,3,0,0,0,0,Unknown
+Ob19,18/06/2009,Wana,South Waziristan,12,18,4,4,0,0,10,10,Unknown
+Ob20,23/06/2009,Makeen,South Waziristan,5,6,0,0,0,0,7,7,Unknown
+Ob21,23/06/2009,Makeen,South Waziristan,60,83,18,50,10,10,27,27,Unknown
+Ob22,03/07/2009,Mantoi,South Waziristan,0,5,0,5,0,0,0,0,Unknown
+Ob23,03/07/2009,Zamarai Nairai,South Waziristan,10,17,0,0,0,0,27,35,Unknown
+Ob24,07/07/2009,Makeen,South Waziristan,14,18,0,0,0,0,10,10,Unknown
+Ob25,08/07/2009,Ladha,South Waziristan,8,10,0,0,0,0,5,12,Unknown
+Ob26,08/07/2009,Ladha,South Waziristan,35,40,0,0,0,0,1,1,Unknown
+Ob27,10/07/2009,Painda Khel,South Waziristan,3,5,0,0,0,0,3,3,Unknown
+Ob28,17/07/2009,Gariwam,North Waziristan,5,6,0,0,0,0,4,6,Unknown
+Ob29,05/08/2009,Ladha,South Waziristan,1,12,1,4,0,0,5,5,Unknown
+Ob30,11/08/2009,Ladha,South Waziristan,12,25,0,6,4,4,5,7,Unknown
+Ob31,21/08/2009,Danda Darpakhel,North Waziristan,17,21,9,13,6,6,2,2,Unknown
+Ob32,27/08/2009,Taparghai,South Waziristan,8,10,0,0,0,0,6,9,Unknown
+Ob33,07/09/2009,Machi Khel,North Waziristan,5,8,3,3,0,0,2,7,Unknown
+Ob34,08/09/2009,Darga Mandi,North Waziristan,10,15,5,5,3,3,4,5,Unknown
+Ob35,14/09/2009,Toorikhel,North Waziristan,5,5,0,0,0,0,2,3,Unknown
+Ob36,24/09/2009,Mir Ali,North Waziristan,10,12,0,12,0,0,5,5,Unknown
+Ob37,29/09/2009,Sararogha,South Waziristan,5,6,0,0,0,0,2,6,Unknown
+Ob38,29/09/2009,Danda Darpakhel,North Waziristan,4,9,0,4,0,0,2,6,Unknown
+Ob39,30/09/2009,Norak,North Waziristan,6,9,0,0,0,0,2,5,Unknown
+Ob40,15/10/2009,Danda Darpakhel,North Waziristan,3,4,0,0,0,0,7,7,Unknown
+Ob41,21/10/2009,Spalaga,North Waziristan,3,3,0,0,0,0,8,8,Unknown
+Ob42,24/10/2009,Damadola,Bajaur Agency,20,30,0,0,0,0,8,8,Unknown
+Ob43,05/11/2009,Norak,North Waziristan,4,6,0,0,0,0,8,8,Unknown
+Ob44,18/11/2009,Shanakorah,North Waziristan,3,6,0,0,0,0,2,15,Unknown
+Ob45,20/11/2009,Machi Khel,North Waziristan,3,14,3,3,1,1,2,12,Unknown
+Ob46,08/12/2009,Spalaga,North Waziristan,3,4,0,0,0,0,3,3,Unknown
+Ob47,10/12/2009,Ladha,South Waziristan,6,6,0,0,0,0,8,8,Unknown
+Ob48,17/12/2009,Datta Khel,North Waziristan,2,2,0,0,0,0,0,0,Unknown
+Ob49,17/12/2009,Ambar Shaga,North Waziristan,12,16,6,6,0,0,0,0,Unknown
+Ob50,18/12/2009,Babrak Ziarat,North Waziristan,5,8,5,5,0,0,4,5,Unknown
+Ob51,26/12/2009,Saidgai,North Waziristan,13,20,6,6,0,0,12,12,Unknown
+Ob52,31/12/2009,Machi Khel,North Waziristan,3,7,3,3,1,1,2,2,Unknown
+Ob53,01/01/2010,Ghundikala,North Waziristan,2,3,0,0,0,0,3,4,Unknown
+Ob54,03/01/2010,Mosaki,North Waziristan,5,5,1,2,1,1,2,2,Unknown
+Ob55,06/01/2010,Sanzali,North Waziristan,5,7,0,6,0,0,5,5,Unknown
+Ob56,06/01/2010,Sanzali,North Waziristan,5,9,5,5,0,0,3,3,Unknown
+Ob57,08/01/2010,Tappi,North Waziristan,5,6,5,5,1,1,3,3,Unknown
+Ob58,09/01/2010,Ismail Khel,North Waziristan,4,5,0,0,0,0,5,5,Unknown
+Ob59,09/01/2010,Shaktoi,North Waziristan,15,18,0,0,0,0,7,14,Unknown
+Ob60,15/01/2010,Zanani,North Waziristan,5,10,0,0,0,0,3,3,Unknown
+Ob61,15/01/2010,Shaktoi,North Waziristan,6,10,0,0,0,0,0,0,Unknown
+Ob62,17/01/2010,Shaktoi,North Waziristan,14,20,0,0,0,0,4,4,Unknown
+Ob63,19/01/2010,Deegan,North Waziristan,5,9,0,0,0,0,4,4,Unknown
+Ob64,29/01/2010,Mohammad Khel,North Waziristan,2,15,0,0,0,0,4,4,Unknown
+Ob65,02/02/2010,Toor Narai,North Waziristan,23,24,0,0,0,0,0,0,Unknown
+Ob66,02/02/2010,Deegan,North Waziristan,0,0,0,0,0,0,0,0,Unknown
+Ob67,02/02/2010,Mohammad Khel,North Waziristan,0,0,0,0,0,0,0,0,Unknown
+Ob68,02/02/2010,Pai Khel,North Waziristan,9,9,5,5,0,0,0,0,Unknown
+Ob69,14/02/2010,Mir Ali,North Waziristan,5,7,0,0,0,0,4,4,Unknown
+Ob70,15/02/2010,Tappi,North Waziristan,4,5,0,0,0,0,0,0,Unknown
+Ob71,17/02/2010,Tabbi,North Waziristan,4,4,0,0,0,0,2,3,Unknown
+Ob72,18/02/2010,Danda Darpakhel,North Waziristan,3,5,0,0,0,0,4,4,Unknown
+Ob73,24/02/2010,Darga Mandi,North Waziristan,5,13,5,6,1,1,6,6,Unknown
+Ob74,08/03/2010,Miram Shah,North Waziristan,9,9,0,0,0,0,2,2,Unknown
+Ob75,10/03/2010,Mizar Madakhel,North Waziristan,7,8,0,0,0,0,12,12,Unknown
+Ob76,10/03/2010,Mizar Madakhel,North Waziristan,7,7,4,7,0,0,0,0,Unknown
+Ob77,16/03/2010,Datta Khel,North Waziristan,7,11,0,0,0,0,2,2,Unknown
+Ob78,17/03/2010,Hamzoni,North Waziristan,3,5,0,0,0,0,4,4,Unknown
+Ob79,17/03/2010,Mizar Madakhel,North Waziristan,5,5,0,0,0,0,0,0,Unknown
+Ob80,21/03/2010,Inzar,North Waziristan,5,8,0,0,0,0,0,0,Unknown
+Ob81,23/03/2010,Machis,North Waziristan,6,6,0,0,0,0,3,3,Unknown
+Ob82,27/03/2010,Hurmuz,North Waziristan,4,4,0,4,0,0,5,5,Unknown
+Ob83,31/03/2010,Tappi,North Waziristan,5,6,5,6,1,1,2,2,Unknown
+Ob84,12/04/2010,Boya,North Waziristan,13,13,8,13,2,2,2,3,Unknown
+Ob85,14/04/2010,Ambar Shaga,North Waziristan,4,5,0,0,0,0,1,3,Unknown
+Ob86,16/04/2010,Toorikhel,North Waziristan,3,4,0,0,0,0,2,2,Unknown
+Ob87,24/04/2010,Machi Khel,North Waziristan,7,9,0,0,0,0,0,0,Unknown
+Ob88,26/04/2010,Khushali,North Waziristan,3,8,0,0,0,0,3,3,Unknown
+Ob89,03/05/2010,Machi Khel,North Waziristan,4,6,0,2,0,0,0,0,Unknown
+Ob90,09/05/2010,Datta Khel,North Waziristan,5,10,0,4,0,0,4,4,Unknown
+Ob91,11/05/2010,Datta Khel,North Waziristan,8,14,0,4,0,0,12,12,Unknown
+Ob92,11/05/2010,Gurwak,North Waziristan,7,15,0,0,0,0,4,4,Unknown
+Ob93,15/05/2010,Khyber,Khyber Agency,5,15,0,2,0,0,15,15,Unknown
+Ob94,21/05/2010,Boya,North Waziristan,11,11,10,10,7,7,7,10,Unknown
+Ob95,28/05/2010,Mizai Nari,South Waziristan,8,12,0,11,0,0,4,4,Unknown
+Ob96,10/06/2010,Norak,North Waziristan,2,7,4,4,0,0,3,3,Unknown
+Ob97,11/06/2010,Maizer,North Waziristan,10,15,0,0,0,0,10,12,Unknown
+Ob98,19/06/2010,Haider Khel,North Waziristan,16,17,0,0,0,0,10,18,Unknown
+Ob99,26/06/2010,Khushali,North Waziristan,2,4,0,0,0,0,1,3,Unknown
+Ob100,27/06/2010,Tabbi,North Waziristan,5,6,0,0,0,0,4,4,Unknown
+Ob101,29/06/2010,Kari Kot,South Waziristan,7,10,0,0,0,0,1,4,Unknown
+Ob102,15/07/2010,Sheerani,North Waziristan,9,14,0,7,0,0,3,3,Unknown
+Ob103,24/07/2010,Dwasarak,South Waziristan,16,18,0,0,0,0,24,24,Unknown
+Ob104,25/07/2010,Shaktoi,North Waziristan,14,32,0,0,0,0,7,12,Unknown
+Ob105,25/07/2010,Tabbi,North Waziristan,4,12,0,0,0,0,2,4,Unknown
+Ob106,25/07/2010,Sararogha,South Waziristan,4,4,0,0,0,0,5,5,Unknown
+Ob107,14/08/2010,Issori,North Waziristan,13,14,7,7,1,1,5,6,Unknown
+Ob108,21/08/2010,Qutab Khel,North Waziristan,4,6,0,4,0,0,2,2,Unknown
+Ob109,23/08/2010,Danda Darpakhel,North Waziristan,20,20,7,9,3,3,15,15,Unknown
+Ob110,23/08/2010,Darga Mandi,North Waziristan,5,7,0,0,0,0,3,12,Unknown
+Ob111,27/08/2010,Shahidano,Kurram Agency,3,9,0,0,0,0,2,2,Unknown
+Ob112,27/08/2010,Badshah Kot,Kurram Agency,0,0,0,0,0,0,0,0,Unknown
+Ob113,27/08/2010,Taaloo Ganj,Kurram Agency,2,3,0,3,0,0,0,0,Unknown
+Ob114,03/09/2010,Miram Shah,North Waziristan,6,9,0,0,0,0,2,3,Unknown
+Ob115,03/09/2010,Datta Khel,North Waziristan,2,4,0,0,0,0,2,2,Unknown
+Ob116,04/09/2010,Datta Khel,North Waziristan,7,8,0,0,0,0,12,12,Unknown
+Ob117,06/09/2010,Khar Qamar,North Waziristan,3,6,0,0,0,0,1,1,Unknown
+Ob118,08/09/2010,Danda Darpakhel,North Waziristan,5,10,4,4,4,4,2,2,Unknown
+Ob119,08/09/2010,Ambar Shaga,North Waziristan,3,4,0,4,0,0,1,2,Unknown
+Ob120,08/09/2010,Danda Darpakhel,North Waziristan,10,10,0,0,0,0,2,5,Unknown
+Ob121,09/09/2010,Miram Shah,North Waziristan,3,6,0,0,0,0,3,5,Unknown
+Ob122,12/09/2010,Newey Adda,North Waziristan,5,7,0,0,0,0,2,3,Unknown
+Ob123,14/09/2010,Bushnarai,North Waziristan,11,12,0,0,0,0,4,4,Unknown
+Ob124,14/09/2010,Qutab Khel,North Waziristan,1,4,0,0,0,0,4,4,Unknown
+Ob125,15/09/2010,Darga Mandi,North Waziristan,11,15,5,5,0,0,1,5,Unknown
+Ob126,15/09/2010,Pai Khel,North Waziristan,4,7,0,0,0,0,3,3,Unknown
+Ob127,19/09/2010,Deegan,North Waziristan,3,9,5,5,0,0,0,0,Unknown
+Ob128,20/09/2010,Darazinda,North Waziristan,3,6,0,3,0,0,0,0,Unknown
+Ob129,21/09/2010,Khand Morsak,South Waziristan,7,8,0,0,0,0,4,5,Unknown
+Ob130,21/09/2010,Azam Warsak,South Waziristan,0,16,0,0,0,0,0,0,Unknown
+Ob131,25/09/2010,Datta Khel,North Waziristan,2,4,0,0,0,0,0,0,Unknown
+Ob132,26/09/2010,Lawra Mandi,North Waziristan,4,5,0,0,0,0,2,2,Unknown
+Ob133,26/09/2010,Miram Shah,North Waziristan,3,5,0,0,0,0,1,2,Unknown
+Ob134,26/09/2010,Sheerani,North Waziristan,2,3,0,0,0,0,0,0,Unknown
+Ob135,27/09/2010,Khushali,North Waziristan,3,4,0,0,0,0,0,0,Unknown
+Ob136,28/09/2010,Zeba,South Waziristan,4,4,0,0,0,0,2,2,Unknown
+Ob137,02/10/2010,Asar Village,North Waziristan,8,10,0,0,0,0,2,4,Unknown
+Ob138,02/10/2010,Inzarkas,North Waziristan,7,14,0,0,0,0,2,2,Unknown
+Ob139,04/10/2010,Mir Ali,North Waziristan,5,9,0,3,0,0,2,2,Unknown
+Ob140,06/10/2010,Miram Shah,North Waziristan,5,11,0,0,0,0,4,4,Unknown
+Ob141,06/10/2010,Hurmuz,North Waziristan,3,5,0,0,0,0,3,3,Unknown
+Ob142,07/10/2010,Khaisoori,North Waziristan,4,4,0,0,0,0,2,2,Unknown
+Ob143,08/10/2010,Mohammad Khel,North Waziristan,4,6,0,0,0,0,0,0,Unknown
+Ob144,08/10/2010,Char Khel,North Waziristan,5,8,0,4,0,0,0,0,Unknown
+Ob145,10/10/2010,Shiva,North Waziristan,4,9,0,0,0,0,3,3,Unknown
+Ob146,13/10/2010,Datta Khel,North Waziristan,6,14,3,6,0,0,0,0,Unknown
+Ob147,15/10/2010,Aziz Khel,North Waziristan,4,6,0,0,0,0,3,3,Unknown
+Ob148,15/10/2010,Machi Khel,North Waziristan,3,5,0,0,0,0,0,0,Unknown
+Ob149,18/10/2010,Datta Khel,North Waziristan,6,7,1,1,1,1,1,6,Unknown
+Ob150,27/10/2010,Mir Ali,North Waziristan,2,5,0,0,0,0,1,1,Unknown
+Ob151,27/10/2010,Deegan,North Waziristan,2,4,0,0,0,0,1,1,Unknown
+Ob152,28/10/2010,Ismail Khel,North Waziristan,4,8,0,4,0,0,0,0,Unknown
+Ob153,01/11/2010,Haider Khel,North Waziristan,5,6,0,0,0,0,2,2,Unknown
+Ob154,03/11/2010,Qutab Khel,North Waziristan,4,5,0,0,0,0,0,0,Unknown
+Ob155,03/11/2010,Khaso Khel,North Waziristan,4,5,0,0,0,0,0,0,Unknown
+Ob156,03/11/2010,Pai Khel,North Waziristan,4,5,0,0,0,0,0,0,Unknown
+Ob157,07/11/2010,Ghulam Khan,North Waziristan,8,9,0,0,0,0,2,2,Unknown
+Ob158,07/11/2010,Datta Khel,North Waziristan,3,6,0,0,0,0,1,4,Unknown
+Ob159,11/11/2010,Ghulam Khan,North Waziristan,5,8,0,0,0,0,5,6,Unknown
+Ob160,13/11/2010,Miram Shah,North Waziristan,4,4,0,4,0,0,1,1,Unknown
+Ob161,16/11/2010,Ghulam Khan,North Waziristan,20,20,0,9,0,0,0,0,Unknown
+Ob162,19/11/2010,Norak,North Waziristan,2,4,0,0,0,0,1,1,Unknown
+Ob163,21/11/2010,Khaddi,North Waziristan,5,9,0,3,0,0,0,0,Unknown
+Ob164,22/11/2010,Khesoor,North Waziristan,3,6,0,0,0,0,2,3,Unknown
+Ob165,26/11/2010,Pir Kelev,North Waziristan,2,4,1,4,1,1,0,0,Unknown
+Ob166,28/11/2010,Hassan Khel,North Waziristan,0,4,0,0,0,0,0,0,Unknown
+Ob167,06/12/2010,Khushali,North Waziristan,3,5,0,2,0,0,3,3,Unknown
+Ob168,06/12/2010,Kushali,North Waziristan,2,4,0,0,0,0,0,0,Unknown
+Ob169,10/12/2010,Khadar Khel,North Waziristan,4,4,0,0,0,0,2,2,Unknown
+Ob170,14/12/2010,Spalaga,North Waziristan,3,4,0,4,0,0,0,0,Unknown
+Ob171,16/12/2010,Tirah Valley,Khyber Agency,7,7,0,0,0,0,0,0,Unknown
+Ob172,17/12/2010,Sandana,Khyber Agency,7,15,0,0,0,0,7,11,Unknown
+Ob173,17/12/2010,Nakai,Khyber Agency,11,15,0,0,0,0,2,2,Unknown
+Ob174,17/12/2010,Speen Drang,Khyber Agency,32,32,2,2,0,0,0,0,Unknown
+Ob175,27/12/2010,Shera Tala,North Waziristan,18,22,0,0,0,0,0,0,Unknown
+Ob176,27/12/2010,Machi Khel,North Waziristan,4,4,0,0,0,0,0,0,Unknown
+Ob177,28/12/2010,Ghulam Khan,North Waziristan,5,7,0,0,0,0,2,2,Unknown
+Ob178,28/12/2010,Ghulam Khan,North Waziristan,5,12,2,4,0,0,3,3,Unknown
+Ob179,28/12/2010,Ghulam Khan,North Waziristan,9,10,0,0,0,0,6,6,Unknown
+Ob180,31/12/2010,Ghulam Khan,North Waziristan,4,8,0,0,0,0,0,0,Unknown
+Ob181,01/01/2011,Mandi Khel,North Waziristan,8,10,0,0,0,0,0,0,Unknown
+Ob182,01/01/2011,Mandi Khel,North Waziristan,4,6,0,0,0,0,0,0,Unknown
+Ob183,01/01/2011,Datta Khel,North Waziristan,4,5,0,0,0,0,0,0,Unknown
+Ob184,01/01/2011,Boya,North Waziristan,4,4,0,0,0,0,4,4,Unknown
+Ob185,07/01/2011,Ghar Laley,North Waziristan,1,6,0,0,0,0,0,0,Unknown
+Ob186,12/01/2011,Haider Khel,North Waziristan,3,6,0,0,0,0,2,15,Unknown
+Ob187,18/01/2011,"Assar Madd Khel, Datta Khel",North Waziristan,3,7,0,0,0,0,3,3,Unknown
+Ob188,23/01/2011,Doga Mada Khel,North Waziristan,2,5,0,0,0,0,0,0,Unknown
+Ob189,23/01/2011,Doga Mada Khel,North Waziristan,2,3,0,0,0,0,0,0,Unknown
+Ob190,23/01/2011,Razmak,North Waziristan,4,6,0,0,0,0,3,3,Unknown
+Ob191,20/02/2011,"Kazha Punga area, Tehsil Birmal",South Waziristan,6,8,0,0,0,0,2,2,Unknown
+Ob192,21/02/2011,Malik Jashdar,North Waziristan,7,14,0,11,0,0,10,10,Unknown
+Ob193,24/02/2011,Mohammad Khel,North Waziristan,4,7,0,0,0,0,3,2,Unknown
+Ob194,08/03/2011,Landidog,South Waziristan,2,5,0,5,0,0,2,2,Unknown
+Ob195,09/03/2011,Datta Khel,North Waziristan,5,5,0,0,0,0,2,3,Unknown
+Ob196,11/03/2011,Khesoor,North Waziristan,4,12,5,5,0,0,0,0,Unknown
+Ob197,11/03/2011,Ghoroski,North Waziristan,4,4,0,0,0,0,0,0,Unknown
+Ob198,13/03/2011,Azam Warsak,South Waziristan,0,4,0,0,0,0,0,5,Unknown
+Ob199,13/03/2011,"Ishar Morr area, Qutab Khel, Miranshah",North Waziristan,4,7,0,0,0,0,5,5,Unknown
+Ob200,14/03/2011,Malik Jashdar,North Waziristan,3,6,0,0,0,0,0,0,Unknown
+Ob201,16/03/2011,Datta Khel,North Waziristan,3,5,0,0,0,0,0,0,Unknown
+Ob202,17/03/2011,Datta Khel,North Waziristan,26,42,19,41,0,1,9,14,Unknown
+Ob203,13/04/2011,Angor Adda,South Waziristan,4,7,0,7,0,0,6,10,Unknown
+Ob204,22/04/2011,Spinwan,North Waziristan,20,26,5,9,3,5,5,10,Unknown
+Ob205,06/05/2011,Dwa Tooe,North Waziristan,7,18,6,6,0,0,4,4,Unknown
+Ob206,10/05/2011,Angor Adda,South Waziristan,3,5,0,0,0,0,4,4,Unknown
+Ob207,12/05/2011,Datta Khel,North Waziristan,5,8,0,0,0,0,1,1,Unknown
+Ob208,13/05/2011,Doga Mada Khel,North Waziristan,3,5,0,0,0,0,0,0,Unknown
+Ob209,16/05/2011,"Khushali Village, Mir Ail",North Waziristan,4,10,0,0,0,0,2,4,Unknown
+Ob210,16/05/2011,"Khisoor Village, Mir Ali",North Waziristan,3,6,0,0,0,0,0,0,Unknown
+Ob211,20/05/2011,Tappi,North Waziristan,4,6,0,0,0,0,0,0,Unknown
+Ob212,23/05/2011,Mir Ali,North Waziristan,4,7,0,0,0,0,2,2,Unknown
+Ob213,03/06/2011,Ghwa Khwa,South Waziristan,5,12,0,0,0,0,1,3,Unknown
+Ob214,06/06/2011,"Tigger, Toji Khel Wazir",South Waziristan,7,9,0,0,0,0,2,2,Unknown
+Ob215,06/06/2011,Wacha Dana,South Waziristan,8,10,0,7,0,0,3,3,Unknown
+Ob216,06/06/2011,Darnashtra,South Waziristan,3,5,0,0,0,0,0,0,Unknown
+Ob217,08/06/2011,Zoynari,South Waziristan,18,23,0,0,0,0,6,6,Unknown
+Ob218,08/06/2011,Shawal,South Waziristan,4,4,0,0,0,0,0,0,Unknown
+Ob219,15/06/2011,Wana,South Waziristan,2,10,0,0,0,0,2,2,Unknown
+Ob220,15/06/2011,Karez,South Waziristan,0,0,0,0,0,0,0,0,Unknown
+Ob221,15/06/2011,Mir Ali,North Waziristan,5,6,5,6,0,0,0,0,Unknown
+Ob222,20/06/2011,Khardand,Kurram Agency,5,7,2,7,0,0,0,3,Unknown
+Ob223,20/06/2011,Zarakai,Kurram Agency,2,5,0,0,0,0,0,0,Unknown
+Ob224,27/06/2011,Shawal,South Waziristan,6,12,0,0,0,0,0,0,Unknown
+Ob225,27/06/2011,Shakai,South Waziristan,12,21,0,20,0,0,2,2,Unknown
+Ob226,05/07/2011,Mir Ali,North Waziristan,4,6,0,3,0,2,5,5,Unknown
+Ob227,11/07/2011,Gurwak,North Waziristan,4,12,0,0,0,0,2,2,Unknown
+Ob228,12/07/2011,Gurwak,North Waziristan,12,25,0,0,0,0,0,0,Unknown
+Ob229,12/07/2011,Barmal,South Waziristan,5,13,0,0,0,0,3,5,Unknown
+Ob230,12/07/2011,Datta Khel,North Waziristan,13,15,0,4,0,0,0,0,Unknown
+Ob231,12/07/2011,Datta Khel,North Waziristan,1,9,1,1,0,0,3,5,Unknown
+Ob232,20/07/2011,Mir Ali,North Waziristan,4,4,0,0,0,0,2,2,Unknown
+Ob233,01/08/2011,Azam Warsak,South Waziristan,3,6,0,6,0,0,2,7,Unknown
+Ob234,02/08/2011,Qutab Khel,North Waziristan,3,4,0,0,0,0,0,0,Unknown
+Ob235,10/08/2011,Miram Shah,North Waziristan,8,25,0,0,0,0,3,8,Unknown
+Ob236,16/08/2011,Miram Shah,North Waziristan,2,7,3,4,1,1,2,2,Unknown
+Ob237,19/08/2011,Shin Warsak,South Waziristan,3,4,0,0,0,0,2,2,Unknown
+Ob238,22/08/2011,"Mir Koon Khel, Mir Ali",North Waziristan,3,7,0,4,0,0,3,3,Unknown
+Ob239,11/09/2011,Hisokhel,North Waziristan,1,5,0,0,0,0,1,3,Unknown
+Ob240,23/09/2011,Khushali,North Waziristan,3,8,0,0,0,0,3,4,Unknown
+Ob241,27/09/2011,Azam Warsak,South Waziristan,0,4,0,0,0,0,0,2,Unknown
+Ob242,30/09/2011,Baghar,South Waziristan,3,4,0,0,0,0,1,5,Unknown
+Ob243,13/10/2011,Danda Darpakhel,North Waziristan,1,6,0,0,0,0,4,4,Unknown
+Ob244,13/10/2011,"Chashma Nala, Birmal",South Waziristan,3,6,0,0,0,0,3,3,Unknown
+Ob245,14/10/2011,Danda Darpakhel,North Waziristan,3,6,0,0,0,0,0,0,Unknown
+Ob246,15/10/2011,Angor Adda,South Waziristan,3,6,0,0,0,0,3,7,Unknown
+Ob247,26/10/2011,"Shana Wana, Birmal",South Waziristan,13,22,0,0,0,0,6,6,Unknown
+Ob248,27/10/2011,Azam Warsak,South Waziristan,4,6,0,0,0,0,3,4,Unknown
+Ob249,27/10/2011,Hisokhel,North Waziristan,4,6,0,0,0,0,3,3,Unknown
+Ob250,30/10/2011,"Khar Khama, Datta Khel",North Waziristan,4,6,4,4,0,0,2,3,Unknown
+Ob251,31/10/2011,Norak,North Waziristan,2,4,2,2,2,2,3,3,Unknown
+Ob252,03/11/2011,"Sarai Darpa Khel, Miranshah",North Waziristan,2,3,0,0,0,0,3,3,Unknown
+Ob253,15/11/2011,Miram Shah,North Waziristan,3,7,0,0,0,0,2,4,Unknown
+Ob254,16/11/2011,Babar Ghar,South Waziristan,4,22,0,0,0,0,6,12,Unknown
+Ob255,17/11/2011,Shawal,North Waziristan,7,9,0,0,0,0,3,5,Unknown
+Ob256,10/01/2012,Miram Shah,North Waziristan,1,4,0,0,0,0,2,2,Unknown
+Ob257,12/01/2012,Datta Khel,North Waziristan,5,9,0,0,0,0,2,3,Unknown
+Ob258,23/01/2012,Deegan,North Waziristan,2,5,0,0,0,0,1,3,Unknown
+Ob259,23/01/2012,"Char Khel, Datta Khel",North Waziristan,0,2,0,0,0,0,0,0,Unknown
+Ob260,08/02/2012,Miranshah,North Waziristan,9,10,0,0,0,0,2,12,Unknown
+Ob261,09/02/2012,Miranshah,North Waziristan,3,8,0,3,0,1,3,3,Unknown
+Ob262,16/02/2012,Miranshah,North Waziristan,5,6,0,0,0,0,4,7,Unknown
+Ob263,16/02/2012,"Jalar Zakar Khel, Mir Ali",North Waziristan,8,15,0,0,0,0,3,3,Unknown
+Ob264,09/03/2012,Shaktoi Mandao,South Waziristan,4,15,0,0,0,0,0,3,Unknown
+Ob265,09/03/2012,Nishpa,South Waziristan,6,6,0,0,0,0,0,0,Unknown
+Ob266,13/03/2012,"Wagdalai, Tehsil Birmal",South Waziristan,6,8,0,0,0,0,2,4,Unknown
+Ob267,13/03/2012,Shawa,North/South Waziristan,6,7,0,0,0,0,3,3,Unknown
+Ob268,30/03/2012,"Sarai Bazaar, Miranshah",North Waziristan,3,4,0,0,0,0,3,3,Unknown
+Ob269,29/04/2012,Miranshah Bazaar,North Waziristan,3,6,0,0,0,0,1,3,Unknown
+Ob270,05/05/2012,"Guldar Kot, Dre Nishtar area",North Waziristan,8,10,0,0,0,0,1,3,Unknown
+Ob271,23/05/2012,Datta Khel Kalai,North Waziristan,1,5,0,0,0,0,1,2,Unknown
+Ob272,24/05/2012,Khassokhel near Mir Ali,North Waziristan,5,12,0,8,0,0,3,4,Unknown
+Ob273,26/05/2012,Miranshah,North Waziristan,1,4,0,0,0,0,1,2,Unknown
+Ob274,28/05/2012,Khassokhel near Mir Ali,North Waziristan,4,10,0,0,0,0,4,4,Unknown
+Ob275,28/05/2012,"Degan, Datta Khel",North Waziristan,2,5,0,0,0,0,0,0,Unknown
+Ob276,02/06/2012,"Khawashi Khel, near Wana",South Waziristan,2,4,0,0,0,0,0,0,Unknown
+Ob277,03/06/2012,"Landai Warai, Tehsil Birmal",South Waziristan,0,10,0,0,0,0,4,10,Unknown
+Ob278,04/06/2012,"Khushali, Tehsil Mir Ali",North Waziristan,14,18,0,6,0,0,3,6,Unknown
+Ob279,13/06/2012,"Isha, near Miranshah",North Waziristan,2,4,0,0,0,0,0,0,Unknown
+Ob280,14/06/2012,Miranshah,North Waziristan,1,4,0,0,0,0,2,3,Unknown
+Ob281,26/06/2012,Shawal,North Waziristan,4,7,0,0,0,0,2,7,Unknown
+Ob282,01/07/2012,Dre Nishter/Shawal,North Waziristan,6,9,0,0,0,0,2,3,Unknown
+Ob283,06/07/2012,Maizer,North Waziristan,13,24,3,18,0,0,2,22,Unknown
+Ob284,23/07/2012,Dre Nishter/Shawal,North Waziristan,11,14,6,14,0,0,2,11,Unknown
+Ob285,29/07/2012,Kushhali Turkhel,North Waziristan,4,7,0,3,0,0,4,4,Unknown
+Ob286,18/08/2012,"Mammon Narai, Shuweda",North Waziristan,5,12,1,1,0,0,2,9,Unknown
+Ob287,19/08/2012,"Mana, Shawal",North Waziristan,4,7,0,0,0,0,2,3,Unknown
+Ob288,19/08/2012,"Mana, Shawal",North Waziristan,2,3,0,0,0,0,2,2,Unknown
+Ob289,21/08/2012,"Shnakhura, Datta Khel",North Waziristan,4,25,1,3,1,1,2,2,Unknown
+Ob290,24/08/2012,"Makai/Maki Ghar, Shawal",North Waziristan,13,22,0,0,0,0,4,14,Unknown
+Ob291,24/08/2012,"Dara, Shawal",North Waziristan,0,0,0,0,0,0,0,0,Unknown
+Ob292,24/08/2012,"Dre Nishter, Shawal",North Waziristan,0,0,0,0,0,0,0,0,Unknown
+Ob293,01/09/2012,Degan,North Waziristan,4,6,0,0,0,0,2,3,Unknown
+Ob294,21/09/2012,Mohammed Khel/Datta Khel,North Waziristan,3,4,0,0,0,0,2,3,Unknown
+Ob295,24/09/2012,"Mosaki - Inzar Abad, Tehsil Mir Ali",North Waziristan,3,8,0,0,0,0,2,2,Unknown
+Ob296,01/10/2012,Khadar Khel,North Waziristan,2,4,0,0,0,0,0,0,Unknown
+Ob297,10/10/2012,"Hurmaz, Teshil Mir Ali",North Waziristan,3,6,0,0,0,0,3,3,Unknown
+Ob298,11/10/2012,Buland Khel,Orakzai Agency,16,26,0,2,0,0,5,15,Unknown
+Ob299,24/10/2012,Village Ghundi Killi Daur Tappi area of Tehsil Miranshah,North Waziristan,1,1,1,1,0,0,6,9,Unknown
+Ob300,29/11/2012,Shin Warsak,South Waziristan,1,4,0,0,0,0,3,4,Unknown
+Ob301,01/12/2012,Shin Warsak,South Waziristan,1,4,0,0,0,0,3,3,Unknown
+Ob302,06/12/2012,"Noorak Mubarak Shahi area, Tehsil Mir Ali",North Waziristan,2,11,1,1,0,0,1,6,Unknown
+Ob303,09/12/2012,"Tabbi Tor Khel, Tehisl Ghulam Khan",North Waziristan,2,4,0,3,0,0,0,0,Unknown
+Ob304,21/12/2012,"Hassokhel, near Mir Ali",North Waziristan,3,6,0,0,0,0,2,2,Unknown
+Ob305,29/12/2012,"Gurbaz, Shawal",North Waziristan,4,5,0,0,0,0,2,2,Unknown
+Ob306,02/01/2013,"Lajhmarai area, Tehsil Birmal",South Waziristan,6,11,0,0,0,0,0,0,Unknown
+Ob307,03/01/2013,"Ghundi Killi, Tappi area, Tehsil Miranshah",North Waziristan,3,6,0,0,0,0,1,1,Unknown
+Ob308,06/01/2013,"Smal Narai area, Tehsil Ladha",South Waziristan,8,18,0,0,0,0,3,7,Unknown
+Ob309,08/01/2013,"Haiderkhel, near Mir Ali",North Waziristan,4,9,0,2,0,1,1,4,Unknown
+Ob310,08/01/2013,"Malangan Hassokhel, Tehsil Mir Ali",North Waziristan,0,9,0,0,0,0,1,4,Unknown
+Ob311,10/01/2013,"Hassokhel, near Mir Ali",North Waziristan,3,6,0,0,0,0,0,0,Unknown
+Ob312,06/02/2013,Spinwam,North Waziristan,3,5,0,2,0,0,1,1,Unknown
+Ob313,08/02/2013,Babar Ghar,South Waziristan,6,9,0,0,0,0,2,6,Unknown
+Ob314,10/03/2013,Datta Khel,North Waziristan,1,3,0,0,0,0,1,1,Unknown
+Ob315,22/03/2013,"New Adda, Tehsil Datta Khel",North Waziristan,1,4,0,0,0,0,1,1,Unknown
+Ob316,14/04/2013,Datta Khel,North Waziristan,4,6,0,0,0,0,2,2,Unknown
+Ob317,17/04/2013,"Pobar, Tehsil Ladha",South Waziristan,4,6,0,0,0,0,2,7,Unknown
+Ob318,29/05/2013,"Qazi Kot, Tehsil Miranshah",North Waziristan,3,7,0,0,0,0,1,4,Unknown
+Ob319,07/06/2013,"Shui Khel Mandi, Tehsil Shawal",North Waziristan,7,11,0,0,0,0,3,4,Unknown
+Ob320,03/07/2013,"Shui Khel Mandi, Tehsil Shawal",North Waziristan,16,18,0,0,0,0,5,5,Unknown
+Ob321,13/07/2013,Khray Chila Mossaki area of Mir Ali,North Waziristan,2,3,0,0,0,0,0,0,Unknown
+Ob322,28/07/2013,"Zoi Nair, Tehsil Shawal",North Waziristan,5,8,0,0,0,0,2,4,Unknown
+Ob323,31/08/2013,"Mossaki, Tehsil Mir Ali",North Waziristan,3,4,0,0,0,0,1,3,Unknown
+Ob324,06/09/2013,"Tabi, Tehsil Ghulam Khan",North Waziristan,5,7,0,0,0,0,3,7,Unknown
+Ob325,22/09/2013,"ShawalPalgai area, Thesil Makin",North/South Waziristan,6,7,0,0,0,0,2,4,Unknown
+Ob326,29/09/2013,Darga Mandi,North Waziristan,3,6,0,0,0,0,1,3,Unknown
+Ob327,30/09/2013,"Land Char Khel, Tehsil Datta Khel",North Waziristan,1,4,0,0,0,0,2,4,Unknown
+Ob328,31/10/2013,Miranshah,North Waziristan,0,5,0,0,0,0,3,3,Unknown
+Ob329,01/11/2013,Dandi Darpakhel,North Waziristan,4,7,0,0,0,0,2,2,Unknown
+Ob330,21/11/2013,"Tal, Hangu District",Khyber Pakhtunkhwa province,6,9,0,0,0,0,1,9,Unknown
+Ob331,29/11/2013,Miranshah,North Waziristan,2,3,0,0,0,0,1,2,Unknown
+Ob332,25/12/2013,"Qutab Khel, Miranshah",North Waziristan,3,4,0,0,0,0,1,1,Unknown
+Ob333,11/06/2014,Tabi Tolkhel or Darga Mandi,North Waziristan,4,6,0,0,0,0,0,0,Unknown
+Ob334,12/06/2014,"Darga Mandi, Dande Darpakhel or Ghulam Khan",North Waziristan,6,10,0,0,0,0,4,4,Unknown
+Ob335,18/06/2014,"Darga Mandi, Dande Darpakhel or Miranshah",North Waziristan,4,8,0,0,0,0,2,4,Unknown
+Ob336,10/07/2014,"Madakhel village, Datta Khel Tehsil",North Waziristan,6,7,0,0,0,0,2,3,Unknown
+Ob337,16/07/2014,"Saidgai, Datta Khel tehsil",North Waziristan,15,24,0,0,0,0,4,6,Unknown
+Ob338,19/07/2014,"Doga Madakhel, Datta Khel tehsil",North Waziristan,11,15,0,0,0,0,0,0,Unknown
+Ob339,05/08/2014,"Lawara Mandi village, Datta Khel tehsil",North Waziristan,5,7,0,0,0,0,2,3,Unknown
+Ob340,24/09/2014,"Alwara Mandi village, Datta Khel tehsil",North Waziristan,5,11,0,0,0,0,0,0,Unknown
+Ob341,28/09/2014,Wana,South Waziristan,2,4,0,0,0,0,1,4,Unknown
+Ob342,05/10/2014,"Kundhgar, Shawal",South Waziristan,4,5,0,0,0,0,2,3,Unknown
+Ob343,06/10/2014,"Mangrotai, Shawal",South Waziristan,4,8,0,0,0,0,4,6,Unknown
+Ob344,07/10/2014,"Kundhgar, Shawal",South Waziristan,4,7,0,0,0,0,5,11,Unknown
+Ob345,07/10/2014,"Kundser, Datta Khel",North Waziristan,2,4,0,0,0,0,5,5,Unknown
+Ob346,08/10/2014,"Loman, Datta Khel",North Waziristan,2,4,0,0,0,0,1,3,Unknown
+Ob347,09/10/2014,Datta Khel,North Waziristan,3,4,0,0,0,0,0,0,Unknown
+Ob348,11/10/2014,Tirah Valley,Khyber Agency,4,6,0,0,0,0,2,2,Unknown
+Ob349,11/10/2014,"Marga, Shawal",North Waziristan,2,4,0,0,0,0,0,0,Unknown
+Ob350,30/10/2014,"Nargas village, Azam Warsak",South Waziristan,4,7,0,0,0,0,2,2,Unknown
+Ob351,11/11/2014,"Dawa Toi, Datta Khel",North Waziristan,4,7,0,2,0,2,2,3,Unknown
+Ob352,20/11/2014,Datta Khel,North Waziristan,5,8,0,0,0,0,2,3,Unknown
+Ob353,26/11/2014,"Garga, Shawal",North Waziristan,4,9,0,0,0,0,2,3,Unknown
+Ob354,07/12/2014,"Khar Tangi, Datta Khel",North Waziristan,4,6,0,0,0,0,2,2,Unknown
+Ob355,20/12/2014,Datta Khel,North Waziristan,4,6,0,0,0,0,0,0,Unknown
+Ob356,26/12/2014,"Kund/Kundghar village, Shawal",North Waziristan,4,5,0,0,0,0,0,0,Unknown
+Ob357,26/12/2014,"Kund/Kundghar village, Shawal",North Waziristan,3,4,0,0,0,0,0,0,Unknown
+Ob358,04/01/2015,"Alwara Mandi, Datta Khel or Shawal",North Waziristan,6,10,0,0,0,0,0,0,Unknown
+Ob359,15/01/2015,Shawal,North Waziristan,5,7,2,2,0,0,0,0,Unknown
+Ob360,15/01/2015,Ladha district,South Waziristan,4,7,0,0,0,0,3,4,Unknown
+Ob361,19/01/2015,"Shahi Khel, Shawal",North Waziristan,5,7,0,0,0,0,4,6,Unknown
+Ob362,28/01/2015,Shawal,North Waziristan,6,7,0,0,0,0,2,4,Unknown
+Ob363,18/03/2015,Shabak,Kurram Agency,3,3,0,0,0,0,0,0,Unknown
+Ob364,12/04/2015,Shawal,North Waziristan,4,4,0,0,0,0,2,2,Unknown
+Ob365,16/05/2015,"Wara Mandi, Shawal",North Waziristan,4,7,0,0,0,0,2,2,Unknown
+Ob366,18/05/2015,"Zoy Nari, Shawal",North Waziristan,3,6,0,0,0,0,2,3,Unknown
+Ob367,01/06/2015,Shawal,North Waziristan,4,5,0,0,0,0,0,0,Unknown
+Ob368,06/06/2015,Shawal or Datta Khel,North Waziristan,7,9,0,3,0,0,4,4,Unknown
+Ob369,06/08/2015,"Alwara Mandi area, Datta Khel",North Waziristan,4,7,0,0,0,0,2,3,Unknown
+Ob370,01/09/2015,"Karwanda village, Manzarkhel area, Dattakhel sub-division or Lawara Banga area of Shawal valley",North Waziristan,5,6,0,0,0,0,4,4,Unknown
+Ob371,09/01/2016,"Mangrooti village, Shawal valley, Datta Khel tehsil",North Waziristan,5,5,0,0,0,0,2,2,Unknown
+Ob372,22/02/2016,"Shahidano Dhand, Lower Kurram",Kurram Agency,4,5,0,0,0,0,1,4,Unknown
+Ob373,21/05/2016,Ahmad Wal,Balochistan,2,2,1,1,0,0,0,0,Unknown
+T001,02/03/2017,Unknown,Kurram Agency,2,2,0,0,0,0,0,0,Unknown
+T002,26/04/2017,Zuwai,North Waziristan,7,11,0,3,0,0,0,0,Unknown
+T003,24/05/2017,Unknown,North Waziristan,2,3,0,0,0,0,0,0,Unknown
+T004,13/06/2017,Hangu district,Khyber Pakhtunkhwa province,1,3,0,0,0,0,0,3,Unknown
+T005,15/09/2017,Ghuz Ghari village,Kurram Agency,3,3,0,0,0,0,1,2,Unknown
+T006,24/01/2018,Unclear ,Unclear ,1,3,0,0,0,0,0,0,Unknown

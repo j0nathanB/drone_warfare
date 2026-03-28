@@ -1,0 +1,327 @@
+Strike ID,Date,Loc,Adm_2,Adm_1,Minimum total people killed,Maximum total people killed,Minimum civilians reported killed,Maximum civilians reported killed,Minimum children reported killed,Maximum children reported killed,Minimum reported injured,Maximum reported injured
+YEM001,03/11/2002,Unknown,unclear,Marib,6,6,0,0,0,0,0,0
+YEM002,17/12/2009,Al Majala,unclear,Abyan,55,58,44,44,21,22,9,9
+YEM003,17/12/2009,unclear,Arhab,Sana,0,0,0,0,0,0,0,0
+YEM004,24/12/2009,Rafd,unclear,Shabwah,30,34,0,0,0,0,0,0
+YEM005,12/01/2010,unclear,unclear,Shabwah,1,2,0,0,0,0,0,0
+YEM006,15/01/2010,Al Ajashir,unclear,Sada,0,6,0,0,0,0,0,0
+YEM007,20/01/2010,Erq al Shawan,unclear,Marib,2,2,0,0,0,0,0,0
+YEM008,31/01/2010,unclear,unclear,unclear,0,0,0,0,0,0,0,0
+YEM009,14/03/2010,Jeezat al Qotn,MUDIYAH,Abyan,2,3,0,0,0,0,0,0
+YEM010,15/03/2010,unclear,MUDIYAH,Abyan,7,20,0,20,0,0,0,0
+YEM011,24/05/2010,Unknown,unclear,Marib,3,4,3,4,0,0,2,3
+YEM012,05/05/2011,unclear,unclear,Shabwah,2,2,0,0,0,0,0,0
+YEM013,03/06/2011,unclear,Zinjibar,Abyan,7,7,4,4,0,0,0,0
+YEM014,10/06/2011,unclear,Zinjibar,Abyan,1,1,0,0,0,0,0,0
+YEM015,10/06/2011,Raia,unclear,Abyan,2,3,2,3,1,1,0,1
+YEM016,18/06/2011,Jaar,Khanfir,Abyan,0,0,0,0,0,0,6,6
+YEM017,14/07/2011,unclear,unclear,Abyan,6,50,30,30,0,0,0,0
+YEM018,14/07/2011,unclear,unclear,Abyan,0,0,0,0,0,0,0,0
+YEM019,27/07/2011,Karadeef,Zinjibar,Abyan,5,5,0,0,0,0,0,0
+YEM020,01/08/2011,Al Khamila,unclear,Abyan,13,16,0,0,0,0,12,17
+YEM021,24/08/2011,unclear,Zinjibar,Abyan,30,30,0,0,0,0,40,40
+YEM022,24/08/2011,Arkoub,unclear,Abyan,6,6,0,0,0,0,0,0
+YEM023,25/08/2011,Wadi Hassan,unclear,Abyan,8,8,0,0,0,0,3,3
+YEM024,31/08/2011,unclear,unclear,Abyan,30,30,0,0,0,0,0,0
+YEM025,05/09/2011,Jaar,Khanfir,Abyan,3,7,3,7,0,0,4,4
+YEM026,05/09/2011,Jaar,Khanfir,Abyan,9,11,1,1,1,1,2,2
+YEM027,07/09/2011,unclear,Al Mahfid,Abyan,3,10,0,0,0,0,2,24
+YEM028,21/09/2011,unclear,Al Mahfid,Abyan,4,4,0,0,0,0,0,0
+YEM029,21/09/2011,Shaqra,unclear,Abyan,6,7,0,0,0,0,3,3
+YEM030,30/09/2011,unclear,unclear,Jawf,4,4,0,0,0,0,0,0
+YEM031,05/10/2011,Al Arqoub,unclear,Abyan,5,5,0,0,0,0,7,7
+YEM032,14/10/2011,Azzan,unclear,Shabwah,0,0,0,0,0,0,0,0
+YEM033,14/10/2011,Azzan,unclear,Shabwah,7,9,2,2,2,2,0,0
+YEM034,14/10/2011,unclear,unclear,unclear,15,17,0,0,0,0,0,0
+YEM035,14/10/2011,Azzan,unclear,Shabwah,2,2,1,2,1,1,0,0
+YEM036,22/12/2011,unclear,Zinjibar,Abyan,1,1,0,0,0,0,0,0
+YEM037,31/01/2012,unclear,LAWDAR,Abyan,10,14,0,0,0,0,0,0
+YEM038,31/01/2012,unclear,unclear,Abyan,0,0,0,0,0,0,0,0
+YEM039,09/03/2012,unclear,unclear,ALBAYDA,23,34,2,2,0,0,0,55
+YEM040,10/03/2012,unclear,unclear,Abyan,24,24,0,0,0,0,0,0
+YEM041,11/03/2012,unclear,unclear,Abyan,3,6,0,0,0,0,0,0
+YEM042,13/03/2012,unclear,unclear,ALBAYDA,4,5,0,0,0,0,0,0
+YEM043,18/03/2012,unclear,Zinjibar,Abyan,14,18,0,0,0,0,0,0
+YEM044,18/03/2012,Jaar,Khanfir,Abyan,8,8,0,0,0,0,0,0
+YEM045,22/03/2012,unclear,Zinjibar,Abyan,29,30,0,0,0,0,24,24
+YEM046,30/03/2012,Azzan,unclear,Shabwah,5,5,1,1,0,0,6,9
+YEM047,07/04/2012,unclear,unclear,Shabwah,0,8,0,0,0,0,0,0
+YEM048,08/04/2012,unclear,unclear,Abyan,16,16,0,0,0,0,0,0
+YEM049,11/04/2012,unclear,LAWDAR,Abyan,10,14,0,0,0,0,10,10
+YEM050,14/04/2012,unclear,AZZAHIR,ALBAYDA,3,7,0,0,0,0,0,0
+YEM051,16/04/2012,Azzan,unclear,Shabwah,5,7,0,0,0,0,0,0
+YEM052,18/04/2012,unclear,unclear,Abyan,6,10,0,0,0,0,0,0
+YEM053,21/04/2012,unclear,LAWDAR,Abyan,12,17,0,0,0,0,0,5
+YEM054,22/04/2012,Sanda,unclear,Marib,4,4,0,0,0,0,0,0
+YEM055,23/04/2012,unclear,Nisab,Shabwah,3,3,0,0,0,0,2,2
+YEM056,23/04/2012,unclear,LAWDAR,Abyan,0,4,0,0,0,0,0,0
+YEM057,26/04/2012,unclear,MUDIYAH,Abyan,3,3,0,0,0,0,0,0
+YEM058,29/04/2012,unclear,unclear,Jawf,3,3,0,0,0,0,0,0
+YEM059,30/04/2012,unclear,LAWDAR,Abyan,4,4,0,0,0,0,0,0
+YEM060,30/04/2012,Jaar,Khanfir,Abyan,3,3,0,0,0,0,0,0
+YEM061,02/05/2012,unclear,Zinjibar,Abyan,10,15,0,0,0,0,0,0
+YEM062,06/05/2012,Wadi Rafad,unclear,Shabwah,2,4,1,1,0,0,0,0
+YEM063,10/05/2012,Jaar,Khanfir,Abyan,5,12,0,0,0,0,0,0
+YEM064,10/05/2012,Shaqra,unclear,Abyan,2,4,0,0,0,0,0,0
+YEM065,12/05/2012,Al Hosoon,unclear,Marib,6,7,0,0,0,0,0,0
+YEM066,12/05/2012,unclear,unclear,unclear,10,10,0,0,0,0,0,0
+YEM067,12/05/2012,unclear,unclear,unclear,6,10,0,0,0,0,0,0
+YEM068,14/05/2012,Shaqra,unclear,Abyan,10,10,0,0,0,0,0,0
+YEM069,14/05/2012,unclear,LAWDAR,Abyan,6,6,0,0,0,0,0,0
+YEM070,14/05/2012,Jaar,Khanfir,Abyan,0,0,0,0,0,0,2,2
+YEM071,15/05/2012,Jaar,Khanfir,Abyan,14,42,14,26,0,0,20,21
+YEM072,16/05/2012,unclear,MUDIYAH,Abyan,16,16,0,0,0,0,5,14
+YEM073,17/05/2012,Shibam,unclear,Hadramawt,2,3,0,0,0,0,0,2
+YEM074,17/05/2012,Shaqra,unclear,Abyan,5,6,0,2,0,0,0,0
+YEM075,19/05/2012,Jaar,Khanfir,Abyan,3,5,0,0,0,0,0,0
+YEM076,19/05/2012,unclear,unclear,ALBAYDA,2,2,0,0,0,0,0,0
+YEM077,20/05/2012,Jaar,Khanfir,Abyan,0,9,0,0,0,0,0,0
+YEM078,28/05/2012,Manaseh,unclear,ALBAYDA,3,5,0,2,0,0,4,4
+YEM079,28/05/2012,Mukalla,unclear,Abyan,5,5,0,0,0,0,0,0
+YEM080,01/06/2012,unclear,Al Mahfid,Abyan,11,12,0,0,0,0,0,0
+YEM081,07/06/2012,unclear,MUDIYAH,Abyan,2,2,0,0,0,0,7,7
+YEM082,07/06/2012,Jaar,Khanfir,Abyan,3,3,0,0,0,0,0,0
+YEM083,07/06/2012,Jaar,Khanfir,Abyan,5,5,0,0,0,0,3,3
+YEM084,11/06/2012,Azzan,unclear,Shabwah,16,16,0,0,0,0,0,0
+YEM085,13/06/2012,Jaar,Khanfir,Abyan,10,18,0,0,0,0,1,1
+YEM086,13/06/2012,Azzan,unclear,Shabwah,9,9,0,0,0,0,0,0
+YEM087,15/06/2012,Azzan,unclear,Shabwah,5,5,0,0,0,0,2,2
+YEM088,15/06/2012,Shaqra,unclear,Abyan,5,7,5,7,4,6,4,5
+YEM089,19/06/2012,unclear,unclear,Shabwah,3,3,0,0,0,0,0,0
+YEM090,20/06/2012,unclear,Al Mahfid,Abyan,1,1,1,1,0,0,0,0
+YEM091,20/06/2012,Al Yafea,unclear,ALBAYDA,5,30,0,0,0,0,6,6
+YEM092,25/06/2012,unclear,Al Mahfid,Abyan,3,3,0,0,0,0,0,0
+YEM093,03/07/2012,unclear,Bayhan,Shabwah,2,5,0,0,0,0,2,2
+YEM094,04/07/2012,unclear,Al Mahfid,Abyan,3,13,0,0,0,0,7,7
+YEM095,23/07/2012,unclear,Al Mahfid,Abyan,5,5,0,0,0,0,0,0
+YEM096,04/08/2012,unclear,Al Qatn,Hadramawt,3,5,0,0,0,0,2,2
+YEM097,06/08/2012,unclear,Rada,ALBAYDA,7,7,0,0,0,0,0,0
+YEM098,07/08/2012,unclear,Al Qatn,Hadramawt,2,3,0,0,0,0,2,2
+YEM099,28/08/2012,Qahb al-Hisan,unclear,Hadramawt,2,3,0,0,0,0,0,0
+YEM100,29/08/2012,unclear,Al Qatn,Hadramawt,5,5,2,2,0,0,0,0
+YEM101,31/08/2012,Hawda,unclear,Hadramawt,8,8,0,0,0,0,0,0
+YEM102,02/09/2012,unclear,Rada,ALBAYDA,12,12,12,12,3,3,4,11
+YEM103,05/09/2012,unclear,unclear,unclear,4,6,1,4,0,0,3,3
+YEM104,10/09/2012,unclear,unclear,unclear,6,15,0,0,0,0,3,3
+YEM105,20/09/2012,unclear,Al Mahfid,Abyan,2,4,0,0,0,0,3,3
+YEM106,04/10/2012,unclear,As Said,Shabwah,3,6,0,0,0,0,2,4
+YEM107,18/10/2012,Khanfir,Khanfir,Abyan,7,9,0,0,0,0,0,0
+YEM108,21/10/2012,unclear,Marib,Marib,4,4,0,0,0,0,0,0
+YEM109,28/10/2012,Wadi al Abu Jabara,unclear,Sada,4,4,0,0,0,0,1,1
+YEM110,07/11/2012,Beit al Ahan,unclear,Sana,2,2,0,0,0,0,2,3
+YEM111,24/12/2012,Manaseh,unclear,ALBAYDA,2,3,0,0,0,0,3,3
+YEM112,24/12/2012,Shehr,unclear,Hadramawt,3,7,0,0,0,0,1,1
+YEM113,28/12/2012,Shehr,unclear,Hadramawt,2,3,0,0,0,0,0,1
+YEM114,29/12/2012,Manaseh,unclear,ALBAYDA,3,4,0,0,0,0,0,2
+YEM115,01/01/2013,unclear,unclear,Shabwah,1,1,0,0,0,0,0,0
+YEM116,04/01/2013,unclear,Rada,ALBAYDA,3,3,0,0,0,0,0,0
+YEM117,19/01/2013,Wadi Abida,unclear,Marib,0,0,0,0,0,0,0,0
+YEM118,19/01/2013,Wadi Abida,unclear,Marib,2,4,0,3,0,0,0,0
+YEM119,19/01/2013,Wadi Abida,unclear,Marib,4,6,0,4,0,0,0,0
+YEM120,20/01/2013,Al Kanais,unclear,Marib,3,3,0,0,0,0,0,0
+YEM121,21/01/2013,Nakhla,unclear,Marib,2,4,0,0,0,0,2,2
+YEM122,22/01/2013,Al Boka,unclear,Jawf,3,5,0,0,0,0,0,0
+YEM123,23/01/2013,unclear,Khawlan,Sana,4,4,2,2,0,0,0,0
+YEM124,23/01/2013,Qayfa,unclear,ALBAYDA,3,5,0,0,0,0,0,0
+YEM125,17/04/2013,Wassab al Ali,unclear,Damar,4,4,0,4,0,0,0,0
+YEM126,21/04/2013,Wadi Abida,unclear,Marib,2,2,0,0,0,0,2,3
+YEM127,18/05/2013,unclear,Al Mahfid,Abyan,4,9,0,0,0,0,0,0
+YEM128,20/05/2013,unclear,Rada,ALBAYDA,2,2,0,0,0,0,0,0
+YEM129,01/06/2013,unclear,Al Mahfid,Abyan,7,8,0,0,0,0,2,3
+YEM130,09/06/2013,Al Makashma,Khabb wa ash Sha`f,Jawf,2,7,1,1,1,1,0,0
+YEM131,27/07/2013,unclear,Al Mahfid,Abyan,4,9,0,0,0,0,0,0
+YEM132,30/07/2013,unclear,As Said,Shabwah,3,4,0,0,0,0,0,0
+YEM133,01/08/2013,Wadi Ser,unclear,Hadramawt,3,5,4,5,1,1,3,3
+YEM134,06/08/2013,Wadi Abida,unclear,Marib,4,4,0,0,0,0,0,0
+YEM135,07/08/2013,unclear,unclear,Shabwah,6,8,0,0,0,0,0,0
+YEM136,08/08/2013,Wadi Abida,unclear,Marib,3,8,2,2,2,2,0,0
+YEM137,08/08/2013,Al Ayoun,unclear,Hadramawt,2,7,0,0,0,0,0,0
+YEM138,08/08/2013,unclear,Al Qatn,Hadramawt,3,5,0,0,0,0,0,0
+YEM139,10/08/2013,Al Askariya,unclear,Lahij,2,5,0,0,0,0,2,5
+YEM140,30/08/2013,Manaseh,unclear,ALBAYDA,4,6,0,0,0,0,0,0
+YEM141,19/11/2013,unclear,Ghayl Ba Wazir,Hadramawt,5,5,0,0,0,0,0,0
+YEM142,26/11/2013,unclear,Al Mahfid,Abyan,12,12,0,0,0,0,0,0
+YEM143,09/12/2013,unclear,Al Qatn,Hadramawt,3,3,0,0,0,0,0,0
+YEM144,12/12/2013,unclear,Rada,ALBAYDA,12,17,8,16,0,0,5,30
+YEM145,27/12/2013,Shibam,unclear,Hadramawt,1,6,0,0,0,0,0,0
+YEM146,31/12/2013,unclear,Al Mahfid,Abyan,2,6,0,0,0,0,0,3
+YEM147,06/01/2014,unclear,Rada,ALBAYDA,0,0,0,0,0,0,0,2
+YEM148,08/01/2014,unclear,Al Qatn,Hadramawt,2,2,0,0,0,0,0,2
+YEM149,15/01/2014,Shibam,unclear,Hadramawt,1,1,1,1,0,0,0,0
+YEM150,24/01/2014,Wadi Abida,unclear,Marib,3,4,0,0,0,0,0,0
+YEM151,03/02/2014,unclear,Al Mahfid,Abyan,0,4,0,0,0,0,0,2
+YEM152,02/03/2014,Shabwan,unclear,Marib,2,3,0,0,0,0,2,2
+YEM153,03/03/2014,unclear,Al Mahfid,Abyan,1,1,0,0,0,0,0,0
+YEM154,03/03/2014,unclear,Rudum,Shabwah,2,4,0,0,0,0,2,2
+YEM155,05/03/2014,Khalek,unclear,Jawf,2,4,0,0,0,0,0,0
+YEM156,10/03/2014,Wadi Abida,unclear,Marib,1,4,0,1,0,1,0,0
+YEM157,12/03/2014,unclear,Khabb wa ash Sha`f,Jawf,2,3,0,0,0,0,0,0
+YEM158,01/04/2014,unclear,Al Mahfid,Abyan,3,3,0,0,0,0,4,4
+YEM159,19/04/2014,unclear,ASSAWMAH,ALBAYDA,13,21,3,8,0,0,1,6
+YEM160,20/04/2014,unclear,Al Mahfid,Abyan,24,31,1,1,1,1,1,3
+YEM161,21/04/2014,unclear,Usaylan,Shabwah,3,4,1,1,1,1,0,0
+YEM162,12/05/2014,Wadi Abida,unclear,Marib,4,6,0,0,0,0,0,0
+YEM163,04/06/2014,Wadi Abida,unclear,Marib,3,4,0,0,0,0,0,0
+YEM164,13/06/2014,Mafraq al Saeed,unclear,Marib,5,6,0,0,0,0,0,0
+YEM165,21/06/2014,unclear,unclear,ALBAYDA,0,0,0,0,0,0,0,0
+YEM166,09/08/2014,Wadi Abida,unclear,Marib,3,3,0,0,0,0,2,2
+YEM167,16/08/2014,unclear,unclear,Hadramawt,3,3,0,0,0,0,0,0
+YEM168,11/09/2014,unclear,unclear,Shabwah,4,5,0,0,0,0,0,0
+YEM169,25/09/2014,unclear,Nisab,Shabwah,4,5,0,0,0,0,0,0
+YEM170,26/09/2014,Khasaf,unclear,Jawf,2,3,0,0,0,0,3,3
+YEM171,15/10/2014,Bani Assaf,Mayfaa,Shabwah,4,4,0,0,0,0,0,0
+YEM172,24/10/2014,unclear,Rada,ALBAYDA,3,10,0,10,0,0,0,0
+YEM173,26/10/2014,unclear,Rada,ALBAYDA,12,20,2,10,0,0,0,0
+YEM174,04/11/2014,unclear,Rada,ALBAYDA,9,20,0,0,0,0,0,0
+YEM175,12/11/2014,Azzan,unclear,Shabwah,6,8,0,0,0,0,0,0
+YEM176,26/11/2014,unclear,Hajar as Say`ar,Hadramawt,7,7,0,0,0,0,0,0
+YEM177,06/12/2014,unclear,Nisab,Shabwah,9,10,0,0,0,0,3,3
+YEM178,06/12/2014,Dafaar,unclear,Shabwah,11,11,8,8,1,1,0,0
+YEM179,26/01/2015,unclear,unclear,unclear,3,3,1,2,1,1,0,0
+YEM180,31/01/2015,unclear,As Said,Shabwah,4,4,0,0,0,0,0,0
+YEM181,02/02/2015,unclear,unclear,ALBAYDA,3,6,0,0,0,0,0,0
+YEM182,20/02/2015,Al Houta,unclear,Shabwah,2,3,0,0,0,0,0,0
+YEM183,28/02/2015,unclear,Bayhan,Shabwah,3,4,0,0,0,0,0,0
+YEM184,01/03/2015,unclear,unclear,Shabwah,2,3,0,0,0,0,3,3
+YEM185,12/04/2015,unclear,Al Mukalla,Hadramawt,3,7,0,0,0,0,0,0
+YEM186,17/04/2015,unclear,Habban,Shabwah,2,2,0,0,0,0,0,0
+YEM187,19/04/2015,unclear,As Said,Shabwah,2,6,0,0,0,0,0,0
+YEM188,21/04/2015,unclear,Al Mukalla,Hadramawt,5,7,0,1,0,1,0,0
+YEM189,08/05/2015,Mafraq,unclear,Shabwah,3,3,0,0,0,0,0,0
+YEM190,10/05/2015,unclear,Ataq,Shabwah,1,4,0,0,0,0,0,0
+YEM191,11/05/2015,unclear,Al Mukalla,Hadramawt,4,4,0,0,0,0,2,2
+YEM192,16/05/2015,unclear,unclear,Shabwah,3,3,0,0,0,0,0,0
+YEM193,22/05/2015,unclear,unclear,Shabwah,3,5,0,0,0,0,0,0
+YEM194,02/06/2015,unclear,unclear,Jawf,5,20,0,0,0,0,0,0
+YEM195,09/06/2015,unclear,Al Mukalla,Hadramawt,3,3,0,0,0,0,2,2
+YEM196,25/06/2015,unclear,Al Mukalla,Hadramawt,4,5,0,0,0,0,2,2
+YEM197,26/06/2015,Rafadh,unclear,Shabwah,4,4,0,0,0,0,0,0
+YEM198,26/06/2015,unclear,Al Mukalla,Hadramawt,4,4,0,0,0,0,0,0
+YEM199,03/07/2015,unclear,Al Mukalla,Hadramawt,4,4,0,0,0,0,0,0
+YEM200,11/07/2015,unclear,Al Mukalla,Hadramawt,3,10,0,0,0,0,0,0
+YEM201,29/07/2015,Wadi Dikha,unclear,Abyan,4,5,0,0,0,0,0,0
+YEM202,12/08/2015,unclear,unclear,Hadramawt,5,5,0,0,0,0,0,0
+YEM203,21/08/2015,unclear,Harib,Marib,3,3,0,0,0,0,0,0
+YEM204,23/08/2015,unclear,Al Mukalla,Hadramawt,4,4,0,0,0,0,0,0
+YEM205,26/08/2015,unclear,Al Mukalla,Hadramawt,5,5,0,0,0,0,0,0
+YEM206,09/09/2015,unclear,Al Mukalla,Hadramawt,3,6,0,4,0,0,2,2
+YEM207,11/09/2015,unclear,unclear,unclear,4,4,0,0,0,0,0,0
+YEM208,12/09/2015,unclear,Al Mukalla,Hadramawt,4,5,0,0,0,0,0,0
+YEM209,21/09/2015,Marib city,Marib,Marib,2,2,0,0,0,0,0,0
+YEM210,22/12/2015,unclear,unclear,unclear,4,4,0,0,0,0,0,0
+YEM211,15/01/2016,Rafadh,unclear,Shabwah,3,3,0,0,0,0,0,0
+YEM212,19/01/2016,unclear,Sayun,Hadramawt,2,2,0,0,0,0,0,0
+YEM213,03/02/2016,Rawda,Arrawdah,Shabwah,6,6,0,0,0,0,0,0
+YEM214,03/02/2016,Maraquesha,unclear,Abyan,3,3,0,0,0,0,0,0
+YEM215,15/02/2016,Huta,unclear,Lahij,3,3,0,0,0,0,0,0
+YEM216,29/02/2016,unclear,unclear,Hadramawt,3,3,0,0,0,0,0,0
+YEM217,04/03/2016,unclear,Rudum,Shabwah,4,4,0,0,0,0,0,0
+YEM218,22/03/2016,unclear,Hajar,Hadramawt,50,71,0,0,0,0,28,30
+YEM219,26/03/2016,Al Hudhn and Naqeel al Hayala villages,unclear,Abyan,8,8,0,0,0,0,0,0
+YEM220,26/03/2016,unclear,Zinjibar,Abyan,6,6,0,0,0,0,0,0
+YEM221,28/03/2016,unclear,Al Mukalla,Hadramawt,5,5,3,3,0,0,0,0
+YEM222,30/03/2016,Azzan,unclear,Shabwah,2,5,0,0,0,0,0,0
+YEM223,30/03/2016,unclear,Al Mukalla,Hadramawt,0,0,0,0,0,0,0,0
+YEM224,03/04/2016,unclear,Al Mukalla,Hadramawt,0,0,0,0,0,0,0,0
+YEM225,05/04/2016,unclear,Zinjibar,Abyan,0,0,0,0,0,0,0,0
+YEM226,23/04/2016,Alemien,unclear,Marib,2,2,0,0,0,0,0,0
+YEM227,25/04/2016,unclear,Zinjibar,Abyan,3,6,0,0,0,0,0,0
+YEM228,25/04/2016,Azzan,unclear,Shabwah,2,10,0,0,0,0,0,0
+YEM229,28/04/2016,unclear,unclear,Shabwah,4,4,0,0,0,0,1,1
+YEM230,19/05/2016,unclear,unclear,Shabwah,4,4,0,0,0,0,0,0
+YEM231,09/06/2016,unclear,unclear,ALBAYDA,2,2,0,0,0,0,0,0
+YEM232,10/06/2016,Unknown,unclear,Marib,2,2,0,0,0,0,0,0
+YEM233,12/06/2016,unclear,Habban,Shabwah,2,3,0,0,0,0,1,1
+YEM234,01/07/2016,Gardan,unclear,Shabwah,3,6,0,0,0,0,0,0
+YEM235,04/07/2016,Musaina,unclear,Shabwah,2,3,0,0,0,0,0,1
+YEM236,08/07/2016,unclear,unclear,unclear,1,1,0,0,0,0,0,0
+YEM237,10/07/2016,Jabul,unclear,Marib,0,0,0,0,0,0,4,4
+YEM238,16/07/2016,Al Uqlah,unclear,Shabwah,2,4,0,0,0,0,0,2
+YEM239,04/08/2016,Azzan,unclear,Shabwah,2,4,0,0,0,0,2,4
+YEM240,24/08/2016,unclear,unclear,Shabwah,4,5,0,0,0,0,0,0
+YEM241,30/08/2016,unclear,unclear,Shabwah,3,3,0,0,0,0,0,0
+YEM242,04/09/2016,unclear,unclear,Shabwah,6,9,0,0,0,0,0,0
+YEM243,13/09/2016,unclear,Rada,ALBAYDA,5,5,0,0,0,0,0,0
+YEM244,20/09/2016,Wadi Abida,unclear,Marib,2,2,0,0,0,0,0,0
+YEM245,22/09/2016,unclear,ASSAWMAH,ALBAYDA,2,3,0,0,0,0,0,0
+YEM246,23/09/2016,Unknown,unclear,Marib,3,5,0,0,0,0,0,0
+YEM247,29/09/2016,unclear,unclear,ALBAYDA,2,2,0,0,0,0,0,0
+YEM248,06/10/2016,unclear,unclear,Shabwah,2,2,0,0,0,0,0,0
+YEM249,12/10/2016,unclear,unclear,unclear,0,0,0,0,0,0,0,0
+YEM250,18/10/2016,unclear,unclear,Shabwah,3,8,0,0,0,0,2,2
+YEM251,21/10/2016,Unknown,unclear,Marib,5,5,0,0,0,0,0,0
+YEM252,21/11/2016,unclear,unclear,ALBAYDA,1,1,0,0,0,0,0,0
+YEM253,24/11/2016,unclear,ASSAWMAH,ALBAYDA,2,2,0,0,0,0,0,0
+YEM254,30/11/2016,unclear,unclear,Hadramawt,3,3,0,0,0,0,0,0
+YEM255,13/12/2016,unclear,unclear,unclear,4,4,0,0,0,0,0,0
+YEM256,29/12/2016,unclear,ASSAWMAH,ALBAYDA,2,2,0,0,0,0,0,0
+YEM257,08/01/2017,unclear,unclear,ALBAYDA,1,1,0,0,0,0,0,0
+YEM258,20/01/2017,unclear,unclear,ALBAYDA,1,1,0,0,0,0,0,0
+YEM259,21/01/2017,unclear,unclear,ALBAYDA,3,6,0,0,0,0,0,0
+YEM260,22/01/2017,unclear,unclear,ALBAYDA,1,3,0,0,0,0,0,0
+YEM261,28/01/2017,Yakla,unclear,ALBAYDA,39,39,25,25,10,10,7,7
+YEM262,30/01/2017,unclear,Bayhan,Shabwah,2,2,0,0,0,0,0,0
+YEM263,02/03/2017,unclear,unclear,unclear,2,12,0,0,0,0,0,0
+YEM264,03/03/2017,unclear,unclear,unclear,1,8,0,0,0,0,0,0
+YEM265,04/03/2017,unclear,Ahwar,Abyan,2,2,0,0,0,0,0,0
+YEM266,06/03/2017,unclear,unclear,unclear,7,11,0,2,0,2,0,0
+YEM267,31/03/2017,unclear,unclear,unclear,0,0,0,0,0,0,0,0
+YEM268,02/04/2017,unclear,unclear,Shabwah,0,0,0,0,0,0,0,0
+YEM269,18/04/2017,Unknown,unclear,Marib,3,4,0,0,0,0,0,0
+YEM270,23/04/2017,unclear,As Said,Shabwah,3,8,3,8,0,0,0,0
+YEM271,24/04/2017,unclear,unclear,unclear,0,0,0,0,0,0,0,0
+YEM272,29/04/2017,Unknown,unclear,Marib,4,5,0,0,0,0,0,0
+YEM273,29/04/2017,unclear,unclear,Shabwah,3,3,0,0,0,0,0,0
+YEM274,23/05/2017,Al Sirim area,unclear,Marib,7,12,5,5,0,1,5,6
+YEM275,16/06/2017,Al Naqba,unclear,Shabwah,2,3,0,0,0,0,0,0
+YEM276,01/07/2017,unclear,ALWADI,Abyan,2,2,0,0,0,0,0,0
+YEM277,13/08/2017,Marakishah,unclear,Abyan,0,3,0,0,0,0,0,0
+YEM278,09/09/2017,unclear,unclear,ALBAYDA,2,7,0,0,0,0,0,0
+YEM279,16/09/2017,unclear,unclear,unclear,0,0,0,0,0,0,0,0
+YEM280,04/10/2017,unclear,unclear,ALBAYDA,1,2,0,0,0,0,0,0
+YEM281,08/10/2017,unclear,Raghwan,Marib,5,5,0,0,0,0,0,0
+YEM282,16/10/2017,unclear,unclear,ALBAYDA,50,50,0,0,0,0,0,0
+YEM283,19/10/2017,unclear,unclear,ALBAYDA,5,5,0,0,0,0,0,0
+YEM284,19/10/2017,unclear,unclear,unclear,0,0,0,0,0,0,0,0
+YEM285,25/10/2017,unclear,unclear,ALBAYDA,9,13,0,0,0,0,0,0
+YEM286,02/11/2017,Al Wadi,unclear,Marib,2,2,0,0,0,0,0,0
+YEM287,10/11/2017,unclear,unclear,ALBAYDA,2,2,0,0,0,0,0,0
+YEM288,11/11/2017,unclear,unclear,ALBAYDA,1,1,0,0,0,0,0,0
+YEM289,12/11/2017,unclear,unclear,ALBAYDA,2,2,0,0,0,0,0,0
+YEM290,19/11/2017,unclear,unclear,ALBAYDA,2,2,0,0,0,0,0,0
+YEM291,20/11/2017,unclear,unclear,ALBAYDA,5,5,0,0,0,0,0,0
+YEM292,23/11/2017,unclear,unclear,ALBAYDA,2,2,0,0,0,0,0,0
+YEM293,25/11/2017,unclear,unclear,Shabwah,5,7,0,0,0,0,0,0
+YEM294,26/11/2017,Qaifa,unclear,ALBAYDA,3,3,0,0,0,0,0,0
+YEM295,15/12/2017,unclear,unclear,ALBAYDA,1,1,0,0,0,0,0,0
+YEM296,19/12/2017,Unknown,unclear,Marib,1,1,0,0,0,0,0,0
+YEM297,01/01/2018,unclear,unclear,ALBAYDA,0,2,0,2,0,0,0,0
+YEM298,26/01/2018,unclear,As Said,Shabwah,7,7,7,7,0,0,0,0
+YEM299,29/01/2018,unclear,unclear,unclear,0,0,0,0,0,0,0,0
+YEM300,11/02/2018,unclear,unclear,ALBAYDA,6,6,0,0,0,0,0,0
+YEM301,16/02/2018,unclear,unclear,ALBAYDA,2,3,0,0,0,0,0,0
+YEM302,28/02/2018,unclear,unclear,unclear,0,0,0,0,0,0,0,0
+YEM303,05/03/2018,unclear,unclear,Hadramawt,1,4,0,1,0,1,0,1
+YEM304,07/03/2018,Al Hudhi,unclear,Hadramawt,1,1,1,1,0,0,0,0
+YEM305,08/03/2018,unclear,unclear,Hadramawt,0,0,0,0,0,0,0,0
+YEM306,09/03/2018,unclear,Al Abr,Hadramawt,6,6,0,6,0,1,0,0
+YEM307,22/03/2018,Wadi Abida,unclear,Marib,5,7,0,0,0,0,0,0
+YEM308,26/03/2018,unclear,unclear,Hadramawt,0,0,0,0,0,0,0,0
+YEM309,29/03/2018,unclear,ASSAWMAH,ALBAYDA,3,4,0,3,0,0,0,2
+YEM310,11/04/2018,unclear,unclear,Hadramawt,0,0,0,0,0,0,0,0
+YEM311,23/04/2018,unclear,unclear,ALBAYDA,0,0,0,0,0,0,0,0
+YEM312,30/04/2018,unclear,unclear,unclear,0,0,0,0,0,0,0,0
+YEM313,14/05/2018,unclear,unclear,Shabwah,2,3,0,1,0,0,0,0
+YEM314,23/06/2018,unclear,unclear,unclear,0,0,0,0,0,0,0,0
+YEM315,30/06/2018,unclear,unclear,unclear,0,0,0,0,0,0,0,0
+YEM316,22/07/2018,unclear,unclear,Hadramawt,0,0,0,0,0,0,0,0
+YEM317,24/07/2018,unclear,unclear,Hadramawt,0,0,0,0,0,0,0,0
+YEM318,14/08/2018,unclear,unclear,unclear,0,0,0,0,0,0,0,0
+YEM319,09/09/2018,unclear,Ahwar,Abyan,4,4,0,0,0,0,0,0
+YEM320,18/09/2018,unclear,unclear,ALBAYDA,0,0,0,0,0,0,0,0
+YEM321,25/11/2018,unclear,ALQURAYSHIYAH,ALBAYDA,5,8,0,0,0,0,0,0
+YEM322,01/01/2019,Unknown,unclear,Marib,1,1,0,0,0,0,0,0
+YEM323,31/03/2019,unclear,unclear,ALBAYDA,0,0,0,0,0,0,0,0
+YEM324,24/06/2019,unclear,Dhi Naim,ALBAYDA,0,5,0,0,0,0,0,0
+YEM325,02/01/2020,unclear,unclear,unclear,0,0,0,0,0,0,0,0
+YEM326,02/01/2020,Wadi Abedah,unclear,Marib,0,2,0,0,0,0,0,0

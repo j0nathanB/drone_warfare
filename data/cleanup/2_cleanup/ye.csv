@@ -1,0 +1,334 @@
+Strike ID,Date,Adm_2,Adm_1,Minimum total people killed,Maximum total people killed,Minimum civilians reported killed,Maximum civilians reported killed,Minimum children reported killed,Maximum children reported killed,Minimum reported injured,Maximum reported injured,Adm_3
+YEM001,03/11/2002,Unknown,Marib,6,6,0,0,0,0,0,0,Unknown
+YEM002,17/12/2009,Al Majala,Abyan,55,58,44,44,21,22,9,9,Unknown
+YEM003,17/12/2009,Arhab,Sanaa,0,0,0,0,0,0,0,0,Unknown
+YEM004,24/12/2009,Rafd,Shabwa,30,34,0,0,0,0,0,0,Unknown
+YEM005,12/01/2010,Unknown,Shabwa,1,2,0,0,0,0,0,0,Unknown
+YEM006,15/01/2010,Al Ajashir,Saada,0,6,0,0,0,0,0,0,Unknown
+YEM007,20/01/2010,Erq al Shawan,Marib,2,2,0,0,0,0,0,0,Unknown
+YEM008,31/01/2010,Unknown,Across Yemen,0,0,0,0,0,0,0,0,Unknown
+YEM009,14/03/2010,"Jeezat al Qotn
+Moudia district",Abyan,2,3,0,0,0,0,0,0,Unknown
+YEM010,15/03/2010,Moudia,Abyan,7,20,0,20,0,0,0,0,Unknown
+YEM011,24/05/2010,Unknown,Marib,3,4,3,4,0,0,2,3,Unknown
+YEM012,05/05/2011,Unknown,Shabwa,2,2,0,0,0,0,0,0,Unknown
+YEM013,03/06/2011,Zinjibar,Abyan,7,7,4,4,0,0,0,0,Unknown
+YEM014,10/06/2011,Zinjibar,Abyan,1,1,0,0,0,0,0,0,Unknown
+YEM015,10/06/2011,Raia,Abyan,2,3,2,3,1,1,0,1,Unknown
+YEM016,18/06/2011,Jaar,Abyan,0,0,0,0,0,0,6,6,Unknown
+YEM017,14/07/2011,"Wadeea district
+Mudiya",Abyan,6,50,30,30,0,0,0,0,Unknown
+YEM018,14/07/2011,Unknown,Abyan,0,0,0,0,0,0,0,0,Unknown
+YEM019,27/07/2011,"Karadeef
+Zinjibar",Abyan,5,5,0,0,0,0,0,0,Unknown
+YEM020,01/08/2011,Al Khamila,Abyan,13,16,0,0,0,0,12,17,Unknown
+YEM021,24/08/2011,Zinjibar,Abyan,30,30,0,0,0,0,40,40,Unknown
+YEM022,24/08/2011,Arkoub,Abyan,6,6,0,0,0,0,0,0,Unknown
+YEM023,25/08/2011,Wadi Hassan,Abyan,8,8,0,0,0,0,3,3,Unknown
+YEM024,31/08/2011,Unknown,Abyan,30,30,0,0,0,0,0,0,Unknown
+YEM025,05/09/2011,Jaar,Abyan,3,7,3,7,0,0,4,4,Unknown
+YEM026,05/09/2011,Jaar,Abyan,9,11,1,1,1,1,2,2,Unknown
+YEM027,07/09/2011,Mahfed,Abyan,3,10,0,0,0,0,2,24,Unknown
+YEM028,21/09/2011,Mahfed,Abyan,4,4,0,0,0,0,0,0,Unknown
+YEM029,21/09/2011,Shaqra,Abyan,6,7,0,0,0,0,3,3,Unknown
+YEM030,30/09/2011,Unknown,Jawf,4,4,0,0,0,0,0,0,Unknown
+YEM031,05/10/2011,Al Arqoub,Abyan,5,5,0,0,0,0,7,7,Unknown
+YEM032,14/10/2011,Azzan,Shabwa,0,0,0,0,0,0,0,0,Unknown
+YEM033,14/10/2011,Azzan,Shabwa,7,9,2,2,2,2,0,0,Unknown
+YEM034,14/10/2011,Unknown,Southern Yemen,15,17,0,0,0,0,0,0,Unknown
+YEM035,14/10/2011,Azzan,Shabwa,2,2,1,2,1,1,0,0,Unknown
+YEM036,22/12/2011,Zinjibar,Abyan,1,1,0,0,0,0,0,0,Unknown
+YEM037,31/01/2012,Lawder,Abyan,10,14,0,0,0,0,0,0,Unknown
+YEM038,31/01/2012,Unknown,Abyan,0,0,0,0,0,0,0,0,Unknown
+YEM039,09/03/2012,Unknown,Bayda,23,34,2,2,0,0,0,55,Unknown
+YEM040,10/03/2012,Jaar and Zinjibar,Abyan,24,24,0,0,0,0,0,0,Unknown
+YEM041,11/03/2012,"Jebel Khanfar
+Near Jaar",Abyan,3,6,0,0,0,0,0,0,Unknown
+YEM042,13/03/2012,Unknown,Bayda,4,5,0,0,0,0,0,0,Unknown
+YEM043,18/03/2012,Zinjibar,Abyan,14,18,0,0,0,0,0,0,Unknown
+YEM044,18/03/2012,Jaar,Abyan,8,8,0,0,0,0,0,0,Unknown
+YEM045,22/03/2012,Zinjibar,Abyan,29,30,0,0,0,0,24,24,Unknown
+YEM046,30/03/2012,Azzan,Shabwa,5,5,1,1,0,0,6,9,Unknown
+YEM047,07/04/2012,Unknown,Shabwa,0,8,0,0,0,0,0,0,Unknown
+YEM048,08/04/2012,Unknown,Abyan,16,16,0,0,0,0,0,0,Unknown
+YEM049,11/04/2012,Lawder,Abyan,10,14,0,0,0,0,10,10,Unknown
+YEM050,14/04/2012,Al Zahir,Bayda,3,7,0,0,0,0,0,0,Unknown
+YEM051,16/04/2012,Azzan,Shabwa,5,7,0,0,0,0,0,0,Unknown
+YEM052,18/04/2012,Lawder and Jaar,Abyan,6,10,0,0,0,0,0,0,Unknown
+YEM053,21/04/2012,Lawder,Abyan,12,17,0,0,0,0,0,5,Unknown
+YEM054,22/04/2012,Sanda,Marib,4,4,0,0,0,0,0,0,Unknown
+YEM055,23/04/2012,Nasab,Shabwa,3,3,0,0,0,0,2,2,Unknown
+YEM056,23/04/2012,Lawder,Abyan,0,4,0,0,0,0,0,0,Unknown
+YEM057,26/04/2012,Moudia,Abyan,3,3,0,0,0,0,0,0,Unknown
+YEM058,29/04/2012,Unknown,Jawf,3,3,0,0,0,0,0,0,Unknown
+YEM059,30/04/2012,Lawder,Abyan,4,4,0,0,0,0,0,0,Unknown
+YEM060,30/04/2012,Jaar,Abyan,3,3,0,0,0,0,0,0,Unknown
+YEM061,02/05/2012,Zinjibar,Abyan,10,15,0,0,0,0,0,0,Unknown
+YEM062,06/05/2012,Wadi Rafad,Shabwa,2,4,1,1,0,0,0,0,Unknown
+YEM063,10/05/2012,Jaar,Abyan,5,12,0,0,0,0,0,0,Unknown
+YEM064,10/05/2012,Shaqra,Abyan,2,4,0,0,0,0,0,0,Unknown
+YEM065,12/05/2012,Al Hosoon,Marib,6,7,0,0,0,0,0,0,Unknown
+YEM066,12/05/2012,Unknown,Between Marib and Shabwa,10,10,0,0,0,0,0,0,Unknown
+YEM067,12/05/2012,Al Ain,Shabwa/Hadramout,6,10,0,0,0,0,0,0,Unknown
+YEM068,14/05/2012,Shaqra,Abyan,10,10,0,0,0,0,0,0,Unknown
+YEM069,14/05/2012,Lawder,Abyan,6,6,0,0,0,0,0,0,Unknown
+YEM070,14/05/2012,Jaar,Abyan,0,0,0,0,0,0,2,2,Unknown
+YEM071,15/05/2012,Jaar,Abyan,14,42,14,26,0,0,20,21,Unknown
+YEM072,16/05/2012,Moudia,Abyan,16,16,0,0,0,0,5,14,Unknown
+YEM073,17/05/2012,Shibam,Hadhramout,2,3,0,0,0,0,0,2,Unknown
+YEM074,17/05/2012,Shaqra,Abyan,5,6,0,2,0,0,0,0,Unknown
+YEM075,19/05/2012,Jaar,Abyan,3,5,0,0,0,0,0,0,Unknown
+YEM076,19/05/2012,Unknown,Bayda,2,2,0,0,0,0,0,0,Unknown
+YEM077,20/05/2012,Jaar,Abyan,0,9,0,0,0,0,0,0,Unknown
+YEM078,28/05/2012,Manaseh,Bayda,3,5,0,2,0,0,4,4,Unknown
+YEM079,28/05/2012,Mukalla,Abyan,5,5,0,0,0,0,0,0,Unknown
+YEM080,01/06/2012,Mahfed,Abyan,11,12,0,0,0,0,0,0,Unknown
+YEM081,07/06/2012,Moudia,Abyan,2,2,0,0,0,0,7,7,Unknown
+YEM082,07/06/2012,Jaar,Abyan,3,3,0,0,0,0,0,0,Unknown
+YEM083,07/06/2012,Jaar,Abyan,5,5,0,0,0,0,3,3,Unknown
+YEM084,11/06/2012,Azzan,Shabwa,16,16,0,0,0,0,0,0,Unknown
+YEM085,13/06/2012,Jaar,Abyan,10,18,0,0,0,0,1,1,Unknown
+YEM086,13/06/2012,Azzan,Shabwa,9,9,0,0,0,0,0,0,Unknown
+YEM087,15/06/2012,Azzan,Shabwa,5,5,0,0,0,0,2,2,Unknown
+YEM088,15/06/2012,Shaqra,Abyan,5,7,5,7,4,6,4,5,Unknown
+YEM089,19/06/2012,Unknown,Shabwa,3,3,0,0,0,0,0,0,Unknown
+YEM090,20/06/2012,Mahfed,Abyan,1,1,1,1,0,0,0,0,Unknown
+YEM091,20/06/2012,Al Yafea,Bayda,5,30,0,0,0,0,6,6,Unknown
+YEM092,25/06/2012,Mahfed,Abyan,3,3,0,0,0,0,0,0,Unknown
+YEM093,03/07/2012,Bayhan,Shabwa,2,5,0,0,0,0,2,2,Unknown
+YEM094,04/07/2012,Mahfed,Abyan,3,13,0,0,0,0,7,7,Unknown
+YEM095,23/07/2012,Mahfed,Abyan,5,5,0,0,0,0,0,0,Unknown
+YEM096,04/08/2012,Al Qotn,Hadhramout,3,5,0,0,0,0,2,2,Unknown
+YEM097,06/08/2012,Radaa,Bayda,7,7,0,0,0,0,0,0,Unknown
+YEM098,07/08/2012,Al Qotn,Hadhramout,2,3,0,0,0,0,2,2,Unknown
+YEM099,28/08/2012,Qahb al-Hisan,Hadhramout,2,3,0,0,0,0,0,0,Unknown
+YEM100,29/08/2012,Al Qotn,Hadhramout,5,5,2,2,0,0,0,0,Unknown
+YEM101,31/08/2012,Hawda,Hadhramout,8,8,0,0,0,0,0,0,Unknown
+YEM102,02/09/2012,Radaa,Bayda,12,12,12,12,3,3,4,11,Unknown
+YEM103,05/09/2012,Al Ain,Shabwa/Hadramout,4,6,1,4,0,0,3,3,Unknown
+YEM104,10/09/2012,Al Ain,Shabwa/Hadramout,6,15,0,0,0,0,3,3,Unknown
+YEM105,20/09/2012,Mahfed,Abyan,2,4,0,0,0,0,3,3,Unknown
+YEM106,04/10/2012,Al Saeed,Shabwa,3,6,0,0,0,0,2,4,Unknown
+YEM107,18/10/2012,Jaar,Abyan,7,9,0,0,0,0,0,0,Unknown
+YEM108,21/10/2012,Maarib,Marib,4,4,0,0,0,0,0,0,Unknown
+YEM109,28/10/2012,Wadi al Abu Jabara,Saada,4,4,0,0,0,0,1,1,Unknown
+YEM110,07/11/2012,Beit al Ahan,Sanaa,2,2,0,0,0,0,2,3,Unknown
+YEM111,24/12/2012,Manaseh,Bayda,2,3,0,0,0,0,3,3,Unknown
+YEM112,24/12/2012,Shehr,Hadhramout,3,7,0,0,0,0,1,1,Unknown
+YEM113,28/12/2012,Shehr,Hadhramout,2,3,0,0,0,0,0,1,Unknown
+YEM114,29/12/2012,Manaseh,Bayda,3,4,0,0,0,0,0,2,Unknown
+YEM115,01/01/2013,Unknown,Shabwa,1,1,0,0,0,0,0,0,Unknown
+YEM116,04/01/2013,Radaa,Bayda,3,3,0,0,0,0,0,0,Unknown
+YEM117,19/01/2013,Wadi Abida,Marib,0,0,0,0,0,0,0,0,Unknown
+YEM118,19/01/2013,Wadi Abida,Marib,2,4,0,3,0,0,0,0,Unknown
+YEM119,19/01/2013,Wadi Abida,Marib,4,6,0,4,0,0,0,0,Unknown
+YEM120,20/01/2013,Al Kanais,Marib,3,3,0,0,0,0,0,0,Unknown
+YEM121,21/01/2013,Nakhla,Marib,2,4,0,0,0,0,2,2,Unknown
+YEM122,22/01/2013,Al Boka,Jawf,3,5,0,0,0,0,0,0,Unknown
+YEM123,23/01/2013,Khawlan,Sanaa,4,4,2,2,0,0,0,0,Unknown
+YEM124,23/01/2013,Qayfa,Bayda,3,5,0,0,0,0,0,0,Unknown
+YEM125,17/04/2013,Wassab al Ali,Damar,4,4,0,4,0,0,0,0,Unknown
+YEM126,21/04/2013,Wadi Abida,Marib,2,2,0,0,0,0,2,3,Unknown
+YEM127,18/05/2013,Mahfed,Abyan,4,9,0,0,0,0,0,0,Unknown
+YEM128,20/05/2013,Radaa,Bayda,2,2,0,0,0,0,0,0,Unknown
+YEM129,01/06/2013,Mahfed,Abyan,7,8,0,0,0,0,2,3,Unknown
+YEM130,09/06/2013,"Al Makashma/
+Khab al Shath",Jawf,2,7,1,1,1,1,0,0,Unknown
+YEM131,27/07/2013,Mahfed,Abyan,4,9,0,0,0,0,0,0,Unknown
+YEM132,30/07/2013,Al Saeed,Shabwa,3,4,0,0,0,0,0,0,Unknown
+YEM133,01/08/2013,Wadi Ser,Hadhramout,3,5,4,5,1,1,3,3,Unknown
+YEM134,06/08/2013,Wadi Abida,Marib,4,4,0,0,0,0,0,0,Unknown
+YEM135,07/08/2013,Markha,Shabwa,6,8,0,0,0,0,0,0,Unknown
+YEM136,08/08/2013,Wadi Abida,Marib,3,8,2,2,2,2,0,0,Unknown
+YEM137,08/08/2013,Al Ayoun,Hadhramout,2,7,0,0,0,0,0,0,Unknown
+YEM138,08/08/2013,Al Qotn,Hadhramout,3,5,0,0,0,0,0,0,Unknown
+YEM139,10/08/2013,Al Askariya,Lahj,2,5,0,0,0,0,2,5,Unknown
+YEM140,30/08/2013,Manaseh,Bayda,4,6,0,0,0,0,0,0,Unknown
+YEM141,19/11/2013,Ghayl Bawazir,Hadhramout,5,5,0,0,0,0,0,0,Unknown
+YEM142,26/11/2013,Mahfed,Abyan,12,12,0,0,0,0,0,0,Unknown
+YEM143,09/12/2013,Al Qotn,Hadhramout,3,3,0,0,0,0,0,0,Unknown
+YEM144,12/12/2013,Radaa,Bayda,12,17,8,16,0,0,5,30,Unknown
+YEM145,27/12/2013,Shibam,Hadhramout,1,6,0,0,0,0,0,0,Unknown
+YEM146,31/12/2013,Mahfed,Abyan,2,6,0,0,0,0,0,3,Unknown
+YEM147,06/01/2014,Radaa,Bayda,0,0,0,0,0,0,0,2,Unknown
+YEM148,08/01/2014,Al Qotn,Hadhramout,2,2,0,0,0,0,0,2,Unknown
+YEM149,15/01/2014,Shibam,Hadhramout,1,1,1,1,0,0,0,0,Unknown
+YEM150,24/01/2014,Wadi Abida,Marib,3,4,0,0,0,0,0,0,Unknown
+YEM151,03/02/2014,Mahfed,Abyan,0,4,0,0,0,0,0,2,Unknown
+YEM152,02/03/2014,Shabwan,Marib,2,3,0,0,0,0,2,2,Unknown
+YEM153,03/03/2014,Mahfed,Abyan,1,1,0,0,0,0,0,0,Unknown
+YEM154,03/03/2014,Radhum,Shabwa,2,4,0,0,0,0,2,2,Unknown
+YEM155,05/03/2014,Khalek,Jawf,2,4,0,0,0,0,0,0,Unknown
+YEM156,10/03/2014,Wadi Abida,Marib,1,4,0,1,0,1,0,0,Unknown
+YEM157,12/03/2014,Khab Wal Saaf,Jawf,2,3,0,0,0,0,0,0,Unknown
+YEM158,01/04/2014,Mahfed,Abyan,3,3,0,0,0,0,4,4,Unknown
+YEM159,19/04/2014,Sawmaa,Bayda,13,21,3,8,0,0,1,6,Unknown
+YEM160,20/04/2014,Mahfed,Abyan,24,31,1,1,1,1,1,3,Unknown
+YEM161,21/04/2014,Usylan,Shabwa,3,4,1,1,1,1,0,0,Unknown
+YEM162,12/05/2014,Wadi Abida,Marib,4,6,0,0,0,0,0,0,Unknown
+YEM163,04/06/2014,Wadi Abida,Marib,3,4,0,0,0,0,0,0,Unknown
+YEM164,13/06/2014,Mafraq al Saeed,Marib,5,6,0,0,0,0,0,0,Unknown
+YEM165,21/06/2014,Unknown,Bayda,0,0,0,0,0,0,0,0,Unknown
+YEM166,09/08/2014,Wadi Abida,Marib,3,3,0,0,0,0,2,2,Unknown
+YEM167,16/08/2014,Unknown,Hadhramout,3,3,0,0,0,0,0,0,Unknown
+YEM168,11/09/2014,Unknown,Shabwa,4,5,0,0,0,0,0,0,Unknown
+YEM169,25/09/2014,"Nasab
+Near Ataq",Shabwa,4,5,0,0,0,0,0,0,Unknown
+YEM170,26/09/2014,Khasaf,Jawf,2,3,0,0,0,0,3,3,Unknown
+YEM171,15/10/2014,"Bani Assaf
+Mayfaa",Shabwa,4,4,0,0,0,0,0,0,Unknown
+YEM172,24/10/2014,Radaa,Bayda,3,10,0,10,0,0,0,0,Unknown
+YEM173,26/10/2014,Radaa, Bayda,12,20,2,10,0,0,0,0,Unknown
+YEM174,04/11/2014,Radaa, Bayda,9,20,0,0,0,0,0,0,Unknown
+YEM175,12/11/2014,Azzan,Shabwa,6,8,0,0,0,0,0,0,Unknown
+YEM176,26/11/2014,Hagr al Saiaar,Hadhramout,7,7,0,0,0,0,0,0,Unknown
+YEM177,06/12/2014,Nasab,Shabwa,9,10,0,0,0,0,3,3,Unknown
+YEM178,06/12/2014,Dafaar,Shabwa,11,11,8,8,1,1,0,0,Unknown
+YEM179,26/01/2015,Hareeb,Shabwa/Mareb border,3,3,1,2,1,1,0,0,Unknown
+YEM180,31/01/2015,Al Saeed,Shabwa,4,4,0,0,0,0,0,0,Unknown
+YEM181,02/02/2015,Unknown,Bayda,3,6,0,0,0,0,0,0,Unknown
+YEM182,20/02/2015,Al Houta,Shabwa,2,3,0,0,0,0,0,0,Unknown
+YEM183,28/02/2015,Bihan region,Shabwa,3,4,0,0,0,0,0,0,Unknown
+YEM184,01/03/2015,Markha district,Shabwa,2,3,0,0,0,0,3,3,Unknown
+YEM185,12/04/2015,Mukalla,Hadhramout,3,7,0,0,0,0,0,0,Unknown
+YEM186,17/04/2015,Habban,Shabwa,2,2,0,0,0,0,0,0,Unknown
+YEM187,19/04/2015,Saeed district,Shabwa,2,6,0,0,0,0,0,0,Unknown
+YEM188,21/04/2015,Mukalla,Hadramout,5,7,0,1,0,1,0,0,Unknown
+YEM189,08/05/2015,Mafraq,Shabwa,3,3,0,0,0,0,0,0,Unknown
+YEM190,10/05/2015,Ataq,Shabwa,1,4,0,0,0,0,0,0,Unknown
+YEM191,11/05/2015,Mukalla,Hadramout,4,4,0,0,0,0,2,2,Unknown
+YEM192,16/05/2015,Unknown,Shabwa,3,3,0,0,0,0,0,0,Unknown
+YEM193,22/05/2015,Unknown,Shabwa,3,5,0,0,0,0,0,0,Unknown
+YEM194,02/06/2015,Unknown,Jawf,5,20,0,0,0,0,0,0,Unknown
+YEM195,09/06/2015,Mukalla,Hadramout,3,3,0,0,0,0,2,2,Unknown
+YEM196,25/06/2015,Mukalla,Hadramout,4,5,0,0,0,0,2,2,Unknown
+YEM197,26/06/2015,Rafadh,Shabwa,4,4,0,0,0,0,0,0,Unknown
+YEM198,26/06/2015,Mukalla,Hadramout,4,4,0,0,0,0,0,0,Unknown
+YEM199,03/07/2015,Mukalla,Hadramout,4,4,0,0,0,0,0,0,Unknown
+YEM200,11/07/2015,Mukalla,Hadramout,3,10,0,0,0,0,0,0,Unknown
+YEM201,29/07/2015,Wadi Dikha,Abyan,4,5,0,0,0,0,0,0,Unknown
+YEM202,12/08/2015,Mukalla-Rukob road,Hadramout,5,5,0,0,0,0,0,0,Unknown
+YEM203,21/08/2015,Harib,Marib,3,3,0,0,0,0,0,0,Unknown
+YEM204,23/08/2015,Mukalla,Hadaramout,4,4,0,0,0,0,0,0,Unknown
+YEM205,26/08/2015,Mukalla,Hadramout,5,5,0,0,0,0,0,0,Unknown
+YEM206,09/09/2015,Mukalla,Hadramout,3,6,0,4,0,0,2,2,Unknown
+YEM207,11/09/2015,Unknown,Jawf-Mareb border,4,4,0,0,0,0,0,0,Unknown
+YEM208,12/09/2015,Mukalla,Hadramout,4,5,0,0,0,0,0,0,Unknown
+YEM209,21/09/2015,Marib city,Marib,2,2,0,0,0,0,0,0,Unknown
+YEM210,22/12/2015,Nata district,Bayda-Shabwa border,4,4,0,0,0,0,0,0,Unknown
+YEM211,15/01/2016,Rafadh,Shabwa,3,3,0,0,0,0,0,0,Unknown
+YEM212,19/01/2016,Sayoun,Hadramout,2,2,0,0,0,0,0,0,Unknown
+YEM213,03/02/2016,Rawda city,Shabwa,6,6,0,0,0,0,0,0,Unknown
+YEM214,03/02/2016,Maraquesha,Abyan,3,3,0,0,0,0,0,0,Unknown
+YEM215,15/02/2016,Huta,Lahij,3,3,0,0,0,0,0,0,Unknown
+YEM216,29/02/2016,Unknown,Hadramout,3,3,0,0,0,0,0,0,Unknown
+YEM217,04/03/2016,Radhum,Shabwa,4,4,0,0,0,0,0,0,Unknown
+YEM218,22/03/2016,Hajr (75km W of Mukalla),Hadramout,50,71,0,0,0,0,28,30,Unknown
+YEM219,26/03/2016,Al Hudhn and Naqeel al Hayala villages,Abyan,8,8,0,0,0,0,0,0,Unknown
+YEM220,26/03/2016,Zinjibar,Abyan,6,6,0,0,0,0,0,0,Unknown
+YEM221,28/03/2016,Mukalla,Hadramout,5,5,3,3,0,0,0,0,Unknown
+YEM222,30/03/2016,Azzan,Shabwa,2,5,0,0,0,0,0,0,Unknown
+YEM223,30/03/2016,Mukalla,Hadramout,0,0,0,0,0,0,0,0,Unknown
+YEM224,03/04/2016,Mukalla,Hadramout,0,0,0,0,0,0,0,0,Unknown
+YEM225,05/04/2016,Zinjibar,Abyan,0,0,0,0,0,0,0,0,Unknown
+YEM226,23/04/2016,Alemien,Mareb,2,2,0,0,0,0,0,0,Unknown
+YEM227,25/04/2016,Zinjibar,Abyan,3,6,0,0,0,0,0,0,Unknown
+YEM228,25/04/2016,Azzan,Shabwa,2,10,0,0,0,0,0,0,Unknown
+YEM229,28/04/2016,Unknown,Shabwa,4,4,0,0,0,0,1,1,Unknown
+YEM230,19/05/2016,Unknown,Shabwa,4,4,0,0,0,0,0,0,Unknown
+YEM231,09/06/2016,Unknown,Bayda,2,2,0,0,0,0,0,0,Unknown
+YEM232,10/06/2016,Unknown,Mareb,2,2,0,0,0,0,0,0,Unknown
+YEM233,12/06/2016,Haban,Shabwa,2,3,0,0,0,0,1,1,Unknown
+YEM234,01/07/2016,Gardan,Shabwa,3,6,0,0,0,0,0,0,Unknown
+YEM235,04/07/2016,Musaina,Shabwa,2,3,0,0,0,0,0,1,Unknown
+YEM236,08/07/2016,Unknown,Central Yemen,1,1,0,0,0,0,0,0,Unknown
+YEM237,10/07/2016,Jabul,Mareb,0,0,0,0,0,0,4,4,Unknown
+YEM238,16/07/2016,Al Uqlah,Shabwa,2,4,0,0,0,0,0,2,Unknown
+YEM239,04/08/2016,Azzan,Shabwa,2,4,0,0,0,0,2,4,Unknown
+YEM240,24/08/2016,Unknown,Shabwa,4,5,0,0,0,0,0,0,Unknown
+YEM241,30/08/2016,Unknown,Shabwa,3,3,0,0,0,0,0,0,Unknown
+YEM242,04/09/2016,Unknown,Shabwa,6,9,0,0,0,0,0,0,Unknown
+YEM243,13/09/2016,Radaa area,Bayda ,5,5,0,0,0,0,0,0,Unknown
+YEM244,20/09/2016,Wadi Abida,Marib,2,2,0,0,0,0,0,0,Unknown
+YEM245,22/09/2016,Sawmaa district,Bayda,2,3,0,0,0,0,0,0,Unknown
+YEM246,23/09/2016,Unknown,Mareb,3,5,0,0,0,0,0,0,Unknown
+YEM247,29/09/2016,Unknown,Bayda,2,2,0,0,0,0,0,0,Unknown
+YEM248,06/10/2016,Unknown,Shabwah,2,2,0,0,0,0,0,0,Unknown
+YEM249,12/10/2016,North of the Bab el-Mandeb strait,-,0,0,0,0,0,0,0,0,Unknown
+YEM250,18/10/2016,Unknown,Shabwah,3,8,0,0,0,0,2,2,Unknown
+YEM251,21/10/2016,Unknown,Marib,5,5,0,0,0,0,0,0,Unknown
+YEM252,21/11/2016,Unknown,Bayda,1,1,0,0,0,0,0,0,Unknown
+YEM253,24/11/2016,Sawmaah,Bayda,2,2,0,0,0,0,0,0,Unknown
+YEM254,30/11/2016,Unknown,Hadramout,3,3,0,0,0,0,0,0,Unknown
+YEM255,13/12/2016,Unknown,Marib/Al Jawf,4,4,0,0,0,0,0,0,Unknown
+YEM256,29/12/2016,Sawmaah,Bayda ,2,2,0,0,0,0,0,0,Unknown
+YEM257,08/01/2017,Unknown,Bayda,1,1,0,0,0,0,0,0,Unknown
+YEM258,20/01/2017,Unknown,Bayda,1,1,0,0,0,0,0,0,Unknown
+YEM259,21/01/2017,Unknown,Bayda,3,6,0,0,0,0,0,0,Unknown
+YEM260,22/01/2017,Unknown,Bayda,1,3,0,0,0,0,0,0,Unknown
+YEM261,28/01/2017,Yakla,Bayda,39,39,25,25,10,10,7,7,Unknown
+YEM262,30/01/2017,Baihan,Shabwa,2,2,0,0,0,0,0,0,Unknown
+YEM263,02/03/2017,Unknown,Across central Yemen ,2,12,0,0,0,0,0,0,Unknown
+YEM264,03/03/2017,Unknown,Yemen,1,8,0,0,0,0,0,0,Unknown
+YEM265,04/03/2017,Ahwar,Abyan ,2,2,0,0,0,0,0,0,Unknown
+YEM266,06/03/2017,Unknown,Multiple provinces,7,11,0,2,0,2,0,0,Unknown
+YEM267,31/03/2017,Unknown ,Unknown ,0,0,0,0,0,0,0,0,Unknown
+YEM268,02/04/2017,Unknown ,Shabwah ,0,0,0,0,0,0,0,0,Unknown
+YEM269,18/04/2017,Unknown ,Marib,3,4,0,0,0,0,0,0,Unknown
+YEM270,23/04/2017,al Said ,Shabwah ,3,8,3,8,0,0,0,0,Unknown
+YEM271,24/04/2017,Unknown ,Unknown ,0,0,0,0,0,0,0,0,Unknown
+YEM272,29/04/2017,Unknown ,Marib,4,5,0,0,0,0,0,0,Unknown
+YEM273,29/04/2017,Unknown ,Shabwah ,3,3,0,0,0,0,0,0,Unknown
+YEM274,23/05/2017,Al Sirim area,Marib,7,12,5,5,0,1,5,6,Unknown
+YEM275,16/06/2017,Al Naqba,Shabwah,2,3,0,0,0,0,0,0,Unknown
+YEM276,01/07/2017,Al Wadei,Abyan,2,2,0,0,0,0,0,0,Unknown
+YEM277,13/08/2017,Marakishah ,Abyan,0,3,0,0,0,0,0,0,Unknown
+YEM278,09/09/2017,Unknown,Bayda ,2,7,0,0,0,0,0,0,Unknown
+YEM279,16/09/2017,Unknown,Unknown,0,0,0,0,0,0,0,0,Unknown
+YEM280,04/10/2017,Unknown,Bayda ,1,2,0,0,0,0,0,0,Unknown
+YEM281,08/10/2017,Raghwan ,Marib ,5,5,0,0,0,0,0,0,Unknown
+YEM282,16/10/2017,Unknown,Bayda ,50,50,0,0,0,0,0,0,Unknown
+YEM283,19/10/2017,Unknown,Bayda ,5,5,0,0,0,0,0,0,Unknown
+YEM284,19/10/2017,Unknown ,Unknown ,0,0,0,0,0,0,0,0,Unknown
+YEM285,25/10/2017,Unknown ,Bayda ,9,13,0,0,0,0,0,0,Unknown
+YEM286,02/11/2017,Al Wadi,Marib ,2,2,0,0,0,0,0,0,Unknown
+YEM287,10/11/2017,Unknown,Bayda,2,2,0,0,0,0,0,0,Unknown
+YEM288,11/11/2017,Unknown,Bayda,1,1,0,0,0,0,0,0,Unknown
+YEM289,12/11/2017,Unknown,Bayda,2,2,0,0,0,0,0,0,Unknown
+YEM290,19/11/2017,Unknown,Bayda,2,2,0,0,0,0,0,0,Unknown
+YEM291,20/11/2017,Unknown,Bayda,5,5,0,0,0,0,0,0,Unknown
+YEM292,23/11/2017,Unknown,Bayda,2,2,0,0,0,0,0,0,Unknown
+YEM293,25/11/2017,Unknown,Shabwah ,5,7,0,0,0,0,0,0,Unknown
+YEM294,26/11/2017,Qaifa ,Bayda,3,3,0,0,0,0,0,0,Unknown
+YEM295,15/12/2017,Unknown,Bayda,1,1,0,0,0,0,0,0,Unknown
+YEM296,19/12/2017,Unknown,Marib,1,1,0,0,0,0,0,0,Unknown
+YEM297,01/01/2018,Unknown,Bayda,0,2,0,2,0,0,0,0,Unknown
+YEM298,26/01/2018,Said,Shabwah,7,7,7,7,0,0,0,0,Unknown
+YEM299,29/01/2018,Unknown,Unknown,0,0,0,0,0,0,0,0,Unknown
+YEM300,11/02/2018,Unknown,Bayda,6,6,0,0,0,0,0,0,Unknown
+YEM301,16/02/2018,Unknown,Bayda,2,3,0,0,0,0,0,0,Unknown
+YEM302,28/02/2018,Unknown,Unknown,0,0,0,0,0,0,0,0,Unknown
+YEM303,05/03/2018,Unknown,Hadramout,1,4,0,1,0,1,0,1,Unknown
+YEM304,07/03/2018,Al Hudhi,Hadramout,1,1,1,1,0,0,0,0,Unknown
+YEM305,08/03/2018,Unknown,Hadramout,0,0,0,0,0,0,0,0,Unknown
+YEM306,09/03/2018,Al Abr,Hadramout,6,6,0,6,0,1,0,0,Unknown
+YEM307,22/03/2018,Wadi Abida,Marib,5,7,0,0,0,0,0,0,Unknown
+YEM308,26/03/2018,Unknown,Hadramout,0,0,0,0,0,0,0,0,Unknown
+YEM309,29/03/2018,Sawmaah,Bayda,3,4,0,3,0,0,0,2,Unknown
+YEM310,11/04/2018,Unknown,Hadramout,0,0,0,0,0,0,0,0,Unknown
+YEM311,23/04/2018,Unknown,Bayda,0,0,0,0,0,0,0,0,Unknown
+YEM312,30/04/2018,Unknown,Unknown,0,0,0,0,0,0,0,0,Unknown
+YEM313,14/05/2018,Unknown,Shabwah,2,3,0,1,0,0,0,0,Unknown
+YEM314,23/06/2018,Unknown,Unknown,0,0,0,0,0,0,0,0,Unknown
+YEM315,30/06/2018,Unknown,Unknown,0,0,0,0,0,0,0,0,Unknown
+YEM316,22/07/2018,Unknown,Hadramout,0,0,0,0,0,0,0,0,Unknown
+YEM317,24/07/2018,Unknown,Hadramout,0,0,0,0,0,0,0,0,Unknown
+YEM318,14/08/2018,Unknown,Unknown,0,0,0,0,0,0,0,0,Unknown
+YEM319,09/09/2018,Ahwar,Abyan,4,4,0,0,0,0,0,0,Unknown
+YEM320,18/09/2018,Unknown,Bayda,0,0,0,0,0,0,0,0,Unknown
+YEM321,25/11/2018,al Qrishia,Bayda,5,8,0,0,0,0,0,0,Unknown
+YEM322,01/01/2019,Unknown,Marib,1,1,0,0,0,0,0,0,Unknown
+YEM323,31/03/2019,Unknown,Bayda,0,0,0,0,0,0,0,0,Unknown
+YEM324,24/06/2019,Dhi Naim,Badya,0,5,0,0,0,0,0,0,Unknown
+YEM325,02/01/2020,Unknown,Unknown,0,0,0,0,0,0,0,0,Unknown
+YEM326,02/01/2020,Wadi Abedah,Marib,0,2,0,0,0,0,0,0,Unknown
